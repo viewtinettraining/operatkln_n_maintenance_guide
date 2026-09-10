@@ -1,0 +1,10 @@
+---
+reusableId: 123
+# snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
+title: 'What is a Plugin Template'
+id: HN7-KY9F-YS7-COU
+slug: what-is-a-plugin-template
+isVisible: true
+lastUpdated: '2025-08-28 08:17:48'
+---
+<h1><strong><span align="center">What is a Plugin Template?</span></strong></h1><p></p><p><span align="justify">A plugin template provides predefined configurations that make it simple to integrate data sources. Viewtinet distributes a comprehensive library of plugin templates covering different vendors and protocols, including ICMP, SNMP, and many others.</span></p><p><span align="justify">Each template comes with the Extract, Transform, Load (ETL) stages and Dashboards already configured, allowing you to integrate new data sources quickly and efficiently. In most cases, you only need to provide the IP address of the host you want to integrate.</span></p><p><span align="justify">For plugins of type Template based on protocols such as ICMP or SNMP, the provisioning of data sources is performed through the Inventory functionality. (Refer to the Inventory chapter for detailed provisioning procedures.)</span></p><p><span align="justify">Once logged into Viewtimanager, you can access the plugin library from the V.S. Data Broker menu, where all available templates are listed and ready to be deployed.</span></p><p></p><figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/nnoeT0qAXnL7T0qi/images/Ek378PG5JfxqrXvnrdf9.png"></figure><p>This library is constantly updating adding new plugins for new vendors.</p><div class="sd-callout" data-callout-type="info"><strong>On plugin templates is not recommended to change, add or delete the fields in extract, transform, load and schema stages. You can cause a malfunction in the plugins. The only recommended edition in this kind or plugins is to add new fields using the decorator feature (explained later on this guide).</strong></div><p></p>
