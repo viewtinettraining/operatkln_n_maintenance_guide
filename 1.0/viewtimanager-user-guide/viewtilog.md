@@ -9,10 +9,10 @@ lastUpdated: '2026-09-10 19:55:21'
 ---
 # **<span align="center">Viewtilog</span>**
 
-<span align="justify">The Viewtilog module ingests, parses and stores logs from your network and security devices. It runs on one or more Dhyana collector appliances and feeds log data into the Viewtinet platform for analysis, visualization and alerting.</span>
+<span align="justify">O módulo Viewtilog ingere, analisa sintaticamente (parseia) e armazena logs dos seus dispositivos de rede e segurança. Ele é executado em um ou mais coletores Dhyana e envia os dados de log para a plataforma Viewtinet para análise, visualização e emissão de alertas.</span>
 
-> **Prerequisite**<br />
-> Make sure you have installed and configured your Dhyana collector(s) according to the **Viewtilog** chapter of the Installation Guide before adding them here.
+> **Pré-requisito**<br />
+> Certifique-se de ter instalado e configurado seu(s) coletor(es) Dhyana de acordo com o capítulo **Viewtilog** do Guia de Instalação antes de adicioná-los aqui.
 
 ---
 
@@ -22,19 +22,19 @@ lastUpdated: '2026-09-10 19:55:21'
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/N9dvqudCh7Kzg0Sm12uC.png" align="center"></figure>
 
--   **Version**: e.g. `6.3.5.3966 (Revision aaf37d89)`
--   **Uptime**: Time since the ViewtILog service started.
--   **Controls**:
+-   **Versão (Version)**: ex.: `6.3.5.3966 (Revision aaf37d89)`
+-   **Tempo de Atividade (Uptime)**: Tempo desde que o serviço ViewtILog foi iniciado.
+-   **Controles (Controls)**:
     
-    -   **Stop**: Gracefully shuts down the connectors.
-    -   **Restart**: Restarts the service without changing configuration.
-    -   **Start**: (Disabled when running) Starts the service if stopped.
+    -   **Stop**: Encerra os conectores de forma segura.
+    -   **Restart**: Reinicia o serviço sem alterar a configuração.
+    -   **Start**: (Desativado quando em execução) Inicia o serviço se estiver parado.
 
 ---
 
-## **Configuration**
+## **Configuração (Configuration)**
 
-> **Note**: All settings on this tab are applied **automatically** during module installation.
+> **Nota**: Todas as configurações nesta guia são aplicadas **automaticamente** durante a instalação do módulo.
 > 
 > <br />
 
@@ -42,61 +42,61 @@ lastUpdated: '2026-09-10 19:55:21'
 
 <br />
 
--   **Main directory**: Path where the Dhyana collector stores incoming log files (e.g. `/opt/vn/dhyana/`).
--   **Watchdog time (secs)**: Interval for internal health checks (default `60`).
+-   **Diretório Principal (Main directory)**: Caminho onde o coletor Dhyana armazena os arquivos de log recebidos (ex.: `/opt/vn/dhyana/`).
+-   **Tempo do Watchdog (segundos)**: Intervalo para verificações internas de integridade (padrão `60`).
 
 ---
 
-## **Hosts List**
+## **Lista de Hosts (Hosts List)**
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/lxgxyxBtwxuO9Ig5GhvI.png" align="center"></figure>
 
-Defines which Dhyana appliances feed logs into Viewtilog.
+Define quais coletores Dhyana alimentam logs no Viewtilog.
 
-1.  **Cluster for Connectors**
+1.  **Cluster para Conectores**
     
-    -   **High availability mode**
+    -   **Modo de alta disponibilidade (HA mode)**
         
-        -   **No HA** if only one host is defined.
-        -   **HA** applies when two or more hosts are present with virtual addresses.
-2.  **Cluster Virtual Addresses** (optional)<br />
-    Click **\+ Add New Virtual Address** to define a floating IP for HA.
-3.  **Cluster Host List**
+        -   **Sem HA (No HA)** se apenas um host for definido.
+        -   **HA** aplica-se quando dois ou mais hosts estão presentes com endereços virtuais.
+2.  **Endereços Virtuais do Cluster** (opcional)<br />
+    Clique em **+ Add New Virtual Address** para definir um IP flutuante para HA.
+3.  **Lista de Hosts do Cluster**
     
-    -   **\+ Add New Host**: Bring up a blank row.
-    -   Enter each collector’s:
+    -   **+ Add New Host**: Cria uma nova linha em branco.
+    -   Informe para cada coletor:
         
-        -   **Hostname or IP Address** (management plane)
-        -   **LAN Hostname or IP Address** (data plane)
-        -   **Password** and **Password confirm** (SSH credentials for `viewtinet` user)
-    -   Click **Save Changes** to apply.
+        -   **Hostname ou Endereço IP** (plano de gerenciamento)
+        -   **Hostname ou Endereço IP da LAN** (plano de dados)
+        -   **Senha** e **Confirmação de Senha** (credenciais SSH do usuário `viewtinet`)
+    -   Clique em **Save Changes** para aplicar.
 
-> **Note**: Collector installation and tuning is covered in the **[Viewtilog's Cluster Installation](http:#?target=ND7-Z3HP-QAV-NIZ)** chapter of the Installation Guide.
+> **Nota**: A instalação e o ajuste dos coletores são abordados no capítulo **Instalação em Cluster do Viewtilog** do Guia de Instalação.
 
 ---
 
-## **Issues**
+## **Problemas (Issues)**
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/g2jfllBnhjXkYQ356sL9.png" align="center"></figure>
 
-All operational warnings and errors from the ViewtILog connectors:
+Todos os avisos e erros operacionais dos conectores do Viewtilog:
 
--   **Timestamp**: When the event was logged.
--   **Level**: `warning`, `error`, etc.
--   **Message**: Detailed description (e.g. host key additions, connection failures).
+-   **Data/Hora (Timestamp)**: Quando o evento foi registrado.
+-   **Nível (Level)**: `warning`, `error`, etc.
+-   **Mensagem (Message)**: Descrição detalhada (ex.: adições de chaves de host, falhas de conexão).
 
-Controls:
+Controles:
 
--   **Show archived**: Toggle to include archived entries.
--   **Archive Page**: Manually archive the current list.
+-   **Show archived**: Alterna para incluir entradas arquivadas.
+-   **Archive Page**: Arquiva manualmente a lista atual.
 
 ---
 
-> **Restart After Changes**<br />
-> If you update hosts or virtual addresses, use the **Restart** button on the **Status** tab to apply changes without waiting for the next automated restart.
+> **Reinicialização Após Alterações**<br />
+> Se você atualizar hosts ou endereços virtuais, use o botão **Restart** na guia **Status** para aplicar as alterações sem esperar pelo próximo reinício automático.
 
 <br />

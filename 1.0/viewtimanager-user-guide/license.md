@@ -6,54 +6,53 @@ slug: license
 isVisible: true
 lastUpdated: '2025-10-15 15:51:35'
 ---
-# **<span align="center">License Enforcement</span>**
+# **<span align="center">Aplicação de Licença (License Enforcement)</span>**
 
 <br />
 
-## **1\. Introduction**
+## **1\. Introdução**
 
-Viewtinet’s new license enforcement system ensures that only properly licensed modules and features remain active, and provides clear warnings or restrictions as license terms approach or exceed their limits
+O sistema de aplicação de licenças da Viewtinet garante que apenas os módulos e recursos devidamente licenciados permaneçam ativos, fornecendo avisos claros ou restrições à medida que os termos da licença se aproximam ou excedem seus limites.
 
 <br />
 
-## **2\. License Enforcement Behavior**
+## **2\. Comportamento de Aplicação de Licença**
 
-1.  **Expiration Check**
+1.  **Verificação de Expiração**
     
-    -   If a temporal license has expired, Viewtimon, Viewtify QoS, Viewtilog, and other modules become disabled, though you can still log in to Viewtimanager.
-    -   Viewtisight is entirely inaccessible until a valid license is loaded.
-2.  **Warning for Imminent Expiry**
+    -   Se uma licença temporária expirar, os módulos Viewtimon, Viewtify QoS, Viewtilog e outros são desativados, embora ainda seja possível fazer login no Viewtimanager.
+    -   O Viewtisight fica totalmente inacessível até que uma licença válida seja carregada.
+2.  **Aviso de Expiração Iminente**
     
-    -   When a temporal license is within 30 days of its expiration date, or a permanent-license support period is within 30 days of ending, Viewtmanager displays a popup warning.
-3.  **Module Enable/Disable**
+    -   Quando uma licença temporária estiver dentro de 30 dias de sua data de expiração, ou o período de suporte de uma licença permanente estiver a 30 dias do término, o Viewtimanager exibe um aviso pop-up.
+3.  **Habilitação/Desabilitação de Módulos**
     
-    -   If a module is **disabled** in the license file, its tables or features are blocked:
+    -   Se um módulo estiver **desativado** no arquivo de licença, suas tabelas ou recursos serão bloqueados:
         
-        -   **Viewtimon**: queries against `dpi_records` and `voip_records` are denied.
-        -   **Viewtify QoS**: `qos_records` queries are denied.
-        -   **Viewtimon Sniffer**: access to `pcap_storage_records` is denied.
-        -   **Viewtilog**: all tables except `dpi_records`, `voip_records`, `qos_records`, and `self_monitoring*` are denied.
+        -   **Viewtimon**: consultas a `dpi_records` e `voip_records` são negadas.
+        -   **Viewtify QoS**: consultas a `qos_records` são negadas.
+        -   **Viewtimon Sniffer**: acesso a `pcap_storage_records` é negado.
+        -   **Viewtilog**: todas as tabelas, exceto `dpi_records`, `voip_records`, `qos_records` e `self_monitoring*`, são negadas.
             
             <br />
             
 
-## **3\. License Scenarios**
+## **3\. Cenários de Licenciamento**
 
-### **3.1 Compliant License**
+### **3.1 Licença em Conformidade (Compliant)**
 
-All usage is below warning and deny limits. The GUI and all modules function normally, with the license serial number displayed at the top of the License
+Todo o uso está abaixo dos limites de aviso e bloqueio. A GUI e todos os módulos funcionam normalmente, com o número de série da licença exibido no topo da seção License.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/wHQ3P0X0g3FDEb1yXaDL.png" align="center"></figure>
 
 <br />
-
 <br />
 
-### **3.2 Temporal License About to Expire**
+### **3.2 Licença Temporária Perto de Expirar**
 
-Within 30 days of expiry, Viewtmanager shows a yellow warning popup. Functionality remains uninterrupted
+Dentro de 30 dias da expiração, o Viewtimanager exibe um aviso amarelo em pop-up. A funcionalidade permanece ininterrupta.
 
 <br />
 
@@ -61,9 +60,9 @@ Within 30 days of expiry, Viewtmanager shows a yellow warning popup. Functionali
 
 <br />
 
-### **3.3 Permanent License Support About to Expire**
+### **3.3 Suporte de Licença Permanente Perto de Expirar**
 
-Within 30 days of support end, a similar warning is displayed in Viewtmanager. Modules continue working until expiry:
+Dentro de 30 dias do fim do suporte, um aviso similar é exibido no Viewtimanager. Os módulos continuam funcionando normalmente:
 
 <br />
 
@@ -71,9 +70,9 @@ Within 30 days of support end, a similar warning is displayed in Viewtmanager. M
 
 <br />
 
-### **3.4 Temporal License Expired**
+### **3.4 Licença Temporária Expirada**
 
-After the expiration date, all modules except Viewtimanager itself are disabled. Viewtisight is inaccessible and shows a disabled banner :
+Após a data de expiração, todos os módulos, exceto o próprio Viewtimanager, são desativados. O Viewtisight fica inacessível e exibe um banner de desativação:
 
 <br />
 
@@ -85,9 +84,9 @@ After the expiration date, all modules except Viewtimanager itself are disabled.
 
 <br />
 
-### **3.5 Permanent License Support Period Expired**
+### **3.5 Período de Suporte de Licença Permanente Expirado**
 
-Modules remain functional, but Viewtmanager displays a support-expired message at the top of the License section:
+Os módulos permanecem operacionais, mas o Viewtimanager exibe uma mensagem de suporte expirado no topo da seção License:
 
 <br />
 
@@ -95,9 +94,9 @@ Modules remain functional, but Viewtmanager displays a support-expired message a
 
 <br />
 
-### **3.6 Module(s) Above Warning Limits**
+### **3.6 Módulo(s) Acima dos Limites de Aviso**
 
-When usage (GB/day, throughput, or device count) exceeds the warning threshold, Viewtmanager displays a non-blocking alert in the License section to caution you before hitting deny limits:
+Quando o uso (GB/dia, taxa de transferência ou contagem de dispositivos) excede o limite de aviso, o Viewtimanager exibe um alerta não bloqueante na seção License para alertar antes de atingir os limites de bloqueio:
 
 <br />
 
@@ -109,9 +108,9 @@ When usage (GB/day, throughput, or device count) exceeds the warning threshold, 
 
 <br />
 
-### **3.7 Module(s) Above Deny Limits but Still Compliant**
+### **3.7 Módulo(s) Acima dos Limites de Bloqueio, mas Ainda Conforme**
 
-If usage has reached the deny threshold but not long enough to declare non-compliance, the system shows a warning and logs events in the License history. Functionality remains active until non-compliance is declared:
+Se o uso atingiu o limite de negação, mas ainda não por tempo suficiente para declarar não conformidade, o sistema exibe um aviso e registra eventos no histórico da licença. A funcionalidade permanece ativa:
 
 <br />
 
@@ -121,13 +120,13 @@ If usage has reached the deny threshold but not long enough to declare non-compl
 
 <br />
 
-### **3.8 Module(s) Non‐Compliant**
+### **3.8 Módulo(s) Não Conforme (Non-Compliant)**
 
-Once usage exceeds deny limits for seven days (or equivalent rule for throughput buckets), the module is declared non-compliant:
+Quando o uso exceder os limites de bloqueio por sete dias seguidos (ou regra equivalente para faixas de transferência), o módulo é declarado não conforme:
 
--   All related tables are blocked (only minimal “self\_monitoring” tables remain).
--   An error message appears in Viewtmanager and Viewtisight restricts affected views.
--   You must wait 30 days from the last non-compliant check—or load a new license with expanded limits—to restore functionality:
+-   Todas as tabelas relacionadas são bloqueadas (apenas tabelas mínimas de auto-monitoramento permanecem).
+-   Uma mensagem de erro aparece no Viewtimanager e o Viewtisight restringe as visualizações afetadas.
+-   É necessário aguardar 30 dias a partir da última verificação — ou carregar uma nova licença com limites ampliados — para restaurar o serviço:
     
     <br />
     
