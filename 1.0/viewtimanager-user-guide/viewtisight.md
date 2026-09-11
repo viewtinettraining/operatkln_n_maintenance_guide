@@ -9,154 +9,153 @@ lastUpdated: '2026-09-10 19:55:02'
 ---
 # **<span align="center">Viewtisight</span>**
 
-## **Introduction**
+## **Introdução**
 
-<span align="justify">From within the Viewtimanager, the Viewtisight section provides administrative control over the Viewtisight module — the visualization and dashboarding engine of the Viewtinet platform. This interface does not allow users to interact with dashboards directly; instead, it enables system administrators to:</span>
+<span align="justify">A partir do Viewtimanager, a seção Viewtisight fornece controle administrativo sobre o módulo Viewtisight — o mecanismo de visualização e painéis (dashboards) da plataforma Viewtinet. Esta interface não permite que os usuários interajam diretamente com os painéis; em vez disso, ela permite que os administradores do sistema:</span>
 
--   <span align="justify">Monitor the health and performance of the Viewtisight service.</span>
--   <span align="justify">Start, stop or restart the module.</span>
--   <span align="justify">Configure server parameters and email notifications.</span>
--   <span align="justify">Manage cluster nodes.</span>
--   <span align="justify">Review warnings, errors, and operational issues.</span>
+-   <span align="justify">Monitorem a integridade e o desempenho do serviço Viewtisight.</span>
+-   <span align="justify">Iniciem, parem ou reiniciem o módulo.</span>
+-   <span align="justify">Configurem parâmetros do servidor e notificações por e-mail.</span>
+-   <span align="justify">Gerenciem os nós do cluster.</span>
+-   <span align="justify">Revisem avisos, erros e problemas operacionais.</span>
 
 ---
 
-## **🖥️ Accessing the Viewtisight Administration Panel**
+## **🖥️ Acessando o Painel de Administração do Viewtisight**
 
 <br />
 
-<div class="sd-callout" data-callout-type="info"><p>The Viewtisight interface is not always active by default. Access to this module depends on the Viewtisight feature being properly licensed in your deployment.</p></div>
+<div class="sd-callout" data-callout-type="info"><p>A interface do Viewtisight nem sempre está ativa por padrão. O acesso a este módulo depende de o recurso Viewtisight estar devidamente licenciado em sua implantação.</p></div>
 
 <br />
 
-To access the administration interface for Viewtisight:
+Para acessar a interface de administração do Viewtisight:
 
-1.  Log in to **Viewtimanager**.
-2.  In the left-hand navigation menu, click on **Viewtisight** (icon: bar chart).
+1.  Faça login no **Viewtimanager**.
+2.  No menu de navegação à esquerda, clique em **Viewtisight** (ícone: gráfico de barras).
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/YOhFgObKsSOcxLdgQBYj.png" align="center"></figure>
 
-You will be redirected to the Viewtisight management panel, which includes module information and multiple tabs for operational control.
+Você será redirecionado para o painel de gerenciamento do Viewtisight, que inclui informações do módulo e várias guias para controle operacional.
 
 ---
 
-## **🧭 Interface Overview**
+## **🧭 Visão Geral da Interface**
 
-At the top of the screen, the following general controls and information are always visible:
+Na parte superior da tela, os seguintes controles gerais e informações estão sempre visíveis:
 
--   **Version Info**: Displays the current version and revision (e.g., `6.3.5.3966 - Revision b11b8118`).
--   **Uptime**: Shows how long the module has been running.
--   **Module Control Buttons**:
+-   **Informações da Versão (Version Info)**: Exibe a versão e revisão atual (por exemplo, `6.3.5.3966 - Revision b11b8118`).
+-   **Tempo de Atividade (Uptime)**: Mostra há quanto tempo o módulo está em execução.
+-   **Botões de Controle do Módulo**:
     
     -   🔴 `STOP`
     -   🟠 `RESTART`
     -   🟢 `START`
 
-### Tabs Available:
+### Guias Disponíveis:
 
--   `STATUS`: Monitor resource usage (CPU, memory, IO).
--   `CONFIGURATION`: Edit network ports and SMTP email settings.
--   `HOSTS LIST`: Manage the cluster configuration.
--   `ISSUES`: View recent warnings and errors.
+-   `STATUS`: Monitorar uso de recursos (CPU, memória, IO).
+-   `CONFIGURATION`: Editar portas de rede e configurações de e-mail SMTP.
+-   `HOSTS LIST`: Gerenciar a configuração do cluster.
+-   `ISSUES`: Visualizar alertas recentes e erros.
 
 ---
 
-## **📈 STATUS Tab – Module Performance**
+## **📈 Guia STATUS – Desempenho do Módulo**
 
-This tab offers performance metrics from the Viewtisight module itself:
+Esta guia oferece métricas de desempenho do próprio módulo Viewtisight:
 
--   **CPU Usage**: Displays current and historical CPU consumption in percentage.
--   **Memory Usage**: Tracks memory usage over time.
--   **IO Write**: Indicates the rate of disk write operations in kilobytes per second (K/s).
+-   **Uso de CPU**: Exibe o consumo atual e histórico da CPU em porcentagem.
+-   **Uso de Memória**: Acompanha o uso de memória ao longo do tempo.
+-   **Gravação em Disco (IO Write)**: Indica a taxa de operações de gravação em disco em kilobytes por segundo (K/s).
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/UeCSP3R0sL99ARMPXXlQ.png" align="center"></figure>
 
 <br />
 
-These metrics help determine if the module is operating within normal parameters and are useful for troubleshooting performance issues.
+Essas métricas ajudam a determinar se o módulo está operando dentro dos parâmetros normais e são úteis para solucionar problemas de desempenho.
 
 ---
 
-## **⚙️ CONFIGURATION Tab – Service and Email Settings**
+## **⚙️ Guia CONFIGURATION – Configurações de Serviço e E-mail**
 
-This tab allows administrators to configure network service ports and set up email notifications.
+Esta guia permite que os administradores configurem as portas de serviço de rede e definam notificações por e-mail.
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/itd7UzNKH5WXm1xvUdXo.png"><br />
 
-## **🔌 Server Configuration**
+## **🔌 Configuração do Servidor**
 
-Administrators can enable or disable HTTP/HTTPS protocols and define the corresponding ports:
+Os administradores podem habilitar ou desabilitar os protocolos HTTP/HTTPS e definir as portas correspondentes:
 
--   **HTTP Port**: Default is `8080`
--   **HTTPS Port**: Default is `8443`
+-   **Porta HTTP**: O padrão é `8080`
+-   **Porta HTTPS**: O padrão é `8443`
 
-You can toggle each option via checkboxes.
+Você pode alternar cada opção por meio das caixas de seleção.
 
-> ⚠️ **Important Notes**:
+> ⚠️ **Notas Importantes**:
 > 
-> -   To **disable the insecure HTTP connection (port 8080)**, you must first access the platform using the secure HTTPS port (usually `8443`).<br />
->     For more details, refer to the **Login Requirements** section above.
-> -   If you require the installation of **non-self-signed SSL certificates** (e.g., certificates from a trusted Certificate Authority), this must be requested through the **Viewtinet Helpdesk**.
+> -   Para **desabilitar a conexão HTTP não segura (porta 8080)**, você deve primeiro acessar a plataforma usando a porta HTTPS segura (geralmente `8443`).<br />
+> -   Se você precisar instalar **certificados SSL não autoassinados** (ex.: certificados de uma Autoridade Certificadora confiável), isso deve ser solicitado por meio do **Helpdesk da Viewtinet**.
 
-Disabling HTTP ensures all access to Viewtisight is encrypted and secured through HTTPS, following best practices for production environments.
+Desabilitar o HTTP garante que todo o acesso ao Viewtisight seja criptografado e protegido por HTTPS, seguindo as melhores práticas para ambientes de produção.
 
 <br />
 
-## **📧 Email Notifications**
+## **📧 Notificações por E-mail**
 
-Here you can configure the SMTP server used to send alert and report emails.
+Aqui você pode configurar o servidor SMTP usado para enviar e-mails de alerta e relatórios.
 
--   **SMTP Server**
--   **SMTP Username / Password**
--   **Connection Security**: e.g., `Default`
--   **Default sender for alarms**: `alerts@viewtinet.com`
--   **Default sender for reports**: `reports@viewtinet.com`
+-   **Servidor SMTP**
+-   **Usuário / Senha do SMTP**
+-   **Segurança da Conexão**: ex.: `Default`
+-   **Remetente padrão para alarmes**: `alerts@viewtinet.com`
+-   **Remetente padrão para relatórios**: `reports@viewtinet.com`
 
-Control buttons at the bottom:
+Botões de controle na parte inferior:
 
 -   ✅ `Save Changes`
 -   ❌ `Discard Changes / Reload`
 -   🔄 `Reset Default Values`
 
-## **📧 SMTP Integration Guide for Viewtinet**
+## **📧 Guia de Integração SMTP para o Viewtinet**
 
-Integrating an external SMTP server allows Viewtinet to enable key platform features such as:
+Integrar um servidor SMTP externo permite que o Viewtinet habilite recursos essenciais da plataforma, tais como:
 
--   🔐 Multi-Factor Authentication (MFA)
--   📄 Scheduled PDF report delivery
--   🚨 Alarm notifications via email
+-   🔐 Autenticação Multifator (MFA)
+-   📄 Envio agendado de relatórios em PDF
+-   🚨 Notificações de alarme por e-mail
 
-This guide outlines the steps required to configure and apply SMTP settings using the Viewtisight interface.
+Este guia descreve as etapas necessárias para configurar e aplicar as definições de SMTP usando a interface do Viewtisight.
 
 <br />
 
-### **🔧 Configuration Steps**
+### **🔧 Etapas de Configuração**
 
-#### **1\. Access Email Notification Settings**
+#### **1\. Acessar as Configurações de Notificação por E-mail**
 
-1.  Log in to **Viewtimanager**.
-2.  Click on the **Viewtisight** module.
-3.  Go to the `CONFIGURATION` tab.
-4.  Locate the **Email Notifications** section.
+1.  Faça login no **Viewtimanager**.
+2.  Clique no módulo **Viewtisight**.
+3.  Vá para a guia `CONFIGURATION`.
+4.  Localize a seção **Email Notifications**.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/R34Kty9mN7IIqpFvvHQN.png" align="center"></figure>
 
 <br />
 
-**2\. Enter SMTP Server Details**
+**2\. Inserir os Dados do Servidor SMTP**
 
-<table><tbody><tr><th><p>Field</p></th><th><p>Description</p></th></tr><tr><td><p><strong>SMTP Server</strong></p></td><td><p>Hostname or IP address + port of your SMTP server (e.g., <code>smtp.office365.com:587</code>)</p></td></tr><tr><td><p><strong>SMTP Username</strong></p></td><td><p>Email or login for the SMTP account</p></td></tr><tr><td><p><strong>SMTP Password</strong></p></td><td><p>Password or App Password for authentication</p></td></tr><tr><td><p><strong>Default Sender for Alarm Emails</strong></p></td><td><p>Email address used to send alert emails</p></td></tr><tr><td><p><strong>Default Sender for PDF Reports</strong></p></td><td><p>Email address used to send PDF reports</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Campo</p></th><th><p>Descrição</p></th></tr><tr><td><p><strong>SMTP Server</strong></p></td><td><p>Nome do host ou endereço IP + porta do seu servidor SMTP (ex.: <code>smtp.office365.com:587</code>)</p></td></tr><tr><td><p><strong>SMTP Username</strong></p></td><td><p>E-mail ou usuário da conta SMTP</p></td></tr><tr><td><p><strong>SMTP Password</strong></p></td><td><p>Senha ou Senha de Aplicativo para autenticação</p></td></tr><tr><td><p><strong>Default Sender for Alarm Emails</strong></p></td><td><p>Endereço de e-mail usado para envio de alertas</p></td></tr><tr><td><p><strong>Default Sender for PDF Reports</strong></p></td><td><p>Endereço de e-mail usado para envio de relatórios PDF</p></td></tr></tbody></table>
 
 <br />
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/iDsXYozsge9BripHSN5T.png"><br />
 
-#### **3\. Set Connection Security Level**
+#### **3\. Definir o Nível de Segurança da Conexão**
 
-From the `Connection Security` dropdown, choose one of the available modes:
+No menu suspenso `Connection Security`, escolha um dos modos disponíveis:
 
-<table><tbody><tr><th><p>Option</p></th><th><p>Description</p></th></tr><tr><td><p><code>Default</code></p></td><td><p>TLS connection with default SSL context (recommended for most cases)</p></td></tr><tr><td><p><code>Insecure (Disables SSL)</code></p></td><td><p>No TLS, no SSL context (<strong>not recommended</strong>)</p></td></tr><tr><td><p><code>No SSL context creation</code></p></td><td><p>TLS connection without creating a custom SSL context</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Opção</p></th><th><p>Descrição</p></th></tr><tr><td><p><code>Default</code></p></td><td><p>Conexão TLS com contexto SSL padrão (recomendado para a maioria dos casos)</p></td></tr><tr><td><p><code>Insecure (Disables SSL)</code></p></td><td><p>Sem TLS, sem contexto SSL (<strong>não recomendado</strong>)</p></td></tr><tr><td><p><code>No SSL context creation</code></p></td><td><p>Conexão TLS sem criação de contexto SSL personalizado</p></td></tr></tbody></table>
 
-> 🛡️ Recommended: Use `Default` unless your SMTP server requires otherwise.
+> 🛡️ Recomendado: Use `Default` a menos que seu provedor SMTP exija outro método.
 
 ---
 
@@ -164,18 +163,18 @@ From the `Connection Security` dropdown, choose one of the available modes:
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/dA6N7vp38yHGIy3KYBBs.png"></figure>
 
-#### **4\. Save and Confirm Configuration**
+#### **4\. Salvar e Confirmar a Configuração**
 
-After entering all values:
+Após preencher todos os valores:
 
-1.  Click ✅ **SAVE CHANGES**
-2.  A confirmation dialog will appear:<br />
-    Click **YES** to confirm.
+1.  Clique em ✅ **SAVE CHANGES**
+2.  Uma caixa de diálogo de confirmação aparecerá:<br />
+    Clique em **YES** para confirmar.
 
-To apply the new SMTP configuration:
+Para aplicar a nova configuração SMTP:
 
-1.  Click the **RESTART** button.
-2.  Confirm by selecting **YES** in the confirmation dialog.
+1.  Clique no botão **RESTART**.
+2.  Confirme selecionando **YES** na caixa de diálogo.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/ye0prfSBHms6NsRmjgI8.png" align="center"></figure>
 
@@ -183,9 +182,9 @@ To apply the new SMTP configuration:
 
 <br />
 
-**5\. Restart Viewtisight to Apply Changes**
+**5\. Reiniciar o Viewtisight para Aplicar Alterações**
 
-Once saved, a red banner will appear:
+Depois de salvo, um banner vermelho será exibido:
 
 > `Please restart Viewtisight to apply config changes`<br />
 
@@ -199,114 +198,114 @@ Once saved, a red banner will appear:
 
 <br />
 
-### **⏳ Wait for Module Restart**
+### **⏳ Aguardar o Reinício do Módulo**
 
 <br />
 
-1\. Wait approximately \*\*3 minutes\*\*.
+1\. Aguarde aproximadamente **3 minutos**.
 
-2\. Refresh the browser.
+2\. Atualize o navegador.
 
-3\. Confirm that the \*\*Uptime\*\* counter starts from \`0\`.
+3\. Confirme que o contador de **Uptime** inicia a partir de `0`.
 
-If you refresh too early, the interface may not be available or may show errors.<br />
+Se você atualizar a página muito cedo, a interface poderá não estar disponível ou apresentar erros.<br />
 <br />
-**⚠️ Temporary Model Loading Error**
+**⚠️ Erro Temporário de Carregamento de Modelos**
 
-Immediately after restart, it's normal to see a warning message: "Models have not been loaded yet"
+Imediatamente após o reinício, é normal ver uma mensagem de aviso: “Models have not been loaded yet”
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/NJTdiJwV7MH9TYlcntuQ.png" align="center"></figure>
 
-This message appears in the performance graphs and will **disappear automatically after ~5 minutes**, once all components are fully initialized.
+Esta mensagem aparece nos gráficos de desempenho e **desaparecerá automaticamente após cerca de 5 minutos**, quando todos os componentes estiverem totalmente inicializados.
 
 <br />
 
-## **✅ SMTP Integration Complete**
+## **✅ Integração SMTP Concluída**
 
-Once Viewtisight is running and performance charts are visible:
+Com o Viewtisight em execução e os gráficos visíveis:
 
--   MFA will be able to send verification codes via email.
--   Scheduled reports will be sent using the configured sender.
--   Alarm notifications will be delivered to recipients based on rules.
-
----
-
-## **🛠️ Troubleshooting Tips**
-
--   Ensure SMTP credentials are valid and authorized to send from the specified address.
--   Confirm network connectivity to the SMTP server and port.
--   Check for typos in the server address or security option.
--   Use `Default` mode unless your email provider requires a different method.
+-   O MFA poderá enviar códigos de verificação por e-mail.
+-   Relatórios agendados serão enviados usando o remetente configurado.
+-   Notificações de alarmes serão entregues aos destinatários com base nas regras.
 
 ---
 
-## **🆘 Need Help?**
+## **🛠️ Dicas de Solução de Problemas**
 
-If you require support with SMTP integration, SSL certificate handling, or email deliverability, contact Viewtinet Helpdesk at:
+-   Certifique-se de que as credenciais SMTP sejam válidas e autorizadas a enviar a partir do endereço especificado.
+-   Confirme a conectividade de rede com o servidor SMTP e a porta correspondente.
+-   Verifique se há erros de digitação no endereço do servidor ou na opção de segurança.
+-   Use o modo `Default`, a menos que o provedor exija outro método.
+
+---
+
+## **🆘 Precisa de Ajuda?**
+
+Se precisar de suporte com a integração SMTP, gestão de certificados SSL ou entrega de e-mails, entre em contato com o Helpdesk da Viewtinet em:
 
 📧 [support@viewtinet.com](mailto:support@viewtinet.com)
 
 ---
 
-## **🖧 HOSTS LIST Tab – Cluster Setup**
+## **🗧 Guia HOSTS LIST – Configuração de Cluster**
 
-In this tab, administrators can define and manage the list of Viewtisight hosts that form part of a cluster.
+Nesta guia, os administradores podem definir e gerenciar a lista de hosts do Viewtisight que compõem um cluster.
 
-### Cluster Details
+### Detalhes do Cluster
 
--   **Cluster Virtual Addresses**: Used for high-availability deployments (HA) with virtual IPs.
--   **Cluster Host List**: Displays the currently configured nodes in the Viewtisight cluster. Each host entry includes:
+-   **Endereços Virtuais do Cluster**: Usados para implantações de alta disponibilidade (HA) com IPs virtuais.
+-   **Lista de Hosts do Cluster**: Exibe os nós atualmente configurados no cluster do Viewtisight. Cada entrada inclui:
     
     -   `Hostname or IP Address`
     -   `LAN Hostname or IP Address`
-    -   Password and password confirmation for secure registration
+    -   Senha e confirmação de senha para registro seguro
 
-#### Actions:
+#### Ações:
 
 -   ➕ `Add New Host`
 -   🗑️ `Uninstall`
 -   ✅ `Save Changes`
 -   ❌ `Cancel Changes`
 
-> ℹ️ **Note**:<br />
-> During the installation of the Viewtinet platform via the standard installation bundle, a single instance of **Viewtisight** is installed by default.<br />
-> This **HOSTS LIST** tab allows for the addition of new Viewtisight instances to enable **High Availability (HA)** or **clustered environments**.<br />
-> Detailed instructions for HA and cluster configuration are provided in the **[Viewtisight's Cluster Installation Guide](http:#?target=NQU-2BQB-PAX-CE8)** and should be followed carefully to ensure proper deployment.
+> ℹ️ **Nota**:<br />
+> Durante a instalação padrão da plataforma Viewtinet, uma única instância do **Viewtisight** é instalada por padrão.<br />
+> Esta guia **HOSTS LIST** permite adicionar novas instâncias do Viewtisight para habilitar **Alta Disponibilidade (HA)** ou **ambientes em cluster**.<br />
+> Instruções detalhadas para configuração de HA e cluster são fornecidas no **Guia de Instalação em Cluster do Viewtisight**.
 
-If only one host is present, High Availability mode is **not active**, and clustering features are disabled.
+Se apenas um host estiver presente, o modo de Alta Disponibilidade **não está ativo**.
 
 ---
 
-## **🚨 ISSUES Tab – Event Log and Errors**
+## **🚨 Guia ISSUES – Registro de Eventos e Erros**
 
-This tab shows a list of operational messages related to the Viewtisight module:
+Esta guia mostra uma lista de mensagens operacionais relacionadas ao módulo Viewtisight:
 
-<table><tbody><tr><th><p>Field</p></th><th><p>Description</p></th></tr><tr><td><p>Timestamp</p></td><td><p>Date and time of the event</p></td></tr><tr><td><p>Level</p></td><td><p>Severity (e.g., <code>error</code>, <code>warning</code>)</p></td></tr><tr><td><p>Message</p></td><td><p>Description of the issue</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Campo</p></th><th><p>Descrição</p></th></tr><tr><td><p>Timestamp</p></td><td><p>Data e hora do evento</p></td></tr><tr><td><p>Level</p></td><td><p>Gravidade (ex.: <code>error</code>, <code>warning</code>)</p></td></tr><tr><td><p>Message</p></td><td><p>Descrição do problema</p></td></tr></tbody></table>
 
-Features:
+Recursos:
 
--   Search and filter by severity or message.
--   ☑ `Show archived` toggle
+-   Pesquisa e filtro por gravidade ou mensagem.
+-   ☑ Caixa de seleção `Show archived`
 -   ❌ `Archive Page`
--   Pagination for browsing historical records
+-   Paginação para navegar por registros históricos
 
 ---
 
-## **✅ Summary**
+## **✅ Resumo**
 
-The **Viewtisight section within Viewtimanager** is dedicated to the **administration and lifecycle management** of the Viewtisight service. From this interface, platform administrators can:
+A seção **Viewtisight no Viewtimanager** é dedicada à **administração e gerenciamento do ciclo de vida** do serviço Viewtisight. A partir desta interface, os administradores podem:
 
--   Monitor Viewtisight’s health and performance
--   Control its runtime state (start, stop, restart)
--   Configure service ports and email notifications
--   Manage cluster participation
--   Review operational issues and system warnings
+-   Monitorar a integridade e o desempenho do Viewtisight
+-   Controlar seu estado de execução (start, stop, restart)
+-   Configurar portas de serviço e notificações por e-mail
+-   Gerenciar a participação em cluster
+-   Revisar problemas operacionais e alertas do sistema
 
-This administration panel is essential for ensuring that Viewtisight remains stable, integrated, and properly monitored within the Viewtinet platform.
+Este painel é essencial para garantir que o Viewtisight permaneça estável, integrado e devidamente monitorado dentro da plataforma Viewtinet.
 
-\--
+--
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/npZNU5du0pdeIWJtMxkg.png"></figure>
 
