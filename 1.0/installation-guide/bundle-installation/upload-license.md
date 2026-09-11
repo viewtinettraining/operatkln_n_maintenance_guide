@@ -1,18 +1,18 @@
 ---
 reusableId: 75
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Upload license'
+title: 'Envio de licença'
 id: LV2-HON0-UN1-IZE
 slug: upload-license
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-03-10 16:04:13'
 ---
-# **<span align="center">Upload License</span>**
+# **<span align="center">Envio de Licença</span>**
 
-<div class="sd-callout" data-callout-type="info">Please remember that to obtain a license file, it will be generated and shared by your Viewtinet representative with you via email.</div>
+<div class="sd-callout" data-callout-type="info">Lembre-se que para obter um arquivo de licença, ele será gerado e compartilhado pelo seu representante Viewtinet via e-mail.</div>
 
-To upload the license, access the IP address of the appliance, virtual machine, or COTS server using your preferred web browser and visit **[http://x.x.x.x:4200](http://x.x.x.x:4200)**. First, complete the authentication process using the **admin** user and the password configured in the **“Admin user activation”** step.
+Para enviar a licença, acesse o endereço IP do appliance, máquina virtual ou servidor COTS usando o navegador web de sua preferência e visite **[http://x.x.x.x:4200](http://x.x.x.x:4200)**. Primeiro, conclua o processo de autenticação usando o usuário **admin** e a senha configurada na etapa **“Ativação do usuário admin”**.
 
 <br />
 
@@ -20,7 +20,7 @@ To upload the license, access the IP address of the appliance, virtual machine, 
 
 <figure align="center" style="width:45%"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/oSdFIJKNSPfP5WxbJzoy.png" width="45%" align="center"></figure>
 
-Once logged in, the "App Selector" will be presented, where you will need to choose the Viewtimanager option, as shown below.
+Uma vez conectado, o "Seletor de Aplicativos" será apresentado, onde você deverá escolher a opção Viewtimanager, conforme mostrado abaixo.
 
 <br />
 
@@ -30,7 +30,7 @@ Once logged in, the "App Selector" will be presented, where you will need to cho
 
 <br />
 
-<div class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"><p>Click on the <strong>'LOAD LICENSE FILE'</strong> button and select the <strong>.key</strong> file provided by <strong>Viewtinet</strong>.</p></div>
+<div class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"><p>Clique no botão <strong>'CARREGAR ARQUIVO DE LICENÇA'</strong> e selecione o arquivo <strong>.key</strong> fornecido pelo <strong>Viewtinet</strong>.</p></div>
 
 <div class="z-0 flex min-h-[46px] justify-start"><p><br></p></div>
 
@@ -38,7 +38,7 @@ Once logged in, the "App Selector" will be presented, where you will need to cho
 
 <br />
 
-Once the file is uploaded, the features of the Viewtimanager will be activated.
+Uma vez que o arquivo for enviado, as funcionalidades do Viewtimanager serão ativadas.
 
 <br />
 

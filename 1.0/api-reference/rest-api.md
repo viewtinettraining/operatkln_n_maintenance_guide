@@ -1,22 +1,22 @@
 ---
 reusableId: 178
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Rest api'
+title: 'API REST'
 id: C1C-3ZC-317-MUQ
 slug: rest-api
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-02 08:54:27'
 ---
-# **<span align="center">REST API</span>**
+# **<span align="center">API REST</span>**
 
 <br />
 
-## **Data Communication Sequence**
+## **Sequência de Comunicação de Dados**
 
-Viewtisight REST API is in charge of accessing metadata, database and configuration parameters stored in Viewticore Layer, where all complexity resides. Thus, it is possible to retrieve all necessary data without having into account all the configuration performed in databases and so on.
+A API REST do Viewtisight é responsável por acessar metadados, banco de dados e parâmetros de configuração armazenados na Camada Viewticore, onde toda a complexidade reside. Assim, é possível recuperar todos os dados necessários sem precisar considerar toda a configuração realizada nos bancos de dados, etc.
 
-Although this data retrieval is fully described in the API INTEGRATION section, here is an example about how communication works when using Viewtisight API REST:
+Embora essa recuperação de dados seja totalmente descrita na seção de INTEGRAÇÃO DA API, aqui está um exemplo de como a comunicação funciona ao usar a API REST do Viewtisight:
 
 <br />
 
@@ -26,30 +26,30 @@ Although this data retrieval is fully described in the API INTEGRATION section, 
 
 ---
 
-## **API Specification**
+## **Especificação da API**
 
 <br />
 
-## **Auth**
+## **Autenticação**
 
 ### GET /auth/\*
 
-Get from Viewtiauth API. (`authControllerGet`) **Responses:**
+Obtém dados da API Viewtiauth. (`authControllerGet`) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### POST /auth/\*
 
-Post to Viewtiauth API. (`authControllerPut`) **Responses:**
+Envia dados para a API Viewtiauth. (`authControllerPut`) **Respostas:**
 
--   `200`: The record has been successfully queried/created.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado/criado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
@@ -57,230 +57,230 @@ Post to Viewtiauth API. (`authControllerPut`) **Responses:**
 
 ### POST /dashboards/wall
 
-Update an application instance of the model and persist it into the data source. (`dashboardsControllerCreatewall`) **Consumes:** `application/json` **Request body:** `body DashboardWallDto` (required) **Responses:**
+Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerCreatewall`) **Consome:** `application/json` **Corpo da requisição:** `body DashboardWallDto` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 <br />
 
 ### GET /dashboards
 
-Find all instances of the model matched by filter from the data source. (`dashboardsControllerFindAll`) **Responses:**
+Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`dashboardsControllerFindAll`) **Respostas:**
 
--   `200`: The records has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: Os registros foram consultados com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
 ### GET /dashboards/{name}
 
-Find a model instance by `name` from the data source. (`dashboardsControllerFindOne`) **Path parameters:** `name` (required) **Responses:**
+Encontra uma instância do modelo pelo `name` na fonte de dados. (`dashboardsControllerFindOne`) **Parâmetros de caminho:** `name` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
 ### DELETE /dashboards/{app}/{id}
 
-Delete a model instance by `id` from `app` in the data source. (`dashboardsControllerRemove`) **Path parameters:** `app` (required), `id` (required) **Responses:**
+Exclui uma instância do modelo pelo `id` de `app` na fonte de dados. (`dashboardsControllerRemove`) **Parâmetros de caminho:** `app` (obrigatório), `id` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully deleted.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi excluído com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
 ### PUT /dashboards/{app}
 
-Update an application instance of the model and persist it into the data source. (`dashboardsControllerUpdate`) **Path parameters:** `app` (required) **Consumes:** `application/json` **Request body:** `body UpdateDashboardDto` (required) **Responses:**
+Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerUpdate`) **Parâmetros de caminho:** `app` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdateDashboardDto` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 <br />
 
 ### PUT /dashboards/wall/{menu}/{name}
 
-Update an application instance of the model and persist it into the data source. (`dashboardsControllerUpdateWallName`) **Path parameters:** `menu` (required), `name` (required) **Responses:**
+Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerUpdateWallName`) **Parâmetros de caminho:** `menu` (obrigatório), `name` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 <br />
 
-## **Data**
+## **Dados**
 
 ### POST /data/{set}/query
 
-Find a model instance by `set` from the data source. (`dataControllerGetData`) **Path parameters:** `set` (required) **Consumes:** `application/json` **Request body:** `body DataDto` (required) **Responses:**
+Encontra uma instância do modelo pelo `set` na fonte de dados. (`dataControllerGetData`) **Parâmetros de caminho:** `set` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body DataDto` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
 ### GET /data/{set}/fields
 
-Find a model instance by `set` from the data source. (`dataControllerGetFields`) **Path parameters:** `set` (required) **Responses:**
+Encontra uma instância do modelo pelo `set` na fonte de dados. (`dataControllerGetFields`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### GET /data/sets
 
-Find all instances of the model matched by filter from the data source. (`dataControllerGetSets`) **Responses:**
+Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`dataControllerGetSets`) **Respostas:**
 
--   `200`: The records has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: Os registros foram consultados com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 <br />
 
-## **Default**
+## **Padrão**
 
 ### GET /queryobjects
 
-Find all instances of the model matched by filter from the data source. (`queryobjectsControllerFindAll`) **Responses:**
+Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`queryobjectsControllerFindAll`) **Respostas:**
 
--   `200`: The records has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: Os registros foram consultados com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### GET /queryobjects/{set}
 
-Find a model instance by `set` from the data source. (`queryobjectsControllerFindOne`) **Path parameters:** `set` (required) **Responses:**
+Encontra uma instância do modelo pelo `set` na fonte de dados. (`queryobjectsControllerFindOne`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ## **Menus**
 
 ### DELETE /menus/{menuId}
 
-Modify user preferences based on `userId` (`menusControllerDelete`) **Path parameters:** `menuId` (required) **Responses:**
+Modifica as preferências do usuário com base no `userId` (`menusControllerDelete`) **Parâmetros de caminho:** `menuId` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 ### GET /menus
 
-Find all instances of the model matched by filter from the data source. (`menusControllerFindAll`) **Responses:**
+Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`menusControllerFindAll`) **Respostas:**
 
--   `200`: The records has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: Os registros foram consultados com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### PUT /menus/{menuId}
 
-Modify user preferences based on `userId` (`menusControllerUpdate`) **Path parameters:** `menuId` (required) **Consumes:** `application/json` **Request body:** `body MenuDto` (required) **Responses:**
+Modifica as preferências do usuário com base no `userId` (`menusControllerUpdate`) **Parâmetros de caminho:** `menuId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body MenuDto` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 ## Pcap
 
 ### POST /pcap
 
-Execute gRPC method to generate Pcap File. (`pcapControllerCall`) **Consumes:** `application/json` **Request body:** `body PcapDto` (required) **Responses:**
+Executa o método gRPC para gerar arquivo Pcap. (`pcapControllerCall`) **Consome:** `application/json` **Corpo da requisição:** `body PcapDto` (obrigatório) **Respostas:**
 
--   `200`: File was generated correctly.
--   `500`: Internal Server Error.
+-   `200`: Arquivo gerado corretamente.
+-   `500`: Erro interno do servidor.
 
 ### GET /pcap/getFile/{id}
 
-Execute gRPC method to generate Pcap File. (`pcapControllerGetFile`) **Path parameters:** `id` (required) **Responses:**
+Executa o método gRPC para gerar arquivo Pcap. (`pcapControllerGetFile`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
 
--   `200`: File was generated correctly.
--   `500`: Internal Server Error.
+-   `200`: Arquivo gerado corretamente.
+-   `500`: Erro interno do servidor.
 
-## Preferences
+## Preferências
 
 ### POST /preferences
 
-Create a new instance of the model and persist it into the data source. (`preferencesControllerCreate`) **Consumes:** `application/json` **Request body:** `body CreatePreferenceDto` (required) **Responses:**
+Cria uma nova instância do modelo e persiste na fonte de dados. (`preferencesControllerCreate`) **Consome:** `application/json` **Corpo da requisição:** `body CreatePreferenceDto` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
 ### GET /preferences
 
-Find all instances of the model matched by filter from the data source. (`preferencesControllerFindAll`) **Responses:**
+Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`preferencesControllerFindAll`) **Respostas:**
 
--   `200`: The records has been successfully queried.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: Os registros foram consultados com sucesso.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### GET /preferences/{id}
 
-Find a model instance by `id` from the data source. (`preferencesControllerFindOne`) **Path parameters:** `id` (required) **Responses:**
+Encontra uma instância do modelo pelo `id` na fonte de dados. (`preferencesControllerFindOne`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### GET /preferences/getPrefByUserId/{userId}
 
-Find a model instance by `userId` from the data source. (`preferencesControllerGetPrefByUserId`) **Path parameters:** `userId` (required) **Responses:**
+Encontra uma instância do modelo pelo `userId` na fonte de dados. (`preferencesControllerGetPrefByUserId`) **Parâmetros de caminho:** `userId` (obrigatório) **Respostas:**
 
--   `200`: The record has been successfully queried.
--   `400`: Bad Request.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `404`: Not Found.
+-   `200`: O registro foi consultado com sucesso.
+-   `400`: Requisição inválida.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `404`: Não encontrado.
 
 ### PUT /preferences/{userId}
 
-Modify user preferences based on `userId` (`preferencesControllerUpdate`) **Path parameters:** `userId` (required) **Consumes:** `application/json` **Request body:** `body UpdatePreferenceDto` (required) **Responses:**
+Modifica as preferências do usuário com base no `userId` (`preferencesControllerUpdate`) **Parâmetros de caminho:** `userId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdatePreferenceDto` (obrigatório) **Respostas:**
 
--   `201`: The record has been successfully created.
--   `400`: Unprocessable Entity.
--   `401`: Unauthorized.
--   `403`: Forbidden.
--   `422`: Entity Validation Error.
+-   `201`: O registro foi criado com sucesso.
+-   `400`: Entidade não processável.
+-   `401`: Não autorizado.
+-   `403`: Proibido.
+-   `422`: Erro de validação de entidade.
 
-## Models
+## Modelos
 
 ### 1\. CreatePreferenceDto
 
@@ -341,9 +341,9 @@ Modify user preferences based on `userId` (`preferencesControllerUpdate`) **Path
 
 ---
 
-## **Data Model**
+## **Modelo de Dados**
 
-Understanding how information is combined in the data model is crucial in order to perform integrations with Viewtisght REST API.
+Entender como as informações são combinadas no modelo de dados é fundamental para realizar integrações com a API REST do Viewtisight.
 
 <br />
 
@@ -351,9 +351,9 @@ Understanding how information is combined in the data model is crucial in order 
 
 <br />
 
--   **Reports** are stored in its own collection. These objects can be embedded in queries in order to get the desired KQIs.
--   **Metadata** is needed in order to know which sets (e.g., tables) can be queried and which fields are available for each set.
+-   **Relatórios** são armazenados em sua própria coleção. Esses objetos podem ser incorporados em consultas para obter os KQIs desejados.
+-   **Metadados** são necessários para saber quais conjuntos (ex.: tabelas) podem ser consultados e quais campos estão disponíveis para cada conjunto.
 
-Once these two data sources are combined, a correct query can be generated in order to retrieve data from Data Layer.
+Uma vez combinadas essas duas fontes de dados, uma consulta correta pode ser gerada para recuperar dados da Camada de Dados.
 
-In case dashboards have been provided or created by Viewtisight GUI, there is an additional datasource named **Dashboards** that is a set of several KQIs combined together to provide meaningful statistics. These are useful to perform a predefined set of queries.
+Caso dashboards tenham sido fornecidos ou criados pela interface gráfica do Viewtisight, existe uma fonte de dados adicional chamada **Dashboards**, que é um conjunto de vários KQIs combinados para fornecer estatísticas significativas. Esses são úteis para executar um conjunto predefinido de consultas.

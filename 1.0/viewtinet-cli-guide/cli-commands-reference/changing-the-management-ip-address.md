@@ -1,44 +1,44 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Changing the Management IP Address'
+title: 'Alterando o Endereço IP de Gerenciamento'
 id: 99S-98I2-CCR-W37
 slug: changing-the-management-ip-address
 isVisible: true
 lastUpdated: '2025-10-15 14:14:33'
 ---
-# **<span align="center">Changing the Management IP Address</span>**
+# **<span align="center">Alterando o Endereço IP de Gerenciamento</span>**
 
 <br />
 
-There are several scenarios where it may be necessary to change the **management IP address** of a Viewtinet appliance or any system running the Viewtinet solution.<br />
-For example, when an appliance is first acquired, it is delivered with a **default management IP address** that must be updated to match the network segment where the appliance will be installed.<br />
-In addition, due to **operational requirements** or network topology changes, administrators may also need to modify the existing management IP to ensure proper communication and integration with other components.
+Há vários cenários em que pode ser necessário alterar o **endereço IP de gerenciamento** de um appliance Viewtinet ou de qualquer sistema que execute a solução Viewtinet.<br />
+Por exemplo, quando um appliance é adquirido pela primeira vez, ele é entregue com um **endereço IP de gerenciamento padrão** que deve ser atualizado para corresponder ao segmento de rede onde o appliance será instalado.<br />
+Além disso, devido a **requisitos operacionais** ou mudanças na topologia de rede, os administradores também podem precisar modificar o IP de gerenciamento existente para garantir a comunicação e integração adequadas com outros componentes.
 
-However, due to the **software architecture implemented by Viewtinet**, changing the IP address only at the **operating system level** is not sufficient.<br />
-Multiple internal services, configuration files, and containers depend on the management IP for communication and synchronization.<br />
-Therefore, it is necessary to execute the dedicated script described below, which automatically updates all internal references and restarts the affected services.
+No entanto, devido à **arquitetura de software implementada pelo Viewtinet**, alterar o endereço IP apenas no **nível do sistema operacional** não é suficiente.<br />
+Vários serviços internos, arquivos de configuração e containers dependem do IP de gerenciamento para comunicação e sincronização.<br />
+Portanto, é necessário executar o script dedicado descrito abaixo, que atualiza automaticamente todas as referências internas e reinicia os serviços afetados.
 
-This procedure can be performed either:
+Este procedimento pode ser realizado:
 
--   Through an **SSH session** using the `viewtinet` user, or
--   Directly from the appliance using a **keyboard and monitor** connected to the console.
+-   Por meio de uma **sessão SSH** usando o usuário `viewtinet`, ou
+-   Diretamente no appliance usando um **teclado e monitor** conectados ao console.
 
 <br />
 
-<div class="sd-callout" data-callout-type="warning">Please note that the IP address mentioned in this section is the management IP of Viewtinet and is different from the IP of IPMI</div>
+<div class="sd-callout" data-callout-type="warning">Observe que o endereço IP mencionado nesta seção é o IP de gerenciamento do Viewtinet e é diferente do IP do IPMI</div>
 
-## **Command Execution**
+## **Execução do Comando**
 
-Run the following command from the appliance console or through SSH as the `viewtinet` user:
+Execute o seguinte comando a partir do console do appliance ou por SSH como usuário `viewtinet`:
 
 ```
 /opt/vn/viewtinet-builder/scripts/change-management-ip.sh
 ```
 
-To modify the **management IP address** of a Viewtinet appliance or any Viewtinet-based deployment, a dedicated script is provided.<br />
-This script updates the network configuration, environment variables of all components, and restarts the required services.
+Para modificar o **endereço IP de gerenciamento** de um appliance Viewtinet ou de qualquer implantação baseada em Viewtinet, um script dedicado é fornecido.<br />
+Este script atualiza a configuração de rede, as variáveis de ambiente de todos os componentes e reinicia os serviços necessários.
 
-Once executed, the system will display a warning message similar to:
+Após a execução, o sistema exibirá uma mensagem de aviso semelhante a:
 
 ```
 You are about to change management ip address. If process fails, access to this server could be lost. 
@@ -47,21 +47,21 @@ To continue, it is necessary to have IPMI access, please confirm IPMI access is 
 
 ```
 
-<div class="sd-callout" data-callout-type="warning">It is important to confirm that <strong>IPMI access is enabled</strong> to ensure remote recovery in case of a network misconfiguration.</div>
+<div class="sd-callout" data-callout-type="warning">É importante confirmar que o <strong>acesso IPMI está habilitado</strong> para garantir a recuperação remota em caso de configuração incorreta de rede.</div>
 
-Type:
+Digite:
 
 ```
 yes
 ```
 
-and press **Enter** to continue.
+e pressione **Enter** para continuar.
 
 ---
 
-## **Configuration Prompts**
+## **Prompts de Configuração**
 
-The script will then request the current and new management IP details:
+O script solicitará os detalhes do IP de gerenciamento atual e do novo:
 
 ```
 Please insert the current management address: 10.30.23.205
@@ -71,7 +71,7 @@ Please insert the mask in CIDR format (e.g., 24 for 255.255.255.0): 24
 Please insert the current gateway: 10.30.23.1
 ```
 
-The script uses this information to automatically update the corresponding **Netplan** configuration file and all internal `.env` files for the different Viewtinet modules:
+O script usa essas informações para atualizar automaticamente o arquivo de configuração **Netplan** correspondente e todos os arquivos `.env` internos dos diferentes módulos Viewtinet:
 
 ```
 Netplan configuration updated.
@@ -84,9 +84,9 @@ Restarting the Viewtimanager service...
 
 ---
 
-## **Automatic Restart**
+## **Reinicialização Automática**
 
-The script performs a controlled restart of the main services:
+O script realiza uma reinicialização controlada dos principais serviços:
 
 ```
 Stopping viewtimanager_viewtinet-viewtimanager-dhyana_1 ... done
@@ -98,7 +98,7 @@ Removing containers ... done
 Creating containers ... done
 ```
 
-When the process finishes successfully, you will see a confirmation message:
+Quando o processo for concluído com sucesso, você verá uma mensagem de confirmação:
 
 ```
 Network configuration, .env update, MongoDB changes, and service restart completed successfully.
@@ -108,22 +108,22 @@ Note: You will now need to use the new management address for SSH and GUI connec
 
 ---
 
-## **Final Step**
+## **Etapa Final**
 
-To finalize the process, apply the new network configuration:
+Para finalizar o processo, aplique a nova configuração de rede:
 
 ```
 sudo netplan apply
 ```
 
-After this step, access to the system must be done using the **new management IP address** both for:
+Após esta etapa, o acesso ao sistema deve ser feito usando o **novo endereço IP de gerenciamento** tanto para:
 
--   SSH connections
--   Web interface (Viewtimanager GUI)
+-   Conexões SSH
+-   Interface web (GUI do Viewtimanager)
 
 <br />
 
-If you are configuring your appliance for the first time, you will need to proceed to the admin user activation step (see the following [link](http:#?target=757-J2LF-2VB-34B#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation))
+Se você estiver configurando seu appliance pela primeira vez, precisará prosseguir para a etapa de ativação do usuário administrador (consulte o seguinte [link](http:#?target=757-J2LF-2VB-34B#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation)#standard-chassis-installation))
 
 <br />
 

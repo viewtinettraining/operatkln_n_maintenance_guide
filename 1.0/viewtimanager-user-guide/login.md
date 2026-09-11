@@ -1,40 +1,40 @@
 ---
 reusableId: 98
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Login
+title: 'Entrar'
 id: 4YI-Q8MJ-7NI-SDN
 slug: login
 isVisible: true
 lastUpdated: '2025-07-16 14:27:19'
 ---
-# **<span align="center">Accessing the Viewtinet Platform</span>**
+# **<span align="center">Acessando a Plataforma Viewtinet</span>**
 
 <br />
-<span align="justify">Access to the Viewtinet platform is handled through the Viewtiauth module, which provides centralized authentication for all components. Users must authenticate via a login page before being allowed to access Viewtimanager, Viewtisight, or other system modules.</span>
+<span align="justify">O acesso à plataforma Viewtinet é gerenciado por meio do módulo Viewtiauth, que fornece autenticação centralizada para todos os componentes. Os usuários devem se autenticar por meio de uma página de login antes de obter acesso ao Viewtimanager, Viewtisight ou outros módulos do sistema.</span>
 
 <br />
 
-### **🌐 Access URLs**
+### **🌐 URLs de Acesso**
 
-The Viewtiauth module listens on two different ports, depending on the security mode used:
+O módulo Viewtiauth escuta em duas portas diferentes, dependendo do modo de segurança utilizado:
 
-<table><tbody><tr><th><p>Protocol</p></th><th><p>URL Format</p></th><th><p>Description</p></th></tr><tr><td><p>HTTP</p></td><td><p><code>http://&lt;platform-ip&gt;:4200</code></p></td><td><p>Insecure connection (not recommended for production)</p></td></tr><tr><td><p>HTTPS</p></td><td><p><code>https://&lt;platform-ip&gt;:4201</code></p></td><td><p>Secure connection with encryption (recommended)</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Protocolo</p></th><th><p>Formato da URL</p></th><th><p>Descrição</p></th></tr><tr><td><p>HTTP</p></td><td><p><code>http://&lt;platform-ip&gt;:4200</code></p></td><td><p>Conexão não segura (não recomendada para produção)</p></td></tr><tr><td><p>HTTPS</p></td><td><p><code>https://&lt;platform-ip&gt;:4201</code></p></td><td><p>Conexão segura com criptografia (recomendada)</p></td></tr></tbody></table>
 
-> ⚠️ **Important:**<br />
-> Although both HTTP and HTTPS are supported by default, it is strongly recommended to access the platform using **HTTPS (port 4201)**. This ensures that credentials and session data are encrypted during transmission.<br />
-> The platform may display a browser warning if **self-signed certificates** are used. To install trusted certificates, please contact the **Viewtinet Helpdesk**.
+> ⚠️ **Importante:**<br />
+> Embora tanto o HTTP quanto o HTTPS sejam suportados por padrão, é altamente recomendável acessar a plataforma usando **HTTPS (porta 4201)**. Isso garante que as credenciais e os dados da sessão sejam criptografados durante a transmissão.<br />
+> A plataforma pode exibir um aviso no navegador seforem usados **certificados autoassinados**. Para instalar certificados confiáveis, entre em contato com o **Helpdesk da Viewtinet**.
 
 ---
 
-### 🔑 Login Form
+### 🔑 Formulário de Login
 
-Once connected to the login URL, the user will be presented with a login form requiring:
+Uma vez conectado à URL de login, o usuário visualizará um formulário de login solicitando:
 
--   **Username**
--   **Password**
--   **Language selection** (bottom dropdown)
+-   **Username** (Nome de usuário)
+-   **Password** (Senha)
+-   **Language selection** (Seleção de idioma no menu suspenso inferior)
 
-Click the **Login** button to submit your credentials for validation.
+Clique no botão **Login** para enviar suas credenciais para validação.
 
 <br />
 
@@ -42,21 +42,21 @@ Click the **Login** button to submit your credentials for validation.
 
 ---
 
-### 🔄 Authentication Flow
+### 🔄 Fluxo de Autenticação
 
-1.  The credentials are validated by the **Viewtiauth** module.
-2.  Upon successful login, the user is redirected to the **App Selector** screen.
+1.  As credenciais são validadas pelo módulo **Viewtiauth**.
+2.  Após o login bem-sucedido, o usuário é redirecionado para a tela do **Seletor de Aplicativos** (App Selector).
 
 ---
 
-### 🧭 App Selector
+### 🧭 Seletor de Aplicativos (App Selector)
 
-After login, the App Selector will display the available modules the user has permission to access:
+Após o login, o App Selector exibirá os módulos disponíveis que o usuário tem permissão para acessar:
 
--   📊 **Viewtisight** – Visualization and dashboards.
--   ⚙️ **Viewtimanager** – System and module administration.
+-   📊 **Viewtisight** – Visualização e painéis (dashboards).
+-   ⚙️ **Viewtimanager** – Administração do sistema e dos módulos.
 
-Click on the desired module to enter its interface.
+Clique no módulo desejado para entrar em sua interface.
 
 <br />
 
@@ -64,7 +64,7 @@ Click on the desired module to enter its interface.
 
 <br />
 
-> 🔐 **Note**: Access rights are managed within the Viewtinet platform. If a user does not have permission to access a module, it may not appear in the selector.
+> 🔐 **Nota**: Os direitos de acesso são gerenciados dentro da plataforma Viewtinet. Se um usuário não tiver permissão para acessar um módulo, ele poderá não aparecer no seletor.
 
 ---
 
@@ -74,28 +74,28 @@ Click on the desired module to enter its interface.
 
 <br />
 
-### **🔁 Direct Access to Modules**
+### **🔁 Acesso Direto aos Módulos**
 
-It is also possible to access the modules directly via their dedicated ports:
+Também é possível acessar os módulos diretamente por meio de suas portas dedicadas:
 
-<table><tbody><tr><th><p>Module</p></th><th><p>Protocol</p></th><th><p>URL Format</p></th></tr><tr><td><p>Viewtimanager</p></td><td><p>HTTP</p></td><td><p><code>http://&lt;platform-ip&gt;:5000</code></p></td></tr><tr><td><p>Viewtimanager</p></td><td><p>HTTPS</p></td><td><p><code>https://&lt;platform-ip&gt;:5001</code></p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Módulo</p></th><th><p>Protocolo</p></th><th><p>Formato da URL</p></th></tr><tr><td><p>Viewtimanager</p></td><td><p>HTTP</p></td><td><p><code>http://&lt;platform-ip&gt;:5000</code></p></td></tr><tr><td><p>Viewtimanager</p></td><td><p>HTTPS</p></td><td><p><code>https://&lt;platform-ip&gt;:5001</code></p></td></tr></tbody></table>
 
-> 📌 **Note**:<br />
-> When accessing these ports directly, if a valid session does not already exist in the browser, the user will be automatically redirected to the **Viewtiauth** login page to authenticate before being granted access to the requested module.
+> 📌 **Nota**:<br />
+> Ao acessar essas portas diretamente, se uma sessão válida ainda não existir no navegador, o usuário será redirecionado automaticamente para a página de login do **Viewtiauth** para se autenticar antes de receber acesso ao módulo solicitado.
 
-This allows for bookmarking or scripting access to modules while still preserving centralized session management and authentication.
+Isso permite salvar o acesso aos módulos nos favoritos ou via scripts, preservando o gerenciamento centralizado de sessão e autenticação.
 
 <br />
 
-### ✅ Summary
+### ✅ Resumo
 
--   Authentication is centralized via **Viewtiauth**, accessible on:
+-   A autenticação é centralizada via **Viewtiauth**, acessível em:
     
-    -   `http://&lt;platform-ip&gt;:4200` (HTTP – insecure)
-    -   `https://&lt;platform-ip&gt;:4201` (HTTPS – secure)
--   Login is required to access **Viewtimanager** or **Viewtisight**.
--   Upon successful login, the **App Selector** will appear.
--   Always use HTTPS in production environments for secure access.
+    -   `http://&lt;platform-ip&gt;:4200` (HTTP – não seguro)
+    -   `https://&lt;platform-ip&gt;:4201` (HTTPS – seguro)
+-   O login é obrigatório para acessar o **Viewtimanager** ou o **Viewtisight**.
+-   Após o login bem-sucedido, o **Seletor de Aplicativos** aparecerá.
+-   Sempre use HTTPS em ambientes de produção para garantir o acesso seguro.
 
 <br />
 <br />

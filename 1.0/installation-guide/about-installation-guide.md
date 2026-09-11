@@ -1,49 +1,49 @@
 ---
 reusableId: 65
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Installation Guide'
+title: 'Sobre o Guia de Instalação'
 id: IEY-AS0W-4NR-IBF
 slug: about-installation-guide
 isVisible: true
 lastUpdated: '2025-10-15 10:54:05'
 ---
-# **<span align="center">Introduction</span>**
+# **<span align="center">Introdução</span>**
 
-> ## **Disclaimer & Important Notes:**
+> ## **Aviso Legal e Notas Importantes:**
 > 
-> -   Viewtinet is compatible **only** with Ubuntu Server versions **20.04** or **24.04**. Installation or execution on other operating system versions or different distributions is **not supported**.
-> -   This manual does **not** cover procedures for:
+> -   O Viewtinet é compatível **apenas** com as versões **20.04** ou **24.04** do Ubuntu Server. A instalação ou execução em outras versões do sistema operacional ou distribuições diferentes **não é suportada**.
+> -   Este manual **não** cobre procedimentos para:
 >     
->     -   Creating installation or boot media for the Ubuntu Server operating system.
->     -   Connecting to the physical server or configuring remote access for the installation of the operating system.
->     -   Deploying Ubuntu Server on virtual machines or cloud environments.
->     -   Disk partitioning processes.
-> -   However, this documentation provides a recommended partitioning scheme (detailed in Chapter 2: Installation) as a guideline.
-> -   All procedures and instructions in this manual begin **after** the operating system has been installed and partitioned according to the provided guidelines.
+>     -   Criar mídia de instalação ou de inicialização para o sistema operacional Ubuntu Server.
+>     -   Conectar ao servidor físico ou configurar acesso remoto para a instalação do sistema operacional.
+>     -   Implantar o Ubuntu Server em máquinas virtuais ou ambientes de nuvem.
+>     -   Processos de particionamento de disco.
+> -   No entanto, esta documentação fornece um esquema de particionamento recomendado (detalhado no Capítulo 2: Instalação) como diretriz.
+> -   Todos os procedimentos e instruções neste manual começam **após** a instalação e o particionamento do sistema operacional de acordo com as diretrizes fornecidas.
 >     
 >     <br />
 >     
 
 ---
 
-## **Intended Audience**
+## **Público-Alvo**
 
-This manual is intended for IT administrators, DevOps engineers, and technical personnel with experience in:
+Este manual é destinado a administradores de TI, engenheiros de DevOps e pessoal técnico com experiência em:
 
--   Linux-based server administration (Ubuntu Server specifically).
--   Observability and monitoring practices.
--   Docker and containerized environments.
+-   Administração de servidores baseados em Linux (especificamente Ubuntu Server).
+-   Práticas de observabilidade e monitoramento.
+-   Docker e ambientes conteinerizados.
 
-Users are expected to have sufficient proficiency in command-line operations and system configuration tasks.
+Espera-se que os usuários tenham proficiência suficiente em operações de linha de comando e tarefas de configuração de sistema.
 
 ---
 
-## **System Requirements**
+## **Requisitos do Sistema**
 
 <br />
 
-### Supported Operating Systems:
+### Sistemas Operacionais Suportados:
 
-<table><tbody><tr><th><p><span align="center">Operating System</span></p></th><th><p><span align="center">Version</span></p></th><th><p><span align="center">Supported</span></p></th></tr><tr><td><p><span align="center">Ubuntu Server</span></p></td><td><p><span align="center">20.04 LTS</span></p></td><td><p><span align="center">✅ Fully Supported</span></p></td></tr><tr><td><p><span align="center">Ubuntu Server</span></p></td><td><p><span align="center">24.04 LTS</span></p></td><td><p><span align="center">✅ Fully Supported</span></p></td></tr><tr><td><p><span align="center">Other Linux distros</span></p></td><td><p><span align="center">Any</span></p></td><td><p><span align="center">❌ Not Supported</span></p></td></tr><tr><td><p><span align="center">Windows, macOS</span></p></td><td><p><span align="center">Any</span></p></td><td><p><span align="center">❌ Not Supported</span></p></td></tr></tbody></table>
+<table><tbody><tr><th><p><span align="center">Sistema Operacional</span></p></th><th><p><span align="center">Versão</span></p></th><th><p><span align="center">Suportado</span></p></th></tr><tr><td><p><span align="center">Ubuntu Server</span></p></td><td><p><span align="center">20.04 LTS</span></p></td><td><p><span align="center">✅ Totalmente Suportado</span></p></td></tr><tr><td><p><span align="center">Ubuntu Server</span></p></td><td><p><span align="center">24.04 LTS</span></p></td><td><p><span align="center">✅ Totalmente Suportado</span></p></td></tr><tr><td><p><span align="center">Outras distribuições Linux</span></p></td><td><p><span align="center">Qualquer</span></p></td><td><p><span align="center">❌ Não Suportado</span></p></td></tr><tr><td><p><span align="center">Windows, macOS</span></p></td><td><p><span align="center">Qualquer</span></p></td><td><p><span align="center">❌ Não Suportado</span></p></td></tr></tbody></table>
 
 <br />

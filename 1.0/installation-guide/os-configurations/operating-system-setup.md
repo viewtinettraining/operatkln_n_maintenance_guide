@@ -1,36 +1,36 @@
 ---
 reusableId: 67
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Operating System Setup'
+title: 'Configuração do Sistema Operacional'
 id: DM2-XF36-ELR-TFC
 slug: operating-system-setup
 isVisible: true
 lastUpdated: '2025-10-14 09:43:46'
 ---
-# **<span align="center">Operating System Profile Setup</span>**
+# **<span align="center">Configuração do Perfil do Sistema Operacional</span>**
 
-In this step, you will configure the default user profile for the operating system installation.
+Nesta etapa, você configurará o perfil de usuário padrão para a instalação do sistema operacional.
 
-All Viewtinet modules, containers, and services run under the dedicated `viewtinet` user. Therefore, it is **mandatory** to create this user exactly as specified below. The server's hostname and the user's password are at your discretion.
+Todos os módulos, contêineres e serviços do Viewtinet são executados sob o usuário dedicado `viewtinet`. Portanto, é **obrigatório** criar este usuário exatamente como especificado abaixo. O nome do host do servidor e a senha do usuário ficam a critério do administrador.
 
 ---
 
-## **Creating the Viewtinet User and Setting Hostname**
+## **Criando o Usuário Viewtinet e Definindo o Hostname**
 
-During the Ubuntu Server installation, you will encounter the **Profile setup** screen. Complete the fields as follows:
+Durante a instalação do Ubuntu Server, você encontrará a tela de **Configuração de Perfil**. Preencha os campos da seguinte forma:
 
--   **Your name:**<br />
-    Enter `viewtinet`.
--   **Your server’s name:**<br />
-    Enter your desired hostname. This hostname is how the server will identify itself within your network.
--   **Pick a username:**<br />
-    Enter `viewtinet`. _(This username is mandatory.)_
--   **Choose a password:**<br />
-    Enter a strong, secure password following your organization's security guidelines.
--   **Confirm your password:**<br />
-    Re-enter the password to confirm.
+-   **Seu nome:**<br />
+    Insira `viewtinet`.
+-   **Nome do seu servidor:**<br />
+    Insira o hostname desejado. Este hostname é como o servidor se identificará em sua rede.
+-   **Escolha um nome de usuário:**<br />
+    Insira `viewtinet`. _(Este nome de usuário é obrigatório.)_
+-   **Escolha uma senha:**<br />
+    Insira uma senha forte e segura seguindo as diretrizes de segurança de sua organização.
+-   **Confirme sua senha:**<br />
+    Re-insira a senha para confirmar.
 
-Ensure all fields are correctly filled as shown in the example below:
+Certifique-se de que todos os campos estejam corretamente preenchidos conforme mostrado no exemplo abaixo:
 
 <br />
 
@@ -38,16 +38,16 @@ Ensure all fields are correctly filled as shown in the example below:
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/hFmxz31pTGJmrTg53sRY.png"></figure>
 
-Once the fields are filled, select `[Done]` to proceed with the installation.
+Depois que os campos forem preenchidos, selecione `[Concluído]` para prosseguir com a instalação.
 
 ---
 
-**Important:**
+**Importante:**
 
--   Do not deviate from using `viewtinet` as the system username, as this is required for correct operation of the platform.
--   Ensure that the password you set complies with your organization's password policies.
+-   Não desvie do uso de `viewtinet` como nome de usuário do sistema, pois isso é necessário para o funcionamento correto da plataforma.
+-   Certifique-se de que a senha definida esteja em conformidade com as políticas de senha de sua organização.
 
-Proceed to the following chapters once the profile setup is complete.
+Prossiga para os capítulos seguintes após concluir a configuração do perfil.
 
 ---
 

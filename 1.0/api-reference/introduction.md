@@ -1,27 +1,27 @@
 ---
 reusableId: 177
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Introduction
+title: Introdução
 id: SEI-EBT-IKZ-LTB
 slug: introduction
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-02 08:53:55'
 ---
-# **<span align="center">Introduction</span>**
+# **<span align="center">Introdução</span>**
 
-This document aims to describe how to use one of the export methods in Viewtisight; a RESTful API providing access to all elements needed by viewtisight, including data layer.
+Este documento tem como objetivo descrever como utilizar um dos métodos de exportação do Viewtisight; uma API RESTful que fornece acesso a todos os elementos necessários pelo Viewtisight, incluindo a camada de dados.
 
-Concretely, the API provides access to:
+Concretamente, a API oferece acesso a:
 
--   User preferences
+-   Preferências do usuário
 -   Menus
 -   Dashboards
--   Reports
--   Data Layer:
+-   Relatórios
+-   Camada de Dados:
     
-    -   Metadata: sets, fields, etc.
-    -   Data: direct access to data (raw tables, aggregations, etc.)
-    -   Pcap files
+    -   Metadados: conjuntos, campos, etc.
+    -   Dados: acesso direto aos dados (tabelas brutas, agregações, etc.)
+    -   Arquivos Pcap
 
-The API is designed for flexibility and optimized access to data layer in order to enhance third-party systems with all the functionality Viewtisight provides. Note that BI layer and all its visualizations are excluded here.
+A API é projetada para flexibilidade e acesso otimizado à camada de dados, a fim de aprimorar sistemas de terceiros com toda a funcionalidade que o Viewtisight oferece. Observe que a camada de BI e todas as suas visualizações estão excluídas aqui.

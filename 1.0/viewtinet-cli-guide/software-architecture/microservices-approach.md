@@ -1,70 +1,70 @@
 ---
 reusableId: 44
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Microservices Approach'
+title: 'Abordagem de Microsserviços'
 id: OWE-SBWL-ZGV-PXH
 slug: microservices-approach
 isVisible: true
 lastUpdated: '2025-10-15 15:56:46'
 ---
-# **<span align="center">Microservices Architecture</span>**
+# **<span align="center">Arquitetura de Microsserviços</span>**
 
-<span align="justify">Viewtinet is built on a microservices-based architecture, where each module is composed of multiple Docker containers that perform specific, isolated functions. This design enhances scalability, flexibility, and performance, while allowing for modular deployment, simplified troubleshooting, and efficient resource usage.</span>
+<span align="justify">O Viewtinet é construído sobre uma arquitetura baseada em microsserviços, onde cada módulo é composto por vários containers Docker que realizam funções específicas e isoladas. Esse design aprimora a escalabilidade, a flexibilidade e o desempenho, ao mesmo tempo que permite implantação modular, solução de problemas simplificada e uso eficiente de recursos.</span>
 
-## **Key Benefits of the Microservices Approach**
+## **Principais Benefícios da Abordagem de Microsserviços**
 
--   **Scalability**: Containers can be scaled independently based on load.
--   **Flexibility**: Modules can be updated or restarted without affecting the entire system.
--   **Fault Isolation**: Errors in one container do not bring down the full platform.
--   **Resource Optimization**: Services consume only what they need.
--   **Independent Deployment**: Each component can be deployed, updated, or rolled back independently​
+-   **Escalabilidade**: Os containers podem ser escalados independentemente com base na carga.
+-   **Flexibilidade**: Os módulos podem ser atualizados ou reiniciados sem afetar todo o sistema.
+-   **Isolamento de Falhas**: Erros em um container não derrubam toda a plataforma.
+-   **Otimização de Recursos**: Os serviços consomem apenas o que precisam.
+-   **Implantação Independente**: Cada componente pode ser implantado, atualizado ou revertido de forma independente.
 
-## **Modular Composition**
+## **Composição Modular**
 
-Each Viewtinet product—**Viewtilog**, **Viewtimon**, and **Viewtify QoS**—is made up of several modules, including:
+Cada produto Viewtinet — **Viewtilog**, **Viewtimon** e **Viewtify QoS** — é composto por vários módulos, incluindo:
 
--   **Viewtimanager**: Manages configuration, plugin handling, and module orchestration.
--   **Viewtisight**: Provides dashboards, reports, and data visualization.
--   **Viewtiauth**: Manages authentication and access control.
--   **Dhyana**: Implements ETL pipelines for data collection and transformation.
--   **Viewticore**: Functions as the data warehouse and time-series engine.
--   **HA\_Proxy**: Manages load balancing and proxy services.
--   **License Checker**: Handles licensing validation and enforcement​
+-   **Viewtimanager**: Gerencia configuração, tratamento de plugins e orquestração de módulos.
+-   **Viewtisight**: Fornece dashboards, relatórios e visualização de dados.
+-   **Viewtiauth**: Gerencia autenticação e controle de acesso.
+-   **Dhyana**: Implementa pipelines ETL para coleta e transformação de dados.
+-   **Viewticore**: Funciona como data warehouse e motor de séries temporais.
+-   **HA\_Proxy**: Gerencia balanceamento de carga e serviços de proxy.
+-   **License Checker**: Trata a validação e aplicação de licenças.
 
-## **GUI Modules and Their Containers**
+## **Módulos GUI e Seus Containers**
 
-Each GUI module (e.g., Viewtimanager, Viewtiauth, Viewtisight) typically includes:
+Cada módulo GUI (ex.: Viewtimanager, Viewtiauth, Viewtisight) normalmente inclui:
 
--   **Frontend container**: Presents the user interface and handles interactions.
--   **Backend container**: Processes business logic, authentication, or configuration tasks.
--   **MongoDB container**: Stores persistent state, configuration, or user preferences.
+-   **Container de Frontend**: Apresenta a interface do usuário e gerencia as interações.
+-   **Container de Backend**: Processa lógica de negócios, autenticação ou tarefas de configuração.
+-   **Container MongoDB**: Armazena estado persistente, configuração ou preferências do usuário.
 
-This separation allows for cleaner architecture and easier debugging or maintenance of each role within the platform​
-
-<br />
-
-## **Data Processing Layers in Viewtilog (Dhyana)**
-
-The backend module **Dhyana** follows a classic **ETL (Extract, Transform, Load)** microservice pattern:
-
--   **Extraction Layer**: Collects data from protocols like SNMP, NetFlow, Syslog, ICMP, etc.
--   **Transformation Layer**: Applies filters, conversions, regex processing, and mathematical calculations.
--   **Loading Layer**: Exports data to target systems in formats like XDR, UDP, TCP, or custom databases​
-
-This pipeline-based processing is defined via XML files and is highly customizable based on network and observability needs.
+Essa separação permite uma arquitetura mais limpa e facilita a depuração ou manutenção de cada função dentro da plataforma.
 
 <br />
 
-## **Viewticore: The Core Data Engine**
+## **Camadas de Processamento de Dados no Viewtilog (Dhyana)**
 
-**Viewticore** is the time-series data warehouse that supports:
+O módulo backend **Dhyana** segue um padrão clássico de microsserviço **ETL (Extrair, Transformar, Carregar)**:
 
--   Multi-node scalability and parallel query execution
--   Data retention policies
--   SQL functions (GROUP BY, JOIN, ORDER BY, etc.)
--   Aggregation, alarm management, and document export (PDF)
--   Query cancellation and optimization capabilities​
+-   **Camada de Extração**: Coleta dados de protocolos como SNMP, NetFlow, Syslog, ICMP, etc.
+-   **Camada de Transformação**: Aplica filtros, conversões, processamento de regex e cálculos matemáticos.
+-   **Camada de Carregamento**: Exporta dados para sistemas de destino em formatos como XDR, UDP, TCP ou bancos de dados personalizados.
+
+Esse processamento baseado em pipeline é definido via arquivos XML e é altamente personalizável com base nas necessidades de rede e observabilidade.
+
+<br />
+
+## **Viewticore: O Motor Central de Dados**
+
+**Viewticore** é o data warehouse de séries temporais que suporta:
+
+-   Escalabilidade multi-nó e execução paralela de consultas
+-   Políticas de retenção de dados
+-   Funções SQL (GROUP BY, JOIN, ORDER BY, etc.)
+-   Agregação, gerenciamento de alarmes e exportação de documentos (PDF)
+-   Capacidades de cancelamento e otimização de consultas
 
 ---
 
-The microservices architecture in Viewtinet not only supports complex observability and analytics workflows but also makes the platform highly adaptable and easy to manage through CLI-driven operations.
+A arquitetura de microsserviços no Viewtinet não apenas suporta fluxos de trabalho complexos de observabilidade e análise, mas também torna a plataforma altamente adaptável e fácil de gerenciar por meio de operações via CLI.

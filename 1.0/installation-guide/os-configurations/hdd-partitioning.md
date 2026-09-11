@@ -1,73 +1,73 @@
 ---
 reusableId: 66
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'HDD partitioning'
+title: 'Particionamento de HDD'
 id: BGW-74PL-76T-ZMH
 slug: hdd-partitioning
 isVisible: true
 lastUpdated: '2025-10-15 10:54:43'
 ---
-# **<span align="center">HDD Partitioning</span>**
+# **<span align="center">Particionamento de HDD</span>**
 
 <br />
 
-## **Recommended Partitioning Scheme**
+## **Esquema de Particionamento Recomendado**
 
-Viewtinet strongly recommends installations to utilize **two separate groups of disks** for optimal performance and redundancy:
+O Viewtinet recomenda fortemente que as instalações utilizem **dois grupos separados de discos** para desempenho ótimo e redundância:
 
--   **First Disk Group (Operating System):** Use a RAID 1 configuration with at least **2 physical disks** to protect the operating system data.
--   **Second Disk Group (Data Warehouse):** Use at least **2 additional physical disks**. Depending on the number of disks available, it is suggested to implement either RAID 10 (preferred) or RAID 5.
+-   **Primeiro Grupo de Discos (Sistema Operacional):** Use uma configuração RAID 1 com pelo menos **2 discos físicos** para proteger os dados do sistema operacional.
+-   **Segundo Grupo de Discos (Data Warehouse):** Use pelo menos **2 discos físicos adicionais**. Dependendo do número de discos disponíveis, sugere-se implementar RAID 10 (preferencial) ou RAID 5.
 
-For servers equipped with physical RAID controllers, configure the RAID arrays directly on the controller.
-
-<br />
-
-### **Recommended Partitions for Operating System (Disk Group 1 - RAID 1):**
-
-<table><tbody><tr><th><p>Mount Point</p></th><th><p>Recommended Size</p></th><th><p>Partition Type</p></th><th><p>Filesystem</p></th></tr><tr><td><p><code>/boot</code></p></td><td><p>1 GB</p></td><td><p>Primary</p></td><td><p>XFS</p></td></tr><tr><td><p><code>swap</code></p></td><td><p>96 GB (or same value as RAM)</p></td><td><p>Primary</p></td><td><p>swap</p></td></tr><tr><td><p><code>/</code></p></td><td><p>35 GB</p></td><td><p>Logical</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/home</code></p></td><td><p>50 GB</p></td><td><p>Logical</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/tmp</code></p></td><td><p>10 GB</p></td><td><p>Logical</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/var</code></p></td><td><p>100 GB</p></td><td><p>Logical</p></td><td><p>XFS</p></td></tr></tbody></table>
+Para servidores equipados com controladores RAID físicos, configure os arrays RAID diretamente no controlador.
 
 <br />
 
-### **Recommended Partitions for Data Warehouse (Disk Group 2 - RAID 10 preferred or RAID 5):**
+### **Partições Recomendadas para o Sistema Operacional (Grupo de Discos 1 - RAID 1):**
 
-<table><tbody><tr><th><p>Mount Point</p></th><th><p>Recommended Size</p></th><th><p>Partition Type</p></th><th><p>Filesystem</p></th><th><p>Comments</p></th></tr><tr><td><p><code>/opt/vn</code></p></td><td><p>200 GB</p></td><td><p>Logical</p></td><td><p>ext4</p></td><td><p><br></p></td></tr><tr><td><p><code>/opt/vn/viewticore/</code></p></td><td><p>1.2 TB</p></td><td><p>Logical</p></td><td><p>ext4</p></td><td><p><br></p></td></tr><tr><td><p><code>/opt/vn/dhyana/var/data/</code></p></td><td><p>400 GB</p></td><td><p>Logical</p></td><td><p>ext4</p></td><td><p>Or increase if more space is available</p></td></tr><tr><td><p><code>/opt/vn/probe/var/</code><br>(if viewtimon is to be deployed)</p></td><td><p>600 GB</p></td><td><p>Logical</p></td><td><p>ext4</p></td><td><p>Or increase if more space is available</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Ponto de Montagem</p></th><th><p>Tamanho Recomendado</p></th><th><p>Tipo de Partição</p></th><th><p>Sistema de Arquivos</p></th></tr><tr><td><p><code>/boot</code></p></td><td><p>1 GB</p></td><td><p>Primária</p></td><td><p>XFS</p></td></tr><tr><td><p><code>swap</code></p></td><td><p>96 GB (ou mesmo valor da RAM)</p></td><td><p>Primária</p></td><td><p>swap</p></td></tr><tr><td><p><code>/</code></p></td><td><p>35 GB</p></td><td><p>Lógica</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/home</code></p></td><td><p>50 GB</p></td><td><p>Lógica</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/tmp</code></p></td><td><p>10 GB</p></td><td><p>Lógica</p></td><td><p>XFS</p></td></tr><tr><td><p><code>/var</code></p></td><td><p>100 GB</p></td><td><p>Lógica</p></td><td><p>XFS</p></td></tr></tbody></table>
 
--   **Note:** Adjust partition sizes proportionally according to your specific needs and available disk capacity.
+<br />
+
+### **Partições Recomendadas para o Data Warehouse (Grupo de Discos 2 - RAID 10 preferencial ou RAID 5):**
+
+<table><tbody><tr><th><p>Ponto de Montagem</p></th><th><p>Tamanho Recomendado</p></th><th><p>Tipo de Partição</p></th><th><p>Sistema de Arquivos</p></th><th><p>Observações</p></th></tr><tr><td><p><code>/opt/vn</code></p></td><td><p>200 GB</p></td><td><p>Lógica</p></td><td><p>ext4</p></td><td><p><br></p></td></tr><tr><td><p><code>/opt/vn/viewticore/</code></p></td><td><p>1,2 TB</p></td><td><p>Lógica</p></td><td><p>ext4</p></td><td><p><br></p></td></tr><tr><td><p><code>/opt/vn/dhyana/var/data/</code></p></td><td><p>400 GB</p></td><td><p>Lógica</p></td><td><p>ext4</p></td><td><p>Ou aumentar se houver mais espaço disponível</p></td></tr><tr><td><p><code>/opt/vn/probe/var/</code><br>(se o viewtimon for implantado)</p></td><td><p>600 GB</p></td><td><p>Lógica</p></td><td><p>ext4</p></td><td><p>Ou aumentar se houver mais espaço disponível</p></td></tr></tbody></table>
+
+-   **Nota:** Ajuste os tamanhos das partições proporcionalmente de acordo com suas necessidades específicas e a capacidade de disco disponível.
 
 ---
 
-## **NVMe Disk Recommendations**
+## **Recomendações para Discos NVMe**
 
-For servers equipped with NVMe disks that lack a physical RAID controller, configure partitions using Linux's software RAID (mdadm) utility:
+Para servidores equipados com discos NVMe sem controlador RAID físico, configure as partições usando o utilitario de RAID por software do Linux (mdadm):
 
--   Use RAID 1 for Operating System partitions.
--   Use RAID 10 (preferred) or RAID 5 for Data Warehouse partitions.
+-   Use RAID 1 para partições do Sistema Operacional.
+-   Use RAID 10 (preferencial) ou RAID 5 para partições do Data Warehouse.
 
 ---
 
-## **Virtual Machine Recommendations**
+## **Recomendações para Máquinas Virtuais**
 
-In virtualized environments, Viewtinet recommends maintaining the same logical separation:
+Em ambientes virtualizados, o Viewtinet recomenda manter a mesma separação lógica:
 
--   Use **two separate virtual storages**:
+-   Use **dois armazenamentos virtuais separados**:
     
-    -   One virtual disk dedicated to the operating system partitions.
-    -   One or more virtual disks for Data Warehouse storage.
+    -   Um disco virtual dedicado às partições do sistema operacional.
+    -   Um ou mais discos virtuais para armazenamento do Data Warehouse.
 
-This configuration maintains separation and ensures optimal performance and manageability.
-
----
-
-## **Customizing Partitioning During Installation**
-
-During the Ubuntu Server installation, select **Custom storage layout** to manually define partitions according to the guidelines provided above. Ensure correct filesystems and RAID configurations are applied based on your environment (physical RAID controller, NVMe disks, or virtualized environment).
+Esta configuração mantém a separação e garante desempenho e gerenciabilidade ótimos.
 
 ---
 
-**Important:**
+## **Personalizando o Particionamento Durante a Instalação**
 
--   Partitioning setup should be completed **before** proceeding with Viewtinet installation steps described later in this manual.
--   Detailed instructions for disk partitioning beyond these guidelines are outside the scope of this document.
+Durante a instalação do Ubuntu Server, selecione **Layout de armazenamento personalizado** para definir manualmente as partições de acordo com as diretrizes fornecidas acima. Certifique-se de que os sistemas de arquivos e configurações de RAID corretos sejam aplicados com base em seu ambiente (controlador RAID físico, discos NVMe ou ambiente virtualizado).
+
+---
+
+**Importante:**
+
+-   A configuração de particionamento deve ser concluída **antes** de prosseguir com as etapas de instalação do Viewtinet descritas posteriormente neste manual.
+-   Instruções detalhadas de particionamento de disco além dessas diretrizes estão fora do escopo deste documento.
 
 <br />
 

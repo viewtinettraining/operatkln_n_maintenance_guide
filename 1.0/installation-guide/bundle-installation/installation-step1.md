@@ -1,28 +1,28 @@
 ---
 reusableId: 70
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Installation step1 '
+title: 'Passo 1 da Instalação '
 id: SM3-711J-KFE-QS7
 slug: installation-step1
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-03-10 15:51:34'
 ---
-# <span align="center">Installation Step 1</span>
+# <span align="center">Passo 1 da Instalação</span>
 
 <br />
 
-<div class="sd-callout" data-callout-type="alert">Internet access is mandatory during the installation process, as all the libraries and tools needed for the execution of Viewtinet will be installed</div>
+<div class="sd-callout" data-callout-type="alert">O acesso à internet é obrigatório durante o processo de instalação, pois todas as bibliotecas e ferramentas necessárias para a execução do Viewtinet serão instaladas</div>
 
-<div class="sd-callout" data-callout-type="info">The installation is carried out in 3 steps: deployment, installation of dependencies, loading of images, and configuration</div>
+<div class="sd-callout" data-callout-type="info">A instalação é realizada em 3 etapas: implantação, instalação de dependências, carregamento de imagens e configuração</div>
 
-The first step is to execute the deployment script:
+O primeiro passo é executar o script de implantação:
 
 ```bash
 ./deploy.sh
 ```
 
-Upon execution, you will see the following prompts and progress:
+Após a execução, você verá os seguintes prompts e o progresso:
 
 ```bash
 viewtinet@dante:~$ ./deploy.sh
@@ -30,9 +30,9 @@ Uncompressing and deploying software... This may take a while. Please wait.
 Please write the bundle passphrase:
 ```
 
-<div class="sd-callout" data-callout-type="info">At this point, enter the <strong>passphrase</strong> that was sent along with your bundle.</div>
+<div class="sd-callout" data-callout-type="info">Neste ponto, insira a <strong>senha (passphrase)</strong> enviada junto com o seu bundle.</div>
 
-After entering the passphrase, the system will proceed with the deployment. At the end of the process, you will see an output similar to the one shown below:
+Após inserir a senha, o sistema prosseguirá com a implantação. Ao final do processo, você verá uma saída semelhante à mostrada abaixo:
 
 ```bash
 Deploying current software

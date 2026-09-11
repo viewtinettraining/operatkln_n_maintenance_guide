@@ -1,25 +1,25 @@
 ---
 reusableId: 96
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Home
+title: 'Início'
 id: HPZ-IWII-6RL-1YQ
 slug: home
 isVisible: true
 lastUpdated: '2025-10-15 14:32:37'
 ---
-# **<span align="center">Home Dashboard</span>**
+# **<span align="center">Painel Inicial (Home Dashboard)</span>**
 
 <br />
 
-This is the default landing page after login, providing a quick overview of system performance.
+Esta é a página inicial padrão após o login, fornecendo uma visão geral rápida do desempenho do sistema.
 
-## **✅ System Health**
+## **✅ Integridade do Sistema (System Health)**
 
-Visual indicators confirm that the system is up and running with no issues.
+Indicadores visuais confirmam que o sistema está funcionando normalmente e sem problemas.
 
-A green box with a thumbs-up icon shows healthy status.
+Uma caixa verde com um ícone de polegar para cima indica o status saudável.
 
-Timestamp of the last system check is displayed.
+O carimbo de data/hora da última verificação do sistema é exibido.
 
 <br />
 
@@ -27,17 +27,17 @@ Timestamp of the last system check is displayed.
 
 <br />
 
-## **📌 Dashboard Views Dropdown**
+## **📌 Menu Suspenso de Visualizações do Painel**
 
 <br />
 
-From the Home dashboard, users can switch between the following monitoring dashboards:
+A partir do painel inicial (Home), os usuários podem alternar entre os seguintes painéis de monitoramento:
 
--   **Cluster Performance**
--   **Disk Monitoring**
--   **Monitoring Users Logins**
--   **Disk Health Check (option listed, not shown in the images)**
--   **Each view provides focused monitoring depending on the selected topic.**
+-   **Desempenho do Cluster (Cluster Performance)**
+-   **Monitoramento de Disco (Disk Monitoring)**
+-   **Monitoramento de Logins de Usuários (Monitoring Users Logins)**
+-   **Verificação de Integridade do Disco (opção listada, não mostrada nas imagens)**
+-   **Cada visualização fornece monitoramento direcionado dependendo do tema selecionado.**
     
     <br />
     
@@ -50,83 +50,83 @@ From the Home dashboard, users can switch between the following monitoring dashb
 
 <br />
 
-## **📊 Cluster Performance**
+## **📊 Desempenho do Cluster (Cluster Performance)**
 
 <br />
 
-Real-time graphs with metrics collected from the cluster, including:
+Gráficos em tempo real com métricas coletadas do cluster, incluindo:
 
--   CPU Usage:
+-   Uso de CPU:
     
-    -   Breakdown by User, System, Wait, and Nice
--   Memory Usage:
+    -   Detalhamento por User, System, Wait e Nice
+-   Uso de Memória:
     
-    -   Percentage of used memory
--   Number of Processes:
--   Active system processes over time
--   Network:
+    -   Porcentagem de memória utilizada
+-   Número de Processos:
+    -   Processos ativos do sistema ao longo do tempo
+-   Rede:
     
-    -   Input and output throughput (Mbps) on the node
+    -   Taxa de transferência de entrada e saída (Mbps) no nó
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/0MpfuRYMlkdLqpgpaUpN.png" align="center"></figure>
 
 <br />
 
-## **💽 Disk Monitoring**
+## **💽 Monitoramento de Disco (Disk Monitoring)**
 
-Accessible via a dropdown in the dashboard view, this panel provides disk-related metrics per partition:
+Acessível através de um menu suspenso na exibição do painel, este painel fornece métricas relacionadas a disco por partição:
 
--   Total Disk Usage:
+-   Uso Total do Disco:
     
-    -   Displayed in both percentage and gigabytes
--   Read IOPS / Write IOPS:
+    -   Exibido em porcentagem e em gigabytes
+-   IOPS de Leitura / IOPS de Gravação:
     
-    -   Input/output operations per second by partition
+    -   Operações de entrada/saída por segundo por partição
     -   Read Await / Write Await:
-    -   Latency in milliseconds for read/write operations
--   Time Filters Available:
+    -   Latência em milissegundos para operações de leitura/gravação
+-   Filtros de Tempo Disponíveis:
     
-    -   Start and end date
-    -   Time shortcut (e.g., “Last day”)
-    -   Granularity (e.g., 5 minutes)
+    -   Data inicial e final
+    -   Atalho de tempo (por exemplo, “Último dia”)
+    -   Granularidade (por exemplo, 5 minutos)
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/dJbEPWPk39uUNLIH2FHs.png" align="center"></figure>
 
 <br />
 
-## **👥 Monitoring Users Logins**
+## **👥 Monitoramento de Logins de Usuários**
 
-This section allows administrators to review platform access by users.
+Esta seção permite que os administradores revisem o acesso à plataforma pelos usuários.
 
--   Logins Graph:
+-   Gráfico de Logins:
     
-    -   Bar chart showing login counts per user (e.g., admin)
--   Users Login Time Table:
+    -   Gráfico de barras mostrando contagens de login por usuário (por exemplo, admin)
+-   Tabela de Horários de Login dos Usuários:
     
-    -   Displays usernames with corresponding timestamps
--   Login Timeline:
+    -   Exibe nomes de usuário com seus respectivos carimbos de data/hora
+-   Linha do Tempo de Login:
     
-    -   A time series chart of login activity
-    -   Useful For:
-    -   Auditing platform access
-    -   Tracking login frequency and time windows
+    -   Gráfico de séries temporais da atividade de login
+    -   Útil para:
+    -   Auditoria de acesso à plataforma
+    -   Acompanhamento da frequência de login e janelas de tempo
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/Dpf2IKLcxU1gk5TbQbEO.png" align="center"></figure>
 
 <br />
 
-## **✅ Summary**
+## **✅ Resumo**
 
 <br />
 
-The Viewtimanager module provides centralized access to:
+O módulo Viewtimanager fornece acesso centralizado para:
 
-System health status and performance metrics
+Status de integridade do sistema e métricas de desempenho
 
-Disk usage and latency monitoring
+Monitoramento de latência e uso de disco
 
-User access auditing
+Auditoria de acesso de usuários
 
-Navigation to all major components of the Viewtinet platform
+Navegação para todos os principais componentes da plataforma Viewtinet
 
-It is the foundational UI for administrators to maintain platform stability, audit activities, and ensure service continuity.
+É a interface fundamental para os administradores manterem a estabilidade da plataforma, auditarem atividades e garantirem a continuidade dos serviços.

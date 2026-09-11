@@ -1,120 +1,120 @@
 ---
 reusableId: 68
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'System Configuration'
+title: 'Configuração do Sistema'
 id: GG6-I8VJ-HKN-FYJ
 slug: system-configuration
 isVisible: true
 lastUpdated: '2025-10-14 09:45:50'
 ---
-# **<span align="center">System Initialization</span>**
+# **<span align="center">Inicialização do Sistema</span>**
 
 <br />
-This chapter describes the essential steps required to configure the system profile, SSH service, and time synchronization services. These configurations must be completed before proceeding with the installation of Viewtinet.<br />
-User Profile Setup
+Este capítulo descreve as etapas essenciais para configurar o perfil do sistema, o serviço SSH e os serviços de sincronização de tempo. Essas configurações devem ser concluídas antes de prosseguir com a instalação do Viewtinet.<br />
+Configuração do Perfil de Usuário
 
-All Viewtinet modules, containers, and services run under the `viewtinet` user. This user must be created during the operating system installation process.
+Todos os módulos, contêineres e serviços do Viewtinet são executados sob o usuário `viewtinet`. Este usuário deve ser criado durante o processo de instalação do sistema operacional.
 
-### Profile Setup During Installation
+### Configuração de Perfil Durante a Instalação
 
-On the **Profile setup** screen, enter the following details:
+Na tela de **Configuração de Perfil**, insira os seguintes detalhes:
 
--   **Your name:** `viewtinet`
--   **Your server’s name:** Any hostname of your choice (e.g., `my_viewtilog`)
--   **Pick a username:** `viewtinet`
--   **Choose a password:** Set a secure password
--   **Confirm your password:** Re-enter the same password
+-   **Seu nome:** `viewtinet`
+-   **Nome do seu servidor:** Qualquer hostname de sua escolha (ex.: `my_viewtilog`)
+-   **Escolha um nome de usuário:** `viewtinet`
+-   **Escolha uma senha:** Defina uma senha segura
+-   **Confirme sua senha:** Re-insira a mesma senha
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/qRQJX723KTkRI4WS2odl.png"></figure>
 
-Click `[Done]` to continue.
+Clique em `[Concluído]` para continuar.
 
-> ⚠️ Do not change the username. It must be `viewtinet` for the system to function correctly.
+> ⚠️ Não altere o nome de usuário. Deve ser `viewtinet` para o sistema funcionar corretamente.
 
 ---
 
-## **SSH Setup**
+## **Configuração do SSH**
 
-To enable secure remote management, it is mandatory to install and enable the **OpenSSH Server**.
+Para habilitar o gerenciamento remoto seguro, é obrigatório instalar e habilitar o **Servidor OpenSSH**.
 
-On the **SSH Setup** screen:
+Na tela de **Configuração do SSH**:
 
--   Check the option: `[X] Install OpenSSH server`
--   Leave the import identity option as `No`
--   Ensure: `[X] Allow password authentication over SSH` is checked
+-   Marque a opção: `[X] Instalar servidor OpenSSH`
+-   Deixe a opção de importar identidade como `Não`
+-   Certifique-se de que: `[X] Permitir autenticação por senha via SSH` esteja marcado
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/Ud68BjEZe1OzSldgxJeA.png"></figure>
 
-Click `[Done]` to proceed.
+Clique em `[Concluído]` para prosseguir.
 
-Optional Packages
+Pacotes Opcionais
 
-If the installer presents a screen for selecting additional packages (e.g., "Featured Server Snaps"):
+Se o instalador apresentar uma tela para selecionar pacotes adicionais (ex.: "Snaps de Servidor em Destaque"):
 
--   **Do not select any packages**.
+-   **Não selecione nenhum pacote**.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/V0OGHxgoBgQn5JAxh0Xl.png"></figure>
 
 <br />
 
--   Simply click `[Done]` to continue the installation process.
+-   Simplesmente clique em `[Concluído]` para continuar o processo de instalação.
 
-> ❗Installing additional packages at this point is not recommended and may cause conflicts with Viewtinet modules.
+> ❗ A instalação de pacotes adicionais neste ponto não é recomendada e pode causar conflitos com os módulos do Viewtinet.
 
 ---
 
-## **NTP Configuration**
+## **Configuração NTP**
 
-Correct time synchronization is essential. Configure the system to use an NTP server as follows:
+A sincronização correta do tempo é essencial. Configure o sistema para usar um servidor NTP da seguinte forma:
 
-### **Install NTP Service**
+### **Instalar o Serviço NTP**
 
 ```bash
 sudo apt-get install ntp
 ```
 
-### **Edit NTP Configuration File**
+### **Editar o Arquivo de Configuração NTP**
 
 ```bash
 sudo vi /etc/ntp.conf
 ```
 
-If the customer provides NTP servers, add them below the section:
+Se o cliente fornecer servidores NTP, adicione-os abaixo da seção:
 
 ```bash
 # Specify one or more NTP servers
 ```
 
-Otherwise, use public NTP servers closest to your location: [https://support.ntp.org/bin/view/Servers/NTPPoolServers](https://support.ntp.org/bin/view/Servers/NTPPoolServers)
+Caso contrário, use servidores NTP públicos mais próximos da sua localização: [https://support.ntp.org/bin/view/Servers/NTPPoolServers](https://support.ntp.org/bin/view/Servers/NTPPoolServers)
 
 <br />
 
-### **Restart NTP Service**
+### **Reiniciar o Serviço NTP**
 
 ```bash
 sudo service ntp restart
 ```
 
-### **Verify NTP Status**
+### **Verificar o Status do NTP**
 
 ```bash
 sudo service ntp status
 ```
 
-### **Verify Status and Synchronization**
+### **Verificar Status e Sincronização**
 
 ```bash
 sudo systemctl status systemd-timesyncd
 timedatectl
 ```
 
-Expected output:
+Saída esperada:
 
 ```bash
 System clock synchronized: yes
 NTP service: active
 ```
 
-Once all steps in this chapter are completed, the operating system is correctly configured to proceed with the Viewtinet installation. Continue with the steps outlined in the Bundle Installation documentation.
+Após concluir todas as etapas deste capítulo, o sistema operacional está corretamente configurado para prosseguir com a instalação do Viewtinet. Continue com as etapas descritas na documentação de Instalação pelo Bundle.
 
 <br />

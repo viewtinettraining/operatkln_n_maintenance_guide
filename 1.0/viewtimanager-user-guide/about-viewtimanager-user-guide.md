@@ -1,16 +1,16 @@
 ---
 reusableId: 94
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Viewtimanager User Guide'
+title: 'Sobre o Guia do Usuário do Viewtimanager'
 id: SWI-TNFX-QEV-Y3J
 slug: about-viewtimanager-user-guide
 isVisible: true
 lastUpdated: '2025-07-18 07:28:00'
 ---
-# **<span align="center">Introduction</span>**
+# **<span align="center">Introdução</span>**
 
 <br />
 
-<span align="justify">Viewtimanager is the main control center for the Viewtinet platform, allowing administrators to manage configurations, monitor system health, and supervise user access and activity. It provides an intuitive graphical user interface (GUI) to ensure operational visibility and control across all core components of the platform.</span>
+<span align="justify">O Viewtimanager é o centro de controle principal da plataforma Viewtinet, permitindo que os administradores gerenciem configurações, monitorem a integridade do sistema e supervisionem o acesso e a atividade dos usuários. Ele fornece uma interface gráfica de usuário (GUI) intuitiva para garantir visibilidade operacional e controle em todos os componentes centrais da plataforma.</span>
 
 <br />

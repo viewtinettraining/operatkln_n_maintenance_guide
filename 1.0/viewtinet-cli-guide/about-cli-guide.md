@@ -1,34 +1,34 @@
 ---
 reusableId: 43
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About CLI Guide'
+title: 'Sobre o Guia CLI'
 id: 486-TZTP-0YW-J40
 slug: about-cli-guide
 isVisible: true
 lastUpdated: '2025-10-15 15:56:20'
 ---
-# **<span align="center">Introduction</span>**
+# **<span align="center">Introdução</span>**
 
-<span align="justify">Viewtinet is a modular observability platform designed to run on Ubuntu Server (20.04 and 24.04), leveraging a microservices architecture orchestrated with Docker. Its container-based approach ensures scalability, efficient resource management, and simplified maintenance.</span>
+<span align="justify">O Viewtinet é uma plataforma de observabilidade modular projetada para ser executada no Ubuntu Server (20.04 e 24.04), utilizando uma arquitetura de microsserviços orquestrada com Docker. Sua abordagem baseada em containers garante escalabilidade, gestão eficiente de recursos e manutenção simplificada.</span>
 
-<span align="justify">This guide is intended for system administrators, network engineers, and support personnel who interact with Viewtinet through the command-line interface (CLI). It provides a practical reference for performing essential operational tasks, including:</span>
+<span align="justify">Este guia é destinado a administradores de sistema, engenheiros de rede e pessoal de suporte que interagem com o Viewtinet por meio da interface de linha de comando (CLI). Fornece uma referência prática para realizar tarefas operacionais essenciais, incluindo:</span>
 
--   Monitoring the status of services and containers
--   Accessing and analyzing system logs
--   Running scripts for backups, data imports, and system checks
--   Troubleshooting and resolving common issues
--   Updating the entire platform or individual modules using CLI tools
+-   Monitoramento do status de serviços e containers
+-   Acesso e análise de logs do sistema
+-   Execução de scripts para backups, importação de dados e verificações do sistema
+-   Solução de problemas e resolução de questões comuns
+-   Atualização de toda a plataforma ou módulos individuais usando ferramentas CLI
 
-The objective of this guide is to streamline CLI-based management of Viewtinet environments and provide clear, actionable instructions to support day-to-day operations.
+O objetivo deste guia é simplificar o gerenciamento baseado em CLI de ambientes Viewtinet e fornecer instruções claras e acionáveis para apoiar as operações diárias.
 
-This guide applies to Viewtinet versions **6.3** and **6.3.5**, and is relevant for all product lines: **Viewtilog**, **Viewtimon**, and **Viewtify QoS**.
+Este guia se aplica às versões **6.3** e **6.3.5** do Viewtinet e é relevante para todas as linhas de produtos: **Viewtilog**, **Viewtimon** e **Viewtify QoS**.
 
 ---
 
-### Conventions Used
+### Convenções Utilizadas
 
--   `$` denotes commands to be run in a shell session
--   `&lt;argument&gt;` indicates a placeholder to be replaced by user-specific values
--   Scripts may require elevated permissions (e.g., `sudo`), as noted — though most are designed to be executed directly by the `viewtinet` user
+-   `$` denota comandos a serem executados em uma sessão de shell
+-   `&lt;argument&gt;` indica um marcador de posição a ser substituído por valores específicos do usuário
+-   Os scripts podem exigir permissões elevadas (ex.: `sudo`), conforme indicado — embora a maioria seja projetada para ser executada diretamente pelo usuário `viewtinet`
 
-By following this guide, you'll be able to efficiently operate and maintain your Viewtinet deployment using the CLI—whether you're performing routine checks, module operations, or full-system maintenance tasks such as upgrades.
+Seguindo este guia, você poderá operar e manter eficientemente sua implantação do Viewtinet usando a CLI — seja realizando verificações de rotina, operações de módulos ou tarefas de manutenção completa do sistema, como atualizações.

@@ -1,7 +1,7 @@
 ---
 reusableId: 116
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: License
+title: 'Licença'
 id: NFD-NF8N-8A9-479
 slug: license
 isVisible: true

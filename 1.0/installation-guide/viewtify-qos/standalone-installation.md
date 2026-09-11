@@ -1,33 +1,33 @@
 ---
 reusableId: 105
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Standalone Installation'
+title: 'Instalação Standalone'
 id: 2DJ-N7C3-94R-9K7
 slug: standalone-installation
 isVisible: true
 lastUpdated: '2025-10-15 10:34:00'
 ---
-# **<span align="center">Installing the Viewtify QoS Module</span>**
+# **<span align="center">Instalando o Módulo Viewtify QoS</span>**
 
 <br />
 
-> ⚠️ **Prerequisites & Disclaimers**
+> ⚠️ **Pré-requisitos e Avisos Legais**
 > 
-> -   The **Viewtify QoS** feature must be licensed and visible under **Viewtify QoS** in the sidebar.
-> -   **Viewtimon** must already be installed and running.
-> -   **High-Availability (HA) is not supported** for Viewtify QoS in this release. You can only deploy a single-node instance.
+> -   O recurso **Viewtify QoS** deve estar licenciado e visível em **Viewtify QoS** na barra lateral.
+> -   O **Viewtimon** já deve estar instalado e em execução.
+> -   **Alta Disponibilidade (HA) não é suportada** para o Viewtify QoS nesta versão. Só é possível implantar uma instância de nó único.
 
 ---
 
-## **Launch the QoS Installer**
+## **Iniciar o Instalador do QoS**
 
-1.  In the Viewtimanager UI, click **Viewtify QoS** in the left nav.
+1.  Na interface do Viewtimanager, clique em **Viewtify QoS** na navegação à esquerda.
     
     <br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/ZhLfy030UTajqcjupsaf.png" align="center"></figure>
     
-2.  Click the **INSTALL QOS** button.
+2.  Clique no botão **INSTALAR QOS**.
     
     <br />
     
@@ -38,43 +38,43 @@ lastUpdated: '2025-10-15 10:34:00'
 
 <br />
 
-## **Add the Cluster Host**
+## **Adicionar o Host ao Cluster**
 
-1.  Under **Cluster for QoS**, click **\+ ADD NEW HOST**.
+1.  Em **Cluster para QoS**, clique em **\+ ADICIONAR NOVO HOST**.
     
     <br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/PQO6d4eeYqFfpdTRaKQV.png" align="center"></figure>
     
-2.  In the new row, enter:
+2.  Na nova linha, insira:
     
-    -   **Hostname or IP Address**: management IP (e.g. `10.30.23.4`).
-    -   **LAN Hostname or IP Address**: same as above.
-    -   **Password** / **Password confirm**: SSH password of the `viewtinet` user on that host.
+    -   **Hostname ou Endereço IP**: IP de gerência (ex.: `10.30.23.4`).
+    -   **Hostname ou Endereço IP LAN**: mesmo que acima.
+    -   **Senha** / **Confirmar senha**: senha SSH do usuário `viewtinet` naquele host.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/fyX8Urcv3SJu3QcnLQrA.png" align="center"></figure>
     
-3.  Click **SAVE CHANGES**, then confirm:
+3.  Clique em **SALVAR ALTERAÇÕES** e confirme:
     
-    > “This module will be active in: 10.30.23.4” → **OK**
+    > “Este módulo ficará ativo em: 10.30.23.4” → **OK**
     
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/47LgIjH70AQypet9xYTy.png" align="center"></figure>
 
-## **Finish the Installation**
+## **Concluir a Instalação**
 
-1.  Wait for the installer log to stream and report **“Installation finished”**.
-2.  Click **FINISH INSTALLATION**.
+1.  Aguarde o log do instalador transmitir e relatar **“Instalação concluída”**.
+2.  Clique em **FINALIZAR INSTALAÇÃO**.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/gXfRvqikCkDex5c4vzJG.png" align="center"></figure>
     
 
-### **Stop Viewtimon Before Interface Binding**
+### **Parar o Viewtimon Antes de Vincular Interfaces**
 
-> ### Viewtify QoS requires exclusive binding of NICs, so you must first stop the Viewtimon service.
+> ### O Viewtify QoS requer vinculação exclusiva das NICs; portanto, você deve primeiro parar o serviço Viewtimon.
 
-1.  Navigate to **Viewtimon → STATUS**.
-2.  Click **STOP** and confirm **“Do you want to stop this module?” → YES**.
+1.  Navegue até **Viewtimon → STATUS**.
+2.  Clique em **PARAR** e confirme **“Deseja parar este módulo?” → SIM**.
     
     <br />
     
@@ -83,33 +83,33 @@ lastUpdated: '2025-10-15 10:34:00'
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/d6aDAJXV83rAIQrInAXN.png" align="center"></figure>
 
-### **Assign Interfaces for QoS**
+### **Atribuir Interfaces para QoS**
 
-1.  Go to **Networking → INTERFACES**.
-2.  For each probe NIC you wish to use with QoS, check the **Viewtify QoS** box.
+1.  Vá para **Rede → INTERFACES**.
+2.  Para cada NIC de sonda que deseja usar com QoS, marque a caixa **Viewtify QoS**.
     
     <br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/zNd62gHxWkr4LSP3EheD.png" align="center"></figure>
     
-3.  Click **SAVE CHANGES**.
-4.  Confirm the red banner: **“Please restart Viewtimon to apply config changes”**.
+3.  Clique em **SALVAR ALTERAÇÕES**.
+4.  Confirme o banner vermelho: **“Reinicie o Viewtimon para aplicar as alterações de configuração”**.
     
     <br />
     
 
 ---
 
-### **Restart Viewtimon**
+### **Reiniciar o Viewtimon**
 
-> ### Restarting Viewtimon will load the new QoS bindings.
+> ### Reiniciar o Viewtimon carregará as novas vinculações de QoS.
 
-1.  Return to **Viewtimon → STATUS**.
-2.  Click **RESTART** (or **START**, if still stopped).
-3.  Confirm **“Do you want to start this module?” → YES**.
-4.  The Viewtimon indicator will turn green and both **Viewtimon** and **Viewtify QoS** status lights will become active.
+1.  Retorne a **Viewtimon → STATUS**.
+2.  Clique em **REINICIAR** (ou **INICIAR**, se ainda estiver parado).
+3.  Confirme **“Deseja iniciar este módulo?” → SIM**.
+4.  O indicador do Viewtimon ficará verde e os indicadores de status do **Viewtimon** e do **Viewtify QoS** ficarão ativos.
 
 ---
 
-🎉 **Viewtify QoS is now installed and running.**<br />
-You can begin creating traffic-shaping and prioritization policies
+🎉 **O Viewtify QoS está agora instalado e em execução.**<br />
+Você pode começar a criar políticas de moldagem de tráfego e priorização

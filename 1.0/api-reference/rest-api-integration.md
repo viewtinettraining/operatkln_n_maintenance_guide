@@ -1,45 +1,45 @@
 ---
 reusableId: 179
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Rest api integration'
+title: 'Integração da API REST'
 id: R4L-IQM-VCO-LYU
 slug: rest-api-integration
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-02 08:54:45'
 ---
-# **<span align="center">REST API INTEGRATION</span>**
+# **<span align="center">INTEGRAÇÃO DA API REST</span>**
 
 <br />
 
-## **Authentication**
+## **Autenticação**
 
-Authentication is needed to perform any call to Viewtisight REST API. This authentication is based on OAuth 2.0 and follows the same sequence:
+A autenticação é necessária para realizar qualquer chamada à API REST do Viewtisight. Essa autenticação é baseada em OAuth 2.0 e segue a mesma sequência:
 
 <br />
 
-Here there is an example of how to get the authentication token to perform any call using `curl` command:
+Aqui está um exemplo de como obter o token de autenticação para realizar qualquer chamada usando o comando `curl`:
 
 ```bash
 curl -X POST "http://192.168.1.199:4000/auth/login" -H "accept: application/json" -H "Content-Type: application/json" -d '{ "username": "admin", "password": "viewtinet", "clear_pass" : true}'
 ```
 
-**Response Example:**
+**Exemplo de Resposta:**
 
 ```json
 {"_id":"5db9a9b7973fac39d8d48512","username":"devel","email":"devel@viewtinet.com","name":"Developer","lastname":"","access_token":"eyJhbG...","expiresIn":3600000}
 ```
 
-Note that the same endpoint can be reached via https on port 4001:<br />
+Observe que o mesmo endpoint pode ser acessado via https na porta 4001:<br />
 `https://192.168.1.187:4001/auth/login`
 
-If authentication has been successful, `access_token` must be stored and used in following API calls in order to accept both GET and POST requests. The same way, cipher can be used as auth url param when accessing frontend, as explained in the Viewtisight Integration chapter.
+Se a autenticação for bem-sucedida, o `access_token` deve ser armazenado e utilizado nas chamadas de API subsequentes para aceitar tanto requisições GET quanto POST. Da mesma forma, o cipher pode ser usado como parâmetro de URL de autenticidade ao acessar o frontend, conforme explicado no capítulo Integração do Viewtisight.
 
 <br />
 
-## **Set Requests**
+## **Requisições de Conjuntos**
 
-The sequence to request sets is as follows:
+A sequência para solicitar conjuntos é a seguinte:
 
 <br />
 
@@ -47,25 +47,25 @@ The sequence to request sets is as follows:
 
 <br />
 
-This is an example of how to get sets using `curl` command:
+Este é um exemplo de como obter conjuntos usando o comando `curl`:
 
 ```bash
 curl -X GET "http://192.168.1.199:4101/data/sets" -H "accept: /" -H "authorization: bearer eyJhb..."
 ```
 
-**Response Example:**
+**Exemplo de Resposta:**
 
 ```json
 {"idrequest":"a2976ca1-8846-47bb-bd21-3cde4cb8e877","sets":["dpi_records","pcap_storage_records"]}
 ```
 
-In the prior example, there would be two sets: `dpi_records` and `pcap_storage_records` that can be queried.
+No exemplo anterior, haveria dois conjuntos: `dpi_records` e `pcap_storage_records` que podem ser consultados.
 
 <br />
 
-## **Set fields requests**
+## **Requisições de Campos do Conjunto**
 
-The sequence to request fields for a given set is as follows:
+A sequência para solicitar campos de um determinado conjunto é a seguinte:
 
 <br />
 
@@ -73,30 +73,30 @@ The sequence to request fields for a given set is as follows:
 
 <br />
 
-Fields will contain the following attributes:
+Os campos conterão os seguintes atributos:
 
--   `type` → Object Type: `STRING`, `ULONG`, `LONG`, `IPADDRESSV6`, `IPADDRESSV4`, `UINT`, `INT`, `DOUBLE`
--   `name` → field name
+-   `type` → Tipo do Objeto: `STRING`, `ULONG`, `LONG`, `IPADDRESSV6`, `IPADDRESSV4`, `UINT`, `INT`, `DOUBLE`
+-   `name` → nome do campo
 
-This is an example of how to get set fields using `curl` command:
+Este é um exemplo de como obter campos de conjuntos usando o comando `curl`:
 
 ```bash
 curl -X GET "http://192.168.1.171:4101/data/dpi_records/fields" -H "accept: /" -H "authorization: bearer eyJhb..."
 ```
 
-**Response Example:**
+**Exemplo de Resposta:**
 
 ```json
 {"err":"Success","idrequest":"...","set":"dpi_records","fields":[{"type":"STRING","name":"app_name"},{"type":"ULONG","name":"connection_time"},...]}
 ```
 
-In the prior example, these would be the list of fields and metadata for `dpi_records` set. Having the list of fields allows external integrations to create data requests in the proper query format.
+No exemplo anterior, esta seria a lista de campos e metadados para o conjunto `dpi_records`. Ter a lista de campos permite que integrações externas criem requisições de dados no formato de consulta correto.
 
 <br />
 
-## Reports/KQIs requests
+## Requisições de Relatórios/KQIs
 
-The sequence to request reports is as follows:
+A sequência para solicitar relatórios é a seguinte:
 
 <br />
 
@@ -104,16 +104,16 @@ The sequence to request reports is as follows:
 
 <br />
 
-This call will return the list of all reports available in the system. Here is an example using `curl` command:
+Esta chamada retornará a lista de todos os relatórios disponíveis no sistema. Aqui está um exemplo usando o comando `curl`:
 
 ```bash
 curl -X GET "http://192.168.1.171:4101/queryobjects" -H "accept: /" -H "authorization: bearer eyJhb..."
 ```
 
-If only reports for a specific set are needed, there is another call:<br />
+Se apenas relatórios de um conjunto específico forem necessários, existe outra chamada:<br />
 `http://&lt;VIEWTISIGIHT_AP_ADDRESS&gt;/queryobjects/&lt;set&gt;`
 
-Here is an example using `curl` command:
+Aqui está um exemplo usando o comando `curl`:
 
 ```bash
 curl -X GET "http://192.168.1.171:4101/queryobjects/dpi_records" -H "accept: /" -H "authorization: bearer eyJhb..."
@@ -121,53 +121,53 @@ curl -X GET "http://192.168.1.171:4101/queryobjects/dpi_records" -H "accept: /" 
 
 <br />
 
-## **Dashboard requests**
+## **Requisições de Dashboards**
 
-The sequence to request dashboards is as follows:
+A sequência para solicitar dashboards é a seguinte:
 
-This call will return the list of all dashboards available in the system. Here is an example using `curl` command:
+Esta chamada retornará a lista de todos os dashboards disponíveis no sistema. Aqui está um exemplo usando o comando `curl`:
 
 ```bash
 curl -X GET "http://192.168.1.171:4101/dashboards" -H "accept: /" -H "authorization: bearer eyJhb..."
 ```
 
-Dashboards are useful as they have predefined queries with some meaning (e.g., Dashboard for network performance) and allow integrations to perform queries just by grabbing the dashboard response. If dashboards are not defined, the user will have to combine set metadata and set reports to retrieve data.
+Os dashboards são úteis pois possuem consultas predefinidas com significado (ex.: Dashboard de desempenho de rede) e permitem que as integrações realizem consultas apenas capturando a resposta do dashboard. Se os dashboards não estiverem definidos, o usuário terá que combinar metadados de conjunto e relatórios de conjunto para recuperar os dados.
 
 <br />
 
-## **Data requests**
+## **Requisições de Dados**
 
-Viewtisight stores information in both raw records (usually millions of records) and aggregated ones in order to speed up queries. However, only raw tables are shown and aggregated tables are internal as they are used automatically by the system depending on incoming query. That is, there is a query scheduler evaluating which table is the best that can return results in the fastest and complete way being this process transparent to users.
+O Viewtisight armazena informações tanto em registros brutos (geralmente milhões de registros) quanto em registros agregados para acelerar as consultas. No entanto, apenas tabelas brutas são exibidas e as tabelas agregadas são internas, pois são usadas automaticamente pelo sistema dependendo da consulta recebida. Ou seja, existe um agendador de consultas que avalia qual tabela pode retornar resultados da forma mais rápida e completa, sendo esse processo transparente para os usuários.
 
-These are the parameters to perform data request, using query format:
+Estes são os parâmetros para realizar uma requisição de dados, usando o formato de consulta:
 
 -   `fields`
     
-    -   `list`: list of fields to retrieve with any aggregation operation. They are used to get all records from tables without any kind of grouping or aggregation.
--   `filters`: list of filters to perform over columns in tables (e.g., filter by some specific IP Address).
+    -   `list`: lista de campos a recuperar com qualquer operação de agregação. São usados para obter todos os registros de tabelas sem nenhum tipo de agrupamento ou agregação.
+-   `filters`: lista de filtros a aplicar sobre colunas em tabelas (ex.: filtrar por algum endereço IP específico).
 -   `group`
     
-    -   `list`: list of fields to retrieve applying aggregation and grouping operations. There are 3 kind of group list fields:
-    -   `dimension`: string columns that will be using for grouping reports (e.g., source ip address).
-    -   `metric`: numeric column that will apply some aggregation operation (e.g., SUM).
-    -   `calculated`: combination of metric fields or constant values to perform advanced mathematical operations.
--   `filters`: list of filters to perform over an already aggregated records (e.g., filter records with a SUM(column) greater than 1000).
+    -   `list`: lista de campos a recuperar aplicando operações de agregação e agrupamento. Existem 3 tipos de campos de lista de grupo:
+    -   `dimension`: colunas de string que serão usadas para agrupamento de relatórios (ex.: endereço IP de origem).
+    -   `metric`: coluna numérica que aplicará alguma operação de agregação (ex.: SUM).
+    -   `calculated`: combinação de campos métricos ou valores constantes para realizar operações matemáticas avançadas.
+-   `filters`: lista de filtros a aplicar sobre registros já agregados (ex.: filtrar registros com SUM(coluna) maior que 1000).
 -   `order`
     
-    -   `list`: list of order fields to perform order operation. Ascending and Descending order are supported for any kind of column.
--   `limit`: Operation to limit results. Useful to get top/bottom elements or iterate over a paginated table.
--   `offset`: offset to start returning records.
--   `count`: number of records to return.
--   `timerange`: time ranges for query.
+    -   `list`: lista de campos de ordenação para realizar operação de ordenação. Ordenação crescente e decrescente são suportadas para qualquer tipo de coluna.
+-   `limit`: Operação para limitar resultados. Útil para obter os primeiros/últimos elementos ou iterar sobre uma tabela paginada.
+-   `offset`: deslocamento para iniciar o retorno de registros.
+-   `count`: número de registros a retornar.
+-   `timerange`: intervalos de tempo para consulta.
     
-    -   `start`: timestamp used to start for lookup.
-    -   `end`: timestamp used to finish lookup.
-    -   `timefield`: field used to perform temporal lookup.
--   `size`: true/false value. If true, number of records returned by query are available in response.
--   `granularity`: used to receive records in time-series format.
+    -   `start`: timestamp usado para iniciar a busca.
+    -   `end`: timestamp usado para finalizar a busca.
+    -   `timefield`: campo usado para realizar a busca temporal.
+-   `size`: valor verdadeiro/falso. Se verdadeiro, o número de registros retornados pela consulta fica disponível na resposta.
+-   `granularity`: usado para receber registros no formato de série temporal.
     
-    -   `value`: value of time bucket.
-    -   `unit`: unit in which value is set. These are the values available:
+    -   `value`: valor do intervalo de tempo.
+    -   `unit`: unidade na qual o valor está definido. Estes são os valores disponíveis:
     -   second
     -   minute
     -   hour
@@ -181,11 +181,11 @@ These are the parameters to perform data request, using query format:
 
 <br />
 
-### **Examples**
+### **Exemplos**
 
-Here are some examples of queries performed used with set `dpi_records`, which contains statistics extracted by Viewtimon DPI:
+Aqui estão alguns exemplos de consultas realizadas com o conjunto `dpi_records`, que contém estatísticas extraídas pelo DPI do Viewtimon:
 
-#### Total Volume (Network)
+#### Volume Total (Rede)
 
 ```bash
 curl 'http://192.168.1.200:4101/data/dpi_records/query' \
@@ -195,7 +195,7 @@ curl 'http://192.168.1.200:4101/data/dpi_records/query' \
   --compressed
 ```
 
-#### Total Volume by app
+#### Volume Total por aplicativo
 
 ```bash
 curl 'http://192.168.1.200:4101/data/dpi_records/query' \
@@ -205,7 +205,7 @@ curl 'http://192.168.1.200:4101/data/dpi_records/query' \
   --compressed
 ```
 
-#### Total Volume by app “youtube”
+#### Volume Total por aplicativo "youtube"
 
 ```bash
 curl 'http://192.168.1.200:4101/data/dpi_records/query' \
@@ -219,9 +219,9 @@ curl 'http://192.168.1.200:4101/data/dpi_records/query' \
 
 ## **Logout**
 
-The logout process invalidates the current session token.
+O processo de logout invalida o token de sessão atual.
 
-This is an example of how to perform a logout using the `curl` command:
+Este é um exemplo de como realizar o logout usando o comando `curl`:
 
 ```bash
 curl -X POST "http://<VIEWTISIGHT_IP>:4000/auth/logout" \
@@ -232,30 +232,30 @@ curl -X POST "http://<VIEWTISIGHT_IP>:4000/auth/logout" \
 
 <br />
 
-## **Python Integration Example**
+## **Exemplo de Integração em Python**
 
-The following is a complete Python script example based on the methods explained in this guide. This script demonstrates how to authenticate, retrieve data (in this example, fetching the available sets), save the response, and finally log out securely.
+A seguir está um exemplo completo de script Python baseado nos métodos explicados neste guia. Este script demonstra como autenticar, recuperar dados (neste exemplo, buscando os conjuntos disponíveis), salvar a resposta e, por fim, realizar o logout com segurança.
 
 ```python
 import requests
 from requests.exceptions import HTTPError, Timeout, ConnectionError, RequestException
 import json
 
-# Authentication URL
-# MODIFY TO MATCH YOUR VIEWTISIGHT IP
+# URL de Autenticação
+# MODIFIQUE PARA CORRESPONDER AO IP DO SEU VIEWTISIGHT
 url = "http://192.168.50.14:4000/auth/login"
 
-# Dynamically obtain the Viewtinet IP from the URL
+# Obter dinamicamente o IP do Viewtinet a partir da URL
 viewtinet_ip = url.split("//")[1].split(":")[0]
 
-# Required headers
+# Cabeçalhos obrigatórios
 headers = {
     "Accept": "application/json",
     "Content-Type": "application/json"
 }
 
-# Viewtinet user credentials (unique for each installation)
-# MODIFY TO MATCH YOUR CREDENTIALS
+# Credenciais do usuário Viewtinet (exclusivas para cada instalação)
+# MODIFIQUE PARA CORRESPONDER ÀS SUAS CREDENCIAIS
 data = {
     "username": "api_viewtinet",
     "password": "2024Viewtinet!",
@@ -264,39 +264,39 @@ data = {
 
 def get_credentials(url, headers, data):
     """
-    Function to obtain the API token from Viewtinet.
+    Função para obter o token da API do Viewtinet.
     """
     try:
-        # POST Request
+        # Requisição POST
         response = requests.post(url, headers=headers, json=data, timeout=10)
 
-        # Check if HTTP response is successful (2xx)
+        # Verificar se a resposta HTTP foi bem-sucedida (2xx)
         response.raise_for_status()
 
-        # Convert response to JSON and extract token
+        # Converter resposta para JSON e extrair token
         json_response = response.json()
         token = json_response["access_token"]
 
     except HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
+        print(f"Erro HTTP ocorrido: {http_err}")
     except Timeout as timeout_err:
-        print(f"Timeout error: {timeout_err}")
+        print(f"Erro de timeout: {timeout_err}")
     except ConnectionError as conn_err:
-        print(f"Error connecting: {conn_err}")
+        print(f"Erro de conexão: {conn_err}")
     except RequestException as req_err:
-        print(f"An error occurred: {req_err}")
+        print(f"Um erro ocorreu: {req_err}")
     except ValueError:
-        print("Error decoding JSON response.")
+        print("Erro ao decodificar resposta JSON.")
     except KeyError:
-        print("Token not found in response.")
+        print("Token não encontrado na resposta.")
     else:
-        print("Authentication successful.")
+        print("Autenticação bem-sucedida.")
         return token
     return None
 
 def get_data_sets(token):
     """
-    Function to dynamically obtain the available sets.
+    Função para obter dinamicamente os conjuntos disponíveis.
     """
     url = f"http://{viewtinet_ip}:4101/data/sets"
 
@@ -314,14 +314,14 @@ def get_data_sets(token):
 
         with open("sets_response.json", "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
-        print("Response saved successfully in 'sets_response.json'.")
+        print("Resposta salva com sucesso em 'sets_response.json'.")
 
     except Exception as e:
-        print(f"An error occurred while fetching sets: {e}")
+        print(f"Um erro ocorreu ao buscar conjuntos: {e}")
 
 def logout(token):
     """
-    Function to invalidate the current session token.
+    Função para invalidar o token de sessão atual.
     """
     url = f"http://{viewtinet_ip}:4000/auth/logout"
 
@@ -335,22 +335,22 @@ def logout(token):
         response = requests.post(url, headers=headers, verify=False, timeout=10)
         response.raise_for_status()
 
-        print("Logout successful.")
+        print("Logout realizado com sucesso.")
     except Exception as e:
-        print(f"An error occurred during logout: {e}")
+        print(f"Um erro ocorreu durante o logout: {e}")
 
 def main():
-    # 1. Obtain the token
+    # 1. Obter o token
     token = get_credentials(url, headers, data)
 
     if token:
-        # 2. Perform API requests (e.g., getting sets)
+        # 2. Realizar requisições à API (ex.: obter conjuntos)
         get_data_sets(token)
 
-        # 3. Securely logout
+        # 3. Realizar logout com segurança
         logout(token)
 
-# Execute the main script
+# Executar o script principal
 main()
 ```
 

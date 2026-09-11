@@ -1,17 +1,17 @@
 ---
 reusableId: 71
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Installation step2'
+title: 'Passo 2 da Instalação'
 id: PF0-AHFT-R28-HXH
 slug: installation-step2
 isVisible: true
 lastUpdated: '2025-10-15 09:48:48'
 ---
-# <span align="center">Installation Step 2</span>
+# <span align="center">Passo 2 da Instalação</span>
 
-<div class="sd-callout" data-callout-type="info">In this step, all dependencies will be installed. At the end of the process, you need to log out of the SSH session and log back in to proceed with the next step.</div>
+<div class="sd-callout" data-callout-type="info">Nesta etapa, todas as dependências serão instaladas. Ao final do processo, é necessário encerrar a sessão SSH e fazer login novamente para prosseguir com a próxima etapa.</div>
 
-To initiate the installation process, you should execute the following command.
+Para iniciar o processo de instalação, execute o seguinte comando.
 
 ```bash
 /opt/vn/viewtinet-builder/install.sh
@@ -19,17 +19,17 @@ To initiate the installation process, you should execute the following command.
 
 <br />
 
-At the end of the process, you will receive a message indicating that the step is complete and that it is necessary to close your current SSH session and log in again.
+Ao final do processo, você receberá uma mensagem indicando que a etapa está concluída e que é necessário fechar sua sessão SSH atual e fazer login novamente.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/DbeVQqyuMpxgxMbG/images/Zkhpqv7oEiD4n22t6Z4R.png" align="center"></figure>
 
-At this point, you must completely disconnect from the server. Depending on your SSH tool:
-- If using a standard terminal, type `exit` and press Enter, or simply close the terminal window.
-- If using a GUI client (e.g., PuTTY, MobaXterm), close the application by clicking the "X" icon or explicitly ending the session.
+Neste ponto, você deve desconectar-se completamente do servidor. Dependendo da sua ferramenta SSH:
+- Se estiver usando um terminal padrão, digite `exit` e pressione Enter, ou simplesmente feche a janela do terminal.
+- Se estiver usando um cliente GUI (por exemplo, PuTTY, MobaXterm), feche o aplicativo clicando no ícone "X" ou encerrando explicitamente a sessão.
 
-Once the session is fully closed, initiate a new SSH connection to proceed with the next steps.
+Assim que a sessão estiver totalmente encerrada, inicie uma nova conexão SSH para prosseguir com as próximas etapas.
 
 <br />
 

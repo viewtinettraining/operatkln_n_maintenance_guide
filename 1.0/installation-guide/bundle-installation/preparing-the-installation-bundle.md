@@ -1,123 +1,123 @@
 ---
 reusableId: 69
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Preparing the Installation Bundle'
+title: 'Preparando o Bundle de Instalação'
 id: LQB-DJ6N-7GW-42C
 slug: preparing-the-installation-bundle
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-03-10 15:37:45'
 ---
-# **<span align="center">Preparing the Installation Bundle</span>**
+# **<span align="center">Preparando o Bundle de Instalação</span>**
 
 <br />
-This chapter describes the steps required to download, upload, and extract the Viewtinet installation bundle onto the designated server (appliance, VM, or COTS hardware).
+Este capítulo descreve as etapas necessárias para baixar, enviar e extrair o bundle de instalação do Viewtinet no servidor designado (appliance, VM ou hardware COTS).
 
 <br />
 
-## **Downloading the Bundle**
+## **Baixando o Bundle**
 
-The Viewtinet installation package is delivered as a compressed `.tgz` file. A Viewtinet sales representative or support engineer will provide a download link to retrieve the bundle.
+O pacote de instalação do Viewtinet é entregue como um arquivo `.tgz` comprimido. Um representante de vendas ou engenheiro de suporte do Viewtinet fornecerá um link para baixar o bundle.
 
-Additionally, you must receive the following from your Viewtinet contact:
+Além disso, você deve receber o seguinte do seu contato Viewtinet:
 
--   The official **.tgz** bundle file.
--   A **passphrase**, which is mandatory for the installation process.
+-   O arquivo oficial de bundle **.tgz**.
+-   Uma **senha (passphrase)**, que é obrigatória para o processo de instalação.
 
-The bundle naming convention follows this structure: `bundle-6.3.5-ubuntu24.04-rXXXX-YYYYMMDDHHMMSS.tgz`.
+A convenção de nomenclatura do bundle segue esta estrutura: `bundle-6.3.5-ubuntu24.04-rXXXX-YYYYMMDDHHMMSS.tgz`.
 
--   The prefix `bundle-6.3.5-ubuntu24.04` remains constant for this version.
--   The subsequent characters represent the specific build revision and the generation timestamp.
+-   O prefixo `bundle-6.3.5-ubuntu24.04` permanece constante para esta versão.
+-   Os caracteres subsequentes representam a revisão específica do build e o timestamp de geração.
 
-Ensure the file is downloaded and stored locally on your machine before proceeding to the next step.
+Certifique-se de que o arquivo foi baixado e armazenado localmente em sua máquina antes de prosseguir para a próxima etapa.
 
 ---
 
-## **Uploading the Bundle**
+## **Enviando o Bundle ao Servidor**
 
-Once the bundle has been downloaded, it must be uploaded to the server where Viewtinet will be installed. It is recommended to upload the file to the `/home/viewtinet` directory.
+Assim que o bundle for baixado, ele deve ser enviado para o servidor onde o Viewtinet será instalado. Recomenda-se enviar o arquivo para o diretório `/home/viewtinet`.
 
 <br />
 
-### **Using SCP from Linux Terminal**
+### **Usando SCP pelo Terminal Linux**
 
-If you are using a Linux-based system, open a terminal and execute (replacing the filename with your specific build):
+Se estiver usando um sistema baseado em Linux, abra um terminal e execute (substituindo o nome do arquivo pelo seu build específico):
 
 ```bash
 scp bundle-6.3.5-ubuntu24.04-r5767-20260302080607.tgz viewtinet@<SERVER_IP>:/home/viewtinet
 ```
 
-> **Note:** Replace `&lt;SERVER_IP&gt;` with the actual IP address of your server in all examples.
+> **Nota:** Substitua `&lt;SERVER_IP&gt;` pelo endereço IP real do seu servidor em todos os exemplos.
 
 <br />
 
-### **Using WinSCP (Windows)**
+### **Usando WinSCP (Windows)**
 
-For Windows environments, use a GUI SCP client such as **WinSCP**:
+Para ambientes Windows, use um cliente SCP com interface gráfica como o **WinSCP**:
 
-1.  Open **WinSCP**.
-2.  Enter the following connection details:
+1.  Abra o **WinSCP**.
+2.  Insira os seguintes detalhes de conexão:
     
-    -   **Host name:** IP address of your server
-    -   **User name:** `viewtinet`
-    -   **Password:** Password configured during system setup
-3.  Navigate on your local machine to the folder where the `.tgz` file is located.
-4.  Upload the file to the `/home/viewtinet` directory on the server.
+    -   **Nome do host:** Endereço IP do seu servidor
+    -   **Nome de usuário:** `viewtinet`
+    -   **Senha:** Senha configurada durante a configuração do sistema
+3.  Navegue em sua máquina local até a pasta onde o arquivo `.tgz` está localizado.
+4.  Envie o arquivo para o diretório `/home/viewtinet` no servidor.
 
 ---
 
-## **SSH Connection**
+## **Conexão SSH**
 
-If you are not working directly on the appliance, virtual machine, or COTS server, you must connect remotely via SSH.
+Se você não estiver trabalhando diretamente no appliance, máquina virtual ou servidor COTS, deverá conectar-se remotamente via SSH.
 
-Depending on your operating system, you can connect using the built-in terminal or a third-party application:
+Dependendo do seu sistema operacional, você pode se conectar usando o terminal integrado ou um aplicativo de terceiros:
 
-### Using the Command Line (Windows 10+, macOS, Linux)
+### Usando a Linha de Comando (Windows 10+, macOS, Linux)
 
-Most modern operating systems come with a built-in SSH client. You can easily connect using your system's terminal (Command Prompt, PowerShell, or standard Linux/macOS Terminal):
+A maioria dos sistemas operacionais modernos vem com um cliente SSH integrado. Você pode se conectar facilmente usando o terminal do sistema (Prompt de Comando, PowerShell ou terminal Linux/macOS padrão):
 
-1.  Open your terminal.
-2.  Execute the following command, replacing `<SERVER_IP>` with the actual IP address of your server:
+1.  Abra seu terminal.
+2.  Execute o seguinte comando, substituindo `<SERVER_IP>` pelo endereço IP real do seu servidor:
     
     ```bash
     ssh viewtinet@<SERVER_IP>
     ```
 
-3.  When prompted, enter the password for the `viewtinet` user.
+3.  Quando solicitado, insira a senha do usuário `viewtinet`.
 
-### Using GUI Clients
+### Usando Clientes GUI
 
-If you prefer a graphical interface or are using an older version of Windows, you can use a dedicated SSH client such as **PuTTY** or **MobaXterm**:
+Se preferir uma interface gráfica ou estiver usando uma versão mais antiga do Windows, você pode usar um cliente SSH dedicado como **PuTTY** ou **MobaXterm**:
 
-1.  Open your preferred SSH client.
-2.  In the **Host Name** field, enter the IP address of your server.
-3.  Initiate the connection and log in using the `viewtinet` user credentials.
+1.  Abra seu cliente SSH preferido.
+2.  No campo **Nome do Host**, insira o endereço IP do seu servidor.
+3.  Inicie a conexão e faça login usando as credenciais do usuário `viewtinet`.
 
-Once logged in successfully, you will have access to the server's command-line interface to continue with the installation steps.
+Após o login bem-sucedido, você terá acesso à interface de linha de comando do servidor para continuar com as etapas de instalação.
 
 ---
 
-## **Extracting the Bundle**
+## **Extraindo o Bundle**
 
-The Viewtinet bundle must be extracted before installation.
+O bundle do Viewtinet deve ser extraído antes da instalação.
 
-### **Navigating and Extracting**
+### **Navegando e Extraindo**
 
-Navigate to the directory where the installation bundle was uploaded. By default, this is:
+Navegue até o diretório onde o bundle de instalação foi enviado. Por padrão, este é:
 
 ```bash
 cd /home/viewtinet
 ```
 
-Then, run the following command to extract the contents of the `.tgz` file (replace with your specific filename):
+Em seguida, execute o seguinte comando para extrair o conteúdo do arquivo `.tgz` (substitua pelo seu nome de arquivo específico):
 
 ```bash
 tar -xvf bundle-6.3.5-ubuntu24.04-r5767-20260302080607.tgz
 ```
 
-After extraction, a new directory named `bundle` will be created. All subsequent installation steps will be carried out from within this directory.
+Após a extração, um novo diretório chamado `bundle` será criado. Todas as etapas subsequentes de instalação serão realizadas dentro deste diretório.
 
-After uncompressing the bundle, you will see an output with the following files and scripts:
+Após descomprimir o bundle, você verá uma saída com os seguintes arquivos e scripts:
 
 ```bash
 decrypt.sh
@@ -126,6 +126,6 @@ software-bundle-6.3.5-r5767.tgz.gpg
 viewtinet-pub.asc
 ```
 
-<div class="sd-callout" data-callout-type="info">Keep the <strong>passphrase</strong> provided by Viewtinet at hand, as it will be required during the execution of the installation scripts in the following steps.</div>
+<div class="sd-callout" data-callout-type="info">Mantenha a <strong>senha (passphrase)</strong> fornecida pelo Viewtinet em mãos, pois será necessária durante a execução dos scripts de instalação nas etapas seguintes.</div>
 
 <br />
