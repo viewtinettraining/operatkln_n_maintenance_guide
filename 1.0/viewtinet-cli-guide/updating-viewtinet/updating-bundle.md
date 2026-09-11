@@ -115,6 +115,6 @@ Existem duas maneiras de carregar versões de módulos atualizadas:
 > ⚠️ Esta abordagem é a mais demorada e causará uma interrupção completa da coleta de dados, ingestão e visualização em toda a plataforma.
 
 2.  **Reinício módulo por módulo** (recomendado para menor tempo de inatividade)<br />
-    Use os scripts individuais de módulo descritos no capítulo _[Operating Viewtinet Containers via Scripts](http:#?target=20U-C19U-8N7-KWB)_. Embora isso ainda incorra em breve indisponibilidade por módulo, o impacto total é muito menor que um reinício completo.
+    Use os scripts individuais de módulo descritos no capítulo _[Operating Viewtinet Containers via Scripts](/1.0/viewtinet-cli-guide/cli-commands-reference/managing-containers/operating-viewtinet-containers-via-scripts)_. Embora isso ainda incorra em breve indisponibilidade por módulo, o impacto total é muito menor que um reinício completo.
 
 <br />
