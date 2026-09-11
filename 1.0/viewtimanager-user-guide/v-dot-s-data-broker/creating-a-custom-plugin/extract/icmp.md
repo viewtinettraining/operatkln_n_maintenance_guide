@@ -1,5 +1,4 @@
 ---
-reusableId: 136
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: ICMP
 id: NTA-4FAZ-5QN-QO6
@@ -7,19 +6,19 @@ slug: icmp
 isVisible: true
 lastUpdated: '2025-10-15 15:26:24'
 ---
-# **<span align="center">ICMP Connector</span>**
+# **<span align="center">Conector ICMP</span>**
 
 <br />
 
-The **ICMP Connector** allows the Visual Smart Data Broker (VSDB) to perform health checks on devices using **ping (echo requests)**. It is commonly used to monitor network reachability and packet loss rates across servers, routers, switches, and other IP-enabled devices.
+O **Conector ICMP** permite que o Visual Smart Data Broker (VSDB) realize verificações de integridade em dispositivos usando **ping (echo requests)**. Ele é comumente usado para monitorar a acessibilidade de rede e as taxas de perda de pacotes em servidores, roteadores, switches e outros dispositivos com IP.
 
 <br />
 
-## **Accessing the ICMP Connector**
+## **Acessando o Conector ICMP**
 
-1.  From the **Plugin Creator**, select the **Extract** stage.
-2.  In the connector list, choose **ICMP Connector**.
-3.  The ICMP Connector configuration screen will be displayed.
+1.  A partir do **Criador de Plugins**, selecione o estágio **Extract**.
+2.  Na lista de conectores, escolha **Conector ICMP**.
+3.  A tela de configuração do Conector ICMP será exibida.
 
 <br />
 
@@ -27,61 +26,61 @@ The **ICMP Connector** allows the Visual Smart Data Broker (VSDB) to perform hea
 
 <br />
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
--   **Frequency Type**<br />
-    Defines how often the connector executes:
+-   **Tipo de Frequência**<br />
+    Define a frequência com que o conector é executado:
     
-    -   **Periodic**: The pipeline runs for the first time after the configured number of seconds (Refresh Time) once the plugin is installed, and continues to repeat at that interval.
-    -   **Scheduled**: Execution is defined using a **cron expression**, allowing precise scheduling by minute, hour, day, week, or month.
--   **Number of Executions**
+    -   **Periódico**: O pipeline é executado pela primeira vez após o número configurado de segundos (Tempo de Atualização) assim que o plugin for instalado, e continua se repetindo nesse intervalo.
+    -   **Agendado**: A execução é definida usando uma **expressão cron**, permitindo um agendamento preciso por minuto, hora, dia, semana ou mês.
+-   **Número de Execuções**
     
-    -   `-1`: The connector runs indefinitely.
-    -   Any positive value: The pipeline executes exactly that number of times.
--   **Session**<br />
-    A mandatory string parameter used internally by the module to track execution.
--   **Ping Count**<br />
-    Defines the number of **echo requests** (pings) sent to each host during every execution cycle.
+    -   `-1`: O conector roda indefinidamente.
+    -   Qualquer valor positivo: O pipeline é executado exatamente esse número de vezes.
+-   **Sessão**<br />
+    Um parâmetro de string obrigatório usado internamente pelo módulo para rastrear a execução.
+-   **Contagem de Ping**<br />
+    Define o número de **solicitações de eco** (pings) enviados a cada host durante cada ciclo de execução.
     
-    -   For a host to be declared **down**, _all_ echo requests must fail.
-    -   Packet loss percentage is calculated as:
+    -   Para que um host seja declarado como **inativo (down)**, _todas_ as solicitações de eco devem falhar.
+    -   A porcentagem de perda de pacotes é calculada como:
         
         ```
-        Lost packets / Ping Count * 100
+        Pacotes perdidos / Contagem de Ping * 100
         ```
         
-        Example:
+        Exemplo:
         
-        -   If `Ping Count = 5` and 1 ping is lost → packet loss = 20%.
-        -   If `Ping Count = 4` and 1 ping is lost → packet loss = 25%.
--   **Ping Timeout**<br />
-    The maximum waiting time (in seconds) for each echo reply. If the host does not respond within this time, the ping is considered lost.
--   **Host Batch Size**<br />
-    Defines how many hosts are pinged simultaneously in each batch.
+        -   Se `Contagem de Ping = 5` e 1 ping for perdido → perda de pacotes = 20%.
+        -   Se `Contagem de Ping = 4` e 1 ping for perdido → perda de pacotes = 25%.
+-   **Tempo Limite (Timeout) do Ping**<br />
+    O tempo máximo de espera (em segundos) por cada resposta de eco. Se o host não responder dentro desse tempo, o ping será considerado perdido.
+-   **Tamanho do Lote de Hosts**<br />
+    Define quantos hosts são pingados simultaneamente em cada lote.
     
-    -   Example: If there are **100 hosts** in the connector and `Host Batch Size = 50`, the system creates **2 pipelines**, each handling 50 hosts in parallel.
+    -   Exemplo: Se houver **100 hosts** no conector e `Tamanho do Lote de Hosts = 50`, o sistema cria **2 pipelines**, cada um lidando com 50 hosts em paralelo.
 
 <br />
 
-## **Hosts Section**
+## **Seção de Hosts**
 
-At least one host must be defined in the connector.<br />
-Hosts can be provisioned in two ways:
+Pelo menos um host deve ser definido no conector.<br />
+Os hosts podem ser provisionados de duas maneiras:
 
--   **Mass provisioning via Inventory** (recommended for large environments, see the _Inventory_ chapter).
--   **Manual entry** using the **Add Host** button, where you specify the IP address and other details.
+-   **Provisionamento em massa via Inventário** (recomendado para grandes ambientes, consulte o capítulo de _Inventário_).
+-   **Entrada manual** usando o botão **Adicionar Host**, onde você especifica o endereço IP e outros detalhes.
 
-Hosts can also be imported or exported using the buttons available in the interface.
+Os hosts também podem ser importados ou exportados usando os botões disponíveis na interface.
 
 <br />
 
-## **Summary**
+## **Resumo**
 
-The ICMP Connector enables reachability and latency monitoring of devices through configurable ping operations:
+O Conector ICMP permite o monitoramento de acessibilidade e latência de dispositivos por meio de operações de ping configuráveis:
 
--   Supports **Periodic** and **Scheduled** execution modes.
--   Measures **packet loss percentage** based on the configured Ping Count.
--   Requires full echo request failure to mark a host as **down**.
--   **Host Batch Size** ensures scalable monitoring across large environments by dividing hosts into groups.
+-   Suporta modos de execução **Periódico** e **Agendado**.
+-   Mede a **porcentagem de perda de pacotes** baseada na Contagem de Ping configurada.
+-   Requer falha total da solicitação de eco para marcar um host como **inativo (down)**.
+-   O **Tamanho do Lote de Hosts** garante monitoramento escalável em grandes ambientes, dividindo os hosts em grupos.
 
-Correct configuration ensures accurate availability checks and efficient use of system resources.
+A configuração correta assegura verificações de disponibilidade precisas e o uso eficiente dos recursos do sistema.

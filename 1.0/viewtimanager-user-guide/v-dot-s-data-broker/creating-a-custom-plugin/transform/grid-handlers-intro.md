@@ -11,35 +11,35 @@ lastUpdated: '2026-05-20 17:30:00'
 
 <br />
 
-## Grid Concept
+## Conceito de Grid
 
-During the Extraction phase, all the obtained information is stored in an in-memory structure called a **Grid**. To simplify the understanding process, think of it as a matrix or table with rows and columns.
+Durante a fase de Extração (Extraction), todas as informações obtidas são armazenadas em uma estrutura em memória chamada **Grid**. Para simplificar o processo de compreensão, pense nela como uma matriz ou tabela com linhas e colunas.
 
-The Grid, as a structure, is sent to the **Transformation process** to perform actions such as adding, removing, modifying, or creating new fields based on the data obtained in the Extraction stage.
+A Grid, como estrutura, é enviada ao **processo de Transformação** para realizar ações como adicionar, remover, modificar ou criar novos campos com base nos dados obtidos na etapa de Extração.
 
 <br />
 
-## What are Grid Handlers?
+## O que são Grid Handlers?
 
-**Grid Handlers** are the individual components or operations used within the Transform Stage to manipulate the Grid. By applying different handlers, the data obtained in the previous stage can be heavily transformed and refined before it moves to the next phase of the pipeline.
+Os **Grid Handlers** são os componentes individuais ou operações usadas dentro da Etapa de Transformação (Transform Stage) para manipular a Grid. Ao aplicar diferentes handlers, os dados obtidos na etapa anterior podem ser amplamente transformados e refinados antes de passarem para a próxima fase do pipeline.
 
-These handlers are incredibly versatile and are able to:
+Esses handlers são incrivelmente versáteis e são capazes de:
 
--   Filter records based on the information extracted.
--   Apply both simple and complex mathematical operations (especially useful for numerical fields) to calculate new fields.
--   Apply regular expressions (regexes) to filter information or extract specific fields.
--   Apply AI techniques to generate new information based on both historical and current data.
--   Add information from external sources (such as CSV files) to dynamically enrich statically-configured data.
+-   Filtrar registros com base nas informações extraídas.
+-   Aplicar operações matemáticas simples e complexas (especialmente úteis para campos numéricos) para calcular novos campos.
+-   Aplicar expressões regulares (regexes) para filtrar informações ou extrair campos específicos.
+-   Aplicar técnicas de IA para gerar novas informações com base em dados históricos e atuais.
+-   Adicionar informações de fontes externas (como arquivos CSV) para enriquecer dinamicamente dados configurados estaticamente.
 
 <br />
 
 ---
 
-### How to Add a New Grid Handler
+### Como Adicionar um Novo Grid Handler
 
-To add a new Grid Handler to your Transform stage, follow these steps:
+Para adicionar um novo Grid Handler à sua etapa de Transformação, siga estas etapas:
 
-**Step 1:** Click the **"+ ADD NEW GRID HANDLER"** button located at the bottom of the Transform stage configuration panel.
+**Passo 1:** Clique no botão **"+ ADD NEW GRID HANDLER"** localizado na parte inferior do painel de configuração da etapa de Transformação.
 
 <br />
 
@@ -47,7 +47,7 @@ To add a new Grid Handler to your Transform stage, follow these steps:
 
 <br />
 
-**Step 2:** A new **Grid Handler** card will appear. Click on the **"Grid Handler Type"** dropdown field to reveal the list of all available handlers.
+**Passo 2:** Um novo cartão **Grid Handler** aparecerá. Clique no campo suspenso **"Grid Handler Type"** para revelar a lista de todos os handlers disponíveis.
 
 <br />
 
@@ -55,7 +55,7 @@ To add a new Grid Handler to your Transform stage, follow these steps:
 
 <br />
 
-**Step 3:** Select the desired handler from the dropdown list. The available Grid Handler types are:
+**Passo 3:** Selecione o handler desejado na lista suspensa. Os tipos de Grid Handler disponíveis são:
 
 <br />
 
@@ -63,6 +63,6 @@ To add a new Grid Handler to your Transform stage, follow these steps:
 
 <br />
 
-<div class="sd-callout" data-callout-type="info"><strong>Note:</strong> This procedure applies to <strong>all</strong> Grid Handlers described in the following sections. Each handler type has its own specific configuration fields that will appear once selected from the dropdown.</div>
+<div class="sd-callout" data-callout-type="info"><strong>Nota:</strong> Este procedimento se aplica a <strong>todos</strong> os Grid Handlers descritos nas seções seguintes. Cada tipo de handler tem seus próprios campos de configuração específicos que aparecerão uma vez selecionados na lista suspensa.</div>
 
 <br />

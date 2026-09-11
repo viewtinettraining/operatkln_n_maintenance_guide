@@ -10,7 +10,7 @@ id: UW1-KO1-P3S-7TC
 
 <br />
 
-The **Interfaces** tab displays all the physical interfaces available on the machine along with their current configuration and status. This view is essential to identify which interfaces are assigned to the different DPI and QoS modules.
+A guia **Interfaces** exibe todas as interfaces físicas disponíveis na máquina, juntamente com a configuração atual e o status. Esta visualização é essencial para identificar quais interfaces estão atribuídas aos diferentes módulos DPI e QoS.
 
 <br />
 
@@ -22,13 +22,13 @@ The **Interfaces** tab displays all the physical interfaces available on the mac
 
 ## **Key Information Displayed**
 
-For each physical interface, the system provides the following details:
+Para cada interface física, o sistema fornece os seguintes detalhes:
 
-- **ID, Name, and Interface:** Identifies the hardware port, its system name, and a brief description of the controller (e.g., *Ethernet Controller*).
-- **Driver:** Displays the driver currently used by the interface. It is crucial to note that the **`igb_uio`** driver is specifically required for interfaces associated with the **Viewtimon** and **Viewtify QoS** modules to ensure proper high-performance packet processing.
-- **Module Assignment (Viewtimon / Viewtify QoS):** Checkboxes indicate which module the interface is currently assigned to. Interfaces can be allocated to either Viewtimon (for monitoring) or Viewtify QoS (for traffic control).
-- **Status:** Shows the physical link status of the interface:
-  - 🟢 **Green Circle:** The interface is physically **UP** (connected).
-  - ⚪ **Gray Circle:** The interface is physically **DOWN** (disconnected).
+- **ID, Name, and Interface:** Identifica a porta de hardware, seu nome no sistema e uma breve descrição do controlador (ex., *Ethernet Controller*).
+- **Driver:** Exibe o driver atualmente usado pela interface. É fundamental observar que o driver **`igb_uio`** é especificamente necessário para interfaces associadas aos módulos **Viewtimon** e **Viewtify QoS** para garantir o processamento de pacotes de alto desempenho adequado.
+- **Module Assignment (Viewtimon / Viewtify QoS):** Caixas de seleção indicam a qual módulo a interface está atribuída no momento. As interfaces podem ser alocadas tanto ao Viewtimon (para monitoramento) quanto ao Viewtify QoS (para controle de tráfego).
+- **Status:** Mostra o status do link físico da interface:
+  - 🟢 **Green Circle:** A interface está fisicamente **UP** (conectada).
+  - ⚪ **Gray Circle:** A interface está fisicamente **DOWN** (desconectada).
 
 <br />

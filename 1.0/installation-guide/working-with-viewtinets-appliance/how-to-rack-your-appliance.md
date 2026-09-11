@@ -1,5 +1,4 @@
 ---
-reusableId: 80
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'How To Rack Your Appliance'
 id: ZUA-4Y0B-2R4-XQ6
@@ -7,11 +6,11 @@ slug: how-to-rack-your-appliance
 isVisible: true
 lastUpdated: '2025-10-15 10:36:00'
 ---
-# **<span align="center">How To Rack Your Appliance</span>**
+# **<span align="center">Como Instalar o Seu Appliance no Rack</span>**
 
 <br />
 
-<span style="color:rgb(0, 0, 0);">The chassis package includes two rail assemblies in the rack mounting kit. Each assembly consists of three sections: An inner chassis rail that secures directly to the chassis, an outer rail that secures to the rack, and a middle rail that extends the left and right side of the chassis.</span>
+<span style="color:rgb(0, 0, 0);">O pacote do chassi inclui dois conjuntos de trilhos no kit de montagem em rack. Cada conjunto consiste em três seções: um trilho interno do chassi que se fixa diretamente ao chassi, um trilho externo que se fixa ao rack e um trilho central que se estende pelo lado esquerdo e direito do chassi.</span>
 
 <br />
 
@@ -19,13 +18,13 @@ lastUpdated: '2025-10-15 10:36:00'
 
 <br />
 
-<div class="sd-callout" data-callout-type="warning">Warning: do not pick up the server with the front handles. They are designed to pull the system from a rack only.</div>
+<div class="sd-callout" data-callout-type="warning">Aviso: não levante o servidor pelas alças frontais. Elas são projetadas apenas para puxar o sistema de um rack.</div>
 
 <br />
 
-## **Releasing the Inner Rail**
+## **Liberando o Trilho Interno**
 
-Use the procedure below to release the inner rails from the outer rails.
+Use o procedimento abaixo para liberar os trilhos internos dos trilhos externos.
 
 <br />
 
@@ -33,36 +32,36 @@ Use the procedure below to release the inner rails from the outer rails.
 
 <br />
 
-1.  Identify the left and right outer rail assemblies as described on the previous page.
-2.  Pull the inner rail out of the outer rail until it is fully extended as illustrated below.
-3.  Press the locking tab down to release the inner rail.
-4.  Repeat steps 1-3 for the second outer rail.
+1.  Identifique os conjuntos de trilhos externos esquerdo e direito conforme descrito na página anterior.
+2.  Puxe o trilho interno para fora do trilho externo até que ele esteja totalmente estendido, conforme ilustrado abaixo.
+3.  Pressione a trava de bloqueio para baixo para soltar o trilho interno.
+4.  Repita as etapas 1 a 3 para o segundo trilho externo.
 
 <br />
 
-## **Installing The Inner Rails on the Chassis**
+## **Instalando os Trilhos Internos no Chassi**
 
 <br />
 
-To install the inner rails, use the procedure below.
+Para instalar os trilhos internos, use o procedimento abaixo.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/nUSDzxcbryC61xBxXoHU.png" align="middle"></figure>
 
 <br />
 
-1.  <span style="color:black;">Confirm that the left and right inner rails have been correctly identified.</span>
-2.  <span style="color:black;">Place the inner rail firmly against the side of the chassis, aligning the hooks on the side of the chassis with the holes in the inner rail.</span>
-3.  <span style="color:black;">Slide the inner rail forward toward the front of the chassis until the rail clicks into the locked position, which secures the inner rail to the chassis.</span>
-4.  <span style="color:black;">Secure the inner rail to the chassis with the screws provided.</span>
-5.  <span style="color:black;">Repeat steps 1 through 4 above for the other inner rail.</span>
+1.  <span style="color:black;">Confirme se os trilhos internos esquerdo e direito foram identificados corretamente.</span>
+2.  <span style="color:black;">Coloque o trilho interno firmemente contra a lateral do chassi, alinhando os ganchos na lateral do chassi com os orifícios no trilho interno.</span>
+3.  <span style="color:black;">Deslize o trilho interno para frente, em direção à frente do chassi, até que o trilho se encaixe na posição travada com um clique, o que fixa o trilho interno ao chassi.</span>
+4.  <span style="color:black;">Fixe o trilho interno ao chassi com os parafusos fornecidos.</span>
+5.  <span style="color:black;">Repita as etapas 1 a 4 acima para o outro trilho interno.</span>
 
 <br />
 
-## **Installing the Outer Rails on the Rack**
+## **Instalando os Trilhos Externos no Rack**
 
 <br />
 
-Use the procedure below to install the outer rails onto the rack.
+Use o procedimento abaixo para instalar os trilhos externos no rack.
 
 <br />
 
@@ -70,26 +69,26 @@ Use the procedure below to install the outer rails onto the rack.
 
 <br />
 
-1.  <span style="color:black;">Press upward on the locking tab at the rear end of the middle rail.</span>
-2.  <span style="color:black;">Push the middle rail back into the outer rail.</span>
-3.  <span style="color:black;">Hang the hooks of the front of the outer rail onto the slots on the front of the rack. If necessary, use screws to secure the outer rails to the rack, as illustrated above.</span>
-4.  <span style="color:black;">Pull out the rear of the outer rail, adjusting the length until it fits within the posts of the rack.</span>
-5.  <span style="color:black;">Hang the hooks of the rear portion of the outer rail onto the slots on the rear of the rack. If necessary, use screws to secure the rear of the outer rail to the rear of the rack.</span>
-6.  <span style="color:black;">Repeat steps 1-5 for the remaining outer rail.</span>
+1.  <span style="color:black;">Pressione para cima a trava de bloqueio na extremidade traseira do trilho central.</span>
+2.  <span style="color:black;">Empurre o trilho central de volta para o trilho externo.</span>
+3.  <span style="color:black;">Pendure os ganchos da parte frontal do trilho externo nas fendas na parte frontal do rack. Se necessário, use parafusos para fixar os trilhos externos ao rack, conforme ilustrado acima.</span>
+4.  <span style="color:black;">Puxe a parte traseira do trilho externo, ajustando o comprimento até que ela se encaixe nas colunas do rack.</span>
+5.  <span style="color:black;">Pendure os ganchos da parte traseira do trilho externo nas fendas na parte traseira do rack. Se necessário, use parafusos para fixar a parte traseira do trilho externo na parte traseira do rack.</span>
+6.  <span style="color:black;">Repita as etapas 1 a 5 para o trilho externo restante.</span>
 
 <br />
 
-## **Standard Chassis Installation**
+## **Instalação Padrão do Chassi**
 
 <br />
 
-1.  <span style="color:black;">Confirm that the inner rails are properly installed on the chassis.</span>
-2.  <span style="color:black;">Confirm that the outer rails are correctly installed on the rack.</span>
-3.  <span style="color:black;">Pull the middle rail out from the front of the outer rail and make sure that the ball-bearing shuttle is at the front locking position of the middle rail.</span>
-4.  <span style="color:black;">Align the chassis inner rails with the front of the middle rails.</span>
-5.  <span style="color:black;">Slide the inner rails on the chassis into the middle rails, keeping the pressure even on both sides, until the locking tab of the inner rail clicks into the front of the middle rail, locking the chassis into the fully extended position.</span>
-6.  <span style="color:black;">Depress the locking tabs on both sides at the same time and push the chassis all the way into the rear of the rack.</span>
-7.  <span style="color:black;">If necessary for security purposes, use screws to secure the chassis handles to the front of the rack.</span>
+1.  <span style="color:black;">Confirme se os trilhos internos estão instalados corretamente no chassi.</span>
+2.  <span style="color:black;">Confirme se os trilhos externos estão instalados corretamente no rack.</span>
+3.  <span style="color:black;">Puxe o trilho central para fora da parte frontal do trilho externo e certifique-se de que a trava com rolamentos esteja na posição de travamento frontal do trilho central.</span>
+4.  <span style="color:black;">Alinhe os trilhos internos do chassi com a frente dos trilhos centrais.</span>
+5.  <span style="color:black;">Deslize os trilhos internos do chassi para dentro dos trilhos centrais, mantendo a pressão uniforme em ambos os lados, até que a trava de bloqueio do trilho interno se encaixe na frente do trilho central, travando o chassi na posição totalmente estendida.</span>
+6.  <span style="color:black;">Pressione as travas de bloqueio de ambos os lados ao mesmo tempo e empurre o chassi até o fundo do rack.</span>
+7.  <span style="color:black;">Se necessário por motivos de segurança, use parafusos para fixar as alças do chassi na parte frontal do rack.</span>
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/T36uOkbr6spRzvIB2O6m.png" align="middle"></figure>
 

@@ -1,5 +1,4 @@
 ---
-reusableId: 134
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: SNMP
 id: GE5-DPO8-5AX-W06
@@ -7,60 +6,60 @@ slug: snmp
 isVisible: true
 lastUpdated: '2025-09-02 09:43:03'
 ---
-# **<span align="center">SNMP Connector</span>**
+# **<span align="center">Conector SNMP</span>**
 
-<span align="justify">This subsection explains how to configure the Extract stage of a plugin using the SNMP Connector. The SNMP Connector is one of the most common connectors available in the Visual Smart Data Broker (VSDB), allowing the acquisition of data from network devices, servers, and any system supporting the SNMP protocol.</span>
+<span align="justify">Esta subseção explica como configurar o estágio Extract de um plugin utilizando o Conector SNMP. O Conector SNMP é um dos conectores mais comuns disponíveis no Visual Smart Data Broker (VSDB), permitindo a aquisição de dados de dispositivos de rede, servidores e de qualquer sistema que suporte o protocolo SNMP.</span>
 
 <br />
-**Accessing the Extract Stage**
+**Acessando o Estágio Extract**
 
-1.  From the **Plugin Creator**, select the **Extract** stage.
+1.  A partir do **Criador de Plugins**, selecione o estágio **Extract**.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/R1CROHlmnYMpjiXd0AYc.png" align="center"></figure>
     
-2.  Click on the **connector selection icon** to open the list of available connectors.
+2.  Clique no **ícone de seleção de conector** para abrir a lista de conectores disponíveis.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/JIdUrJEU8uxjjZo4faRf.png" align="center"></figure>
     
-3.  From the list, choose **SNMP Connector**
+3.  Na lista, escolha **Conector SNMP**
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/UtNiKc0mpDeOn0hSiTUr.png" align="center"></figure>
     
     <br />
     
 
-Once selected, the SNMP Connector configuration window is displayed.
+Uma vez selecionado, a janela de configuração do Conector SNMP é exibida.
 
 <br />
 
-**Connector Configuration Parameters**
+**Parâmetros de Configuração do Conector**
 
--   **Frequency Type**<br />
-    Defines how often the pipeline will run:
+-   **Tipo de Frequência**<br />
+    Define a frequência com que o pipeline será executado:
     
-    -   **Periodic**:<br />
-        The pipeline is executed for the first time after the number of seconds defined in _Refresh Time (secs)_ from the moment the plugin is installed.<br />
-        After each execution, the pipeline waits the same interval before running again.
-    -   **Scheduled**:<br />
-        The pipeline execution is configured using a **cron expression**, similar to a crontab. This allows precise scheduling by minutes, hours, days, weeks, or months.
--   **Refresh Time (secs)** _(Periodic only)_<br />
-    Interval, in seconds, between each execution of the pipeline.
--   **Number of Executions**
+    -   **Periódico**:<br />
+        O pipeline é executado pela primeira vez após o número de segundos definidos no _Tempo de Atualização (segs)_ a partir do momento em que o plugin for instalado.<br />
+        Após cada execução, o pipeline espera o mesmo intervalo antes de ser executado novamente.
+    -   **Agendado**:<br />
+        A execução do pipeline é configurada usando uma **expressão cron**, semelhante a um crontab. Isso permite o agendamento preciso por minutos, horas, dias, semanas ou meses.
+-   **Tempo de Atualização (segs)** _(Somente Periódico)_<br />
+    Intervalo, em segundos, entre cada execução do pipeline.
+-   **Número de Execuções**
     
-    -   `-1`: The pipeline will run indefinitely.
-    -   Any positive number: The pipeline will run exactly that number of times.
--   **Session**<br />
-    A mandatory parameter used internally by the module to manage execution.<br />
-    It must be a **string value** and uniquely identify the session.
+    -   `-1`: O pipeline será executado indefinidamente.
+    -   Qualquer número positivo: O pipeline será executado exatamente esse número de vezes.
+-   **Sessão**<br />
+    Um parâmetro obrigatório usado internamente pelo módulo para gerenciar a execução.<br />
+    Deve ser um **valor em string** e identificar a sessão de forma exclusiva.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/t5FcSc6KWYd8IxgYYNUl.png"></figure>
 
 <br />
 
--   **hostPartitionSize** _(default 0)_<br />
-    Defines the maximum number of hosts to be grouped and polled in each batch.
--   **partitionDelay (secs)** _(default 30)_<br />
-    Defines the number of seconds to wait between each batch execution.
+-   **hostPartitionSize** _(padrão 0)_<br />
+    Define o número máximo de hosts a serem agrupados e consultados em cada lote.
+-   **partitionDelay (secs)** _(padrão 30)_<br />
+    Define o número de segundos a serem aguardados entre a execução de cada lote.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/4BG6bduRzTbAq96dfPRy.png" align="center"></figure>
 
@@ -70,44 +69,44 @@ Once selected, the SNMP Connector configuration window is displayed.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/Z8iIEKxtBX6hVKCNMVbl.png" align="center"></figure>
 
-**How Host Partitioning Works**
+**Como o Particionamento de Host Funciona**
 
-When polling a large number of hosts, **hostPartitionSize** and **partitionDelay** allow the workload to be divided into manageable batches.
+Ao consultar um grande número de hosts, o **hostPartitionSize** e o **partitionDelay** permitem que a carga de trabalho seja dividida em lotes gerenciáveis.
 
-For example:
+Por exemplo:
 
--   If `hostPartitionSize = 20` and `partitionDelay = 10`, and the pipeline has 100 devices:
+-   Se `hostPartitionSize = 20` e `partitionDelay = 10`, e o pipeline tiver 100 dispositivos:
     
-    -   The system will divide the 100 hosts into 5 groups of 20.
-    -   Each group of 20 will be polled sequentially, waiting 10 seconds between groups.
+    -   O sistema dividirá os 100 hosts em 5 grupos de 20.
+    -   Cada grupo de 20 será consultado sequencialmente, aguardando 10 segundos entre os grupos.
 
-Execution timeline example:
+Exemplo de cronograma de execução:
 
--   Poll 20 hosts → 00:00:00 – 00:00:05
--   Wait 10 seconds
--   Poll next 20 hosts → 00:00:15 – 00:00:20
--   Wait 10 seconds
--   Poll next 20 hosts → 00:00:30 – 00:00:35
--   Wait 10 seconds
--   Poll next 20 hosts → 00:00:45 – 00:00:50
--   Wait 10 seconds
--   Poll last 20 hosts → 00:01:05
+-   Consultar 20 hosts → 00:00:00 – 00:00:05
+-   Aguardar 10 segundos
+-   Consultar os próximos 20 hosts → 00:00:15 – 00:00:20
+-   Aguardar 10 segundos
+-   Consultar os próximos 20 hosts → 00:00:30 – 00:00:35
+-   Aguardar 10 segundos
+-   Consultar os próximos 20 hosts → 00:00:45 – 00:00:50
+-   Aguardar 10 segundos
+-   Consultar os últimos 20 hosts → 00:01:05
 
-At the end of the cycle, the pipeline waits until the next scheduled execution.
+Ao final do ciclo, o pipeline aguarda até a próxima execução agendada.
 
-⚠️ **Important Note:** If the total polling time (including delays) exceeds the interval defined in the cron expression or refresh time, executions may **overlap**. This can cause inaccurate timestamps in the collected data. Always validate that partition sizes and delays are properly aligned with the pipeline schedule.
+⚠️ **Nota Importante:** Se o tempo total de consulta (incluindo os atrasos) exceder o intervalo definido na expressão cron ou no tempo de atualização, as execuções poderão **sobrepor-se**. Isso pode gerar timestamps incorretos nos dados coletados. Sempre valide se o tamanho das partições e os atrasos estão devidamente alinhados com a programação do pipeline.
 
 <br />
 
-**Default Credentials**
+**Credenciais Padrão**
 
-The SNMP Connector also requires **default credentials**:
+O Conector SNMP também requer **credenciais padrão**:
 
--   **SNMP Version** (e.g., 2c, 3).
--   **Community** (for SNMP v1/v2c).
--   **Authentication and privacy fields** (for SNMP v3).
+-   **Versão SNMP** (ex., 2c, 3).
+-   **Comunidade** (para SNMP v1/v2c).
+-   **Campos de autenticação e privacidade** (para SNMP v3).
 
-These credentials are applied to all hosts by default, but can be overridden individually when adding hosts to the connector.
+Essas credenciais são aplicadas por padrão a todos os hosts, no entanto, podem ser substituídas de forma individual ao adicionar hosts ao conector.
 
 <br />
 
@@ -115,23 +114,23 @@ These credentials are applied to all hosts by default, but can be overridden ind
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/VTjDadscYiuwjKBqdoYS.png" align="center"></figure>
 
-<div class="sd-callout" data-callout-type="info">The <strong>Hosts section</strong> is normally provisioned through the <strong>Inventory module</strong>, which enables massive and organized provisioning of devices. This method is recommended when managing a large number of hosts, as it ensures consistency and efficiency.</div>
+<div class="sd-callout" data-callout-type="info">A <strong>seção de Hosts</strong> é normalmente provisionada por meio do <strong>Módulo de Inventário</strong>, que possibilita um provisionamento massivo e organizado dos dispositivos. Esse método é recomendado ao se gerenciar um grande número de hosts, garantindo consistência e eficiência.</div>
 
-<div class="sd-callout" data-callout-type="info">However, it is also possible to manually add hosts one by one using the <strong>Add Host</strong> button, specifying the corresponding <strong>OID Group</strong> for each device.</div>
+<div class="sd-callout" data-callout-type="info">Contudo, também é possível adicionar os hosts de forma manual e individual usando o botão <strong>Adicionar Host</strong>, especificando para cada dispositivo o seu respectivo <strong>Grupo de OID</strong>.</div>
 
 <br />
 
-**Summary**
+**Resumo**
 
-The SNMP Connector in the Extract stage allows flexible and scalable polling of network devices:
+O Conector SNMP no estágio Extract possibilita uma pesquisa flexível e escalonável de dispositivos de rede:
 
--   **Periodic** or **Scheduled** execution modes.
--   Continuous execution with `-1` or limited runs with a fixed number.
--   Session parameter is mandatory.
--   Partitioning (hostPartitionSize, partitionDelay) prevents overloads and improves efficiency.
--   Requires at least one host and valid SNMP credentials.
+-   Modos de execução **Periódico** ou **Agendado**.
+-   Execução contínua com `-1` ou execuções limitadas mediante um número fixo.
+-   O parâmetro Sessão é obrigatório.
+-   O particionamento (hostPartitionSize, partitionDelay) previne sobrecargas e melhora a eficiência.
+-   Requer a presença de no mínimo um host e credenciais SNMP válidas.
 
-Correct configuration ensures reliable and optimized data extraction for the subsequent transformation and loading stages.
+Sua configuração correta assegura uma extração de dados otimizada e confiável para os estágios posteriores de transformação e carga.
 
 <br />
 <br />

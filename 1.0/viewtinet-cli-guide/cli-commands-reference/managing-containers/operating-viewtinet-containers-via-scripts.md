@@ -1,5 +1,4 @@
 ---
-reusableId: 50
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Operating Viewtinet Containers via Scripts'
 id: 20U-C19U-8N7-KWB
@@ -7,19 +6,19 @@ slug: operating-viewtinet-containers-via-scripts
 isVisible: true
 lastUpdated: '2025-10-15 16:05:16'
 ---
-# **<span align="center">Operating Viewtinet Containers via Scripts</span>**
+# **<span align="center">Operando Contêineres Viewtinet via Scripts</span>**
 
 <br />
 
-This chapter covers the use of CLI scripts to manage the lifecycle of Viewtinet containers. These scripts provide a consistent and safe way to start, stop, or restart all containers that belong to a specific Viewtinet module.
+Este capítulo aborda o uso de scripts CLI para gerenciar o ciclo de vida dos contêineres Viewtinet. Estes scripts fornecem uma maneira segura e consistente de iniciar, parar ou reiniciar todos os contêineres que pertencem a um módulo específico do Viewtinet.
 
-The scripts are located in the following path:
+Os scripts estão localizados no seguinte caminho:
 
 ```
 /opt/vn/viewtinet-builder/scripts/<module>/action-module.sh
 ```
 
-Where `&lt;module&gt;` corresponds to one of the platform components, such as:
+Onde `&lt;module&gt;` corresponde a um dos componentes da plataforma, tais como:
 
 -   `viewtiauth`
 -   `viewtisight`
@@ -28,134 +27,134 @@ Where `&lt;module&gt;` corresponds to one of the platform components, such as:
 -   `dhyana`
 -   `viewtimon`
 
-Each script accepts one of the following parameters:
+Cada script aceita um dos seguintes parâmetros:
 
--   `start`: Starts all containers of the selected module.
--   `stop`: Stops all containers of the selected module.
--   `restart`: Stops and then starts all containers of the selected module.
+-   `start`: Inicia todos os contêineres do módulo selecionado.
+-   `stop`: Para todos os contêineres do módulo selecionado.
+-   `restart`: Para e depois inicia todos os contêineres do módulo selecionado.
 
-These scripts ensure that actions are applied to the entire module in a controlled manner, respecting container dependencies and the required start/stop order. They are especially useful during:
+Esses scripts garantem que as ações sejam aplicadas em todo o módulo de forma controlada, respeitando as dependências dos contêineres e a ordem necessária de inicialização/parada. Eles são especialmente úteis durante:
 
--   Maintenance or troubleshooting operations
--   Controlled shutdowns prior to system updates
--   Partial restarts when only one module requires attention
+-   Operações de manutenção ou solução de problemas
+-   Desligamentos controlados antes de atualizações do sistema
+-   Reinícios parciais quando apenas um módulo exige atenção
 
 ---
 
 <br />
 
-## **Starting a Module**
+## **Iniciando um Módulo**
 
-To start all containers associated with a specific Viewtinet module, use the `start` parameter with the module's `action-module.sh` script.
+Para iniciar todos os contêineres associados a um módulo específico do Viewtinet, use o parâmetro `start` com o script `action-module.sh` do módulo.
 
-**Example:**
+**Exemplo:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewticore/action-module.sh start
 ```
 
-> **Tip:** Wait a few seconds after running the script, then verify the container status using `dps`.
+> **Dica:** Aguarde alguns segundos após executar o script, em seguida verifique o status do contêiner usando `dps`.
 
-## **Stopping a Module**
+## **Parando um Módulo**
 
-To stop all containers associated with a specific module, use the `stop` parameter. This is useful before applying upgrades, backing up volumes, or performing diagnostics.
+Para parar todos os contêineres associados a um módulo específico, use o parâmetro `stop`. Isso é útil antes de aplicar atualizações, fazer backup de volumes ou realizar diagnósticos.
 
-**Example:**
+**Exemplo:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewtisight/action-module.sh stop
 ```
 
-> **Caution:** Do not use this during peak production hours unless necessary.
+> **Atenção:** Não use isso durante os horários de pico de produção, a menos que seja necessário.
 
 <br />
 
-## **Restarting a Module**
+## **Reiniciando um Módulo**
 
-The `restart` parameter combines a stop followed by a start operation for the selected module. This is commonly used to recover from container-level issues, configuration changes, or memory leaks.
+O parâmetro `restart` combina uma operação de parada seguida de uma inicialização para o módulo selecionado. Isso é comumente usado para recuperar de problemas a nível de contêiner, alterações de configuração ou vazamentos de memória.
 
 <br />
 
-**Example:**
+**Exemplo:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewtiauth/action-module.sh restart
 ```
 
-> **Note:** A restart may temporarily interrupt services. Always verify the platform health afterward using `dps` and the web interface.
+> **Nota:** Um reinício pode interromper temporariamente os serviços. Sempre verifique a saúde da plataforma depois usando `dps` e a interface web.
 
 ---
 
-## **Additional Scripts for the** `viewticore` **Module**
+## **Scripts Adicionais para o Módulo** `viewticore`
 
-Unlike other modules in Viewtinet, the `viewticore` module includes two additional scripts to manage internal components separately:
+Ao contrário de outros módulos no Viewtinet, o módulo `viewticore` inclui dois scripts adicionais para gerenciar componentes internos separadamente:
 
 1.  `action-timescaledb.sh`
 2.  `action-viewticore-internal.sh`
 
-These scripts provide more granular control over critical infrastructure components related to data storage and internal platform logic.
+Estes scripts fornecem controle mais granular sobre componentes de infraestrutura críticos relacionados ao armazenamento de dados e lógica interna da plataforma.
 
 <br />
 
-## **Restarting the Time-Series Database (**`action-timescaledb.sh`**)**
+## **Reiniciando o Banco de Dados de Séries Temporais (**`action-timescaledb.sh`**)**
 
-This script controls the TimescaleDB container, which serves as the time-series database where all collected data is stored.
+Este script controla o contêiner do TimescaleDB, que atua como o banco de dados de séries temporais onde todos os dados coletados são armazenados.
 
-**Script path:**
+**Caminho do script:**
 
 ```
 /opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh
 ```
 
-**Usage:**
+**Uso:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh restart
 ```
 
-This script also accepts the `start` and `stop` parameters:
+Este script também aceita os parâmetros `start` e `stop`:
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh stop
 /opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh start
 ```
 
-> **Note:** Stopping the database will interrupt access to all metrics and historical data. Use with caution and only during planned maintenance windows.
+> **Nota:** Parar o banco de dados interromperá o acesso a todas as métricas e dados históricos. Use com cautela e apenas durante janelas de manutenção planejadas.
 
 <br />
 
-## **Managing Internal Containers (**`action-viewticore-internal.sh`**)**
+## **Gerenciando Contêineres Internos (**`action-viewticore-internal.sh`**)**
 
-This script handles auxiliary containers that perform background processing inside the `viewticore` module, such as arbiter processes or MongoDB used for internal coordination.
+Este script lida com contêineres auxiliares que realizam o processamento em segundo plano dentro do módulo `viewticore`, como processos de árbitro ou o MongoDB usado para coordenação interna.
 
 <br />
 
-**Script path:**
+**Caminho do script:**
 
 ```
 /opt/vn/viewtinet-builder/scripts/viewticore/action-viewticore-internal.sh
 ```
 
-**Usage:**
+**Uso:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/viewticore/action-viewticore-internal.sh restart
 ```
 
-> **Tip:** Use this script when troubleshooting internal alarms, replication issues, or if instructed by the support team.
+> **Dica:** Use este script ao solucionar alarmes internos, problemas de replicação ou se for instruído pela equipe de suporte.
 
 ---
 
-> ⚠️ **Warning:** These scripts are intended for advanced operational scenarios. Avoid using them unless you understand their impact or have been instructed by Viewtinet support. In most cases, restarting the full `viewticore` module using `action-module.sh` is sufficient.
+> ⚠️ **Aviso:** Estes scripts são destinados a cenários operacionais avançados. Evite usá-los a menos que você entenda seu impacto ou tenha sido instruído pelo suporte do Viewtinet. Na maioria dos casos, reiniciar o módulo `viewticore` completo usando `action-module.sh` é suficiente.
 
 ---
 
 <br />
 
-## **Module Script Reference Table**
+## **Tabela de Referência de Scripts de Módulos**
 
-The following table summarizes all supported modules and the location of their control script:
+A tabela a seguir resume todos os módulos suportados e a localização do seu script de controle:
 
-<table><tbody><tr><th><p><span align="center">Module</span></p></th><th><p><span align="center">Script Path</span></p></th><th><p><span align="center">Description</span></p></th></tr><tr><td><p><code>viewtiauth</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtiauth/action-module.sh</code></p></td><td><p>Authentication and user access containers</p></td></tr><tr><td><p><code>viewtisight</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtisight/action-module.sh</code></p></td><td><p>BI dashboards and reporting engine</p></td></tr><tr><td><p><code>viewtimanager</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtimanager/action-module.sh</code></p></td><td><p>Web interface and plugin orchestration</p></td></tr><tr><td><p><code>viewticore</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-module.sh</code></p></td><td><p>Core processing and data storage</p></td></tr><tr><td><p><code>viewticore-db</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh</code></p></td><td><p>Time-series database (TimescaleDB) control</p></td></tr><tr><td><p><code>viewticore-int</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-viewticore-internal.sh</code></p></td><td><p>Internal services of the viewticore module</p></td></tr><tr><td><p><code>dhyana</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/dhyana/action-module.sh</code></p></td><td><p>ETL pipelines and data collection logic</p></td></tr><tr><td><p><code>viewtimon</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtimon/action-module.sh</code></p></td><td><p>QoS and network visibility containers</p></td></tr></tbody></table>
+<table><tbody><tr><th><p><span align="center">Módulo</span></p></th><th><p><span align="center">Caminho do Script</span></p></th><th><p><span align="center">Descrição</span></p></th></tr><tr><td><p><code>viewtiauth</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtiauth/action-module.sh</code></p></td><td><p>Contêineres de acesso de usuários e autenticação</p></td></tr><tr><td><p><code>viewtisight</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtisight/action-module.sh</code></p></td><td><p>Painéis de BI e mecanismo de relatórios</p></td></tr><tr><td><p><code>viewtimanager</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtimanager/action-module.sh</code></p></td><td><p>Interface web e orquestração de plugins</p></td></tr><tr><td><p><code>viewticore</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-module.sh</code></p></td><td><p>Processamento principal e armazenamento de dados</p></td></tr><tr><td><p><code>viewticore-db</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-timescaledb.sh</code></p></td><td><p>Controle do banco de dados de séries temporais (TimescaleDB)</p></td></tr><tr><td><p><code>viewticore-int</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewticore/action-viewticore-internal.sh</code></p></td><td><p>Serviços internos do módulo viewticore</p></td></tr><tr><td><p><code>dhyana</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/dhyana/action-module.sh</code></p></td><td><p>Pipelines de ETL e lógica de coleta de dados</p></td></tr><tr><td><p><code>viewtimon</code></p></td><td><p><code>/opt/vn/viewtinet-builder/scripts/viewtimon/action-module.sh</code></p></td><td><p>QoS e contêineres de visibilidade de rede</p></td></tr></tbody></table>
 
-Use this table as a quick reference to locate and execute the correct control script for each module in your Viewtinet environment.
+Use esta tabela como uma referência rápida para localizar e executar o script de controle correto para cada módulo no seu ambiente Viewtinet.

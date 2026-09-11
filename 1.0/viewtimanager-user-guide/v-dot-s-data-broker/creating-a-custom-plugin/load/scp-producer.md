@@ -7,27 +7,27 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-22 16:31:00'
 ---
-# **<span align="center">SCP Producer</span>**
+# **<span align="center">Produtor SCP (SCP Producer)</span>**
 
 <br />
 
-The **SCP Producer** allows you to securely transfer files from the Viewtinet server to a remote host using the **SCP (Secure Copy Protocol)** over SSH. Instead of exporting individual grid rows like other producers, the SCP Producer works at the **file level**, picking up files from a local directory and delivering them to a specified path on the remote server.
-
-<br />
-
----
-
-## **Prerequisite: File List Connector**
-
-<div class="sd-callout" data-callout-type="warning"><strong>Important:</strong> The SCP Producer does <strong>not</strong> work independently. It requires the <strong>File List Connector</strong> to be configured in the <strong>Extract stage</strong> of the same pipeline.<br /><br />The File List Connector is responsible for collecting files from a <code>to-collect</code> directory and moving them to a <code>to-send</code> directory. The SCP Producer then takes the files from the <code>to-send</code> directory and transfers them to the remote destination via SCP.<br /><br />Please refer to the <strong>File List Connector</strong> documentation in the <strong>Extract</strong> section for its full configuration details.</div>
+O **SCP Producer** permite transferir arquivos de forma segura do servidor Viewtinet para um host remoto usando o **SCP (Secure Copy Protocol)** sobre SSH. Em vez de exportar linhas individuais de grade como outros produtores, o Produtor SCP trabalha no **nível de arquivo**, pegando arquivos de um diretório local e entregando-os a um caminho especificado no servidor remoto.
 
 <br />
 
 ---
 
-## **Configuration Parameters**
+## **Pré-requisito: Conector de Lista de Arquivos (File List Connector)**
 
-Once you select `SCP Producer` from the Producer Type dropdown, the following connection and transfer parameters become available:
+<div class="sd-callout" data-callout-type="warning"><strong>Importante:</strong> O Produtor SCP <strong>não</strong> funciona de forma independente. Ele requer que o <strong>File List Connector</strong> seja configurado na <strong>etapa Extract</strong> do mesmo pipeline.<br /><br />O File List Connector é responsável por coletar arquivos de um diretório <code>to-collect</code> (a coletar) e movê-los para um diretório <code>to-send</code> (a enviar). O Produtor SCP então pega os arquivos do diretório <code>to-send</code> e os transfere para o destino remoto via SCP.<br /><br />Por favor, consulte a documentação do <strong>File List Connector</strong> na seção <strong>Extract</strong> para ver os detalhes completos de sua configuração.</div>
+
+<br />
+
+---
+
+## **Parâmetros de Configuração**
+
+Depois de selecionar `SCP Producer` no menu suspenso de Tipo de Produtor, os seguintes parâmetros de conexão e transferência ficam disponíveis:
 
 <br />
 
@@ -35,20 +35,20 @@ Once you select `SCP Producer` from the Producer Type dropdown, the following co
 
 <br />
 
--   **Host:** The IP address or hostname of the remote server where the files will be delivered (e.g., `10.30.23.10`).
--   **Destination path:** The absolute directory path on the remote server where the files will be placed (e.g., `/home/remote_directory`).
--   **Port:** The SSH port on the remote server. The standard default is `22`.
--   **Username:** The SSH user account used to authenticate the connection on the remote host (e.g., `remote_user`).
--   **Password:** The password for the specified SSH user account.
--   **Keep Files:** When this checkbox is **unchecked** (default behavior), the SCP Producer will **delete the local files** from the `to-send` directory after they have been successfully transferred to the remote server. If **checked**, the local copies of the files will be preserved even after the transfer is completed.
+-   **Host:** O endereço IP ou nome do host do servidor remoto onde os arquivos serão entregues (ex., `10.30.23.10`).
+-   **Destination path** (Caminho de destino): O caminho do diretório absoluto no servidor remoto onde os arquivos serão colocados (ex., `/home/remote_directory`).
+-   **Port** (Porta): A porta SSH no servidor remoto. O padrão padrão é `22`.
+-   **Username** (Nome de usuário): A conta de usuário SSH usada para autenticar a conexão no host remoto (ex., `remote_user`).
+-   **Password** (Senha): A senha para a conta de usuário SSH especificada.
+-   **Keep Files** (Manter Arquivos): Quando esta caixa de seleção está **desmarcada** (comportamento padrão), o Produtor SCP **excluirá os arquivos locais** do diretório `to-send` depois que eles tiverem sido transferidos com sucesso para o servidor remoto. Se estiver **marcada**, as cópias locais dos arquivos serão preservadas mesmo após a conclusão da transferência.
 
 <br />
 
-> [!WARNING] **Connectivity Verification**<br />
-> The SCP Producer relies on the **SSH protocol** to establish a secure connection with the remote server. Before enabling this producer, it is the **administrator's responsibility** to guarantee that:<br />
-> - The remote host is **reachable** from the Viewtinet server.<br />
-> - The configured **SSH port** (default `22`) is **open and accessible** through any intermediate firewalls or network policies.<br />
-> - The provided **credentials** (username and password) are valid and have **write permissions** on the destination path.<br /><br />
-> It is strongly recommended to perform a manual SCP or SSH connection test from the Viewtinet server's command line before activating this producer to confirm that the transfer will succeed.
+> [!WARNING] **Verificação de Conectividade**<br />
+> O Produtor SCP depende do **protocolo SSH** para estabelecer uma conexão segura com o servidor remoto. Antes de habilitar este produtor, é **responsabilidade do administrador** garantir que:<br />
+> - O host remoto está **acessível** a partir do servidor Viewtinet.<br />
+> - A **porta SSH** configurada (padrão `22`) está **aberta e acessível** por quaisquer firewalls intermediários ou políticas de rede.<br />
+> - As **credenciais** fornecidas (nome de usuário e senha) são válidas e têm **permissões de gravação** no caminho de destino.<br /><br />
+> É altamente recomendável realizar um teste manual de conexão SCP ou SSH a partir da linha de comando do servidor Viewtinet antes de ativar este produtor para confirmar que a transferência será bem-sucedida.
 
 <br />

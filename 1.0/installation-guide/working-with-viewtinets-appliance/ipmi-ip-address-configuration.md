@@ -1,5 +1,4 @@
 ---
-reusableId: 81
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'IPMI IP Address Configuration'
 id: GTF-VP32-JNO-C00
@@ -7,23 +6,23 @@ slug: ipmi-ip-address-configuration
 isVisible: true
 lastUpdated: '2025-10-15 10:36:15'
 ---
-# **<span align="center">IPMI IP Address Configuration</span>**
+# **<span align="center">Configuração do Endereço IP da IPMI</span>**
 
-<span align="justify">The Intelligent Platform Management Interface (IPMI) provides remote access to multiple users at different locations for networking. It also allows a system admin­istrator to monitor system health and manage computer events remotely. IPMI operates independently from the operating system. Provides remote access to multiple users from different locations for system maintenance and management.</span>
+<span align="justify">O Intelligent Platform Management Interface (IPMI) fornece acesso remoto a vários usuários em diferentes locais para rede. Ele também permite que um administrador do sistema monitore a integridade do sistema e gerencie eventos do computador remotamente. A IPMI opera de forma independente do sistema operacional. Fornece acesso remoto a vários usuários de diferentes locais para manutenção e gerenciamento do sistema.</span>
 
-This section describes the steps to configure the IP address of the IPMI interface. To complete these steps, you will need to connect a keyboard and monitor to your appliance (list of ports in the previous chapter, link), power on the appliance, and when the SuperMicro message appears, as shown in the image below, you must press the DEL key
+Esta seção descreve as etapas para configurar o endereço IP da interface IPMI. Para concluir essas etapas, você precisará conectar um teclado e um monitor ao seu appliance (lista de portas no capítulo anterior, link), ligar o appliance e, quando a mensagem da SuperMicro aparecer, conforme mostrado na imagem abaixo, você deve pressionar a tecla DEL
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/dBYEmjKmvVdmmBMRcFD6.png"></figure>
 
-In the next screen, you will need to press the &lt;DEL&gt; key again.
+Na próxima tela, você precisará pressionar a tecla &lt;DEL&gt; novamente.
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/zXcW0E7FveIE23iUXAr5.png"></figure>
 
-The above will allow you to enter the appliance's Setup Utility. To access the IPMI configuration, use the right arrow key '-&gt;' to navigate to the IPMI menu, as shown in the images
+O procedimento acima permitirá que você entre no Utilitário de Configuração do appliance (Setup Utility). Para acessar a configuração da IPMI, use a tecla de seta para a direita '-&gt;' para navegar até o menu IPMI, conforme mostrado nas imagens
 
 <br />
 
@@ -35,13 +34,13 @@ The above will allow you to enter the appliance's Setup Utility. To access the I
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/a8YHwpY94NBJwUmyRqpv.png"></figure>
 
-Using the down arrow key on the keyboard, select the 'Update IPMI LAN Configuration' menu and press the &lt;Enter&gt; key to change the configuration.
+Usando a tecla de seta para baixo no teclado, selecione o menu 'Update IPMI LAN Configuration' (Atualizar Configuração de LAN da IPMI) e pressione a tecla &lt;Enter&gt; para alterar a configuração.
 
-From the pop-up menu, select 'Yes'
+No menu pop-up, selecione 'Yes' (Sim)
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/xgnecpAv56dTAspkzmT6.png"></figure>
 
-Use the down arrow key to select each configuration parameter (Station IP Address, Subnet Mask, Gateway IP Address) to configure it according to your network settings
+Use a tecla de seta para baixo para selecionar cada parâmetro de configuração (Station IP Address, Subnet Mask, Gateway IP Address) para configurá-lo de acordo com as configurações da sua rede
 
 <br />
 
@@ -55,15 +54,15 @@ Use the down arrow key to select each configuration parameter (Station IP Addres
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/AGCp1sU4oGJbaxNYKF7o.png"></figure>
 
-After configuring the network parameters, to confirm the changes, you will need to press the &lt;F4&gt; key
+Depois de configurar os parâmetros de rede, para confirmar as alterações, você precisará pressionar a tecla &lt;F4&gt;
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/Rk34fGvJ6LICCghb7wT6.png"></figure>
 
-To finalize, select the 'Yes' option from the pop-up menu
+Para finalizar, selecione a opção 'Yes' (Sim) no menu pop-up
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/6HHddNJPpu8amwjAb2Ev.png"></figure>
 
-Now the appliance will go through a reboot process, and you will be able to access the IPMI tool via the web. Please remember to physically connect the IPMI port to your network in order to access the web-based IP tool (see the following [link](http:#?target=2PL-6EPV-GGQ-5D7#standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) )
+Agora o appliance passará por um processo de reinicialização e você poderá acessar a ferramenta IPMI via web. Lembre-se de conectar fisicamente a porta IPMI à sua rede para acessar a ferramenta de IP baseada na web (consulte o seguinte [link](http:#?target=2PL-6EPV-GGQ-5D7#standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) #standard-chassis-installation) )
 
 <br />
 

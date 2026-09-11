@@ -7,25 +7,25 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-03-13 17:41:27'
 ---
-# **<span align="center">Creating a Custom Plugin</span>**
+# **<span align="center">Criando um Plugin Personalizado</span>**
 
-This guide walks you through the process of creating a new plugin within the Viewtimanager interface.
-
-<br />
-
-## **Prerequisites**
-
-Ensure you are logged into the Viewtimanager.
+Este guia o orienta através do processo de criação de um novo plugin dentro da interface do Viewtimanager.
 
 <br />
 
-## **Step-by-Step Tutorial**
+## **Pré-requisitos**
 
-**Step 1: Navigate to V.S Data Broker** Make sure you are logged into **Viewtimanager**. Then, from the main menu, navigate to the **V.S Data Broker** section and select **Plugins**.
+Certifique-se de que você está conectado ao Viewtimanager.
 
 <br />
 
-**Step 2: Start Creation** Click the **"CREATE NEW PLUGIN"** button to initiate the process.
+## **Tutorial Passo a Passo**
+
+**Passo 1: Navegue até V.S Data Broker** Certifique-se de que está conectado ao **Viewtimanager**. Então, no menu principal, navegue até a seção **V.S Data Broker** e selecione **Plugins**.
+
+<br />
+
+**Passo 2: Iniciar a Criação** Clique no botão **"CREATE NEW PLUGIN"** (Criar Novo Plugin) para iniciar o processo.
 
 <br />
 
@@ -33,7 +33,7 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 3 & 4: Set the Plugin Name** Click the input field labeled "Name" and type the desired name for your new plugin.
+**Passo 3 e 4: Definir o Nome do Plugin** Clique no campo de entrada rotulado "Name" (Nome) e digite o nome desejado para o seu novo plugin.
 
 <br />
 
@@ -41,7 +41,7 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 5: Click on "Category"** Click the "Category" field to define the classification.
+**Passo 5: Clicar em "Category" (Categoria)** Clique no campo "Category" para definir a classificação.
 
 <br />
 
@@ -51,7 +51,7 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 6, 7 & 8: Assign a Category** Click the category selection area. You can either write a custom category manually or choose an existing one from the list.
+**Passo 6, 7 e 8: Atribuir uma Categoria** Clique na área de seleção de categoria. Você pode escrever uma categoria personalizada manualmente ou escolher uma existente na lista.
 
 <br />
 
@@ -67,7 +67,7 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 9 & 10: Add a Description (Optional)** Click on the text area provided for the plugin description and enter your description (e.g., "A Plugin description this is optional step"). This step is optional.
+**Passo 9 e 10: Adicionar uma Descrição (Opcional)** Clique na área de texto fornecida para a descrição do plugin e digite sua descrição (ex: "A Plugin description this is optional step"). Este passo é opcional.
 
 <br />
 
@@ -79,7 +79,7 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 11 & 12: Set a Plugin Image (Optional)** Interact with the image upload area, then click on "ADD IMAGE" to open the file selector.
+**Passo 11 e 12: Definir uma Imagem para o Plugin (Opcional)** Interaja com a área de upload de imagem, depois clique em "ADD IMAGE" (Adicionar Imagem) para abrir o seletor de arquivos.
 
 <br />
 
@@ -89,10 +89,10 @@ Ensure you are logged into the Viewtimanager.
 
 <br />
 
-**Step 13: Select an Image** Select an image from your local drive to represent the plugin.
+**Passo 13: Selecionar uma Imagem** Selecione uma imagem do seu disco local para representar o plugin.
 
 <br />
 
 <br />
 
-**Step 14: Finalize** Click on the "SAVE CHANGES" button at the bottom of the screen to finish creating your custom plugin. <img src="https://viewtinettraining.github.io/images/step14.png" alt="Save Changes">
+**Passo 14: Finalizar** Clique no botão "SAVE CHANGES" (Salvar Alterações) na parte inferior da tela para concluir a criação do seu plugin personalizado. <img src="https://viewtinettraining.github.io/images/step14.png" alt="Save Changes">

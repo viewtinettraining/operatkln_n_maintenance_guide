@@ -1,5 +1,4 @@
 ---
-reusableId: 147
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Sflow
 id: Z4I-P8Q4-K1D-88D
@@ -7,43 +6,43 @@ slug: sflow
 isVisible: true
 lastUpdated: '2025-09-02 15:11:06'
 ---
-# **<span align="center">sFlow Connector</span>**
+# **<span align="center">Conector sFlow</span>**
 
 <br />
 
-The **sFlow Connector** is designed to process flow data exported in the **sFlow protocol** from network devices such as switches and routers. Similar to the NetFlow Connector, it works in conjunction with the **Ethernet Streamer** pipeline. Before using this connector, it is **mandatory** to configure an **Ethernet Streamer** pipeline with the correct port (commonly UDP/6343) and host filters. The Ethernet Streamer captures the binary sFlow traffic and stores it in the **Collected Path** directory, where the sFlow Connector later processes and decodes it.
+O **Conector sFlow** é projetado para processar dados de fluxo exportados no **protocolo sFlow** de dispositivos de rede como switches e roteadores. Semelhante ao Conector NetFlow, ele funciona em conjunto com o pipeline **Ethernet Streamer**. Antes de usar este conector, é **obrigatório** configurar um pipeline **Ethernet Streamer** com a porta correta (geralmente UDP/6343) e os filtros de host. O Ethernet Streamer captura o tráfego sFlow binário e o armazena no diretório do **Caminho Coletado (Collected Path)**, onde o Conector sFlow os processa e decodifica posteriormente.
 
 <br />
 
-⚠️ **Note:** Viewtinet provides a **Plugin Template** for sFlow integrations. In most scenarios, you will not need to configure this connector manually, as the template already includes a functional setup.
+⚠️ **Nota:** O Viewtinet fornece um **Template de Plugin** para integrações sFlow. Na maioria dos cenários, você não precisará configurar este conector manualmente, pois o template já inclui uma configuração funcional.
 
 <br />
 
-## **Key Parameters**
+## **Principais Parâmetros**
 
--   **Frequency Type**<br />
-    Same as other scheduled connectors (ICMP, SNMP, CSV, NetFlow). It can be configured as:
+-   **Tipo de Frequência**<br />
+    O mesmo que os outros conectores agendados (ICMP, SNMP, CSV, NetFlow). Pode ser configurado como:
     
-    -   **Periodic**: Executes every _x_ seconds (defined in _Refresh Time_).
-    -   **Scheduled**: Executes according to a Cron Expression.
+    -   **Periódico**: Executa a cada _x_ segundos (definidos em _Tempo de Atualização_).
+    -   **Agendado**: Executa de acordo com uma Expressão Cron.
 -   **Threads**<br />
-    Defines the number of concurrent threads for pipeline execution. Increasing this number allows more files to be processed simultaneously, but also increases CPU and memory usage.
--   **Collected Path**<br />
-    Directory where the Ethernet Streamer dumps the captured sFlow traffic files.
--   **Processing Path**<br />
-    Temporary directory where files are handled while being decoded.
--   **Processed Path**<br />
-    Directory where files are stored after successful processing.
--   **Suffix**<br />
-    File extension of dumped files, usually `.csv` or a binary format depending on the configuration.
--   **Max Files**<br />
-    Maximum number of files processed per thread during each execution cycle.
--   **Number of Executions**
+    Define o número de threads simultâneas para execução do pipeline. Aumentar esse número permite que mais arquivos sejam processados simultaneamente, mas também aumenta o uso da CPU e da memória.
+-   **Caminho Coletado (Collected Path)**<br />
+    Diretório onde o Ethernet Streamer despeja os arquivos de tráfego sFlow capturados.
+-   **Caminho de Processamento (Processing Path)**<br />
+    Diretório temporário onde os arquivos são manuseados durante a decodificação.
+-   **Caminho Processado (Processed Path)**<br />
+    Diretório onde os arquivos são armazenados após o processamento bem-sucedido.
+-   **Sufixo**<br />
+    Extensão de arquivo dos arquivos despejados, geralmente `.csv` ou um formato binário, dependendo da configuração.
+-   **Máx de Arquivos**<br />
+    Número máximo de arquivos processados por thread durante cada ciclo de execução.
+-   **Número de Execuções**
     
-    -   `-1`: The connector will run indefinitely.
-    -   Positive integer: Limits the execution to the specified number of runs.
--   **Version**<br />
-    Defines how fields are decoded according to the sFlow standard version. Typically supports **sFlow v5**, which is the most widely used.
+    -   `-1`: O conector funcionará indefinidamente.
+    -   Inteiro positivo: Limita a execução ao número especificado de execuções.
+-   **Versão**<br />
+    Define como os campos são decodificados de acordo com a versão padrão sFlow. Normalmente suporta **sFlow v5**, que é o mais amplamente usado.
 
 <br />
 

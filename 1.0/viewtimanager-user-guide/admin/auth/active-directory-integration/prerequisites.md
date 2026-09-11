@@ -1,5 +1,4 @@
 ---
-reusableId: 60
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: ' Prerequisites'
 id: CHL-R7JE-YJF-9EG
@@ -7,52 +6,52 @@ slug: prerequisites
 isVisible: true
 lastUpdated: '2025-10-15 15:38:04'
 ---
-# **<span align="center">Prerequisites</span>**
+# **<span align="center">Pré-requisitos</span>**
 
-<span align="justify">Integrating Viewtimanager with Active Directory requires specific configurations to ensure seamless authentication and user management. This chapter outlines the necessary prerequisites, including user permissions, network requirements, and configuration details.</span>
-
-<br />
-
-## **1\. Active Directory User Account Requirements**
-
-To connect Viewtimanager with Active Directory, a dedicated user account must be created in the domain. This account should have the following properties:
-
--   **Username:** A unique service account (e.g., `viewtinet_user`).
--   **Permissions:** Read access to the Active Directory structure to retrieve user and group information.
--   **Domain Scope:** Ensure the account has access to the necessary Organizational Units (OUs) where the users are stored.
--   **Non-Expiring Password:** It is recommended to configure the account with a non-expiring password to prevent authentication failures.
-
-## **2\. Network and Firewall Requirements**
-
-The following ports must be open for proper communication between Viewtimanager and the Active Directory server:
-
--   **TCP 389:** Standard LDAP port for directory queries (non-secure mode).
--   **TCP 636:** Standard LDAPS port for directory queries (secure mode).
-
-## **3\. Active Directory Structure Considerations**
-
--   Ensure that the required users and groups are located in a known Organizational Unit (OU) or group for easier management.
--   If Role-Based Access Control (RBAC) is being implemented, predefine the security groups that will map to different Viewtimanager roles.
-
-## **4\. Domain Controller Information**
-
-Gather the following details before starting the integration:
-
--   **Domain Name:** (e.g., `viewtinet.local`)
--   **Domain Controller IP or Hostname:** (e.g., `10.30.23.8 or dc01.viewtinet.local`)
--   **Base DN (Distinguished Name):** (e.g., `DC=viewtinet,DC=local`)
--   **Bind DN (Service Account DN):** (e.g., `CN=viewtinet_user,DC=viewtinet,DC=local`)
-
-<div class="sd-callout" data-callout-type="info"><span align="justify">The structure of the service user, including its groups and Organizational Units (OUs), presented in this manual is for informational purposes only and does not represent a mandatory configuration. Each company should maintain its users, groups, and OUs according to its own policies and requirements. However, it is mandatory that the service user has read permissions on the Active Directory tree, as this is necessary to perform the mapping between users and groups within the platform.</span></div>
-
-## **5\. Time Synchronization**
-
-Both Viewtimanager and the Active Directory server must have synchronized time settings to avoid authentication failures due to time drift.
+<span align="justify">A integração do Viewtimanager com o Active Directory requer configurações específicas para garantir a autenticação e o gerenciamento de usuários sem problemas. Este capítulo descreve os pré-requisitos necessários, incluindo permissões de usuário, requisitos de rede e detalhes de configuração.</span>
 
 <br />
 
-### **Next Steps**
+## **1\. Requisitos da Conta de Usuário do Active Directory**
 
-Once these prerequisites are met, the next chapter will guide you through the step-by-step process of configuring Viewtimanager to integrate with Active Directory, including role assignment to modify the graphical user interface behavior based on user permissions.
+Para conectar o Viewtimanager ao Active Directory, uma conta de usuário dedicada deve ser criada no domínio. Esta conta deve ter as seguintes propriedades:
+
+-   **Nome de Usuário:** Uma conta de serviço exclusiva (ex: `viewtinet_user`).
+-   **Permissões:** Acesso de leitura à estrutura do Active Directory para recuperar informações de usuários e grupos.
+-   **Escopo do Domínio:** Garanta que a conta tenha acesso às Unidades Organizacionais (OUs) necessárias onde os usuários estão armazenados.
+-   **Senha que não Expira:** Recomenda-se configurar a conta com uma senha que não expira para evitar falhas de autenticação.
+
+## **2\. Requisitos de Rede e Firewall**
+
+As seguintes portas devem estar abertas para a comunicação adequada entre o Viewtimanager e o servidor Active Directory:
+
+-   **TCP 389:** Porta LDAP padrão para consultas de diretório (modo inseguro).
+-   **TCP 636:** Porta LDAPS padrão para consultas de diretório (modo seguro).
+
+## **3\. Considerações sobre a Estrutura do Active Directory**
+
+-   Certifique-se de que os usuários e grupos necessários estejam localizados em uma Unidade Organizacional (OU) ou grupo conhecido para facilitar o gerenciamento.
+-   Se o Controle de Acesso Baseado em Funções (RBAC) estiver sendo implementado, predefina os grupos de segurança que serão mapeados para as diferentes funções do Viewtimanager.
+
+## **4\. Informações do Controlador de Domínio**
+
+Reúna os seguintes detalhes antes de iniciar a integração:
+
+-   **Nome do Domínio:** (ex: `viewtinet.local`)
+-   **IP ou Hostname do Controlador de Domínio:** (ex: `10.30.23.8 ou dc01.viewtinet.local`)
+-   **Base DN (Nome Distinto):** (ex: `DC=viewtinet,DC=local`)
+-   **Bind DN (DN da Conta de Serviço):** (ex: `CN=viewtinet_user,DC=viewtinet,DC=local`)
+
+<div class="sd-callout" data-callout-type="info"><span align="justify">A estrutura do usuário de serviço, incluindo seus grupos e Unidades Organizacionais (OUs), apresentada neste manual é apenas para fins informativos e não representa uma configuração obrigatória. Cada empresa deve manter seus usuários, grupos e OUs de acordo com suas próprias políticas e requisitos. No entanto, é obrigatório que o usuário de serviço tenha permissões de leitura na árvore do Active Directory, pois isso é necessário para realizar o mapeamento entre usuários e grupos dentro da plataforma.</span></div>
+
+## **5\. Sincronização de Tempo**
+
+Tanto o Viewtimanager quanto o servidor Active Directory devem ter configurações de tempo sincronizadas para evitar falhas de autenticação devido à diferença de tempo.
+
+<br />
+
+### **Próximos Passos**
+
+Assim que esses pré-requisitos forem atendidos, o próximo capítulo o guiará pelo processo passo a passo de configuração do Viewtimanager para se integrar ao Active Directory, incluindo a atribuição de funções para modificar o comportamento da interface gráfica com base nas permissões do usuário.
 
 <br />

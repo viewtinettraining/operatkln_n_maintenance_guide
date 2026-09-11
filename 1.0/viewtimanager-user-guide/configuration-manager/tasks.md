@@ -1,5 +1,4 @@
 ---
-reusableId: 118
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Tasks
 id: QLK-CBX1-ANW-UDR
@@ -7,38 +6,38 @@ slug: tasks
 isVisible: true
 lastUpdated: '2025-10-15 14:54:13'
 ---
-# **<span align="center">Tasks</span>**
+# **<span align="center">Tarefas (Tasks)</span>**
 
-<span align="justify">The Tasks tab in the Network Configuration Manager lets you orchestrate recurring or one‑off jobs against groups of devices. A Task is a named schedule + device filter, and a Subtask is a single command invocation within that job. Use Tasks to automate backups, compliance checks, or batch configuration pushes on a timetable you define.</span>
+<span align="justify">A aba Tarefas (Tasks) no Network Configuration Manager permite orquestrar trabalhos recorrentes ou pontuais em grupos de dispositivos. Uma Tarefa (Task) é um agendamento nomeado + filtro de dispositivo, e uma Subtarefa (Subtask) é a invocação de um único comando dentro desse trabalho. Use as Tarefas para automatizar backups, verificações de conformidade (compliance) ou envios de configuração em lote em um cronograma definido por você.</span>
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/Szq3m40HWbuIqJjUmGs3.png" align="center"></figure>
 
-1.  **View existing tasks**
+1.  **Visualizar tarefas existentes**
     
-    -   **Name**: Your task identifier.
-    -   **Devices Filter**: A previously defined filter (by group, tag, IP‑range).
-    -   **Cron** / **Date**: Shows the schedule expression or next run timestamp.
-    -   **Scheduled**: Enable/disable the cron job.
-    -   **Allow Individual Failure**: Continue other devices if one fails.
-    -   **Edit**, **Run**, **Results**, **Delete** icons for quick actions.
-2.  **Create a new Task**<br />
-    Click **Add a New Task** at the bottom of the list.<br />
+    -   **Name**: Seu identificador de tarefa.
+    -   **Devices Filter**: Um filtro definido anteriormente (por grupo, tag, faixa de IP).
+    -   **Cron** / **Date**: Mostra a expressão de agendamento ou o carimbo de data/hora da próxima execução.
+    -   **Scheduled**: Ativa/desativa o trabalho cron.
+    -   **Allow Individual Failure**: Continua com outros dispositivos se um falhar.
+    -   Ícones **Edit**, **Run**, **Results**, **Delete** para ações rápidas.
+2.  **Criar uma nova Tarefa**<br />
+    Clique em **Add a New Task** na parte inferior da lista.<br />
     
-3.  **Define Task properties**
+3.  **Definir propriedades da Tarefa**
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/1OZnFoP7XS98lwWcd9n0.png" align="center"></figure>
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/SiyUs5lpBf5rpXSND2YJ.png" align="center"></figure>
     
-4.  **Define Task properties**<br />
-    In the **View Task** dialog:
+4.  **Definir propriedades da Tarefa**<br />
+    No diálogo **View Task**:
     
-    -   **Name**: Give your task a clear, descriptive title.
-    -   **Filter Devices**: Pick one of your pre‑built device filters.
-    -   **Allow individual failure**: When checked, one device failure won’t halt the rest of the run.
-    -   **Schedule Enabled**: Toggle on to open the scheduling controls.
+    -   **Nome (Name)**: Dê à sua tarefa um título claro e descritivo.
+    -   **Filtrar Dispositivos (Filter Devices)**: Escolha um dos seus filtros de dispositivos pré-construídos.
+    -   **Permitir falha individual (Allow individual failure)**: Quando marcado, uma falha de dispositivo não interromperá o restante da execução.
+    -   **Agendamento Ativado (Schedule Enabled)**: Ative para abrir os controles de agendamento.
         
         <br />
         
@@ -47,10 +46,10 @@ lastUpdated: '2025-10-15 14:54:13'
     
     <br />
     
-5.  **Set execution schedule**
+5.  **Definir cronograma de execução**
     
-    -   **Next Execution Date** (one‑off): Toggle on and pick a date/time.
-    -   **Cron Editor**: When **Next Execution Date** is off and **Schedule Enabled** is on, configure a recurring schedule in **Minutes | Hourly | Daily | Weekly | Monthly** tabs.
+    -   **Data da Próxima Execução (Next Execution Date)** (pontual): Ative e escolha uma data/hora.
+    -   **Editor Cron**: Quando **Next Execution Date** estiver desativado e **Schedule Enabled** estiver ativado, configure um agendamento recorrente nas abas **Minutes | Hourly | Daily | Weekly | Monthly**.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/Af0kd0e7DQalTBXON92s.png" align="center"></figure>
     
@@ -60,15 +59,15 @@ lastUpdated: '2025-10-15 14:54:13'
     
     <br />
     
-6.  **Build your Task Flow**<br />
-    Once saved, you’re taken to the flow editor. Your Task node appears in purple.
+6.  **Construir seu Fluxo de Tarefa**<br />
+    Depois de salvo, você será levado ao editor de fluxo. Seu nó (node) de Tarefa aparece em roxo.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/R4aw8tNfNB8pvylkLX8m.png" align="center"></figure>
     
     <br />
     
-    -   **Add a Subtask**: Hover over the bottom handle and click to spawn a new node.
-    -   **Connect** the Task node to the Subtask node by dragging the connector dot.
+    -   **Adicionar uma Subtarefa (Add a Subtask)**: Passe o mouse sobre a alça inferior e clique para gerar um novo nó.
+    -   **Conecte (Connect)** o nó Task ao nó Subtask arrastando o ponto conector.
         
         <br />
         
@@ -76,14 +75,14 @@ lastUpdated: '2025-10-15 14:54:13'
         
         <br />
         
-7.  **Configure each Subtask**
+7.  **Configurar cada Subtarefa**
     
-    -   Click **EDIT** on the Subtask node.
-    -   In the **View Subtask** dialog, enter:
+    -   Clique em **EDIT** no nó Subtask.
+    -   No diálogo **View Subtask**, insira:
         
-        -   **Name**: A descriptive subtask label (e.g. “Get Startup Configs”).
-        -   **Devices**: Inherit from the parent Task filter or override with a comma‑separated list.
-        -   **Command**: Select one of your predefined Commands.
+        -   **Name**: Um rótulo descritivo da subtarefa (ex: "Get Startup Configs").
+        -   **Devices**: Herdar do filtro da Tarefa principal ou sobrescrever com uma lista separada por vírgulas.
+        -   **Command**: Selecione um de seus Comandos predefinidos.
             
             <br />
             
@@ -92,10 +91,10 @@ lastUpdated: '2025-10-15 14:54:13'
     
     <br />
     
-8.  **Save and Activate**
+8.  **Salvar e Ativar**
     
-    -   After configuring all subtasks, click **SAVE** in the flow editor.
-    -   Your Task will now run on its schedule, executing each Subtask in sequence.
+    -   Depois de configurar todas as subtarefas, clique em **SAVE** no editor de fluxo.
+    -   Sua Tarefa agora será executada em sua programação, executando cada Subtarefa em sequência.
         
         <br />
         
@@ -104,15 +103,15 @@ lastUpdated: '2025-10-15 14:54:13'
     
     <br />
     
-9.  **Persist the new Task**<br />
-    After saving your flow, return to the **Tasks** list. You’ll see your new task row populated with its name, device filter, and Cron expression. Click **Save Changes** at the bottom right to commit it.<br />
+9.  **Persistir a nova Tarefa**<br />
+    Depois de salvar seu fluxo, retorne à lista **Tasks**. Você verá sua nova linha de tarefa preenchida com o nome, filtro de dispositivo e expressão Cron. Clique em **Save Changes** no canto inferior direito para confirmá-la.<br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/kEpm3l7JJ2BEdmpw3Idh.png" align="center"></figure>
     
     <br />
     
-10.  **Confirm the schedule**<br />
-    Once saved, verify that the **Cron** column shows the correct expression (e.g. `0 0/5 * ?`) and that **Scheduled** is checked. Your task is now active and will run according to the defined timetable.
+10.  **Confirmar o agendamento**<br />
+    Uma vez salvo, verifique se a coluna **Cron** mostra a expressão correta (ex: `0 0/5 * ?`) e se **Scheduled** está marcado. Sua tarefa agora está ativa e será executada de acordo com o cronograma definido.
     
     ```text
     Name           | Devices Filter           | Cron            | Scheduled
@@ -120,11 +119,11 @@ lastUpdated: '2025-10-15 14:54:13'
     My Task Name   | Cisco Training Devices   | 0 0/5   * ?   | ✓
     ```
     
-11.  **Run, Edit, or Delete on‑demand**
+11.  **Executar, Editar ou Excluir sob demanda**
     
-    -   **Edit (✏️)** – Modify the task’s name, filter or schedule.
-    -   **Run (▶️)** – Trigger the task immediately against its device set.
-    -   **Delete (🗑️)** – Remove the task entirely.
+    -   **Edit (✏️)** – Modifica o nome da tarefa, filtro ou agendamento.
+    -   **Run (▶️)** – Aciona a tarefa imediatamente contra o seu conjunto de dispositivos.
+    -   **Delete (🗑️)** – Remove a tarefa completamente.
         
         <br />
         
@@ -132,12 +131,12 @@ lastUpdated: '2025-10-15 14:54:13'
         
         <br />
         
-12.  **View Task Results**<br />
-    Click **Results (📋)** to inspect the history of runs. You’ll see for each execution:
+12.  **Visualizar Resultados da Tarefa**<br />
+    Clique em **Results (📋)** para inspecionar o histórico de execuções. Você verá para cada execução:
     
-    -   **Start / Finish** timestamps
-    -   **Hosts Success / Failure** counts
-    -   **Commands Run / Success / Failure** counts
+    -   Carimbos de data/hora de **Início / Fim (Start / Finish)**
+    -   Contagens de **Sucesso / Falha de Hosts (Hosts Success / Failure)**
+    -   Contagens de **Comandos Executados / Sucesso / Falha (Commands Run / Success / Failure)**
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/2KrDvj6S0vFToz7QUIDM.png" align="center"></figure>
     
@@ -145,7 +144,7 @@ lastUpdated: '2025-10-15 14:54:13'
     
     <br />
     
-    Expand any run to drill into host‑level details, then expand a host to see **Subtask Results** and click the **👁️** in **Command Output** to view the raw device output (e.g. running‑config).
+    Expanda qualquer execução para aprofundar-se nos detalhes no nível do host, depois expanda um host para ver os **Subtask Results** (Resultados da Subtarefa) e clique em **👁️** na **Command Output** (Saída de Comando) para visualizar a saída bruta do dispositivo (ex: running-config).
     
     <br />
     
@@ -158,6 +157,6 @@ lastUpdated: '2025-10-15 14:54:13'
     <br />
     
 
-> **Note:** This section covers only the viewing of command outputs. File storage and archive management of collected configurations will be explained in the **“Configurations”** chapter.
+> **Nota:** Esta seção abrange apenas a visualização de saídas de comando. O armazenamento de arquivos e o gerenciamento de arquivos das configurações coletadas serão explicados no capítulo **“Configurations”**.
 
 <br />

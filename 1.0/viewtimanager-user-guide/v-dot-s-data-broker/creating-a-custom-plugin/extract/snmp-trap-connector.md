@@ -1,5 +1,4 @@
 ---
-reusableId: 148
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'SNMP Trap Connector'
 id: Z4P-33BL-Q86-7SO
@@ -7,4 +6,4 @@ slug: snmp-trap-connector
 isVisible: true
 lastUpdated: '2025-09-03 16:00:44'
 ---
-<h1><strong><span align="center">SNMP Trap Connector</span></strong></h1><p></p><p>The <strong>SNMP Trap Connector</strong> appears as one of the available connectors in the ETL Extract stage.<br>However, this connector is <strong>not intended for direct configuration or use by end users</strong>.</p><blockquote><p>⚠️ <strong>Disclaimer</strong><br>If your project requires SNMP Trap integration, please contact <strong>Viewtinet Support</strong> or your account representative.</p><p>The implementation of this connector depends on advanced configurations and internal processes managed exclusively by Viewtinet. For this reason, it cannot be set up or operated directly from the user interface without support assistance.</p></blockquote><p></p>
+<h1><strong><span align="center">Conector SNMP Trap</span></strong></h1><p></p><p>O <strong>Conector SNMP Trap</strong> aparece como um dos conectores disponíveis no estágio Extract do ETL.<br>Contudo, este conector <strong>não se destina à configuração direta ou uso por usuários finais</strong>.</p><blockquote><p>⚠️ <strong>Aviso</strong><br>Se o seu projeto exigir a integração de SNMP Trap, por favor contate o <strong>Suporte Viewtinet</strong> ou seu representante de conta.</p><p>A implementação deste conector depende de configurações avançadas e processos internos gerenciados exclusivamente pela Viewtinet. Por esse motivo, ele não pode ser configurado ou operado diretamente pela interface do usuário sem a assistência do suporte.</p></blockquote><p></p>

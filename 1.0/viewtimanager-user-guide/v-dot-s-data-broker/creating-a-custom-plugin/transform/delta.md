@@ -11,7 +11,7 @@ lastUpdated: '2026-05-21 08:29:56'
 
 <br />
 
-The **Delta** grid handler is a powerful component that calculates the difference (delta) between the value of a field in the current iteration and its value in the previous iteration during the ETL process.
+O handler de grid **Delta** é um componente poderoso que calcula a diferença (delta) entre o valor de um campo na iteração atual e seu valor na iteração anterior durante o processo ETL.
 
 <br />
 
@@ -21,11 +21,11 @@ The **Delta** grid handler is a powerful component that calculates the differenc
 
 ---
 
-### **Configuration**
+### **Configuração**
 
-Configuring the **Delta** grid handler involves following these sequential steps:
+A configuração do handler de grid **Delta** envolve as seguintes etapas sequenciais:
 
-1.  **Select the Grid-Handler**: Click on the "ADD NEW GRID-HANDLER" button and select **Delta** from the `Grid Handler Type` dropdown menu.
+1.  **Selecionar o Grid-Handler**: Clique no botão "ADD NEW GRID-HANDLER" e selecione **Delta** no menu suspenso `Grid Handler Type`.
 
 <br />
 
@@ -37,8 +37,8 @@ Configuring the **Delta** grid handler involves following these sequential steps
 
 <br />
 
-2.  **Select the Keys**: From the `Keys` dropdown, select the key(s) that you wish to use as groupers for the metric or counter. These keys uniquely identify the entity for which the delta is calculated (e.g., `host` and `interface`).
-3.  **Select the Column**: From the `Column` dropdown, choose the numeric field on which the delta operation will be performed.
+2.  **Selecionar as Keys**: No menu suspenso `Keys`, selecione a(s) chave(s) que você deseja usar como agrupadores para a métrica ou contador. Essas chaves identificam de forma única a entidade para a qual o delta é calculado (por exemplo, `host` e `interface`).
+3.  **Selecionar a Column**: No menu suspenso `Column`, escolha o campo numérico no qual a operação delta será realizada.
 
 <br />
 
@@ -48,21 +48,21 @@ Configuring the **Delta** grid handler involves following these sequential steps
 
 ---
 
-### **Use Case Example: SNMP Counters**
+### **Exemplo de Caso de Uso: Contadores SNMP**
 
-A common scenario for the Delta grid handler is processing SNMP counters. When retrieving metrics like inbound and outbound octets from network interfaces via SNMP, the values returned are typically **cumulative counters** since the last time the SNMP agent was restarted.
+Um cenário comum para o handler de grid Delta é o processamento de contadores SNMP. Ao coletar métricas como octetos de entrada e saída das interfaces de rede via SNMP, os valores retornados geralmente são **contadores cumulativos** desde a última vez em que o agente SNMP foi reiniciado.
 
-To obtain the real, absolute amount of traffic (octets) transmitted between each ETL polling interval, you must calculate the delta.
+Para obter a quantidade real e absoluta de tráfego (octetos) transmitida entre cada intervalo de polling do ETL, você deve calcular o delta.
 
-#### **Why combine multiple Keys?**
+#### **Por que combinar múltiplas Keys?**
 
-In this scenario, a network device (host) can have multiple interfaces. Therefore, the state must be tracked using a combination of the `host` and `interface` keys together:
+Neste cenário, um dispositivo de rede (host) pode ter várias interfaces. Portanto, o estado deve ser rastreado usando uma combinação das chaves `host` e `interface` em conjunto:
 
--   If only the `interface` key were used, the delta calculation could become corrupted, as multiple distinct devices might share identical interface names (e.g., `eth0`).
--   By combining `host` and `interface` as the **Keys**, the Delta grid handler correctly computes the difference for each unique interface on each unique device.
+-   Se apenas a chave `interface` fosse usada, o cálculo do delta poderia ser corrompido, pois vários dispositivos distintos podem compartilhar nomes de interface idênticos (por exemplo, `eth0`).
+-   Ao combinar `host` e `interface` como **Keys**, o handler de grid Delta calcula corretamente a diferença para cada interface exclusiva em cada dispositivo exclusivo.
 
 <br />
 
-<div class="sd-callout" data-callout-type="tip"><strong>Best Practice:</strong> Always evaluate your specific environment and data model. The combination of keys needed to uniquely track state varies depending on the nature of the data sources.</div>
+<div class="sd-callout" data-callout-type="tip"><strong>Melhor Prática:</strong> Sempre avalie seu ambiente e modelo de dados específicos. A combinação de chaves necessária para rastrear o estado de forma exclusiva varia dependendo da natureza das fontes de dados.</div>
 
 <br />

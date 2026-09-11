@@ -1,32 +1,32 @@
 ---
-reusableId: 89
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: About
-id: GXV-KRZL-2HI-CPM
+id: VF0-YCF6-YDW-CMP
 slug: about
 isVisible: true
-lastUpdated: '2025-07-18 07:28:26'
+isSearchable: true
+lastUpdated: '2026-09-10 19:55:33'
 ---
-## **<span align="center"><span class="text-large">Introduction to the Inventory Feature</span></span>**
+## **<span align="center"><span class="text-large">Introdução ao Recurso Inventory</span></span>**
 
 <br />
 
-The **Inventory** feature in Viewtinet provides a unified, authoritative repository of all your network assets and their key properties. Rather than scattering device details across multiple tools and spreadsheets, Inventory centralizes:
+O recurso **Inventory** (Inventário) no Viewtinet fornece um repositório unificado e confiável de todos os ativos da sua rede e suas principais propriedades. Em vez de dispersar detalhes de dispositivos por várias ferramentas e planilhas, o Inventory centraliza:
 
--   **Device Records**<br />
-    <span align="justify">Every managed endpoint—routers, switches, servers, virtual machines and more—is represented as a structured “Device” entry. Basic attributes (IP/hostname, vendor, model, OS, firmware version) are stored alongside custom identifiers or tags.</span>
--   **Credential Management**<br />
-    <span align="justify">Secure access credentials (SNMP community strings, SSH keys, WMI/WINRM, Telnet, ICMP, etc.) are maintained in the same system. This tight coupling ensures that auto-discovery and monitoring pipelines always have up-to-date, validated credentials.</span>
--   **Relationship Mapping**<br />
-    <span align="justify">This section lets you link each device entry to the specific data-collection protocols and sources (SNMP, ICMP, WINRM, SSH, Telnet etc.) used to acquire performance counters and metrics. By defining these associations centrally, you ensure consistent metric gathering across your entire infrastructure.</span>
--   **Discovery Integration**<br />
-    <span align="justify">Inventory drives and records the output of automated discovery jobs—SNMP walks, port scans, OS detection, DNS lookups—so that every asset discovered on the network is automatically added or updated in the central database.</span>
+-   **Registros de Dispositivos (Device Records)**<br />
+    <span align="justify">Cada endpoint gerenciado — roteadores, switches, servidores, máquinas virtuais e mais — é representado como uma entrada estruturada de "Dispositivo". Atributos básicos (IP/hostname, fabricante, modelo, SO, versão de firmware) são armazenados junto com identificadores personalizados ou tags.</span>
+-   **Gerenciamento de Credenciais (Credential Management)**<br />
+    <span align="justify">As credenciais de acesso seguro (strings de comunidade SNMP, chaves SSH, WMI/WINRM, Telnet, ICMP, etc.) são mantidas no mesmo sistema. Esse forte acoplamento garante que os processos de autodescoberta e monitoramento sempre tenham credenciais validadas e atualizadas.</span>
+-   **Mapeamento de Relacionamentos (Relationship Mapping)**<br />
+    <span align="justify">Esta seção permite que você vincule cada entrada de dispositivo aos protocolos e fontes de coleta de dados específicos (SNMP, ICMP, WINRM, SSH, Telnet, etc.) usados para adquirir contadores e métricas de desempenho. Ao definir essas associações centralmente, você garante uma coleta consistente de métricas em toda a sua infraestrutura.</span>
+-   **Integração de Descoberta (Discovery Integration)**<br />
+    <span align="justify">O Inventory conduz e registra a saída de tarefas de descoberta automatizadas — varreduras SNMP, varreduras de portas, detecção de SO, consultas DNS — de modo que cada ativo descoberto na rede seja automaticamente adicionado ou atualizado no banco de dados central.</span>
 
-<span align="justify">By consolidating asset details, access methods and data-collection mappings in a single platform, the Inventory feature becomes the foundational “single source of truth” for both network operations and strategic planning.</span>
+<span align="justify">Ao consolidar detalhes de ativos, métodos de acesso e mapeamentos de coleta de dados em uma única plataforma, o recurso Inventory torna-se a "fonte única da verdade" fundamental tanto para operações de rede quanto para o planejamento estratégico.</span>
 
 <br />
 
-<div class="sd-callout" data-callout-type="info">This feature is available starting from version v6.3.5 build 2353 released on November 11, 2024</div>
+<div class="sd-callout" data-callout-type="info"><p>Este recurso está disponível a partir da versão v6.3.5 build 2353 lançada em 11 de novembro de 2024</p></div>
 
 <br />
 <br />

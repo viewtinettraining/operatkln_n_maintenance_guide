@@ -1,5 +1,4 @@
 ---
-reusableId: 61
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Groups & Roles'
 id: 0QA-TLZ4-4U4-TO8
@@ -7,53 +6,53 @@ slug: groups-and-roles
 isVisible: true
 lastUpdated: '2025-10-15 15:39:00'
 ---
-# **<span align="center">AD Groups &amp; Viewtinet Roles</span>**
+# **<span align="center">Grupos do AD e Funções do Viewtinet</span>**
 
 <br />
 
-<span align="justify">This chapter will guide you through the process of creating and mapping roles in Viewtimanager, which will be linked to groups in your Active Directory. While the setup and preparation of Active Directory are outside the scope of this guide, it is important to note that the appropriate groups must already exist within your directory. By configuring roles in Viewtimanager and mapping them to these pre-existing groups, you ensure that users are assigned the correct permissions and access within the Viewtimanager interface, aligned with their organizational roles.</span>
+<span align="justify">Este capítulo o guiará através do processo de criação e mapeamento de funções no Viewtimanager, as quais serão vinculadas a grupos em seu Active Directory. Embora a configuração e preparação do Active Directory estejam fora do escopo deste guia, é importante observar que os grupos apropriados já devem existir em seu diretório. Ao configurar funções no Viewtimanager e mapeá-las para esses grupos pré-existentes, você garante que os usuários recebam as permissões e o acesso corretos dentro da interface do Viewtimanager, alinhados com suas funções organizacionais.</span>
 
-For the purpose of this guide, an Organizational Unit (OU) named **"Viewtinet\_Users"** has been created in Active Directory. Within this OU, three groups have been defined to manage user access in Viewtimanager:
+Para os propósitos deste guia, uma Unidade Organizacional (OU) chamada **"Viewtinet\_Users"** foi criada no Active Directory. Dentro desta OU, três grupos foram definidos para gerenciar o acesso de usuários no Viewtimanager:
 
--   **Admins\_Viewtinet**: This group includes administrator users with full access to both Viewtimanager and Viewtisight.
--   **ReadOnly\_Viewtinet**: This group consists of users with read-only access to Viewtisight, without permissions to create dashboards.
--   **Viewtisight\_Viewtinet**: This group contains users with administrative access to Viewtisight but no access to Viewtimanager.
+-   **Admins\_Viewtinet**: Este grupo inclui usuários administradores com acesso total ao Viewtimanager e ao Viewtisight.
+-   **ReadOnly\_Viewtinet**: Este grupo consiste em usuários com acesso somente leitura ao Viewtisight, sem permissões para criar painéis (dashboards).
+-   **Viewtisight\_Viewtinet**: Este grupo contém usuários com acesso administrativo ao Viewtisight, mas sem acesso ao Viewtimanager.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/xEEtWoUK537P4eDPCSbj.png" align="center"></figure>
 
 <br />
 
-## **ROLES**
+## **FUNÇÕES (ROLES)**
 
-<span align="justify">Roles define the permissions and access levels that users have within the platform. They determine what actions a user can perform, which modules they can access, and how they can interact with different features. Roles can be customized to align with an organization’s security policies, ensuring that users only have access to the functionalities relevant to their responsibilities. Additionally, roles can be mapped to Active Directory groups, allowing for seamless integration with existing user management structures.</span>
-
-<br />
-
-<span align="justify">As the first step, you must be logged in with the admin user or a user with administrative permissions in </span> Viewtimanager at `http://x.x.x.x:5000` (insecure mode) or `https://x.x.x.x:50001` (secure mode), where `x.x.x.x` is the management IP address of Viewtimanager.
+<span align="justify">As funções definem as permissões e os níveis de acesso que os usuários têm dentro da plataforma. Elas determinam quais ações um usuário pode realizar, quais módulos ele pode acessar e como ele pode interagir com os diferentes recursos. As funções podem ser personalizadas para se alinharem às políticas de segurança de uma organização, garantindo que os usuários tenham acesso apenas às funcionalidades relevantes para suas responsabilidades. Além disso, as funções podem ser mapeadas para grupos do Active Directory, permitindo a integração perfeita com as estruturas de gerenciamento de usuários existentes.</span>
 
 <br />
 
-To create a role, click on the **Admin** menu, navigate to the **Details** section, and enter the required information for the role you want to create. The role name must match the Active Directory group that you want to map it to.
+<span align="justify">Como primeiro passo, você deve estar logado com o usuário administrador ou um usuário com permissões administrativas no </span> Viewtimanager em `http://x.x.x.x:5000` (modo inseguro) ou `https://x.x.x.x:50001` (modo seguro), onde `x.x.x.x` é o endereço IP de gerenciamento do Viewtimanager.
+
+<br />
+
+Para criar uma função, clique no menu **Admin**, navegue até a seção **Details** e insira as informações necessárias para a função que deseja criar. O nome da função deve corresponder ao grupo do Active Directory ao qual você deseja mapeá-la.
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/neD5NA2oab2gjjq8pGMW.png"></figure>
 
-<div class="sd-callout" data-callout-type="info">There are two predefined permissions: VS_FULL_ACCESS and VM_FULL_ACCESS, which grant full access to all elements in the GUI. All other elements can be selected to create roles with customized access to the GUI.</div>
+<div class="sd-callout" data-callout-type="info">Existem duas permissões predefinidas: VS_FULL_ACCESS e VM_FULL_ACCESS, que concedem acesso total a todos os elementos da GUI. Todos os outros elementos podem ser selecionados para criar funções com acesso personalizado à GUI.</div>
 
-The 'Role Permissions' section allows you to assign or filter the visibility of elements in the GUI.
+A seção 'Role Permissions' permite atribuir ou filtrar a visibilidade de elementos na GUI.
 
-Permissions are structured as: **_Module\_Menu\_Tab\_Permission_**, where:
+As permissões são estruturadas como: **_Módulo\_Menu\_Aba\_Permissão_**, onde:
 
--   Module
+-   Módulo
     
     -   VM = Viewtimanager
     -   VS = Viewtisight
--   Menu: The Viewtimanager or Viewtisight menu where the permission will be applied
--   Tab: This applies exclusively to Viewtimanager and refers to sections within the menus.
--   Permission: Define the permission to be applied. It will only appear when access to the tab is to be denied, indicated by the word 'FILTERED'. If the word 'FILTERED' is not present, access is allowed.
+-   Menu: O menu do Viewtimanager ou do Viewtisight onde a permissão será aplicada
+-   Aba: Isso se aplica exclusivamente ao Viewtimanager e se refere a seções dentro dos menus.
+-   Permissão: Define a permissão a ser aplicada. Aparecerá apenas quando o acesso à aba for negado, indicado pela palavra 'FILTERED'. Se a palavra 'FILTERED' não estiver presente, o acesso é permitido.
 
-For this example, we will assign the VS\_FULL\_ACCESS and VM\_FULL\_ACCESS permissions to the role, as it is being mapped to the Admins\_Viewtinet group
+Para este exemplo, atribuiremos as permissões VS\_FULL\_ACCESS e VM\_FULL\_ACCESS à função, pois ela está sendo mapeada para o grupo Admins\_Viewtinet
 
 <br />
 
@@ -61,21 +60,21 @@ For this example, we will assign the VS\_FULL\_ACCESS and VM\_FULL\_ACCESS permi
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/P3b4vMMTPpkTkFIgr8y5.png"></figure>
 
-Finally, we will save the changes by clicking the 'SAVE' button
+Por fim, salvaremos as alterações clicando no botão 'SAVE'
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/KOFw115qHO2WRtmUUDOS.png" align="center"></figure>
 
-For each group defined in Active Directory, it will be necessary to create a role following the indicated process and assigning the required permissions for each case
+Para cada grupo definido no Active Directory, será necessário criar uma função seguindo o processo indicado e atribuindo as permissões necessárias para cada caso
 
 <br />
 
-For demonstration purposes, the three roles that map the Active Directory groups have been created as shown below:
+Para fins de demonstração, as três funções que mapeiam os grupos do Active Directory foram criadas conforme mostrado abaixo:
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/miwrxO52RXzDr4JqNJw0.png" align="center"></figure>
 
-The 'ReadOnly\_Viewtinet' role has the VS\_READ\_ONLY permission assigned, which grants access only to the Viewtisight module without the ability to create dashboards
+A função 'ReadOnly\_Viewtinet' tem a permissão VS\_READ\_ONLY atribuída, o que concede acesso apenas ao módulo Viewtisight, sem a capacidade de criar painéis (dashboards)
 
 <br />
 
@@ -83,7 +82,7 @@ The 'ReadOnly\_Viewtinet' role has the VS\_READ\_ONLY permission assigned, which
 
 <br />
 
-Meanwhile, the 'Viewtisight\_Viewtinet' role has the VS\_FULL\_ACCESS permission, which grants access only to the Viewtisight module with permission to create dashboards
+Enquanto isso, a função 'Viewtisight\_Viewtinet' tem a permissão VS\_FULL\_ACCESS, que concede acesso apenas ao módulo Viewtisight com permissão para criar painéis (dashboards)
 
 <br />
 

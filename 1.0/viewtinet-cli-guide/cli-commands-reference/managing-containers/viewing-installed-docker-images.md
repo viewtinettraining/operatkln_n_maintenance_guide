@@ -1,5 +1,4 @@
 ---
-reusableId: 49
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Viewing Installed Docker Images'
 id: R1C-WGZV-8OK-AI9
@@ -7,30 +6,30 @@ slug: viewing-installed-docker-images
 isVisible: true
 lastUpdated: '2025-10-15 16:02:19'
 ---
-# **<span align="center">Viewing Installed Docker Images</span>**
+# **<span align="center">Visualizando Imagens Docker Instaladas</span>**
 
 <br />
 
-Viewtinet provides another helpful CLI alias: `di`, which is shorthand for:
+A Viewtinet fornece outro alias útil na CLI: `di`, que é a abreviação de:
 
 ```bash
 sudo docker image ls
 ```
 
-This command lists all Docker images currently installed on the system. It's particularly useful for:
+Este comando lista todas as imagens Docker atualmente instaladas no sistema. É particularmente útil para:
 
--   Verifying the **exact version** of each Viewtinet component installed (e.g., `viewtinet/viewtisight:6.3.5`)
--   Checking the **creation date** of the image, which helps determine how recently it was updated or rebuilt
--   Comparing images across environments for consistency
--   **Reporting** image versions to the Viewtinet support team when opening a support ticket
+-   Verificar a **versão exata** de cada componente Viewtinet instalado (ex., `viewtinet/viewtisight:6.3.5`)
+-   Verificar a **data de criação** da imagem, o que ajuda a determinar quão recentemente ela foi atualizada ou reconstruída
+-   Comparar imagens em diferentes ambientes para consistência
+-   **Relatar** as versões da imagem para a equipe de suporte da Viewtinet ao abrir um ticket de suporte
 
-To use it, simply run:
+Para usá-lo, simplesmente execute:
 
 ```bash
 $ di
 ```
 
-You will see output similar to the following:
+Você verá uma saída semelhante à seguinte:
 
 ```
 REPOSITORY                        TAG       IMAGE ID       CREATED         SIZE
@@ -39,21 +38,21 @@ viewtinet/viewtiauth-backend     6.3.5     b2c3d4e5f6g7   23 hours ago    350MB
 viewtinet/viewticore             6.3.5     c3d4e5f6g7h8   23 hours ago    780MB
 ```
 
-> **Tip**: Always include the output of `di` when submitting a support request. It allows the support team to confirm you are running the correct and most recent versions of the components involved.
+> **Dica**: Sempre inclua a saída do `di` ao enviar uma solicitação de suporte. Isso permite que a equipe de suporte confirme se você está executando as versões corretas e mais recentes dos componentes envolvidos.
 
-This command complements `dps` by offering a version-level view of the deployed modules, helping you keep track of the platform’s health and update history.
+Este comando complementa o `dps` oferecendo uma visão no nível da versão dos módulos implantados, ajudando você a acompanhar a saúde da plataforma e o histórico de atualizações.
 
 <br />
 
-## **Checking the Installed Viewtinet Version**
+## **Verificando a Versão da Viewtinet Instalada**
 
-In addition to monitoring containers and images, it is often necessary to check the installed version of the Viewtinet platform itself. This can be done using the following command:
+Além de monitorar contêineres e imagens, muitas vezes é necessário verificar a versão instalada da própria plataforma Viewtinet. Isso pode ser feito usando o seguinte comando:
 
 ```bash
 dpkg --list | grep viewtinet
 ```
 
-This command queries the Debian package manager to list any installed packages that include `viewtinet` in their name. A typical output looks like this:
+Este comando consulta o gerenciador de pacotes Debian para listar quaisquer pacotes instalados que incluam `viewtinet` em seu nome. Uma saída típica se parece com isso:
 
 <br />
 
@@ -61,14 +60,14 @@ This command queries the Debian package manager to list any installed packages t
 ii  viewtinet-builder     6.3.3200     all     viewtinet-builder
 ```
 
-This output indicates that the system is running version `6.3.3200` of the `viewtinet-builder` package.
+Esta saída indica que o sistema está executando a versão `6.3.3200` do pacote `viewtinet-builder`.
 
-#### Why this is useful
+#### Por que isso é útil
 
--   It allows administrators to **confirm the exact installed version** of the platform, independent of the Docker image tags.
--   It is **essential for support purposes**, as the Viewtinet support team may request this information to troubleshoot issues or verify compatibility.
--   It helps identify if the environment is running a **stable or outdated build**, especially before performing upgrades or patches.
+-   Permite aos administradores **confirmar a versão exata instalada** da plataforma, independentemente das tags de imagem Docker.
+-   É **essencial para fins de suporte**, pois a equipe de suporte da Viewtinet pode solicitar essas informações para solucionar problemas ou verificar a compatibilidade.
+-   Ajuda a identificar se o ambiente está executando uma **build estável ou desatualizada**, especialmente antes de realizar atualizações ou correções.
 
-> **Tip**: Include the result of this command in any support request to ensure faster diagnosis and resolution.
+> **Dica**: Inclua o resultado deste comando em qualquer solicitação de suporte para garantir um diagnóstico e resolução mais rápidos.
 
 <br />

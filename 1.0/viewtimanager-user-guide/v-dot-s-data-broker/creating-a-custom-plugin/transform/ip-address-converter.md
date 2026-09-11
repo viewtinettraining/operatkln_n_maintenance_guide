@@ -11,27 +11,27 @@ lastUpdated: '2026-05-21 16:58:00'
 
 <br />
 
-The **IP Address Converter** grid handler is used to perform conversions between standard IP address string formats and their mathematical representations (Integers or Hexadecimals), and vice versa. 
+O handler de grid **IP Address Converter** é usado para realizar conversões entre formatos de string de endereço IP padrão e suas representações matemáticas (Inteiros ou Hexadecimais), e vice-versa. 
 
-This is particularly useful when raw data sources provide IP addresses as decimal integers or hexadecimals, which need to be translated into readable dotted-decimal IP addresses for analysis, or when you need to compress IPs into integer representations.
+Isso é particularmente útil quando fontes de dados brutas fornecem endereços IP como inteiros decimais ou hexadecimais, que precisam ser traduzidos para endereços IP decimais com pontos legíveis para análise, ou quando você precisa compactar IPs em representações inteiras.
 
 <br />
 
 ---
 
-## **Configuration**
+## **Configuração**
 
-Configuring the IP Address Converter is straightforward. It requires three main parameters to process the data:
+A configuração do IP Address Converter é simples. Ela requer três parâmetros principais para processar os dados:
 
--   **Field:** The source column in your grid that contains the value you want to convert.
--   **Output column name:** The destination column where the handler will write the resulting converted value. If this column doesn't exist, it will be created.
--   **Mode:** The type of conversion operation you want to perform.
+-   **Field:** A coluna de origem na sua grid que contém o valor que você deseja converter.
+-   **Output column name:** A coluna de destino onde o handler escreverá o valor convertido resultante. Se esta coluna não existir, ela será criada.
+-   **Mode:** O tipo de operação de conversão que você deseja realizar.
 
 <br />
 
-### **Available Modes**
+### **Modos Disponíveis**
 
-The handler supports four different conversion modes depending on your needs:
+O handler suporta quatro modos de conversão diferentes dependendo das suas necessidades:
 
 <br />
 
@@ -39,9 +39,9 @@ The handler supports four different conversion modes depending on your needs:
 
 <br />
 
--   **IP Address to Int:** Converts a standard dotted-decimal IP address (e.g., `192.168.1.1`) into its 32-bit Integer representation.
--   **Int to IP Address:** Converts a 32-bit Integer representation back into a standard dotted-decimal IP address.
--   **IP Address to Hexadecimal:** Converts a standard dotted-decimal IP address into its Hexadecimal representation.
--   **Hexadecimal to IP Address:** Converts a Hexadecimal string representation back into a standard dotted-decimal IP address.
+-   **IP Address to Int:** Converte um endereço IP decimal com pontos padrão (por exemplo, `192.168.1.1`) para sua representação Inteira de 32 bits.
+-   **Int to IP Address:** Converte uma representação Inteira de 32 bits de volta para um endereço IP decimal com pontos padrão.
+-   **IP Address to Hexadecimal:** Converte um endereço IP decimal com pontos padrão para sua representação Hexadecimal.
+-   **Hexadecimal to IP Address:** Converte uma representação de string Hexadecimal de volta para um endereço IP decimal com pontos padrão.
 
 <br />

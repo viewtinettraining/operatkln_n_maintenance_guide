@@ -7,15 +7,15 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 10:48:29'
 ---
-# **<span align="center">The Viewtimon Interface</span>**
+# **<span align="center">A Interface do Viewtimon</span>**
 
 <br />
 
-The **Viewtimon** module provides a dedicated interface for managing the DPI probe, monitoring its health, and checking its performance.
+O módulo **Viewtimon** fornece uma interface dedicada para gerenciar a sonda DPI, monitorar sua integridade e verificar seu desempenho.
 
-> <div class="sd-callout" data-callout-type="info">The Viewtimon interface is not always active by default. Access to this module depends on the Viewtimon feature being properly licensed in your deployment.</div>
+> <div class="sd-callout" data-callout-type="info">A interface do Viewtimon nem sempre está ativa por padrão. O acesso a este módulo depende de o recurso Viewtimon estar devidamente licenciado em sua implantação.</div>
 
-To access this interface, navigate to the main Viewtimanager left-hand menu and click on **Viewtimon**.
+Para acessar esta interface, navegue até o menu principal à esquerda do Viewtimanager e clique em **Viewtimon**.
 
 <br />
 
@@ -25,9 +25,9 @@ To access this interface, navigate to the main Viewtimanager left-hand menu and 
 
 ---
 
-## **Module Overview and Controls**
+## **Visão Geral e Controles do Módulo**
 
-Upon entering the Viewtimon section, you are greeted with the **STATUS** tab, which acts as the main dashboard for the module.
+Ao entrar na seção do Viewtimon, você é recebido com a guia **STATUS**, que atua como o painel principal do módulo.
 
 <br />
 
@@ -35,44 +35,44 @@ Upon entering the Viewtimon section, you are greeted with the **STATUS** tab, wh
 
 <br />
 
-### **System Information & Controls**
+### **Informações do Sistema e Controles**
 
-At the very top of the page, the system provides critical operational information and control buttons for the Viewtimon engine:
+No topo da página, o sistema fornece informações operacionais críticas e botões de controle para o mecanismo Viewtimon:
 
--   **Version:** Displays the currently installed version of Viewtimon (e.g., `6.3.5.6369 (Revision)`), along with a link to the latest **release notes**.
--   **Uptime:** Shows how long the Viewtimon service has been continuously running without interruption.
--   **Control Buttons (Top Right):** These buttons allow you to manage the engine's service state:
+-   **Version:** Exibe a versão atualmente instalada do Viewtimon (por exemplo, `6.3.5.6369 (Revision)`), juntamente com um link para as **notas de lançamento** mais recentes.
+-   **Uptime:** Mostra por quanto tempo o serviço do Viewtimon está em execução contínua sem interrupção.
+-   **Botões de Controle (Canto Superior Direito):** Estes botões permitem gerenciar o estado do serviço do mecanismo:
     
-    -   **STOP:** Halts the Viewtimon DPI engine.
-    -   **RESTART:** Safely restarts the service (useful after applying certain configuration changes).
-    -   **START:** Starts the engine if it is currently stopped.
+    -   **STOP:** Interrompe o mecanismo DPI do Viewtimon.
+    -   **RESTART:** Reinicia o serviço com segurança (útil após a aplicação de certas alterações de configuração).
+    -   **START:** Inicia o mecanismo se ele estiver interrompido no momento.
 
-### **Navigation Tabs**
+### **Guias de Navegação**
 
-Below the top controls, several tabs allow you to navigate through the different configuration areas of Viewtimon:
+Abaixo dos controles superiores, várias guias permitem navegar pelas diferentes áreas de configuração do Viewtimon:
 
--   **STATUS:** The current view, showing the performance dashboard.
--   **CONFIGURATION:** For setting up network interfaces and advanced engine parameters.
--   **SIGNATURES:** To manage custom or updated DPI application signatures.
--   **BUSINESS GROUPS:** To define organizational grouping for IPs and subnets.
--   **HOSTS LIST:** Displays discovered hosts on the network.
--   **ISSUES:** A log of any internal warnings or errors detected by the module.
+-   **STATUS:** A visualização atual, mostrando o painel de desempenho.
+-   **CONFIGURATION:** Para configurar interfaces de rede e parâmetros avançados do mecanismo.
+-   **SIGNATURES:** Para gerenciar assinaturas de aplicativos DPI personalizadas ou atualizadas.
+-   **BUSINESS GROUPS:** Para definir agrupamentos organizacionais para IPs e sub-redes.
+-   **HOSTS LIST:** Exibe os hosts descobertos na rede.
+-   **ISSUES:** Um registro de quaisquer avisos internos ou erros detectados pelo módulo.
 
 ---
 
-## **Viewtimon Performance Dashboard**
+## **Painel de Desempenho do Viewtimon**
 
-The **STATUS** tab features the **Viewtimon Performance** dashboard, which visualizes the real-time and historical health of the probe itself (not the user traffic). It includes the following key indicators:
+A guia **STATUS** apresenta o painel **Viewtimon Performance**, que visualiza a integridade em tempo real e histórica da própria sonda (não o tráfego do usuário). Ele inclui os seguintes indicadores-chave:
 
--   **CPU Usage:** Monitors the processing load of the DPI engine.
--   **Memory Usage:** Tracks the RAM consumption of the module.
--   **IO Wait:** Displays the time the CPU spends waiting for input/output operations (e.g., writing to disk), which is crucial for identifying bottlenecks.
+-   **CPU Usage:** Monitora a carga de processamento do mecanismo DPI.
+-   **Memory Usage:** Acompanha o consumo de RAM do módulo.
+-   **IO Wait:** Exibe o tempo que a CPU passa aguardando operações de entrada/saída (por exemplo, gravação em disco), o que é crucial para identificar gargalos.
 
 <br />
 
-### **Time Selector Configuration**
+### **Configuração do Seletor de Tempo**
 
-To analyze the performance historically, you can use the robust **Time Selector** located at the top of the dashboard.
+Para analisar o desempenho historicamente, você pode usar o robusto **Seletor de Tempo** localizado na parte superior do painel.
 
 <br />
 
@@ -80,19 +80,19 @@ To analyze the performance historically, you can use the robust **Time Selector*
 
 <br />
 
-This selector allows you to customize the view:
+Este seletor permite personalizar a visualização:
 
--   **Dashboard Dropdown:** Allows switching to different performance dashboards if available.
--   **Start Date & End Date:** Define an exact custom time range.
--   **Time Shortcut:** A quick dropdown to select common periods (e.g., `Last day`, `Last 7 days`, `Last hour`).
--   **Granularity:** Adjust the resolution of the data points on the graphs (e.g., `5 minutes`, `1 hour`), allowing for fine-grained analysis or smoother long-term trends.
--   **Control Icons:** The buttons on the right allow you to refresh the data manually, lock the time range, enable auto-refresh, or access further dashboard options.
+-   **Dashboard Dropdown:** Permite alternar para diferentes painéis de desempenho, se disponíveis.
+-   **Start Date & End Date:** Define um intervalo de tempo personalizado exato.
+-   **Time Shortcut:** Um menu suspenso rápido para selecionar períodos comuns (por exemplo, `Last day`, `Last 7 days`, `Last hour`).
+-   **Granularity:** Ajusta a resolução dos pontos de dados nos gráficos (por exemplo, `5 minutes`, `1 hour`), permitindo uma análise refinada ou tendências de longo prazo mais suaves.
+-   **Ícones de Controle:** Os botões à direita permitem atualizar os dados manualmente, bloquear o intervalo de tempo, habilitar a atualização automática ou acessar outras opções do painel.
 
 ---
 
-## **Additional Health Dashboards**
+## **Painéis de Integridade Adicionais**
 
-Using the **Dashboard Dropdown** in the Time Selector, you can access two additional specialized dashboards to further analyze the health and performance of the probe:
+Usando o **Dashboard Dropdown** no Seletor de Tempo, você pode acessar dois painéis especializados adicionais para analisar ainda mais a integridade e o desempenho da sonda:
 
 <br />
 
@@ -102,7 +102,7 @@ Using the **Dashboard Dropdown** in the Time Selector, you can access two additi
 
 ### **1\. Stages Monitoring**
 
-This dashboard displays key information about the internal functioning of the Viewtimon probe and its data processing pipeline.
+Este painel exibe informações importantes sobre o funcionamento interno da sonda Viewtimon e seu pipeline de processamento de dados.
 
 <br />
 
@@ -110,16 +110,16 @@ This dashboard displays key information about the internal functioning of the Vi
 
 <br />
 
-It includes the following metrics:
+Ele inclui as seguintes métricas:
 
--   **Total Throughput:** The total amount of data being processed internally.
--   **Total Dropped Packets:** Identifies if any packets are being dropped by the engine.
--   **Total Deduplicated Packets:** Shows packets that were identified as duplicates and handled accordingly.
--   **Total Throughput by stage & Total Dropped Packets by stage:** Breaks down the throughput and drops across the specific internal processing stages of the engine (e.g., analyze, balancer, qos).
+-   **Total Throughput:** A quantidade total de dados sendo processada internamente.
+-   **Total Dropped Packets:** Identifica se algum pacote está sendo descartado pelo mecanismo.
+-   **Total Deduplicated Packets:** Mostra os pacotes que foram identificados como duplicados e tratados adequadamente.
+-   **Total Throughput by stage & Total Dropped Packets by stage:** Detalha a taxa de transferência e as perdas em todas as fases internas de processamento específicas do mecanismo (por exemplo, analyze, balancer, qos).
 
 ### **2\. Interface Statistics**
 
-This dashboard provides a clear view of the physical or virtual network interfaces that Viewtimon is monitoring.
+Este painel fornece uma visão clara das interfaces de rede físicas ou virtuais que o Viewtimon está monitorando.
 
 <br />
 
@@ -127,11 +127,11 @@ This dashboard provides a clear view of the physical or virtual network interfac
 
 <br />
 
-It highlights:
+Ele destaca:
 
--   **Throughput:** The traffic volume measured directly at the interface level.
--   **Input Packets:** The total number of packets received by the interface.
--   **Packets with Errors:** The number of malformed or corrupted packets detected.
--   **Packets missed:** Packets that the interface failed to capture, which can indicate hardware bottlenecks or excessive traffic bursts.
+-   **Throughput:** O volume de tráfego medido diretamente no nível da interface.
+-   **Input Packets:** O número total de pacotes recebidos pela interface.
+-   **Packets with Errors:** O número de pacotes malformados ou corrompidos detectados.
+-   **Packets missed:** Pacotes que a interface não conseguiu capturar, o que pode indicar gargalos de hardware ou picos de tráfego excessivos.
 
 <br />

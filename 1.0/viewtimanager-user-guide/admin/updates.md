@@ -1,5 +1,4 @@
 ---
-reusableId: 106
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Updates
 id: QSU-GUJD-JHM-QCI
@@ -8,55 +7,55 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-12 15:53:47'
 ---
-# **<span align="center">Updating the Platform and Modules</span>**
+# **<span align="center">Atualizando a Plataforma e Módulos</span>**
 
 <br />
 
-## **📘 Introduction**
+## **📘 Introdução**
 
-Viewtinet provides a built-in update mechanism that allows administrators to upgrade the entire platform — including all its modules — to the latest available version provided by Viewtinet.<br />
+O Viewtinet fornece um mecanismo de atualização integrado que permite aos administradores atualizar toda a plataforma — incluindo todos os seus módulos — para a versão mais recente disponível fornecida pelo Viewtinet.<br />
 
-> ⚠️ **Important**: This update process **applies to the whole platform**. It is **not possible to update individual modules selectively** using this method.
+> ⚠️ **Importante**: Este processo de atualização **aplica-se a toda a plataforma**. **Não é possível atualizar módulos individuais seletivamente** usando este método.
 
-In addition to the GUI-based procedure described in this section, updates can also be performed via the command line. For CLI-based update instructions, refer to the **"Updating Viewtinet"** section in the chapter **"Viewtinet CLI Guide"**.
+Além do procedimento baseado em GUI descrito nesta seção, as atualizações também podem ser realizadas via linha de comando. Para instruções de atualização baseadas na CLI (Command Line Interface), consulte a seção **"Updating Viewtinet"** no capítulo **"Viewtinet CLI Guide"**.
 
 ---
 
-## **📦 Prerequisites**
+## **📦 Pré-requisitos**
 
-Before starting the update process, make sure the following requirements are met:
+Antes de iniciar o processo de atualização, certifique-se de que os seguintes requisitos sejam atendidos:
 
--   ✅ You have obtained the **official update bundle** (`.tgz` file) from Viewtinet.
--   ✅ The bundle must be the latest supported version, and the download link will be provided by the Viewtinet Support team.
--   ✅ You must also obtain the **Passphrase file** provided by the Viewtinet Support team, which is required to authenticate the update.
+-   ✅ Você obteve o **pacote de atualização oficial** (arquivo `.tgz`) com o Viewtinet.
+-   ✅ O pacote (bundle) deve ser a versão suportada mais recente, e o link para download será fornecido pela equipe de Suporte do Viewtinet.
+-   ✅ Você também deve obter o **arquivo de Senha (Passphrase)** fornecido pela equipe de Suporte do Viewtinet, que é necessário para autenticar a atualização.
 
-### **🔐 Transferring the Bundle**
+### **🔐 Transferindo o Pacote**
 
-1.  Use an SCP-capable tool such as **WinSCP**, **FileZilla**, or a terminal with `scp` support to connect to the Viewtinet appliance (server or virtual machine).
-2.  Log in using a system user with write permissions (typically `admin` or a privileged user).
-3.  Upload the `.tgz` update bundle to the following directory: `/var/viewtimanager/updates`
+1.  Use uma ferramenta compatível com SCP, como **WinSCP**, **FileZilla** ou um terminal com suporte a `scp`, para se conectar ao appliance (servidor ou máquina virtual) do Viewtinet.
+2.  Faça login usando um usuário do sistema com permissões de gravação (tipicamente `admin` ou um usuário privilegiado).
+3.  Faça o upload do pacote de atualização `.tgz` para o seguinte diretório: `/var/viewtimanager/updates`
     
     <br />
     
 
-### **📂 Extracting the Bundle**
+### **📂 Extraindo o Pacote**
 
-Once the file is successfully uploaded, you must extract its contents:
+Assim que o arquivo for carregado com sucesso, você deve extrair seu conteúdo:
 
-1.  Connect to the Viewtinet appliance via SSH using the `admin` user.
-2.  Navigate to the updates directory:
+1.  Conecte-se ao appliance do Viewtinet via SSH usando o usuário `admin`.
+2.  Navegue até o diretório de atualizações:
     
     ```bash
     cd /var/viewtimanager/updates
     ```
     
-3.  Decompress the bundle by running the following command (replace `&lt;version&gt;` with your specific file name):
+3.  Descomprima o pacote executando o seguinte comando (substitua `&lt;version&gt;` pelo nome do seu arquivo específico):
     
     ```bash
     tar xvzf bundle-&lt;version&gt;.tgz
     ```
     
-4.  After decompressing the file, you will obtain the extracted files as shown below:
+4.  Após descomprimir o arquivo, você obterá os arquivos extraídos conforme mostrado abaixo:
     
     <br />
     
@@ -67,28 +66,28 @@ Once the file is successfully uploaded, you must extract its contents:
 
 ---
 
-## **Open the Update Manager**
+## **Abrir o Gerenciador de Atualizações (Update Manager)**
 
-1.  In the left-hand menu, click **Admin**.<br />
+1.  No menu à esquerda, clique em **Admin**.<br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/lIi7e7MEFosaR3xCKoUm.png" align="center"></figure>
     
-2.  Select the **Updates** tab at the top.<br />
+2.  Selecione a aba **Updates** na parte superior.<br />
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/update-tab-new.png" align="center"></figure>
     
     <br />
     
 
-## **Select the Bundle and Update**
+## **Selecionar o Pacote e Atualizar**
 
-1.  Click the dropdown arrow on **Bundles Available** and select your bundle.
+1.  Clique na seta suspensa em **Bundles Available** (Pacotes Disponíveis) e selecione o seu pacote.
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/update-dropdown-new.png" align="center"></figure>
     
     <br />
     
-2.  In the next step, you must enter the passphrase. After typing it, initiate the update by clicking **UPDATE**.
+2.  No próximo passo, você deve inserir a frase secreta (passphrase). Após digitá-la, inicie a atualização clicando em **UPDATE**.
     
     <br />
     
@@ -96,16 +95,15 @@ Once the file is successfully uploaded, you must extract its contents:
     
     <br />
     
-3.  Finally, confirm the process when prompted.
+3.  Por fim, confirme o processo quando solicitado.
     
     <br />
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/update-confirm.png" align="center"></figure>
     
-
     <br />
 
-4.  During the installation process, live logs will be displayed as shown below:
+4.  Durante o processo de instalação, os logs ao vivo serão exibidos como mostrado abaixo:
     
     <br />
     
@@ -113,7 +111,7 @@ Once the file is successfully uploaded, you must extract its contents:
     
     <br />
 
-5.  Once the process completes, the output will indicate that the installation is finished. Click the **FINISH INSTALLATION** button to conclude the process.
+5.  Uma vez concluído o processo, a saída indicará que a instalação está terminada. Clique no botão **FINISH INSTALLATION** para concluir o processo.
     
     <br />
 
@@ -121,16 +119,16 @@ Once the file is successfully uploaded, you must extract its contents:
 
 ---
 
-## **Restart Each Module**
+## **Reiniciar Cada Módulo**
 
-> **Important:** After updating, each module must be restarted to apply the new version.
+> **Importante:** Após a atualização, cada módulo deve ser reiniciado para aplicar a nova versão.
 
-1.  In the left menu, go to **Viewtisight** and restart the module.
-2.  Proceed with each active module (e.g., **Viewtilog**, **Viewtimon**, **Viewtify QoS**), depending on your licensed modules.
-3.  To restart a module, click **RESTART** in the top-right corner and confirm.
+1.  No menu à esquerda, vá para **Viewtisight** e reinicie o módulo.
+2.  Prossiga com cada módulo ativo (ex: **Viewtilog**, **Viewtimon**, **Viewtify QoS**), dependendo dos seus módulos licenciados.
+3.  Para reiniciar um módulo, clique em **RESTART** no canto superior direito e confirme.
 
     <br />
 
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/update-restart.png" align="center"></figure>
 
-Repeat this process for every active module until all of them are running the latest version.
+Repita esse processo para cada módulo ativo até que todos eles estejam executando a versão mais recente.

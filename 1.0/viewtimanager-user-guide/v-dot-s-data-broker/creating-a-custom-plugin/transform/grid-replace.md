@@ -11,22 +11,22 @@ lastUpdated: '2026-05-22 09:35:11'
 
 <br />
 
-The **Grid Replace** handler allows you to search for specific characters, substrings, or patterns within a column and substitute them with a new value. You can write the resulting modified text into the same column (to overwrite the original data) or into a completely new target column.
+O handler **Grid Replace** permite que você pesquise por caracteres, substrings ou padrões específicos dentro de uma coluna e os substitua por um novo valor. Você pode escrever o texto modificado resultante na mesma coluna (para sobrescrever os dados originais) ou em uma coluna de destino completamente nova.
 
-This is extremely useful for sanitizing data, standardizing formats (e.g., changing commas to dots in numerical values), or removing unwanted characters from log messages.
+Isso é extremamente útil para higienizar dados, padronizar formatos (por exemplo, mudar vírgulas para pontos em valores numéricos) ou remover caracteres indesejados de mensagens de log.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To set up the **Grid Replace** handler, configure the following fields:
+Para configurar o handler **Grid Replace**, defina os seguintes campos:
 
--   **Grid Handler Type**: Select `Grid Replace`.
--   **Mode**: Defines the specific behavior and scope of the replacement operation (explained in detail below).
--   **Column**: The source column containing the original text you want to modify (e.g., `LOC_LATITUD`).
--   **Target Column**: The destination column where the modified string will be saved. If you select the same name as the source column, the original data will be overwritten.
--   **To Replace**: The exact character, string, or regular expression pattern you want to find and substitute.
--   **Replacement**: The new text that will take the place of the matched string.
+-   **Grid Handler Type**: Selecione `Grid Replace`.
+-   **Mode**: Define o comportamento específico e o escopo da operação de substituição (explicado em detalhes abaixo).
+-   **Column**: A coluna de origem que contém o texto original que você deseja modificar (por exemplo, `LOC_LATITUD`).
+-   **Target Column**: A coluna de destino onde a string modificada será salva. Se você selecionar o mesmo nome da coluna de origem, os dados originais serão sobrescritos.
+-   **To Replace**: O caractere exato, string ou padrão de expressão regular que você deseja encontrar e substituir.
+-   **Replacement**: O novo texto que tomará o lugar da string correspondente.
 
 <br />
 
@@ -36,11 +36,11 @@ To set up the **Grid Replace** handler, configure the following fields:
 
 ---
 
-## **Execution Modes**
+## **Modos de Execução**
 
-The power of this handler lies in its different execution modes, which allow you to control exactly which occurrences of the string are replaced.
+O poder deste handler está em seus diferentes modos de execução, que permitem que você controle exatamente quais ocorrências da string serão substituídas.
 
-When you click the `Mode` dropdown, you will see the following options:
+Ao clicar na lista suspensa `Mode`, você verá as seguintes opções:
 
 <br />
 
@@ -48,10 +48,10 @@ When you click the `Mode` dropdown, you will see the following options:
 
 <br />
 
--   `all`: Replaces _every single occurrence_ of the "To Replace" string found in the text. This is the most common mode used for global sanitization.
--   `first`: Replaces _only the very first_ occurrence of the string, leaving any subsequent matches intact.
--   `last`: Replaces _only the final_ occurrence of the string found at the end of the text.
--   `nth`: Replaces a specific occurrence based on its numerical index (e.g., replacing only the 3rd instance of a comma). Selecting this mode will typically prompt for the index value.
--   `regex`: Treats the "To Replace" field as a **Regular Expression** rather than a literal string. This allows for advanced, dynamic replacements based on complex patterns.
+-   `all`: Substitui _cada ocorrência_ da string "To Replace" encontrada no texto. Este é o modo mais comum usado para higienização global.
+-   `first`: Substitui _apenas a primeira_ ocorrência da string, deixando as correspondências subsequentes intactas.
+-   `last`: Substitui _apenas a última_ ocorrência da string encontrada no final do texto.
+-   `nth`: Substitui uma ocorrência específica com base em seu índice numérico (por exemplo, substituindo apenas a 3ª ocorrência de uma vírgula). A seleção deste modo normalmente solicitará o valor do índice.
+-   `regex`: Trata o campo "To Replace" como uma **Expressão Regular (Regular Expression)** em vez de uma string literal. Isso permite substituições avançadas e dinâmicas baseadas em padrões complexos.
 
 <br />

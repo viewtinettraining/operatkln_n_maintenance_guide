@@ -1,5 +1,4 @@
 ---
-reusableId: 137
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: CSV
 id: 7Z6-GTTH-7QR-S4A
@@ -7,13 +6,13 @@ slug: csv
 isVisible: true
 lastUpdated: '2025-10-15 15:25:17'
 ---
-# **<span align="center">CSV Connector</span>**
+# **<span align="center">Conector CSV</span>**
 
 <br />
 
-The **CSV Connector** is used to ingest records from CSV files. Although the name suggests a strict CSV format, the **field separator is configurable**, allowing flexibility to adapt to different file structures. This connector is widely used for integrations with **VoIP systems**, particularly for ingesting **CDRs (Call Detail Records)**, **CMRs (Call Management Records)**, or any other data source that generates logs in CSV format.
+O **Conector CSV** é usado para ingerir registros de arquivos CSV. Embora o nome sugira um formato CSV estrito, o **separador de campos é configurável**, permitindo flexibilidade para se adaptar a diferentes estruturas de arquivos. Este conector é amplamente utilizado para integrações com **sistemas VoIP**, particularmente para a ingestão de **CDRs (Call Detail Records)**, **CMRs (Call Management Records)**, ou qualquer outra fonte de dados que gere logs no formato CSV.
 
-The connector reads files directly from a **local directory on the Viewtilog server**, which means there must be an **external or scheduled process** responsible for depositing CSV files into the specified collection path. Once collected, the files are processed and then moved to a dedicated directory to ensure traceability and avoid reprocessing.
+O conector lê os arquivos diretamente de um **diretório local no servidor Viewtilog**, o que significa que deve haver um **processo externo ou agendado** responsável por depositar arquivos CSV no caminho da coleção especificado. Uma vez coletados, os arquivos são processados e depois movidos para um diretório dedicado para garantir rastreabilidade e evitar reprocessamento.
 
 <br />
 
@@ -21,50 +20,50 @@ The connector reads files directly from a **local directory on the Viewtilog ser
 
 <br />
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
--   **Frequency Type**<br />
-    Same behavior as in SNMP and ICMP connectors:
+-   **Tipo de Frequência**<br />
+    Mesmo comportamento que nos conectores SNMP e ICMP:
     
-    -   **Periodic**: Executes the pipeline at fixed intervals (defined in _Refresh Time_).
-    -   **Scheduled**: Uses a cron expression to control execution at precise times.
--   **Number of Threads**<br />
-    Defines how many concurrent threads will process files. This is useful for handling high volumes of data in parallel.
--   **Pipeline Name**<br />
-    A unique identifier for the pipeline.
--   **Refresh Time (secs)**<br />
-    The interval in seconds between each execution when _Periodic_ is selected.
--   **Number of Executions**
+    -   **Periódico**: Executa o pipeline em intervalos fixos (definidos em _Tempo de Atualização_).
+    -   **Agendado**: Usa uma expressão cron para controlar a execução em horários precisos.
+-   **Número de Threads**<br />
+    Define quantas threads simultâneas processarão arquivos. Isso é útil para lidar com altos volumes de dados em paralelo.
+-   **Nome do Pipeline**<br />
+    Um identificador único para o pipeline.
+-   **Tempo de Atualização (segs)**<br />
+    O intervalo em segundos entre cada execução quando _Periódico_ for selecionado.
+-   **Número de Execuções**
     
-    -   `-1`: Continuous execution with no limit.
-    -   Positive integer: Limits the number of runs to the specified value.
--   **Collected Path**<br />
-    Directory where new CSV files must be placed. Files in this location will be read by the connector.
--   **Processing Path**<br />
-    Temporary directory where files are moved while being processed.
--   **Processed Path**<br />
-    Directory where files are stored once processing is completed.
--   **Separator**<br />
-    Character used to delimit fields (e.g., `,`, `;`, `|`).
--   **Suffix**<br />
-    Extension of the files to be processed (e.g., `.csv`).
--   **Max Files**<br />
-    Maximum number of files to be processed per cycle.
--   **Keep Commas**<br />
-    Option that preserves commas inside fields instead of splitting them as separators.
--   **Has Quotations**<br />
-    If enabled, fields enclosed in quotes (`"`) are treated as a single field, even if they contain the separator character.
--   **Chunk Size**<br />
-    Defines whether the CSV file will be read in chunks (useful for very large files).
+    -   `-1`: Execução contínua sem limite.
+    -   Inteiro positivo: Limita o número de execuções ao valor especificado.
+-   **Caminho Coletado**<br />
+    Diretório onde os novos arquivos CSV devem ser colocados. Arquivos neste local serão lidos pelo conector.
+-   **Caminho de Processamento**<br />
+    Diretório temporário para onde os arquivos são movidos durante o processamento.
+-   **Caminho Processado**<br />
+    Diretório onde os arquivos são armazenados após a conclusão do processamento.
+-   **Separador**<br />
+    Caractere usado para delimitar os campos (ex.: `,`, `;`, `|`).
+-   **Sufixo**<br />
+    Extensão dos arquivos a serem processados (ex.: `.csv`).
+-   **Máx de Arquivos**<br />
+    Número máximo de arquivos a serem processados por ciclo.
+-   **Manter Vírgulas**<br />
+    Opção que preserva vírgulas dentro dos campos em vez de dividi-las como separadores.
+-   **Possui Aspas**<br />
+    Se ativado, campos entre aspas (`"`) são tratados como um campo único, mesmo se contiverem o caractere separador.
+-   **Tamanho do Bloco**<br />
+    Define se o arquivo CSV será lido em blocos (útil para arquivos muito grandes).
 
 <br />
 
-## **Fields Definition**
+## **Definição de Campos**
 
-In order to parse the file correctly, **fields must be defined**. This can be done in two ways:
+Para analisar o arquivo corretamente, **os campos devem ser definidos**. Isso pode ser feito de duas formas:
 
-1.  **Manual definition**: Use the **Add New Field** button to create fields one by one, assigning them a name and type.
-2.  **Import from CSV**: Upload a sample CSV file containing only the **header line** (field names). The system will automatically create the corresponding fields in the connector configuration.
+1.  **Definição manual**: Use o botão **Adicionar Novo Campo** para criar campos um por um, atribuindo-lhes um nome e um tipo.
+2.  **Importar do CSV**: Envie um arquivo CSV de amostra contendo apenas a **linha de cabeçalho** (nomes dos campos). O sistema criará automaticamente os campos correspondentes na configuração do conector.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/o16HcrWNNphk1dYg/images/nzTHsGYKZ2nYSO0pNxfl.png" align="center"></figure>
 
@@ -72,21 +71,21 @@ In order to parse the file correctly, **fields must be defined**. This can be do
 
 <br />
 
-**Additional options include:**
+**Opções adicionais incluem:**
 
--   **Field Name**: Name of the column to be parsed.
--   **Field Type**: Data type for the field (string, integer, float, etc.), which can be applied individually or to all fields at once.
--   **Delete All Fields**: Resets the configuration if needed.
+-   **Nome do Campo**: Nome da coluna a ser analisada.
+-   **Tipo de Campo**: Tipo de dado para o campo (string, integer, float, etc.), que pode ser aplicado individualmente ou para todos os campos de uma vez.
+-   **Deletar Todos os Campos**: Redefine a configuração, se necessário.
 
 <br />
 
-## **Summary**
+## **Resumo**
 
-The CSV Connector provides a flexible and efficient way to ingest structured data stored in files:
+O Conector CSV fornece uma maneira flexível e eficiente de ingerir dados estruturados armazenados em arquivos:
 
--   Supports both **Periodic** and **Scheduled** execution.
--   Requires a process to deposit CSV files into the collection directory.
--   Can handle field separators and quoted fields for complex data structures.
--   Fields can be configured manually or imported directly from a CSV header.
+-   Suporta execução **Periódica** e **Agendada**.
+-   Requer um processo para depositar os arquivos CSV no diretório de coleta.
+-   Pode lidar com separadores de campo e campos entre aspas para estruturas de dados complexas.
+-   Os campos podem ser configurados manualmente ou importados diretamente do cabeçalho de um CSV.
 
-This connector is ideal for environments where external systems export logs or transaction records in CSV format and need to be integrated into the Viewtinet platform for further analysis.
+Este conector é ideal para ambientes em que sistemas externos exportam logs ou registros de transações no formato CSV e que precisam ser integrados à plataforma Viewtinet para análises posteriores.

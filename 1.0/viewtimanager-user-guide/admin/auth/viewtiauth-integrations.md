@@ -1,5 +1,4 @@
 ---
-reusableId: 114
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Viewtiauth Integrations'
 id: ZIC-1AVN-68A-KLJ
@@ -7,11 +6,11 @@ slug: viewtiauth-integrations
 isVisible: true
 lastUpdated: '2025-10-15 15:37:12'
 ---
-# **<span align="center">Viewtiauth Integrations</span>**
+# **<span align="center">Integrações do Viewtiauth</span>**
 
 <br />
 
-The Viewtiauth Integrations section defines how Viewtinet authenticates users by specifying one or more authentication backends, their precedence, and the default role assigned on successful login. Viewtiauth processes entries in ascending order (`1` = highest precedence). If an entry is marked Inactive, or authentication fails against that backend, it will fall back to the next active entry.
+A seção de Integrações do Viewtiauth define como o Viewtinet autentica os usuários, especificando um ou mais backends de autenticação, sua precedência e a função padrão atribuída no login bem-sucedido. O Viewtiauth processa as entradas em ordem crescente (`1` = maior precedência). Se uma entrada for marcada como Inativa (Inactive) ou se a autenticação falhar nesse backend, ele fará o fallback (retorno) para a próxima entrada ativa.
 
 <br />
 
@@ -19,44 +18,44 @@ The Viewtiauth Integrations section defines how Viewtinet authenticates users by
 
 <br />
 
-## **Configuration Fields**
+## **Campos de Configuração**
 
-<table><tbody><tr><th><p>Field</p></th><th><p>Description</p></th></tr><tr><td><p><strong>Active</strong></p></td><td><p>Enable (☑) or disable (☐) this authentication backend. Inactive entries are skipped.</p></td></tr><tr><td><p><strong>Order</strong></p></td><td><p>Precedence of this backend (integer). Lower numbers are tried first. For example, <code>1</code> is highest priority.</p></td></tr><tr><td><p><strong>Type</strong></p></td><td><p>Authentication method:</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Campo</p></th><th><p>Descrição</p></th></tr><tr><td><p><strong>Active (Ativo)</strong></p></td><td><p>Habilite (☑) ou desabilite (☐) este backend de autenticação. Entradas inativas são ignoradas.</p></td></tr><tr><td><p><strong>Order (Ordem)</strong></p></td><td><p>Precedência deste backend (número inteiro). Os números menores são tentados primeiro. Por exemplo, <code>1</code> é a prioridade mais alta.</p></td></tr><tr><td><p><strong>Type (Tipo)</strong></p></td><td><p>Método de autenticação:</p></td></tr></tbody></table>
 
 -   `ad` (Active Directory)
--   `local` (built-in Viewtinet database)
--   `ldap` (external LDAP server)
--   `saml2` (SAML 2.0 IdP) | | **Default Role**| Role automatically assigned to users authenticated via this backend. Select any role defined in **Admin ➔ Roles**. |
+-   `local` (banco de dados interno do Viewtinet)
+-   `ldap` (servidor LDAP externo)
+-   `saml2` (SAML 2.0 IdP) | | **Default Role (Função Padrão)**| Função atribuída automaticamente aos usuários autenticados por este backend. Selecione qualquer função definida em **Admin ➔ Roles**. |
 
 <br />
 
-## **Authentication Flow**
+## **Fluxo de Autenticação**
 
-1.  Viewtiauth reads all configured entries sorted by **Order** ascending.
-2.  For each entry in sequence:
+1.  O Viewtiauth lê todas as entradas configuradas, classificadas de forma crescente por **Order**.
+2.  Para cada entrada em sequência:
     
-    -   If **Active** is unchecked, skip to the next.
-    -   Otherwise, attempt authentication using the specified **Type**.
-    -   On success, assign the **Default Role** and grant access.
-    -   On failure, move to the next active entry.
-3.  If all active entries fail, authentication is denied.
+    -   Se **Active** estiver desmarcado, pule para o próximo.
+    -   Caso contrário, tente a autenticação usando o **Type** especificado.
+    -   Em caso de sucesso, atribua a **Default Role** e conceda o acesso.
+    -   Em caso de falha, mova para a próxima entrada ativa.
+3.  Se todas as entradas ativas falharem, a autenticação é negada.
 
-> **Example:**
+> **Exemplo:**
 > 
-> -   Entry `Order = 1`, **Active** = ☐ (inactive)
-> -   Entry `Order = 2`, **Active** = ☑, **Type** = `local`
-> -   Entry `Order = 3`, **Active** = ☑, **Type** = `ldap`
-> -   Entry `Order = 4`, **Active** = ☐ (inactive)
+> -   Entrada `Order = 1`, **Active** = ☐ (inativo)
+> -   Entrada `Order = 2`, **Active** = ☑, **Type** = `local`
+> -   Entrada `Order = 3`, **Active** = ☑, **Type** = `ldap`
+> -   Entrada `Order = 4`, **Active** = ☐ (inativo)
 > 
-> Viewtiauth will first try the **local** database (order 2). If the user isn’t found or the password is incorrect, it will then try the LDAP server (order 3).
+> O Viewtiauth tentará primeiro o banco de dados **local** (ordem 2). Se o usuário não for encontrado ou a senha estiver incorreta, ele tentará o servidor LDAP (ordem 3).
 
 <br />
 
-## **Saving Your Changes**
+## **Salvando Suas Alterações**
 
-1.  After adjusting **Active**, **Order**, **Type**, or **Default Role**, click **Save Changes** at the bottom of the page.
-2.  A confirmation message will appear once the new authentication sequence is applied.
+1.  Após ajustar **Active**, **Order**, **Type** ou **Default Role**, clique em **Save Changes** na parte inferior da página.
+2.  Uma mensagem de confirmação aparecerá assim que a nova sequência de autenticação for aplicada.
 
-> **Note:** Changes here affect how **all** users authenticate. Be cautious when disabling or reordering entries to avoid inadvertently locking out administrative access.
+> **Nota:** As alterações feitas aqui afetam como **todos** os usuários se autenticam. Tenha cuidado ao desabilitar ou reordenar as entradas para evitar o bloqueio inadvertido do acesso administrativo.
 
 <br />

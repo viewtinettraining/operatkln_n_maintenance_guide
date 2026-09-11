@@ -11,41 +11,41 @@ lastUpdated: '2026-05-20 20:30:00'
 
 <br />
 
-The **Network Decorator** grid handler is a powerful transformation component that shares the same underlying concept as the CSV Decorator, but is specifically designed for **IP address and Subnet matching**. 
+O handler de grid **Network Decorator** é um componente de transformação poderoso que compartilha o mesmo conceito subjacente que o CSV Decorator, mas é projetado especificamente para **correspondência de endereço IP e sub-rede**. 
 
-It takes a Grid column containing an IP address and compares it against a reference CSV file containing subnets or specific IP addresses in CIDR notation (e.g., `/24`, `/16`, or `/32` for a single host). If the Grid IP address falls within a defined subnet in the CSV file, the handler adds the corresponding descriptive information to new Grid columns.
-
-<br />
-
----
-
-## **Use Cases**
-
-This handler is generally used to enrich IP addresses with contextual information, such as:
--   **Subnet Belonging:** Identifying which network segment an IP address belongs to (e.g., `Madrid Network`, `Miami Network`).
--   **Department or Area:** Mapping IP addresses to specific departments (e.g., `HR Subnet`, `IT Servers`).
--   **Location / Site:** Associating traffic or logs with physical locations or branches based on the IP address.
--   **Device Identification:** Using a `/32` mask to identify specific hosts or critical devices within the network.
+Ele pega uma coluna da Grid contendo um endereço IP e o compara com um arquivo CSV de referência contendo sub-redes ou endereços IP específicos em notação CIDR (por exemplo, `/24`, `/16` ou `/32` para um único host). Se o endereço IP da Grid estiver dentro de uma sub-rede definida no arquivo CSV, o handler adiciona as informações descritivas correspondentes em novas colunas da Grid.
 
 <br />
 
 ---
 
-## **Configuration & Practical Example**
+## **Casos de Uso**
 
-To configure the Network Decorator, you must define the lookup CSV file and map the source IP column to the destination descriptive columns.
+Este handler é geralmente usado para enriquecer endereços IP com informações contextuais, tais como:
+-   **Pertencimento à Sub-rede:** Identificando a qual segmento de rede um endereço IP pertence (por exemplo, `Rede de Madrid`, `Rede de Miami`).
+-   **Departamento ou Área:** Mapeando endereços IP para departamentos específicos (por exemplo, `Sub-rede RH`, `Servidores de TI`).
+-   **Localização / Site:** Associando tráfego ou logs com locais físicos ou filiais com base no endereço IP.
+-   **Identificação de Dispositivo:** Usando uma máscara `/32` para identificar hosts específicos ou dispositivos críticos dentro da rede.
 
 <br />
 
-### **Step 1: The Reference CSV File**
+---
 
-The lookup CSV file must contain at least two columns: one for the network/IP in CIDR notation, and one (or more) for the descriptive information to be added. 
+## **Configuração e Exemplo Prático**
 
-In this example, the CSV file `network_decorator_example.csv` contains a `net` column with the subnets and a `descriptive_field` column with the location names:
+Para configurar o Network Decorator, você deve definir o arquivo CSV de pesquisa e mapear a coluna de IP de origem para as colunas descritivas de destino.
+
+<br />
+
+### **Passo 1: O Arquivo CSV de Referência**
+
+O arquivo CSV de pesquisa deve conter pelo menos duas colunas: uma para a rede/IP em notação CIDR, e uma (ou mais) para a informação descritiva a ser adicionada. 
+
+Neste exemplo, o arquivo CSV `network_decorator_example.csv` contém uma coluna `net` com as sub-redes e uma coluna `descriptive_field` com os nomes de localização:
 
 -   `192.168.32.0/24` -> `Madrid Network`
 -   `172.16.0.0/16` -> `Miami Network`
--   `10.30.23.1/32` -> `Device Example` (using `/32` to indicate a specific host)
+-   `10.30.23.1/32` -> `Device Example` (usando `/32` para indicar um host específico)
 
 <br />
 
@@ -53,9 +53,9 @@ In this example, the CSV file `network_decorator_example.csv` contains a `net` c
 
 <br />
 
-### **Step 2: Grid Handler Configuration**
+### **Passo 2: Configuração do Grid Handler**
 
-In the Transform stage, add a new **Net Decorator** handler and configure it as follows:
+Na etapa de Transformação, adicione um novo handler **Net Decorator** e configure-o da seguinte maneira:
 
 <br />
 
@@ -63,25 +63,25 @@ In the Transform stage, add a new **Net Decorator** handler and configure it as 
 
 <br />
 
--   **CSV File Path:** Select the reference CSV file containing the subnets.
--   **Source Columns:** Define the lookup relationship.
-    -   `CSV Name` = `net` (the column containing the CIDR subnets).
-    -   `Grid Name` = `net_src_ip` (the column in the Grid containing the actual IP addresses to evaluate).
--   **Destination Columns:** Define where the new information will be stored.
-    -   `CSV Name` = `descriptive_field` (the descriptive value from the CSV).
-    -   `Grid Name` = `descriptive_value` (the new column that will be created in the Grid).
--   **Default value if not found:** Set a default label such as `No_info_provided` for IP addresses that do not match any subnet in the CSV file.
+-   **CSV File Path:** Selecione o arquivo CSV de referência contendo as sub-redes.
+-   **Source Columns:** Defina a relação de pesquisa.
+    -   `CSV Name` = `net` (a coluna contendo as sub-redes CIDR).
+    -   `Grid Name` = `net_src_ip` (a coluna na Grid contendo os endereços IP reais a serem avaliados).
+-   **Destination Columns:** Defina onde as novas informações serão armazenadas.
+    -   `CSV Name` = `descriptive_field` (o valor descritivo do CSV).
+    -   `Grid Name` = `descriptive_value` (a nova coluna que será criada na Grid).
+-   **Default value if not found:** Defina um rótulo padrão como `No_info_provided` para endereços IP que não correspondem a nenhuma sub-rede no arquivo CSV.
 
 <br />
 
-**Result:**
+**Resultado:**
 
-If the Grid contains the IP `192.168.32.45` in the `net_src_ip` column, the handler will evaluate it against the CSV file, determine that it belongs to the `192.168.32.0/24` subnet, and create a new column `descriptive_value` with the text `Madrid Network`.
+Se a Grid contiver o IP `192.168.32.45` na coluna `net_src_ip`, o handler o avaliará em relação ao arquivo CSV, determinará que ele pertence à sub-rede `192.168.32.0/24`, e criará uma nova coluna `descriptive_value` com o texto `Madrid Network`.
 
 <br />
 
 ---
 
-<div class="sd-callout" data-callout-type="info"><strong>Net IPv6 Decorator:</strong> Please note that there is a separate Grid Handler called <strong>Net IPv6 Decorator</strong>. It applies the exact same methodology and configuration process described in this document, with the only difference being that the subnets in the CSV file must be defined using IPv6 notation.</div>
+<div class="sd-callout" data-callout-type="info"><strong>Net IPv6 Decorator:</strong> Observe que existe um Grid Handler separado chamado <strong>Net IPv6 Decorator</strong>. Ele aplica exatamente a mesma metodologia e processo de configuração descritos neste documento, com a única diferença sendo que as sub-redes no arquivo CSV devem ser definidas usando a notação IPv6.</div>
 
 <br />

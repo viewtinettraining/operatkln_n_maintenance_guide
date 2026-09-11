@@ -11,20 +11,20 @@ lastUpdated: '2026-05-22 11:10:35'
 
 <br />
 
-The **Grid Transpose** handler fundamentally reshapes the structure of your data grid. It converts a wide row containing multiple individual columns into a long "key-value" format (often referred to as an Entity-Attribute-Value model), creating multiple rows out of a single original row.
+O handler **Grid Transpose** remodela fundamentalmente a estrutura da sua grid de dados. Ele converte uma linha larga contendo várias colunas individuais em um formato longo de "chave-valor" (frequentemente chamado de modelo Entidade-Atributo-Valor), criando várias linhas a partir de uma única linha original.
 
-## **When to use it?**
+## **Quando usá-lo?**
 
-This handler is extremely useful when integrating with time-series databases or monitoring systems that expect data in a strict `metric_name` and `metric_value` schema rather than wide tables. By transposing the grid, you normalize highly dimensional data into a standard, scalable key-value structure.
+Este handler é extremamente útil ao integrar com bancos de dados de séries temporais ou sistemas de monitoramento que esperam dados em um esquema estrito de `metric_name` e `metric_value` em vez de tabelas largas. Ao transpor a grid, você normaliza dados altamente dimensionais em uma estrutura chave-valor padrão e escalável.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To configure the handler, you need to define which column(s) will act as the anchor point for the transposition:
+Para configurar o handler, você precisa definir qual(is) coluna(s) atuará(ão) como ponto de ancoragem para a transposição:
 
--   **Grid Handler Type**: Select `Grid Transpose`.
--   **Keys**: Select the column that should be maintained as the constant primary key across all newly generated transposed rows. Generally, the `timestamp` column is selected here to ensure that all the newly generated metric rows maintain the exact temporal key of the original event.
+-   **Grid Handler Type**: Selecione `Grid Transpose`.
+-   **Keys**: Selecione a coluna que deve ser mantida como a chave primária constante em todas as novas linhas transpostas geradas. Geralmente, a coluna `timestamp` é selecionada aqui para garantir que todas as novas linhas de métrica geradas mantenham a chave temporal exata do evento original.
 
 <br />
 
@@ -34,31 +34,31 @@ To configure the handler, you need to define which column(s) will act as the anc
 
 ---
 
-## **Expected Behaviour**
+## **Comportamento Esperado**
 
-The following example demonstrates how a wide grid row is transposed into a long structure.
+O exemplo a seguir demonstra como uma linha larga da grid é transposta para uma estrutura longa.
 
-**Original Grid (Wide format):**
+**Grid Original (Formato largo):**
 
 <table><tbody><tr><th><p>timestamp</p></th><th><p>host</p></th><th><p>name</p></th><th><p>network</p></th><th><p>rtt_min</p></th><th><p>rtt_avg</p></th><th><p>rtt_max</p></th><th><p>rtt_mdev</p></th><th><p>packet_loss</p></th><th><p>reply</p></th><th><p>status</p></th><th><p>hostname</p></th><th><p>operating_system</p></th><th><p>role</p></th><th><p>snmp</p></th><th><p>type</p></th><th><p>vendor</p></th><th><p>version</p></th></tr><tr><td><p><code>1779447362814887</code></p></td><td><p><code>10.30.23.151</code></p></td><td><p><br></p></td><td><p><br></p></td><td><p><code>430</code></p></td><td><p><code>584</code></p></td><td><p><code>1110</code></p></td><td><p><code>263</code></p></td><td><p><code>0</code></p></td><td><p><code>1</code></p></td><td><p><code>alive</code></p></td><td><p><code>rds151.viewtinet.local</code></p></td><td><p><code>Windows</code></p></td><td><p><code>Remote Desktop for Student</code></p></td><td><p><code>NO</code></p></td><td><p><code>Virtual Machine</code></p></td><td><p><code>Microsoft</code></p></td><td><p><code>10</code></p></td></tr></tbody></table>
 
 <br />
 
-When applying the **Grid Transpose** handler with the `Keys` set to `timestamp`, the grid generates a completely new structure with default column names `field`, `value`, and `field_value`:
+Quando o handler **Grid Transpose** é aplicado com o campo `Keys` definido como `timestamp`, a grid gera uma estrutura completamente nova com os nomes de colunas padrão `field`, `value` e `field_value`:
 
-**Transposed Grid (Long format):**
+**Grid Transposta (Formato longo):**
 
 <table><tbody><tr><th><p>timestamp</p></th><th><p>field</p></th><th><p>value</p></th><th><p>field_value</p></th></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>host</code></p></td><td><p><code>10.30.23.151</code></p></td><td><p><code>host=10.30.23.151</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>name</code></p></td><td><p><br></p></td><td><p><code>name=</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>network</code></p></td><td><p><br></p></td><td><p><code>network=</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>rtt_min</code></p></td><td><p><code>380</code></p></td><td><p><code>rtt_min=380</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>rtt_avg</code></p></td><td><p><code>1440</code></p></td><td><p><code>rtt_avg=1440</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>rtt_max</code></p></td><td><p><code>5090</code></p></td><td><p><code>rtt_max=5090</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>rtt_mdev</code></p></td><td><p><code>1826</code></p></td><td><p><code>rtt_mdev=1826</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>packet_loss</code></p></td><td><p><code>0</code></p></td><td><p><code>packet_loss=0</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>reply</code></p></td><td><p><code>1</code></p></td><td><p><code>reply=1</code></p></td></tr><tr><td><p><code>1779447422672874</code></p></td><td><p><code>status</code></p></td><td><p><code>alive</code></p></td><td><p><code>status=alive</code></p></td></tr></tbody></table>
 
-> _Note: For the sake of brevity, only the first 10 fields are shown, but the handler iterates through all original columns._
+> _Nota: Por uma questão de brevidade, apenas os primeiros 10 campos são mostrados, mas o handler itera por todas as colunas originais._
 
 <br />
 
-### **Explanation:**
+### **Explicação:**
 
--   The configured key (`timestamp`) is preserved as the anchor in every new row.
--   The original column name becomes the `field`.
--   The original data inside that column becomes the `value`.
--   The handler automatically creates a `field_value` column concatenating both using an `=` sign.
+-   A chave configurada (`timestamp`) é preservada como âncora em cada nova linha.
+-   O nome original da coluna torna-se o `field`.
+-   Os dados originais dentro dessa coluna tornam-se o `value`.
+-   O handler cria automaticamente uma coluna `field_value` concatenando ambos usando um sinal `=`.
 
 <br />

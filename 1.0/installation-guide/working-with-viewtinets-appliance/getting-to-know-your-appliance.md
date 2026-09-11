@@ -1,5 +1,4 @@
 ---
-reusableId: 79
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Getting To Know Your Appliance'
 id: 2PL-6EPV-GGQ-5D7
@@ -7,15 +6,15 @@ slug: getting-to-know-your-appliance
 isVisible: true
 lastUpdated: '2025-10-15 10:37:57'
 ---
-# **<span align="center">Getting To Know Your Appliance</span>**
+# **<span align="center">Conhecendo o Seu Appliance</span>**
 
 <br />
 
-This section provides a physical description of the appliance, its ports, and the function of each one.
+Esta seção fornece uma descrição física do appliance, suas portas e a função de cada uma.
 
 <br />
 
-## **Front View**
+## **Vista Frontal**
 
 <br />
 
@@ -23,7 +22,7 @@ This section provides a physical description of the appliance, its ports, and th
 
 <br />
 
-## **Rear View:**
+## **Vista Traseira:**
 
 <br />
 
@@ -31,12 +30,12 @@ This section provides a physical description of the appliance, its ports, and th
 
 <br />
 
-1.  Power Supply
-2.  Power Supply
-3.  Management Interface
-4.  Serial Port for Monitor
-5.  IPMI Interface (Out-of-Band Management)
-6.  USB Ports (for connecting keyboard or bypass)
+1.  Fonte de Alimentação
+2.  Fonte de Alimentação
+3.  Interface de Gerenciamento
+4.  Porta Serial para Monitor
+5.  Interface IPMI (Gerenciamento Out-of-Band)
+6.  Portas USB (para conectar teclado ou bypass)
 
 <br />
 

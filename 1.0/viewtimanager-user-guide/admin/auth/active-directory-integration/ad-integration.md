@@ -1,5 +1,4 @@
 ---
-reusableId: 62
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'AD Integration'
 id: OI1-V5IM-IU4-2B7
@@ -7,13 +6,13 @@ slug: ad-integration
 isVisible: true
 lastUpdated: '2025-10-15 15:39:37'
 ---
-# **<span align="center">Active Directory Integration</span>**
+# **<span align="center">Integração com Active Directory</span>**
 
-<span align="justify">As the first step, you must be logged in with the admin user or a user with administrative permissions in </span> Viewtimanager at `http://x.x.x.x:5000` (insecure mode) or `https://x.x.x.x:5001` (secure mode), where `x.x.x.x` is the management IP address of Viewtimanager.
+<span align="justify">Como primeiro passo, você deve estar logado com o usuário administrador ou um usuário com permissões administrativas no </span> Viewtimanager em `http://x.x.x.x:5000` (modo inseguro) ou `https://x.x.x.x:5001` (modo seguro), onde `x.x.x.x` é o endereço IP de gerenciamento do Viewtimanager.
 
 <br />
 
-We will select the 'Admin' menu and then the 'AUTH' tab:
+Selecionaremos o menu 'Admin' e, em seguida, a aba 'AUTH':
 
 <br />
 
@@ -21,22 +20,22 @@ We will select the 'Admin' menu and then the 'AUTH' tab:
 
 <br />
 
-Scroll down to find the 'AD Servers' section and enter the information according to the text boxes
+Role para baixo para encontrar a seção 'AD Servers' e insira as informações de acordo com as caixas de texto
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/9cBMkW0aag0nOyO0xszM.png"></figure>
 
-Click on the pencil icon next to the 'Authorized Branches' text box
+Clique no ícone de lápis ao lado da caixa de texto 'Authorized Branches'
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/lN3k1t99gEuCsrboYu44.png"></figure>
 
-<span align="justify">Using the 'ADD NEW BRANCH' button, insert each Active Directory group you wish to map to the roles, along with the Organizational Unit (OU) to which it belongs.</span>
+<span align="justify">Usando o botão 'ADD NEW BRANCH', insira cada grupo do Active Directory que você deseja mapear para as funções, junto com a Unidade Organizacional (OU) à qual ele pertence.</span>
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/ehFExWx8CIoeDVL4dJ8i.png"></figure>
 
-Finish the editing by clicking the 'SAVE' button.
+Termine a edição clicando no botão 'SAVE'.
 
 <br />

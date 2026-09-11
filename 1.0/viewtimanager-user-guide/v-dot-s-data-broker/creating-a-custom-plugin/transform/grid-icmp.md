@@ -11,26 +11,26 @@ lastUpdated: '2026-05-22 09:22:00'
 
 <br />
 
-The **Grid ICMP** handler allows you to perform active network ping checks against an IP address or hostname directly during the ETL transformation stage.
+O handler **Grid ICMP** permite que você realize verificações ativas de ping de rede em um endereço IP ou hostname diretamente durante a etapa de transformação do ETL.
 
-By extracting the destination IP/hostname from a specified column in the grid, the handler executes an ICMP echo request (ping) to calculate essential network statistics such as:
+Ao extrair o IP/hostname de destino de uma coluna especificada na grid, o handler executa uma solicitação de eco ICMP (ping) para calcular estatísticas essenciais da rede, como:
 
--   **Status**: Whether the destination is `alive` or `down`.
--   **Packet Loss**: Percentage of packets lost.
--   **Round Trip Time (RTT)**: Average, Maximum, and Minimum latency response times.
+-   **Status**: Se o destino está ativo (`alive`) ou inativo (`down`).
+-   **Packet Loss**: Porcentagem de pacotes perdidos.
+-   **Round Trip Time (RTT)**: Tempos de resposta de latência Médio (Average), Máximo (Maximum) e Mínimo (Minimum).
 
-These statistics are dynamically injected into the grid as new columns and can then be seamlessly loaded into the time-series database for monitoring and alerting.
+Essas estatísticas são injetadas dinamicamente na grid como novas colunas e podem então ser carregadas perfeitamente no banco de dados de séries temporais para monitoramento e alertas.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To properly set up the **Grid ICMP** handler, define the following configuration values:
+Para configurar adequadamente o handler **Grid ICMP**, defina os seguintes valores de configuração:
 
--   **Host Column**: The existing column in the grid that contains the destination IP address or hostname to ping.
--   **New Column Prefix**: A custom text prefix that will be prepended to all the newly generated statistics columns. For example, if you set the prefix to `my_prefix`, the handler will create the following columns: `my_prefix_status`, `my_prefix_packet_loss`, `my_prefix_rtt_avg`, `my_prefix_rtt_max`, and `my_prefix_rtt_min`.
--   **Ping Count**: The number of ICMP echo request packets to send for the test (e.g., `4`).
--   **Ping Timeout**: The maximum amount of time (in seconds) to wait for a response before considering the request timed out (e.g., `2`).
+-   **Host Column**: A coluna existente na grid que contém o endereço IP de destino ou hostname a ser pingado.
+-   **New Column Prefix**: Um prefixo de texto personalizado que será adicionado antes de todas as colunas de estatísticas recém-geradas. Por exemplo, se você definir o prefixo como `my_prefix`, o handler criará as seguintes colunas: `my_prefix_status`, `my_prefix_packet_loss`, `my_prefix_rtt_avg`, `my_prefix_rtt_max` e `my_prefix_rtt_min`.
+-   **Ping Count**: O número de pacotes de solicitação de eco ICMP a serem enviados para o teste (por exemplo, `4`).
+-   **Ping Timeout**: O tempo máximo (em segundos) a aguardar por uma resposta antes de considerar a solicitação como expirada (por exemplo, `2`).
 
 <br />
 
@@ -40,22 +40,22 @@ To properly set up the **Grid ICMP** handler, define the following configuration
 
 ---
 
-## **Expected Behaviour**
+## **Comportamento Esperado**
 
-Using the configuration from the image above as an example:
+Usando a configuração da imagem acima como exemplo:
 
--   The handler reads the IP address from the `host` column.
--   It sends `4` ping requests with a timeout of `2` seconds.
--   The results are appended to the grid using the prefix `my_prefix`.
+-   O handler lê o endereço IP da coluna `host`.
+-   Ele envia `4` solicitações de ping com um tempo limite de `2` segundos.
+-   Os resultados são anexados à grid usando o prefixo `my_prefix`.
 
-### **Grid Example**
+### **Exemplo da Grid**
 
-<table><tbody><tr><th><p><strong>Before Transformation:</strong></p></th><th><p>host</p></th></tr><tr><td><p><br></p></td><td><p><code>192.168.1.1</code></p></td></tr><tr><td><p><br></p></td><td><p><code>10.0.0.99</code></p></td></tr></tbody></table>
-
-<br />
-
-<table><tbody><tr><th><p><strong>After Transformation:</strong></p></th><th><p>host</p></th><th><p>my_prefix_status</p></th><th><p>my_prefix_packet_loss</p></th><th><p>my_prefix_rtt_min</p></th><th><p>my_prefix_rtt_avg</p></th><th><p>my_prefix_rtt_max</p></th></tr><tr><td><p><br></p></td><td><p><code>192.168.1.1</code></p></td><td><p><code>alive</code></p></td><td><p><code>0</code></p></td><td><p><code>1.2</code></p></td><td><p><code>1.5</code></p></td><td><p><code>2.1</code></p></td></tr><tr><td><p><br></p></td><td><p><code>10.0.0.99</code></p></td><td><p><code>down</code></p></td><td><p><code>100</code></p></td><td><p><code>0</code></p></td><td><p><code>0</code></p></td><td><p><code>0</code></p></td></tr></tbody></table>
+<table><tbody><tr><th><p><strong>Antes da Transformação:</strong></p></th><th><p>host</p></th></tr><tr><td><p><br></p></td><td><p><code>192.168.1.1</code></p></td></tr><tr><td><p><br></p></td><td><p><code>10.0.0.99</code></p></td></tr></tbody></table>
 
 <br />
 
-This powerful feature eliminates the need for separate active probing plugins, as you can continuously measure availability and latency metrics on-the-fly alongside your standard data ingestion.
+<table><tbody><tr><th><p><strong>Após a Transformação:</strong></p></th><th><p>host</p></th><th><p>my_prefix_status</p></th><th><p>my_prefix_packet_loss</p></th><th><p>my_prefix_rtt_min</p></th><th><p>my_prefix_rtt_avg</p></th><th><p>my_prefix_rtt_max</p></th></tr><tr><td><p><br></p></td><td><p><code>192.168.1.1</code></p></td><td><p><code>alive</code></p></td><td><p><code>0</code></p></td><td><p><code>1.2</code></p></td><td><p><code>1.5</code></p></td><td><p><code>2.1</code></p></td></tr><tr><td><p><br></p></td><td><p><code>10.0.0.99</code></p></td><td><p><code>down</code></p></td><td><p><code>100</code></p></td><td><p><code>0</code></p></td><td><p><code>0</code></p></td><td><p><code>0</code></p></td></tr></tbody></table>
+
+<br />
+
+Este recurso poderoso elimina a necessidade de plug-ins de sondagem ativa separados, pois você pode medir continuamente métricas de disponibilidade e latência de forma dinâmica, juntamente com a sua ingestão de dados padrão.

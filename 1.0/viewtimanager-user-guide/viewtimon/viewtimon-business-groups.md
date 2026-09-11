@@ -7,13 +7,13 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 12:06:00'
 ---
-# **<span align="center">Viewtimon Business Groups</span>**
+# **<span align="center">Grupos de Negócios do Viewtimon</span>**
 
 <br />
 
-The **BUSINESS GROUPS** tab allows you to configure Business Groups (BGs). A Business Group is an editable dimension used to include your customers' subnet information, grouping IPs collected by Viewtimon based on locations, branches, departments, or any other breakdown criteria relevant to your organization.
+A guia **BUSINESS GROUPS** permite configurar Grupos de Negócios (BGs). Um Grupo de Negócios é uma dimensão editável usada para incluir as informações de sub-rede de seus clientes, agrupando os IPs coletados pelo Viewtimon com base em localizações, filiais, departamentos ou quaisquer outros critérios de divisão relevantes para a sua organização.
 
-By default, Viewtimon doesn't contain any predefined Business Groups, and it is not mandatory for deployment. However, it is highly recommendable to include this information since there are significant optimizations and analytical benefits based on these fields within the Viewtimon plugin.
+Por padrão, o Viewtimon não contém nenhum Grupo de Negócios predefinido e não é obrigatório para a implantação. No entanto, é altamente recomendável incluir essas informações, pois há otimizações significativas e benefícios analíticos baseados nesses campos dentro do plugin do Viewtimon.
 
 <br />
 
@@ -25,12 +25,12 @@ By default, Viewtimon doesn't contain any predefined Business Groups, and it is 
 
 ---
 
-## **Configuring Business Groups**
+## **Configurando Grupos de Negócios**
 
-You have two primary ways to populate the Business Groups table:
+Você tem duas maneiras principais de preencher a tabela de Grupos de Negócios:
 
-1.  **Manual Entry:** You can add entries individually by clicking the **+ ADD NEW BUSINESS GROUP** button at the bottom left. This creates a new row where you can manually specify the `Network` (IP address or CIDR subnet) and the corresponding `Business Group` name.
-2.  **Bulk Import:** For larger deployments, it is much more efficient to use the **IMPORT HOSTS** button at the bottom right. This allows you to upload a list of IPs and subnets in bulk (via CSV) mapped to their respective groups.
+1.  **Entrada Manual:** Você pode adicionar entradas individualmente clicando no botão **+ ADD NEW BUSINESS GROUP** no canto inferior esquerdo. Isso cria uma nova linha onde você pode especificar manualmente a `Network` (endereço IP ou sub-rede CIDR) e o respectivo nome do `Business Group`.
+2.  **Importação em Lote:** Para implantações maiores, é muito mais eficiente usar o botão **IMPORT HOSTS** no canto inferior direito. Isso permite que você faça o upload de uma lista de IPs e sub-redes em lote (via CSV) mapeados para seus respectivos grupos.
 
 <br />
 
@@ -40,15 +40,15 @@ You have two primary ways to populate the Business Groups table:
 
 <br />
 
-Once you have added or imported your networks, remember to click the **SAVE CHANGES** button to apply the new Business Group definitions.
+Depois de adicionar ou importar suas redes, lembre-se de clicar no botão **SAVE CHANGES** para aplicar as novas definições do Grupo de Negócios.
 
 ---
 
-## **Fixing Overlapping Networks**
+## **Corrigindo Redes Sobrepostas**
 
-When defining multiple subnets, especially in complex enterprise networks, it is possible to accidentally create overlapping rules (e.g., assigning the `192.168.1.0/24` subnet to one group, but specifically assigning the smaller `192.168.1.112/28` subnet to another).
+Ao definir várias sub-redes, especialmente em redes corporativas complexas, é possível criar regras sobrepostas acidentalmente (por exemplo, atribuir a sub-rede `192.168.1.0/24` a um grupo, mas atribuir especificamente a sub-rede menor `192.168.1.112/28` a outro).
 
-Viewtimon implements intelligent validations to detect and help you resolve these conflicts automatically. If an overlap occurs, a red warning banner will appear at the top of the screen explaining the conflict.
+O Viewtimon implementa validações inteligentes para detectar e ajudar a resolver esses conflitos automaticamente. Se ocorrer uma sobreposição, um banner de aviso vermelho aparecerá na parte superior da tela explicando o conflito.
 
 <br />
 
@@ -58,4 +58,4 @@ Viewtimon implements intelligent validations to detect and help you resolve thes
 
 <br />
 
-To resolve the issue, simply click the purple **FIX OVERLAPPING NETWORKS** button located at the top right of the table. The system will automatically reorder the rules (moving the more specific subnet above the broader one) to ensure that traffic is categorized correctly without ambiguity.
+Para resolver o problema, basta clicar no botão roxo **FIX OVERLAPPING NETWORKS** localizado no canto superior direito da tabela. O sistema reordenará automaticamente as regras (movendo a sub-rede mais específica para cima da mais abrangente) para garantir que o tráfego seja categorizado corretamente sem ambiguidade.

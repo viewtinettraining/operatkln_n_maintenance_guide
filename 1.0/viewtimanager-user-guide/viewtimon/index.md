@@ -7,13 +7,13 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 18:27:08'
 ---
-# **<span align="center">Introduction to Viewtimon</span>**
+# **<span align="center">Introdução ao Viewtimon</span>**
 
 <br />
 
-**Viewtimon** is a powerful **Deep Packet Inspection (DPI)** probe designed to provide complete visibility into your network by extracting precise metrics and intelligence directly from user traffic.
+O **Viewtimon** é uma poderosa sonda de **Inspeção Profunda de Pacotes (DPI)** projetada para fornecer visibilidade completa da sua rede, extraindo métricas precisas e inteligência diretamente do tráfego do usuário.
 
-By functioning as an advanced DPI probe, Viewtimon goes beyond basic header analysis, diving deep into the packets to recognize applications, monitor performance, and provide exhaustive network insights.
+Ao funcionar como uma sonda DPI avançada, o Viewtimon vai além da análise básica de cabeçalhos, mergulhando fundo nos pacotes para reconhecer aplicativos, monitorar o desempenho e fornecer percepções exaustivas da rede.
 
 <br />
 
@@ -23,13 +23,13 @@ By functioning as an advanced DPI probe, Viewtimon goes beyond basic header anal
 
 ---
 
-## **Key Characteristics**
+## **Características Principais**
 
-Viewtimon is built around four main pillars of network intelligence:
+O Viewtimon é construído em torno de quatro pilares principais de inteligência de rede:
 
-### **1\. Application Recognition**
+### **1\. Reconhecimento de Aplicativos**
 
-Utilizing its DPI technology, Viewtimon provides complete visibility into the applications traversing the network. It doesn't just look at ports; it analyzes the packet payload to accurately identify the specific application being used (e.g., Salesforce, Office 365, YouTube, BitTorrent), regardless of the port or protocol.
+Utilizando sua tecnologia DPI, o Viewtimon fornece visibilidade completa dos aplicativos que atravessam a rede. Ele não olha apenas para as portas; ele analisa a carga útil do pacote para identificar com precisão o aplicativo específico que está sendo usado (por exemplo, Salesforce, Office 365, YouTube, BitTorrent), independentemente da porta ou protocolo.
 
 <br />
 
@@ -37,18 +37,18 @@ Utilizing its DPI technology, Viewtimon provides complete visibility into the ap
 
 <br />
 
-The DPI engine uses a sophisticated sequence to identify traffic: checking Ports, then IPs, applying Heuristic analysis, and finally achieving precise Application Recognition.
+O mecanismo DPI usa uma sequência sofisticada para identificar o tráfego: verificando Portas, em seguida IPs, aplicando análise Heurística e, finalmente, alcançando o Reconhecimento de Aplicativos preciso.
 
-### **2\. QoE & Network KPIs**
+### **2\. QoE e KPIs de Rede**
 
-Viewtimon delivers real-time measurements of Quality of Experience (QoE) and crucial network Key Performance Indicators (KPIs). This allows administrators to continuously monitor the performance of critical applications and ensure service level agreements (SLAs) are met.
+O Viewtimon fornece medições em tempo real da Qualidade de Experiência (QoE) e dos Principais Indicadores de Desempenho (KPIs) de rede cruciais. Isso permite que os administradores monitorem continuamente o desempenho de aplicativos críticos e garantam que os acordos de nível de serviço (SLAs) sejam cumpridos.
 
-> <div class="sd-callout" data-callout-type="tip"><strong>KPI Reference</strong> For a comprehensive list of all the metrics and KPIs that Viewtimon can extract from the traffic, please refer to the <a href="http:#?target=KWS-CP2E-E29-FCN" target="_self">KPI Reference Guide</a>.</div>
+> <div class="sd-callout" data-callout-type="tip"><strong>Referência de KPI</strong> Para uma lista abrangente de todas as métricas e KPIs que o Viewtimon pode extrair do tráfego, consulte o <a href="http:#?target=KWS-CP2E-E29-FCN" target="_self">Guia de Referência de KPI</a>.</div>
 
-### **3\. North-South & East-West Visibility**
+### **3\. Visibilidade Norte-Sul e Leste-Oeste**
 
-Modern networks are complex. Viewtimon provides exhaustive monitoring of all flows, whether the traffic is leaving your network towards the internet (North-South) or moving internally between servers within your Data Center or WAN (East-West).
+As redes modernas são complexas. O Viewtimon fornece monitoramento exaustivo de todos os fluxos, quer o tráfego esteja saindo da sua rede em direção à internet (Norte-Sul) ou se movendo internamente entre servidores no seu Data Center ou WAN (Leste-Oeste).
 
-### **4\. Remote Sites**
+### **4\. Sites Remotos**
 
-Viewtimon is highly scalable. It provides robust solutions capable of handling high-density traffic environments in core data centers, while also offering affordable, lightweight probe options suitable for remote sites or branch offices with lower traffic volumes.
+O Viewtimon é altamente escalável. Ele fornece soluções robustas capazes de lidar com ambientes de tráfego de alta densidade em data centers principais, ao mesmo tempo em que oferece opções de sonda acessíveis e leves, adequadas para sites remotos ou filiais com volumes de tráfego menores.

@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 11:53:00'
 ---
-# **<span align="center">Viewtimon Signatures</span>**
+# **<span align="center">Assinaturas do Viewtimon</span>**
 
 <br />
 
-The **SIGNATURES** tab provides a comprehensive catalog of all the specific applications and protocols that the Viewtimon DPI engine is capable of recognizing.
+A guia **SIGNATURES** fornece um catálogo abrangente de todos os aplicativos e protocolos específicos que o mecanismo DPI do Viewtimon é capaz de reconhecer.
 
 <br />
 
@@ -19,15 +19,15 @@ The **SIGNATURES** tab provides a comprehensive catalog of all the specific appl
 
 <br />
 
-As shown at the bottom right of the list, modern versions of the Viewtimon engine support recognizing over **8,100 different applications** out of the box (e.g., 8164 applications).
+Conforme mostrado no canto inferior direito da lista, as versões modernas do mecanismo Viewtimon suportam o reconhecimento de mais de **8.100 aplicativos diferentes** prontos para uso (por exemplo, 8164 aplicativos).
 
 ---
 
-## **Searching for Specific Applications**
+## **Pesquisando Aplicativos Específicos**
 
-If you want to verify whether a particular application or service is supported by the DPI engine, you can use the prominent search bar located at the top of the table. 
+Se você quiser verificar se um determinado aplicativo ou serviço é suportado pelo mecanismo DPI, pode usar a barra de pesquisa proeminente localizada na parte superior da tabela. 
 
-Simply type the name of the application (for instance, `youtube`).
+Basta digitar o nome do aplicativo (por exemplo, `youtube`).
 
 <br />
 
@@ -37,7 +37,7 @@ Simply type the name of the application (for instance, `youtube`).
 
 <br />
 
-The table will instantly update to display all matching signatures, revealing the exact **App name** recognized by the system and the broader **App group** it belongs to (e.g., `streaming`).
+A tabela será atualizada instantaneamente para exibir todas as assinaturas correspondentes, revelando o exato **App name** (Nome do aplicativo) reconhecido pelo sistema e o **App group** (Grupo do aplicativo) mais amplo ao qual pertence (por exemplo, `streaming`).
 
 <br />
 
@@ -49,11 +49,11 @@ The table will instantly update to display all matching signatures, revealing th
 
 ---
 
-## **Filtering by Application Groups**
+## **Filtrando por Grupos de Aplicativos**
 
-In addition to searching for specific names, Viewtimon organizes all applications into logical categories or groups (such as `web-applications`, `file-sharing`, `voip`, `streaming`, `meetings`, etc.).
+Além de pesquisar nomes específicos, o Viewtimon organiza todos os aplicativos em categorias lógicas ou grupos (como `web-applications`, `file-sharing`, `voip`, `streaming`, `meetings`, etc.).
 
-To view all supported applications within a specific category, click on the **Filter** dropdown on the right side.
+Para visualizar todos os aplicativos suportados dentro de uma categoria específica, clique no menu suspenso **Filter** no lado direito.
 
 <br />
 
@@ -63,7 +63,7 @@ To view all supported applications within a specific category, click on the **Fi
 
 <br />
 
-For example, selecting `meetings` will filter the list to display only collaboration and video conferencing tools (like MS Teams, Webex, Zoom, Google Meet, etc.) that the engine can identify.
+Por exemplo, selecionar `meetings` filtrará a lista para exibir apenas ferramentas de colaboração e videoconferência (como MS Teams, Webex, Zoom, Google Meet, etc.) que o mecanismo pode identificar.
 
 <br />
 

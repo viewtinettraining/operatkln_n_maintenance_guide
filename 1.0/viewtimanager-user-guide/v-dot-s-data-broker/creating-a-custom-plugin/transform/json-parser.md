@@ -11,23 +11,23 @@ lastUpdated: '2026-05-22 10:11:39'
 
 <br />
 
-The **JSON Parser** handler is specifically designed to extract nested elements from JSON strings located within a grid column. It parses the JSON structure, retrieves the desired values, and saves them into completely new columns with the appropriate data type.
+O handler **JSON Parser** é projetado especificamente para extrair elementos aninhados de strings JSON localizadas dentro de uma coluna da grid. Ele analisa a estrutura JSON, recupera os valores desejados e os salva em colunas completamente novas com o tipo de dado apropriado.
 
-> \[!NOTE\] The handler will **not** delete or modify the original source columns (the "from columns"); it will only create or modify the destination columns (the "to columns").
+> \[!NOTE\] O handler **não** excluirá ou modificará as colunas de origem originais (as "from columns"); ele criará ou modificará apenas as colunas de destino (as "to columns").
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To extract elements from a JSON string, you must define the mapping rules in the configuration:
+Para extrair elementos de uma string JSON, você deve definir as regras de mapeamento na configuração:
 
--   **JSON field separator**: The character used to separate nested levels when specifying the path to the element (e.g., `,` or `:`).
--   **Columns Section**: Click **\+ ADD NEW COLUMN** to define an extraction rule.
+-   **JSON field separator**: O caractere usado para separar os níveis aninhados ao especificar o caminho para o elemento (por exemplo, `,` ou `:`).
+-   **Columns Section**: Clique em **\+ ADD NEW COLUMN** para definir uma regra de extração.
     
-    -   **From-column name**: The source column in the grid that contains the JSON string (e.g., `payload` or `owner`).
-    -   **JSON field**: The exact path or key inside the JSON structure to extract. For nested objects, you can use the defined separator to drill down (e.g., `type:id` if using `:` as the separator, or `payload.object.issue` using standard dot notation).
-    -   **To-column name**: The name of the new column where the extracted value will be stored.
-    -   **To-column type**: The data type to cast the extracted value into (e.g., `string`, `int`).
+    -   **From-column name**: A coluna de origem na grid que contém a string JSON (por exemplo, `payload` ou `owner`).
+    -   **JSON field**: O caminho ou chave exata dentro da estrutura JSON para extrair. Para objetos aninhados, você pode usar o separador definido para detalhar (por exemplo, `type:id` se usar `:` como separador, ou `payload.object.issue` usando a notação padrão de ponto).
+    -   **To-column name**: O nome da nova coluna onde o valor extraído será armazenado.
+    -   **To-column type**: O tipo de dado para o qual o valor extraído será convertido (por exemplo, `string`, `int`).
 
 <br />
 
@@ -37,32 +37,32 @@ To extract elements from a JSON string, you must define the mapping rules in the
 
 ---
 
-## **Expected Behaviour**
+## **Comportamento Esperado**
 
-The following example describes the handler's behaviour in a practical scenario using `:` as the JSON field separator.
+O exemplo a seguir descreve o comportamento do handler em um cenário prático usando `:` como o separador de campo JSON.
 
-Given the following initial grid:
+Dada a seguinte grid inicial:
 
 <table><tbody><tr><th><p>owner (string)</p></th><th><p>permissions (string)</p></th></tr><tr><td><p><code>{"user": "admin","tenant": "Viewtinet"}</code></p></td><td><p><code>{"type": {"id": "42","label": "devel"}}</code></p></td></tr><tr><td><p><code>{"user": "dev","tenant": "Client"}</code></p></td><td><p><code>{"type": {"id": "21","label": "labs"}}</code></p></td></tr></tbody></table>
 
 <br />
 
-If we configure the handler to extract three different fields:
+Se configurarmos o handler para extrair três campos diferentes:
 
-1.  Extracting the `user` element from the `owner` column into a new string column called `owner_user`.
-2.  Extracting the `type` element from the `permissions` column into a new string column called `permissions_type`.
-3.  Extracting the nested `id` element inside `type` from the `permissions` column (using the path `type:id`) into a new integer column called `permissions_id`.
+1.  Extraindo o elemento `user` da coluna `owner` para uma nova coluna de string chamada `owner_user`.
+2.  Extraindo o elemento `type` da coluna `permissions` para uma nova coluna de string chamada `permissions_type`.
+3.  Extraindo o elemento `id` aninhado dentro de `type` da coluna `permissions` (usando o caminho `type:id`) para uma nova coluna de inteiro chamada `permissions_id`.
 
-The resulting grid would be as follows:
+A grid resultante seria a seguinte:
 
 <table><tbody><tr><th><p>owner (string)</p></th><th><p>permissions (string)</p></th><th><p>owner_user (string)</p></th><th><p>permissions_type (string)</p></th><th><p>permissions_id (int)</p></th></tr><tr><td><p><code>{"user": "admin","tenant": "Viewtinet"}</code></p></td><td><p><code>{"type": {"id": "42","label": "devel"}}</code></p></td><td><p><code>admin</code></p></td><td><p><code>{"id": "42","label": "devel"}</code></p></td><td><p><code>42</code></p></td></tr><tr><td><p><code>{"user": "dev","tenant": "Client"}</code></p></td><td><p><code>{"type": {"id": "21","label": "labs"}}</code></p></td><td><p><code>dev</code></p></td><td><p><code>{"id": "21","label": "labs"}</code></p></td><td><p><code>21</code></p></td></tr></tbody></table>
 
 <br />
 
-### **Explanation:**
+### **Explicação:**
 
--   The first new column, `owner_user`, contains the `user` element from the `owner` column, as specified by the JSON field `"user"`.
--   The second new column, `permissions_type`, contains the whole `type` nested object, converted to a string, as specified by the JSON field `"type"`.
--   The third new column, `permissions_id`, contains the `id` double-nested element, as specified by the JSON field `"type:id"`. Note the `:` separated element list used to traverse the JSON hierarchy.
+-   A primeira nova coluna, `owner_user`, contém o elemento `user` da coluna `owner`, conforme especificado pelo campo JSON `"user"`.
+-   A segunda nova coluna, `permissions_type`, contém todo o objeto aninhado `type`, convertido para uma string, conforme especificado pelo campo JSON `"type"`.
+-   A terceira nova coluna, `permissions_id`, contém o elemento aninhado duplo `id`, conforme especificado pelo campo JSON `"type:id"`. Observe a lista de elementos separados por `:` usada para percorrer a hierarquia JSON.
 
 <br />

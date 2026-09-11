@@ -1,5 +1,4 @@
 ---
-reusableId: 103
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Fine Tuning'
 id: JB9-WUEB-9W1-SFX
@@ -7,34 +6,34 @@ slug: fine-tuning
 isVisible: true
 lastUpdated: '2025-10-15 10:28:49'
 ---
-# **<span align="center">Fine-Tuning for Viewtimon Performance</span>**
+# **<span align="center">Ajuste Fino para Desempenho do Viewtimon</span>**
 
-To maximize throughput, minimize latency, and ensure reliable operation, apply the following kernel and system-level tunings on every Viewtimon host.
+Para maximizar o throughput, minimizar a latência e garantir uma operação confiável, aplique os seguintes ajustes de kernel e nível de sistema em cada host do Viewtimon.
 
 <br />
 
-## **High Precision Event Timer (HPET)**
+## **Temporizador de Eventos de Alta Precisão (HPET)**
 
-HPET provides high-resolution timestamps for packet capture and scheduling:
+O HPET fornece timestamps de alta resolução para captura de pacotes e agendamento:
 
-1.  **Check support**
+1.  **Verificar suporte**
     
     ```bash
     cat /sys/devices/system/clocksource/clocksource0/available_clocksource
-    # e.g.: tsc hpet acpi_pm
+    # ex: tsc hpet acpi_pm
     ```
     
-2.  **If** `hpet` appears, enable it in GRUB:
+2.  **Se** `hpet` aparecer, habilite-o no GRUB:
     
-    -   Edit `/etc/default/grub`
-    -   Append `clocksource=hpet` to `GRUB_CMDLINE_LINUX_DEFAULT`:
+    -   Edite `/etc/default/grub`
+    -   Adicione `clocksource=hpet` em `GRUB_CMDLINE_LINUX_DEFAULT`:
         
         ```diff
         --- /etc/default/grub
         + GRUB_CMDLINE_LINUX_DEFAULT="… clocksource=hpet"
         ```
         
-3.  **Update GRUB** and reboot:
+3.  **Atualizar o GRUB** e reiniciar:
     
     ```bash
     sudo update-grub
@@ -46,37 +45,37 @@ HPET provides high-resolution timestamps for packet capture and scheduling:
 
 ## **Hugepages**
 
-Allocating large pages reduces TLB overhead and boosts memory performance.
+Alocar páginas grandes (hugepages) reduz a sobrecarga da TLB e aumenta o desempenho da memória.
 
 <br />
 
-### **A. 1 GB Hugepages (Recommended)**
+### **A. Hugepages de 1 GB (Recomendado)**
 
-1.  **Verify support**
+1.  **Verificar suporte**
     
     ```bash
     cat /proc/cpuinfo | egrep -o pdpe1gb | head -n1
-    # returns pdpe1gb if supported
+    # retorna pdpe1gb se suportado
     ```
     
-2.  **Determine count** based on NUMA nodes and RAM:
+2.  **Determinar a quantidade** com base nos nós NUMA e na RAM:
     
-    <table><tbody><tr><th><p>NUMA nodes</p></th><th><p>RAM</p></th><th><p>Hugepages</p></th></tr><tr><td><p>1</p></td><td><p>128 GB</p></td><td><p>32</p></td></tr><tr><td><p>1</p></td><td><p>96 GB</p></td><td><p>24</p></td></tr><tr><td><p>1</p></td><td><p>64 GB</p></td><td><p>16</p></td></tr><tr><td><p>1</p></td><td><p>32 GB</p></td><td><p>8</p></td></tr><tr><td><p>2</p></td><td><p>128 GB</p></td><td><p>32</p></td></tr><tr><td><p>2</p></td><td><p>96 GB</p></td><td><p>32</p></td></tr><tr><td><p>2</p></td><td><p>64 GB</p></td><td><p>24</p></td></tr><tr><td><p>2</p></td><td><p>32 GB</p></td><td><p>16</p></td></tr></tbody></table>
+    <table><tbody><tr><th><p>Nós NUMA</p></th><th><p>RAM</p></th><th><p>Hugepages</p></th></tr><tr><td><p>1</p></td><td><p>128 GB</p></td><td><p>32</p></td></tr><tr><td><p>1</p></td><td><p>96 GB</p></td><td><p>24</p></td></tr><tr><td><p>1</p></td><td><p>64 GB</p></td><td><p>16</p></td></tr><tr><td><p>1</p></td><td><p>32 GB</p></td><td><p>8</p></td></tr><tr><td><p>2</p></td><td><p>128 GB</p></td><td><p>32</p></td></tr><tr><td><p>2</p></td><td><p>96 GB</p></td><td><p>32</p></td></tr><tr><td><p>2</p></td><td><p>64 GB</p></td><td><p>24</p></td></tr><tr><td><p>2</p></td><td><p>32 GB</p></td><td><p>16</p></td></tr></tbody></table>
     
-3.  **Enable in GRUB** (example: 1 NUMA, 128 GB → 48 pages):
+3.  **Habilitar no GRUB** (exemplo: 1 NUMA, 128 GB → 48 páginas):
     
     ```diff
     --- /etc/default/grub
     + GRUB_CMDLINE_LINUX_DEFAULT="… default_hugepagesz=1G hugepagesz=1G hugepages=48"
     ```
     
-4.  **Update GRUB**:
+4.  **Atualizar o GRUB**:
     
     ```bash
     sudo update-grub
     ```
     
-5.  **Mount hugepage filesystem**:
+5.  **Montar o sistema de arquivos hugepage**:
     
     ```bash
     echo "nodev /mnt/huge_1GB hugetlbfs pagesize=1GB 0 0" | sudo tee -a /etc/fstab
@@ -85,25 +84,25 @@ Allocating large pages reduces TLB overhead and boosts memory performance.
     ```
     
 
-> **Notes:**
+> **Notas:**
 > 
-> -   A single-NUMA node server is highly recommended.
-> -   On dual-NUMA servers, the OS will free half of node 2’s pages at runtime if unused.
+> -   Recomenda-se fortemente um servidor de nó único NUMA.
+> -   Em servidores de nó duplo NUMA, o sistema operacional liberará metade das páginas do nó 2 no tempo de execução se elas não forem usadas.
 
 <br />
 
-### **B. 2 MB Hugepages (Fallback)**
+### **B. Hugepages de 2 MB (Alternativa)**
 
 <br />
 
-1.  **Verify support**
+1.  **Verificar suporte**
     
     ```bash
     cat /proc/cpuinfo | egrep -o pse | head -n1
-    # returns pse if supported
+    # retorna pse se suportado
     ```
     
-2.  **Mount and configure**:
+2.  **Montar e configurar**:
     
     ```bash
     echo "nodev /mnt/huge hugetlbfs defaults 0 0" | sudo tee -a /etc/fstab
@@ -113,18 +112,18 @@ Allocating large pages reduces TLB overhead and boosts memory performance.
     sudo sysctl -p
     ```
     
-    Replace `X` with the desired number of 2 MB pages.
+    Substitua `X` pelo número desejado de páginas de 2 MB.
     
 
 ---
 
-## **Viewtimon High-Performance Configuration**
+## **Configuração de Alto Desempenho do Viewtimon**
 
-### **CPU Isolation**
+### **Isolamento de CPU**
 
-Prevent other processes from contending with Viewtimon:
+Evite que outros processos disputem recursos com o Viewtimon:
 
-1.  **Compute CPUs to isolate**:
+1.  **Calcular as CPUs a isolar**:
     
     ```bash
     STAGES=$(grep -c '^stage' /opt/vn/config/viewtimon/etc/pipeline.cfg)
@@ -133,35 +132,35 @@ Prevent other processes from contending with Viewtimon:
     echo "Isolate $CPUS CPUs"
     ```
     
-    Or run the helper script:
+    Ou execute o script auxiliar:
     
     ```bash
     sudo /opt/vn/viewtinet-builder/scripts/compute-isolated-cpus.sh
     ```
     
-2.  **Edit GRUB** (example: isolate CPUs 3–6):
+2.  **Editar o GRUB** (exemplo: isolar as CPUs 3–6):
     
     ```diff
     --- /etc/default/grub
     + GRUB_CMDLINE_LINUX_DEFAULT="… isolcpus=3-6 nohz_full=3-6 rcu_nocbs=3-6 nohz=on"
     ```
     
-3.  **(AMD only)** add:
+3.  **(Apenas AMD)** adicione:
     
     ```diff
     + iommu=pt amd_iommu=on
     ```
     
-4.  **Apply changes**:
+4.  **Aplicar as alterações**:
     
     ```bash
     sudo update-grub
     ```
     
 
-### **CPU Performance Setup**
+### **Configuração de Desempenho da CPU**
 
-Disable Spectre/Meltdown mitigations in trusted environments:
+Desabilite as mitigações Spectre/Meltdown em ambientes confiáveis:
 
 ```diff
 --- /etc/default/grub
@@ -174,8 +173,8 @@ sudo update-grub
 
 ---
 
-> **Final Step:**<br />
-> Reboot the server to apply all kernel parameters and mounts:
+> **Etapa Final:**<br />
+> Reinicie o servidor para aplicar todos os parâmetros de kernel e montagens:
 > 
 > ```bash
 > sudo reboot

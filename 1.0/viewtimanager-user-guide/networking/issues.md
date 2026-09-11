@@ -10,7 +10,7 @@ id: QJQ-GSD-LYL-AFM
 
 <br />
 
-The **ISSUES** tab provides a consolidated view of the alerts and problems detected within the networking modules (such as bypass status, module checks, etc.). This view operates similarly to the Issues sections found in other Viewtinet modules.
+A guia **ISSUES** fornece uma visão consolidada dos alertas e problemas detectados dentro dos módulos de rede (tais como status do bypass, verificações dos módulos, etc.). Essa visualização opera de forma semelhante às seções de Issues encontradas em outros módulos do Viewtinet.
 
 <br />
 
@@ -22,9 +22,9 @@ The **ISSUES** tab provides a consolidated view of the alerts and problems detec
 
 ## **Managing Issues**
 
-The table displays all the active notifications with their respective **Timestamp**, **Level** (e.g., error, warning), and the descriptive **Message** detailing the root cause.
+A tabela exibe todas as notificações ativas com seus respectivos **Timestamp**, **Level** (ex., error, warning) e a **Message** descritiva detalhando a causa raiz.
 
-- **Archive Page:** You can acknowledge and clear the current visible issues by clicking the **ARCHIVE PAGE** button. This action moves the items out of the active view.
-- **Show Archived:** To review historical or previously cleared alerts, simply activate the **Show archived** checkbox.
+- **Archive Page:** Você pode reconhecer e limpar as issues ativas clicando no botão **ARCHIVE PAGE**. Esta ação retira os itens da visualização ativa.
+- **Show Archived:** Para rever alertas históricos ou anteriormente limpos, simplesmente ative a caixa de seleção **Show archived**.
 
 <br />

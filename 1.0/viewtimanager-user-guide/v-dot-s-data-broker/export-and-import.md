@@ -1,5 +1,4 @@
 ---
-reusableId: 129
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Export and Import'
 id: 0J9-BX41-0FB-400
@@ -7,32 +6,32 @@ slug: export-and-import
 isVisible: true
 lastUpdated: '2025-10-15 15:17:58'
 ---
-# **<span align="center">Exporting and Importing a Plugin</span>**
+# **<span align="center">Exportando e Importando um Plugin</span>**
 
-The plugins can be exported and imported. The goal is that you can get any available plugin from the Viewtinet team and also share it with the support team if needed.
+Os plugins podem ser exportados e importados. O objetivo é que você possa obter qualquer plugin disponível com a equipe da Viewtinet e também compartilhá-lo com a equipe de suporte, se necessário.
 
-## **Exporting a plugin**
+## **Exportando um plugin**
 
-You can export any Plugin by clicking on the export button, on the Plugin details page.
+Você pode exportar qualquer plugin clicando no botão de exportação, na página de detalhes do plugin.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/nnoeT0qAXnL7T0qi/images/M0lnngXaILgf2lXZWGLA.png"></figure>
 
 <br />
 
-This will open a download window with a JSON file to store the file in the client.
+Isso abrirá uma janela de download com um arquivo JSON para armazenar o arquivo no cliente.
 
 <br />
 
-## **Importing a Plugin**
+## **Importando um Plugin**
 
 <br />
 
-You can import the JSON file by clicking on the Import button on the visual smart data broker main page.
+Você pode importar o arquivo JSON clicando no botão Importar na página principal do Visual Smart Data Broker.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/nnoeT0qAXnL7T0qi/images/hauQWofnsAYQNUjrZm9G.png"></figure>
 
 <br />
 
-This will open an upload window. You must select the file path from the client. Once uploaded, It automatically generates the selected plugin.
+Isso abrirá uma janela de upload. Você deve selecionar o caminho do arquivo no cliente. Uma vez enviado, ele gera automaticamente o plugin selecionado.
 
 <br />

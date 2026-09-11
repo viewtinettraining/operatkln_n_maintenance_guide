@@ -7,27 +7,27 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-22 16:22:00'
 ---
-# **<span align="center">Syslog Producer</span>**
+# **<span align="center">Produtor de Syslog (Syslog Producer)</span>**
 
 <br />
 
-The **Syslog Producer** allows you to export the final transformed grid as Syslog messages to a remote server using the standard Syslog protocol (UDP). Each row of the processed grid is formatted and forwarded as an individual Syslog message to the configured destination.
+O **Syslog Producer** permite que você exporte a grade final transformada como mensagens Syslog para um servidor remoto usando o protocolo padrão Syslog (UDP). Cada linha da grade processada é formatada e encaminhada como uma mensagem Syslog individual para o destino configurado.
 
-This is particularly useful when you need to integrate Viewtinet's processed data with third-party SIEM platforms, log aggregation systems, or any external tool that supports Syslog ingestion.
+Isso é particularmente útil quando você precisa integrar os dados processados da Viewtinet com plataformas SIEM de terceiros, sistemas de agregação de logs ou qualquer ferramenta externa que suporte a ingestão de Syslog.
 
 <br />
 
-> [!WARNING] **UDP — Connectionless Protocol**<br />
-> Syslog operates over **UDP**, which is a connectionless, non-reliable transport protocol. This means that Viewtinet sends the messages without establishing a prior connection and **has no way to confirm whether the remote server is actually receiving the data**. There is no acknowledgment mechanism or error feedback from the destination.<br /><br />
-> Therefore, it is the **administrator's responsibility** to guarantee network connectivity between the Viewtinet server and the Syslog destination **before** enabling this producer. It is strongly recommended to verify reachability (e.g., by testing with `netcat` or validating firewall rules for the target IP and port) to ensure the messages are being delivered correctly.
+> [!WARNING] **UDP — Protocolo sem Conexão**<br />
+> O Syslog opera sobre **UDP**, que é um protocolo de transporte sem conexão e não confiável. Isso significa que a Viewtinet envia as mensagens sem estabelecer uma conexão prévia e **não tem como confirmar se o servidor remoto está de fato recebendo os dados**. Não há mecanismo de confirmação ou feedback de erro do destino.<br /><br />
+> Portanto, é **responsabilidade do administrador** garantir a conectividade de rede entre o servidor Viewtinet e o destino Syslog **antes** de habilitar este produtor. É altamente recomendável verificar a acessibilidade (ex., testando com `netcat` ou validando as regras de firewall para o IP e a porta de destino) para garantir que as mensagens estão sendo entregues corretamente.
 
 <br />
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-Once you select `Syslog Producer` from the Producer Type dropdown, the following connection and formatting parameters become available:
+Depois de selecionar `Syslog Producer` no menu suspenso de Tipo de Produtor, os seguintes parâmetros de conexão e formatação ficam disponíveis:
 
 <br />
 
@@ -35,18 +35,18 @@ Once you select `Syslog Producer` from the Producer Type dropdown, the following
 
 <br />
 
--   **IP Address / Hostname:** The destination IP address or hostname of the remote Syslog server where the messages will be sent (e.g., `10.30.23.5`).
--   **Syslog port:** The UDP port on the destination server listening for Syslog messages. The standard default is `514`.
--   **Timestamp position:** Defines the position (index) within the Syslog message where the timestamp will be inserted. A value of `0` places it at the very beginning of the message payload.
--   **Timestamp format:** The format string used to represent the timestamp in each message. It follows the standard Linux `date` command format wildcards. For example, `%s%f` produces a high-precision epoch timestamp including fractional seconds.
--   **Message severity:** The Syslog severity level assigned to each exported message, following the standard Syslog severity codes (RFC 5424). Common values include:
-    -   `0` — Emergency
-    -   `1` — Alert
-    -   `2` — Critical
-    -   `3` — Error
-    -   `4` — Warning
-    -   `5` — Notice
-    -   `6` — Informational
-    -   `7` — Debug
+-   **IP Address / Hostname** (Endereço IP / Nome do host): O endereço IP de destino ou nome do host do servidor Syslog remoto para onde as mensagens serão enviadas (ex., `10.30.23.5`).
+-   **Syslog port** (Porta Syslog): A porta UDP no servidor de destino escutando mensagens Syslog. O padrão padrão é `514`.
+-   **Timestamp position** (Posição do carimbo de data/hora): Define a posição (índice) dentro da mensagem Syslog onde o timestamp será inserido. Um valor de `0` o coloca bem no início da carga útil (payload) da mensagem.
+-   **Timestamp format** (Formato do carimbo de data/hora): A string de formatação usada para representar o timestamp em cada mensagem. Segue os curingas (wildcards) padrão do comando `date` do Linux. Por exemplo, `%s%f` produz um timestamp epoch de alta precisão incluindo frações de segundo.
+-   **Message severity** (Gravidade da mensagem): O nível de gravidade Syslog atribuído a cada mensagem exportada, seguindo os códigos de gravidade Syslog padrão (RFC 5424). Valores comuns incluem:
+    -   `0` — Emergência (Emergency)
+    -   `1` — Alerta (Alert)
+    -   `2` — Crítico (Critical)
+    -   `3` — Erro (Error)
+    -   `4` — Aviso (Warning)
+    -   `5` — Notificação (Notice)
+    -   `6` — Informativo (Informational)
+    -   `7` — Depuração (Debug)
 
 <br />

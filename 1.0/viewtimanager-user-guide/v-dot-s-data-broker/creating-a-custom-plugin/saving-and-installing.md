@@ -7,22 +7,22 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 19:00:00'
 ---
-# **<span align="center">Saving and Installing the Plugin</span>**
+# **<span align="center">Salvando e Instalando o Plugin</span>**
 
 <br />
 
-Once you have finished configuring the **Extract**, **Transform**, **Load**, and **Schema** stages, you must properly confirm, save, and install the plugin for the changes to take effect in the system.
+Depois de terminar de configurar as etapas de **Extract** (Extrair), **Transform** (Transformar), **Load** (Carregar) e **Schema** (Esquema), você deve confirmar, salvar e instalar o plugin adequadamente para que as alterações tenham efeito no sistema.
 
 <br />
 
 ---
 
-## **1. Confirming Stage Changes**
+## **1. Confirmando as Alterações da Etapa**
 
-Every time you modify a stage (like the Schema configuration), you will be working inside a popup or a specific configuration window. To ensure those changes are temporarily retained by the editor, you must click the **CONFIRM** button (usually located at the bottom right).
+Toda vez que você modificar uma etapa (como a configuração de Schema), você estará trabalhando dentro de um pop-up ou de uma janela de configuração específica. Para garantir que essas alterações sejam temporariamente mantidas pelo editor, você deve clicar no botão **CONFIRM** (Geralmente localizado no canto inferior direito).
 
-> [!WARNING] **Closing without Confirming**
-> If you close the configuration window without clicking **CONFIRM**, all modifications made within that specific stage will be lost.
+> [!WARNING] **Fechar sem Confirmar**
+> Se você fechar a janela de configuração sem clicar em **CONFIRM**, todas as modificações feitas dentro dessa etapa específica serão perdidas.
 
 <br />
 
@@ -32,13 +32,13 @@ Every time you modify a stage (like the Schema configuration), you will be worki
 
 ---
 
-## **2. Saving Changes to the Database**
+## **2. Salvando as Alterações no Banco de Dados**
 
-After confirming the changes within the individual stages, you will return to the main Plugin Editor interface showing the ETL flowchart. 
+Depois de confirmar as alterações dentro das etapas individuais, você retornará para a interface principal do Editor de Plugin, que mostra o fluxograma do ETL. 
 
-At this point, the changes are only in the editor's memory. To commit these configurations to the database, you must scroll to the bottom of the page and click the **SAVE CHANGES** button. 
+Neste ponto, as alterações estão apenas na memória do editor. Para confirmar (commit) essas configurações no banco de dados, você deve rolar até o final da página e clicar no botão **SAVE CHANGES** (Salvar Alterações). 
 
-You can also provide a brief description of what was changed before saving, which helps keep a history of modifications.
+Você também pode fornecer uma breve descrição do que foi alterado antes de salvar, o que ajuda a manter um histórico de modificações.
 
 <br />
 
@@ -48,17 +48,17 @@ You can also provide a brief description of what was changed before saving, whic
 
 ---
 
-## **3. Installing the Plugin**
+## **3. Instalando o Plugin**
 
-Saving the changes to the database ensures your work is stored, but **it does not automatically apply them to the running system**. 
+Salvar as alterações no banco de dados garante que seu trabalho seja armazenado, mas **não as aplica automaticamente ao sistema em execução**. 
 
-To generate and deploy the actual pipelines, models, dashboards, and alarms to the host, you must **install** the plugin.
+Para gerar e implantar as pipelines reais, modelos, dashboards e alarmes no host, você deve **instalar** (install) o plugin.
 
-To do this:
-1. Go back to the Plugin Details page (outside the editor).
-2. Click the **INSTALL** button.
+Para fazer isso:
+1. Volte para a página de Detalhes do Plugin (fora do editor).
+2. Clique no botão **INSTALL** (Instalar).
 
-The system will then compile your configurations and deploy them. If the plugin already exists, the items will be seamlessly updated.
+O sistema compilará as suas configurações e as implantará. Se o plugin já existir, os itens serão atualizados perfeitamente.
 
 <br />
 

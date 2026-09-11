@@ -1,7 +1,6 @@
 ---
-reusableId: 68
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Configuração do Sistema'
+title: 'System Configuration'
 id: GG6-I8VJ-HKN-FYJ
 slug: system-configuration
 isVisible: true
@@ -10,46 +9,46 @@ lastUpdated: '2025-10-14 09:45:50'
 # **<span align="center">Inicialização do Sistema</span>**
 
 <br />
-Este capítulo descreve as etapas essenciais para configurar o perfil do sistema, o serviço SSH e os serviços de sincronização de tempo. Essas configurações devem ser concluídas antes de prosseguir com a instalação do Viewtinet.<br />
+Este capítulo descreve as etapas essenciais necessárias para configurar o perfil do sistema, o serviço SSH e os serviços de sincronização de horário. Essas configurações devem ser concluídas antes de prosseguir com a instalação do Viewtinet.<br />
 Configuração do Perfil de Usuário
 
 Todos os módulos, contêineres e serviços do Viewtinet são executados sob o usuário `viewtinet`. Este usuário deve ser criado durante o processo de instalação do sistema operacional.
 
-### Configuração de Perfil Durante a Instalação
+### Configuração do Perfil Durante a Instalação
 
-Na tela de **Configuração de Perfil**, insira os seguintes detalhes:
+Na tela **Profile setup** (Configuração de perfil), insira os seguintes detalhes:
 
--   **Seu nome:** `viewtinet`
--   **Nome do seu servidor:** Qualquer hostname de sua escolha (ex.: `my_viewtilog`)
--   **Escolha um nome de usuário:** `viewtinet`
--   **Escolha uma senha:** Defina uma senha segura
--   **Confirme sua senha:** Re-insira a mesma senha
+-   **Your name (Seu nome):** `viewtinet`
+-   **Your server’s name (Nome do seu servidor):** Qualquer nome de host da sua escolha (ex: `my_viewtilog`)
+-   **Pick a username (Escolha um nome de usuário):** `viewtinet`
+-   **Choose a password (Escolha uma senha):** Defina uma senha segura
+-   **Confirm your password (Confirme sua senha):** Reinsira a mesma senha
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/qRQJX723KTkRI4WS2odl.png"></figure>
 
-Clique em `[Concluído]` para continuar.
+Clique em `[Done]` para continuar.
 
-> ⚠️ Não altere o nome de usuário. Deve ser `viewtinet` para o sistema funcionar corretamente.
+> ⚠️ Não altere o nome de usuário. Ele deve ser `viewtinet` para que o sistema funcione corretamente.
 
 ---
 
 ## **Configuração do SSH**
 
-Para habilitar o gerenciamento remoto seguro, é obrigatório instalar e habilitar o **Servidor OpenSSH**.
+Para habilitar o gerenciamento remoto seguro, é obrigatório instalar e habilitar o **OpenSSH Server**.
 
-Na tela de **Configuração do SSH**:
+Na tela **SSH Setup**:
 
--   Marque a opção: `[X] Instalar servidor OpenSSH`
--   Deixe a opção de importar identidade como `Não`
--   Certifique-se de que: `[X] Permitir autenticação por senha via SSH` esteja marcado
+-   Marque a opção: `[X] Install OpenSSH server`
+-   Deixe a opção de importar identidade (import identity) como `No`
+-   Certifique-se de que: `[X] Allow password authentication over SSH` esteja marcado
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/Ud68BjEZe1OzSldgxJeA.png"></figure>
 
-Clique em `[Concluído]` para prosseguir.
+Clique em `[Done]` para prosseguir.
 
 Pacotes Opcionais
 
-Se o instalador apresentar uma tela para selecionar pacotes adicionais (ex.: "Snaps de Servidor em Destaque"):
+Se o instalador apresentar uma tela para selecionar pacotes adicionais (ex: "Featured Server Snaps"):
 
 -   **Não selecione nenhum pacote**.
 
@@ -57,15 +56,15 @@ Se o instalador apresentar uma tela para selecionar pacotes adicionais (ex.: "Sn
 
 <br />
 
--   Simplesmente clique em `[Concluído]` para continuar o processo de instalação.
+-   Basta clicar em `[Done]` para continuar o processo de instalação.
 
-> ❗ A instalação de pacotes adicionais neste ponto não é recomendada e pode causar conflitos com os módulos do Viewtinet.
+> ❗A instalação de pacotes adicionais neste momento não é recomendada e pode causar conflitos com os módulos do Viewtinet.
 
 ---
 
-## **Configuração NTP**
+## **Configuração do NTP**
 
-A sincronização correta do tempo é essencial. Configure o sistema para usar um servidor NTP da seguinte forma:
+A sincronização de horário correta é essencial. Configure o sistema para usar um servidor NTP da seguinte forma:
 
 ### **Instalar o Serviço NTP**
 
@@ -73,7 +72,7 @@ A sincronização correta do tempo é essencial. Configure o sistema para usar u
 sudo apt-get install ntp
 ```
 
-### **Editar o Arquivo de Configuração NTP**
+### **Editar o Arquivo de Configuração do NTP**
 
 ```bash
 sudo vi /etc/ntp.conf
@@ -85,7 +84,7 @@ Se o cliente fornecer servidores NTP, adicione-os abaixo da seção:
 # Specify one or more NTP servers
 ```
 
-Caso contrário, use servidores NTP públicos mais próximos da sua localização: [https://support.ntp.org/bin/view/Servers/NTPPoolServers](https://support.ntp.org/bin/view/Servers/NTPPoolServers)
+Caso contrário, use servidores NTP públicos mais próximos à sua localização: [https://support.ntp.org/bin/view/Servers/NTPPoolServers](https://support.ntp.org/bin/view/Servers/NTPPoolServers)
 
 <br />
 
@@ -101,7 +100,7 @@ sudo service ntp restart
 sudo service ntp status
 ```
 
-### **Verificar Status e Sincronização**
+### **Verificar o Status e a Sincronização**
 
 ```bash
 sudo systemctl status systemd-timesyncd
@@ -115,6 +114,6 @@ System clock synchronized: yes
 NTP service: active
 ```
 
-Após concluir todas as etapas deste capítulo, o sistema operacional está corretamente configurado para prosseguir com a instalação do Viewtinet. Continue com as etapas descritas na documentação de Instalação pelo Bundle.
+Assim que todas as etapas deste capítulo forem concluídas, o sistema operacional estará configurado corretamente para prosseguir com a instalação do Viewtinet. Continue com as etapas descritas na documentação de Instalação do Pacote (Bundle Installation).
 
 <br />

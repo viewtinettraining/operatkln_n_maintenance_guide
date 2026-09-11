@@ -7,22 +7,22 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 14:24:18'
 ---
-# **<span align="center">Schema Stage</span>**
+# **<span align="center">Etapa de Schema (Schema Stage)</span>**
 
 <br />
 
-The **Schema** stage is the final configuration step of a plugin within the V.S. Data Broker. This stage serves two main critical purposes:
+A etapa **Schema** é a última etapa de configuração de um plugin dentro do V.S. Data Broker. Esta etapa atende a dois propósitos críticos principais:
 
-1.  **Database Configuration:** It defines how the table is structured, its retention policies, and the partitioning periods inside the Viewtinet time-series database.
-2.  **Data Preparation for Viewtisight:** It specifies the exact formatting, dimensions, metrics, aggregated tables, and real-time alarms that will be available later for visualization and analysis in Viewtisight.
+1.  **Configuração de Banco de Dados:** Define como a tabela é estruturada, suas políticas de retenção e os períodos de particionamento dentro do banco de dados de séries temporais da Viewtinet.
+2.  **Preparação de Dados para o Viewtisight:** Especifica a formatação exata, dimensões, métricas, tabelas agregadas e alarmes em tempo real que estarão disponíveis posteriormente para visualização e análise no Viewtisight.
 
 <br />
 
 ---
 
-## **Model Settings**
+## **Configurações de Modelo (Model Settings)**
 
-The initial section controls the core database structure and retention logic.
+A seção inicial controla a estrutura principal do banco de dados e a lógica de retenção.
 
 <br />
 
@@ -30,21 +30,21 @@ The initial section controls the core database structure and retention logic.
 
 <br />
 
-### **Table & Raw Data Configuration**
+### **Configuração de Tabela e Dados Brutos**
 
--   **Set:** The name of the destination table in the database (e.g., `snmp_interface_records_info`).
--   **Tenant Field:** Defines which column acts as the **tenant identifier** to logically separate data within the same table. This is commonly set to `host`.
--   **Retention Period for Raw Data:** Specifies how long the **raw (unprocessed) records** will be kept before being automatically purged (e.g., `5 days`).
--   **Partition Period for Raw Data:** Defines the internal partitioning interval used by the database engine to optimize query performance (e.g., `1 day`).
+-   **Set:** O nome da tabela de destino no banco de dados (ex., `snmp_interface_records_info`).
+-   **Tenant Field:** Define qual coluna atua como o **identificador de tenant** para separar logicamente os dados dentro da mesma tabela. Isso é comumente definido como `host`.
+-   **Retention Period for Raw Data:** Especifica por quanto tempo os **registros brutos (não processados)** serão mantidos antes de serem automaticamente purgados/apagados (ex., `5 days`).
+-   **Partition Period for Raw Data:** Define o intervalo de particionamento interno usado pela engine de banco de dados para otimizar o desempenho de consultas (ex., `1 day`).
 
-### **Granularities and Aggregated Tables Policy**
+### **Granularidades e Política de Tabelas Agregadas**
 
-This section controls the creation and retention of **aggregated tables** at different time granularities.
+Esta seção controla a criação e retenção de **tabelas agregadas** em diferentes granularidades de tempo.
 
-> \[!NOTE\] **Not All Data Should Be Aggregated**<br />
-> As explained in the conceptual theory, **not all data sources are susceptible to be aggregated**. Aggregation is mandatory for high-volume listener protocols (NetFlow, Syslog) or frequent polling operations (SNMP interfaces) to compress the data, but it is typically disabled for lightweight polling (SNMP health, ICMP).
+> \[!NOTE\] **Nem Todos os Dados Devem Ser Agregados**<br />
+> Conforme explicado na teoria conceitual, **nem todas as fontes de dados são suscetíveis de serem agregadas**. A agregação é obrigatória para protocolos de escuta de alto volume (NetFlow, Syslog) ou operações de polling frequentes (interfaces SNMP) para compactar os dados, mas normalmente é desabilitada para polling leve (SNMP health, ICMP).
 
-Each row represents an aggregation level that can be individually **enabled or disabled**:
+Cada linha representa um nível de agregação que pode ser individualmente **habilitado ou desabilitado**:
 
 <table><tbody><tr><th><p>Granularity</p></th><th><p>Retention Period</p></th><th><p>Partition Period</p></th><th><p>Enabled</p></th></tr><tr><td><p>1 minute</p></td><td><p>3 days</p></td><td><p>1 day</p></td><td><p>☐</p></td></tr><tr><td><p>5 minutes</p></td><td><p>1 week</p></td><td><p>1 day</p></td><td><p>☑</p></td></tr><tr><td><p>1 hour</p></td><td><p>1 week</p></td><td><p>1 day</p></td><td><p>☑</p></td></tr><tr><td><p>1 day</p></td><td><p>1 day</p></td><td><p>1 day</p></td><td><p>☑</p></td></tr></tbody></table>
 
@@ -52,9 +52,9 @@ Each row represents an aggregation level that can be individually **enabled or d
 
 ---
 
-## **Fields**
+## **Campos (Fields)**
 
-The **Fields** section is where you review and configure every column that will exist in the database table. These fields are inherited from the grid produced during the Transform stage.
+A seção **Fields** é onde você revisa e configura cada coluna que existirá na tabela do banco de dados. Esses campos são herdados da grade produzida durante a etapa de Transformação (Transform).
 
 <br />
 
@@ -62,23 +62,23 @@ The **Fields** section is where you review and configure every column that will 
 
 <br />
 
-For each column, you can configure:
+Para cada coluna, você pode configurar:
 
--   **Field Name:** The internal name of the column in the V.S. Data Broker.
--   **DataBase Name:** The actual column name that will be created in Postgres/ViewtinetDB.
--   **Type:** The SQL data type (e.g., `int64`, `string`, `double`).
--   **Max Length / Precision / Scale:** Optional constraints for string lengths or decimal precision.
--   **Metric/Dimension:** A crucial setting for Viewtisight. A **Dimension** is an attribute used to group or filter data (e.g., `host`, `interface_description`). A **Metric** is a numerical value that can be mathematically operated on.
--   **Agg. Function:** If the field is marked as a Metric, assigning a predefined Aggregation Function (like `sum`, `avg`, `max`) automatically prepares this metric to be used efficiently in Viewtisight dashboards.
--   **Units:** Defines the unit label (e.g., `bps`, `bytes`, `ms`).
+-   **Field Name:** O nome interno da coluna no V.S. Data Broker.
+-   **DataBase Name:** O nome real da coluna que será criada no Postgres/ViewtinetDB.
+-   **Type:** O tipo de dados SQL (ex., `int64`, `string`, `double`).
+-   **Max Length / Precision / Scale:** Restrições opcionais para comprimentos de string ou precisão decimal.
+-   **Metric/Dimension:** Uma configuração crucial para o Viewtisight. Uma **Dimensão** é um atributo usado para agrupar ou filtrar dados (ex., `host`, `interface_description`). Uma **Métrica** é um valor numérico no qual podem ser feitas operações matemáticas.
+-   **Agg. Function:** Se o campo for marcado como uma Métrica, a atribuição de uma Função de Agregação predefinida (como `sum`, `avg`, `max`) prepara automaticamente esta métrica para ser usada de forma eficiente nos dashboards do Viewtisight.
+-   **Units:** Define o rótulo da unidade (ex., `bps`, `bytes`, `ms`).
 
 <br />
 
 ---
 
-## **Aggregated Tables (Dimensions & Metrics)**
+## **Tabelas Agregadas (Dimensões e Métricas)**
 
-If you enabled any granularities in the Model Settings, this section allows you to define exactly **how** those aggregated tables will be built.
+Se você habilitou quaisquer granularidades nas Model Settings (Configurações de Modelo), esta seção permite definir exatamente **como** essas tabelas agregadas serão construídas.
 
 <br />
 
@@ -86,17 +86,17 @@ If you enabled any granularities in the Model Settings, this section allows you 
 
 <br />
 
-Here, you select which specific **Dimensions** and **Metrics** from your main table will be summarized and pushed into the secondary aggregated tables.
+Aqui, você seleciona quais **Dimensões** e **Métricas** específicas da sua tabela principal serão resumidas e empurradas para as tabelas agregadas secundárias.
 
-By default, the platform groups the records based on the selected dimensions over the defined time interval (e.g., every 5 minutes), applies the `Agg. Function` to the metrics, and stores the compressed results. This reduces volume and dramatically speeds up long-term trend queries.
+Por padrão, a plataforma agrupa os registros com base nas dimensões selecionadas no intervalo de tempo definido (ex., a cada 5 minutos), aplica a `Agg. Function` às métricas e armazena os resultados compactados. Isso reduz o volume e acelera drasticamente as consultas de tendências de longo prazo.
 
 <br />
 
 ---
 
-## **Alarms**
+## **Alarmes (Alarms)**
 
-The Schema stage also allows you to define **real-time alarms**.
+A etapa de Schema também permite definir **alarmes em tempo real**.
 
 <br />
 
@@ -104,10 +104,10 @@ The Schema stage also allows you to define **real-time alarms**.
 
 <br />
 
-Alarms configured here are evaluated **at insertion time**. This means that as soon as the system writes the record into the database, it instantly evaluates the metric against the configured threshold.
+Os alarmes configurados aqui são avaliados **no momento da inserção**. Isso significa que assim que o sistema grava o registro no banco de dados, ele avalia instantaneamente a métrica em relação ao limite configurado.
 
--   **Alarm name:** The identifier for the alarm (e.g., `Interfaz caído`).
--   **Metrics:** The specific column being evaluated (e.g., `interface-oper-status`).
--   **Dimension Keys:** The dimensions that provide context to the alarm, allowing you to know exactly which device or interface triggered it (e.g., `host`, `interface`, `interface-description`).
+-   **Alarm name:** O identificador do alarme (ex., `Interfaz caído`).
+-   **Metrics:** A coluna específica sendo avaliada (ex., `interface-oper-status`).
+-   **Dimension Keys:** As dimensões que dão contexto ao alarme, permitindo que você saiba exatamente qual dispositivo ou interface o disparou (ex., `host`, `interface`, `interface-description`).
 
 <br />

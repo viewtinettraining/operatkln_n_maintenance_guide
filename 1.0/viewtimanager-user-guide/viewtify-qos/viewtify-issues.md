@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 10:34:57'
 ---
-# **<span align="center">Viewtify Issues</span>**
+# **<span align="center">Problemas do Viewtify (Viewtify Issues)</span>**
 
 <br />
 
-The **ISSUES** tab acts as the internal system log and alert center specifically dedicated to the Viewtify DPI engine. It tracks background status checks and any operational anomalies that occur while the probe is running.
+A aba **ISSUES** atua como o log do sistema interno e central de alertas dedicada especificamente ao motor Viewtify DPI. Ela rastreia verificações de status em segundo plano e quaisquer anomalias operacionais que ocorram enquanto a sonda estiver em execução.
 
 <br />
 
@@ -21,23 +21,23 @@ The **ISSUES** tab acts as the internal system log and alert center specifically
 
 ---
 
-## **Understanding the Issues Log**
+## **Entendendo o Log de Problemas**
 
-Whenever the Viewtify engine detects a problem, it logs an entry in this section. If there are unread or active issues, a red badge containing the number of alerts will appear over the "ISSUES" tab icon, proactively notifying administrators that attention is required.
+Sempre que o motor Viewtify detecta um problema, ele registra uma entrada nesta seção. Se houver problemas não lidos ou ativos, um crachá (badge) vermelho contendo o número de alertas aparecerá sobre o ícone da aba "ISSUES", notificando proativamente os administradores de que é necessária atenção.
 
-The table provides a clear breakdown of each event:
+A tabela fornece um detalhamento claro de cada evento:
 
--   **Timestamp:** The exact date and time the issue was detected and logged.
--   **Level:** The severity of the alert (e.g., `error`, `warning`, `info`). This helps prioritize troubleshooting efforts.
--   **Message:** A detailed description of the problem. For instance, it may report internal background status warnings or state changes in hardware bypass mechanisms (e.g., `BYPASS_DISCONNECTED`), which are crucial for ensuring high availability.
+-   **Timestamp:** A data e hora exatas em que o problema foi detectado e registrado.
+-   **Level:** A gravidade do alerta (ex., `error`, `warning`, `info`). Isso ajuda a priorizar os esforços de solução de problemas (troubleshooting).
+-   **Message:** Uma descrição detalhada do problema. Por exemplo, ele pode relatar avisos internos de status em segundo plano ou mudanças de estado em mecanismos de bypass de hardware (ex., `BYPASS_DISCONNECTED`), que são cruciais para garantir a alta disponibilidade.
 
 ---
 
-## **Managing Issues**
+## **Gerenciando Problemas**
 
-To maintain a clean and manageable log over time, you can archive issues that have already been resolved or acknowledged.
+Para manter um log limpo e gerenciável ao longo do tempo, você pode arquivar problemas que já foram resolvidos ou confirmados.
 
--   **ARCHIVE PAGE:** Clicking this button will archive all the currently visible alerts on the active page, removing them from the default view.
--   **Show archived:** Checking this box allows you to view historical alerts that were previously archived, which is useful for post-incident analysis or auditing recurring problems.
+-   **ARCHIVE PAGE:** Clicar neste botão arquivará todos os alertas atualmente visíveis na página ativa, removendo-os da visualização padrão.
+-   **Show archived:** Marcar esta caixa permite visualizar alertas históricos que foram arquivados anteriormente, o que é útil para análise pós-incidente ou auditoria de problemas recorrentes.
 
 <br />

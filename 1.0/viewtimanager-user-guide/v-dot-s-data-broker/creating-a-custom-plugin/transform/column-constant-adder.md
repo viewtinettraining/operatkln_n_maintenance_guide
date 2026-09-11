@@ -1,5 +1,4 @@
 ---
-reusableId: 138
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Column Constant Adder'
 id: 3AE-OBTK-EV6-YSP
@@ -11,27 +10,27 @@ lastUpdated: '2026-05-20 15:30:00'
 
 <br />
 
-The **Column Constant Adder** grid handler is a transformation component that allows you to apply a static, constant value to all fields of a specified column in the **Grid** during the ETL (Extract, Transform, Load) pipeline.
+O handler de grid **Column Constant Adder** é um componente de transformação que permite aplicar um valor estático e constante a todos os campos de uma coluna especificada na **Grid** durante o pipeline ETL (Extração, Transformação, Carga).
 
-This operation is highly useful for populating default values, setting standard constants, or appending static labels across entire columns in your dataset.
+Esta operação é altamente útil para preencher valores padrão, definir constantes padrão ou anexar rótulos estáticos em colunas inteiras do seu conjunto de dados.
 
 <br />
 
 ---
 
-### **Configuration & Examples**
+### **Configuração & Exemplos**
 
-Configuring the **Column Constant Adder** requires specifying two main fields:
+A configuração do **Column Constant Adder** requer a especificação de dois campos principais:
 
-- **Column**: Type or select the name of the column you want to operate on.
-- **Constant**: Specify the static value that will be added to the column.
+- **Column**: Digite ou selecione o nome da coluna em que você deseja operar.
+- **Constant**: Especifique o valor estático que será adicionado à coluna.
 
-This handler supports both numeric values and string text, applying the changes while maintaining the original column name.
+Este handler suporta tanto valores numéricos quanto texto em string, aplicando as alterações enquanto mantém o nome original da coluna.
 
 <br />
 
-#### **Example 1: Adding a Numeric Constant**
-When operating on numeric columns, you can add a fixed number to all rows (for example, adding `2500` to the `bytes_out` column):
+#### **Exemplo 1: Adicionando uma Constante Numérica**
+Ao operar em colunas numéricas, você pode adicionar um número fixo a todas as linhas (por exemplo, adicionando `2500` à coluna `bytes_out`):
 
 <br />
 
@@ -39,8 +38,8 @@ When operating on numeric columns, you can add a fixed number to all rows (for e
 
 <br />
 
-#### **Example 2: Adding a String Constant**
-This handler can also be used to append text to a string or text-based column (for example, setting the value `"MyVendor"` for all rows in the `vendor` column):
+#### **Exemplo 2: Adicionando uma Constante de String**
+Este handler também pode ser usado para anexar texto a uma coluna de string ou baseada em texto (por exemplo, definindo o valor `"MyVendor"` para todas as linhas na coluna `vendor`):
 
 <br />
 
@@ -48,6 +47,6 @@ This handler can also be used to append text to a string or text-based column (f
 
 <br />
 
-<div class="sd-callout" data-callout-type="tip"><strong>Best Practice:</strong> Use the Column Constant Adder when you need to define default metadata (such as vendor name, static status codes, or baseline threshold numbers) across all rows before loading the final dataset into the database.</div>
+<div class="sd-callout" data-callout-type="tip"><strong>Melhor Prática:</strong> Use o Column Constant Adder quando precisar definir metadados padrão (como nome do fornecedor, códigos de status estáticos ou números de limite base) em todas as linhas antes de carregar o conjunto de dados final no banco de dados.</div>
 
 <br />

@@ -11,24 +11,24 @@ lastUpdated: '2026-05-22 12:00:00'
 
 <br />
 
-The **Grid Filter** handler is a powerful tool designed to selectively keep or discard incoming records (rows) based on specific logical conditions before they are sent to the database.
+O handler **Grid Filter** é uma ferramenta poderosa projetada para manter ou descartar seletivamente registros recebidos (linhas) com base em condições lógicas específicas antes que sejam enviados ao banco de dados.
 
-By setting up dimension filters, you can ensure that only valid, relevant, or compliant data is ingested. Any row that does not meet the specified criteria is completely dropped from the payload during the transformation phase.
+Ao configurar os filtros de dimensão (dimension filters), você pode garantir que apenas dados válidos, relevantes ou em conformidade sejam ingeridos. Qualquer linha que não atenda aos critérios especificados é completamente descartada da carga durante a fase de transformação.
 
 ---
 
-## **When to use it?**
+## **Quando usá-lo?**
 
-You should use this handler to:
-- **Drop anomalies**: For example, filtering out logs where a percentage metric like CPU or Storage utilization reports a value higher than 100%.
-- **Reduce noise**: Discarding irrelevant log levels (e.g., keeping only `ERROR` or `CRITICAL` severity logs and dropping `INFO` or `DEBUG`).
-- **Targeted ingestion**: Only ingesting events that belong to a specific tenant or IP subnet.
+Você deve usar este handler para:
+- **Descartar anomalias**: Por exemplo, filtrar logs onde uma métrica percentual como uso de CPU ou Armazenamento relata um valor maior que 100%.
+- **Reduzir o ruído**: Descartar níveis de log irrelevantes (por exemplo, manter apenas logs de severidade `ERROR` ou `CRITICAL` e descartar `INFO` ou `DEBUG`).
+- **Ingestão direcionada**: Ingerir apenas eventos que pertencem a um tenant específico ou sub-rede de IP.
 
 <br />
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-The configuration is divided into two parts: the global logical operation and the individual conditions.
+A configuração é dividida em duas partes: a operação lógica global e as condições individuais.
 
 <br />
 
@@ -36,20 +36,20 @@ The configuration is divided into two parts: the global logical operation and th
 
 <br />
 
-### **1. Global Operation**
-- **Operation**: Determines how the system should evaluate multiple conditions if you define more than one. 
-  - `AND (match all)`: The row is kept *only* if it satisfies **all** the conditions simultaneously.
-  - `OR (match any)`: The row is kept if it satisfies **at least one** of the conditions.
+### **1. Operação Global**
+- **Operation**: Determina como o sistema deve avaliar múltiplas condições se você definir mais de uma. 
+  - `AND (match all)`: A linha é mantida *apenas* se satisfizer **todas** as condições simultaneamente.
+  - `OR (match any)`: A linha é mantida se satisfizer **pelo menos uma** das condições.
 
-### **2. Conditions (Dimension Filters)**
-You can define one or more rules by clicking the **+ ADD NEW DIMENSION FILTER** button. For each rule, you must configure:
+### **2. Condições (Filtros de Dimensão)**
+Você pode definir uma ou mais regras clicando no botão **+ ADD NEW DIMENSION FILTER**. Para cada regra, você deve configurar:
 
-- **Column**: The name of the column you want to evaluate (e.g., `storage_utilization`).
-- **Filter Type**: Determines how the value will be processed and compared. For example, `int-compare` treats the value as an integer for mathematical comparison.
-- **Case Sensitive**: Determines whether string comparisons should distinguish between uppercase and lowercase letters.
-- **Match Mode**: Defines string matching behaviors (like exact match, starts with, etc.).
-- **Compare Operation**: The mathematical or logical operator used for the evaluation (e.g., `<=`, `>=`, `==`, `!=`).
-- **Value**: The threshold, string, or number to compare the column's content against (e.g., `100`).
-- **Invert Filter**: If set to `true`, it logically negates the rule (e.g., turning a `<=` into a `>`). By default, it should be `false`.
+- **Column**: O nome da coluna que você deseja avaliar (por exemplo, `storage_utilization`).
+- **Filter Type**: Determina como o valor será processado e comparado. Por exemplo, `int-compare` trata o valor como um número inteiro para comparação matemática.
+- **Case Sensitive**: Determina se as comparações de string devem distinguir entre letras maiúsculas e minúsculas.
+- **Match Mode**: Define os comportamentos de correspondência de string (como correspondência exata, começa com, etc.).
+- **Compare Operation**: O operador lógico ou matemático usado para a avaliação (por exemplo, `<=`, `>=`, `==`, `!=`).
+- **Value**: O limite, string ou número para comparar com o conteúdo da coluna (por exemplo, `100`).
+- **Invert Filter**: Se definido como `true`, nega logicamente a regra (por exemplo, transformando um `<=` em um `>`). Por padrão, deve ser `false`.
 
-In the example image provided above, the handler is configured to keep **only** the rows where the `storage_utilization` is less than or equal to `100` (`<= 100`). Any row reporting a value of `101` or higher will be automatically discarded.
+Na imagem de exemplo fornecida acima, o handler está configurado para manter **apenas** as linhas onde o `storage_utilization` é menor ou igual a `100` (`<= 100`). Qualquer linha reportando um valor de `101` ou maior será automaticamente descartada.

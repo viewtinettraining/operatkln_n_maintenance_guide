@@ -1,5 +1,4 @@
 ---
-reusableId: 56
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Updating Bundle'
 id: XY9-HS55-0VV-2F9
@@ -7,17 +6,17 @@ slug: updating-bundle
 isVisible: true
 lastUpdated: '2025-10-15 16:20:46'
 ---
-# **<span align="center">Updating All Modules at Once</span>**
+# **<span align="center">Atualizando Todos os Módulos de Uma Vez</span>**
 
-This section walks you through applying a full-platform update bundle (`artifacts.zip`) to all Viewtinet modules in one operation via the CLI.
+Esta seção orienta você sobre como aplicar um pacote de atualização de plataforma completa (`artifacts.zip`) a todos os módulos do Viewtinet em uma única operação via CLI.
 
-> **Note:** Both the bundle file name and the version numbers shown here are examples; your actual filenames and versions will vary. The update bundles are provided directly by Viewtinet engineers (no public repository is available at this time).
+> **Nota:** Tanto o nome do arquivo do pacote quanto os números de versão mostrados aqui são exemplos; os nomes de arquivos e versões reais irão variar. Os pacotes de atualização são fornecidos diretamente pelos engenheiros da Viewtinet (nenhum repositório público está disponível no momento).
 
 ---
 
-## **1\. Upload the Update Bundle**
+## **1\. Faça o Upload do Pacote de Atualização**
 
-Use your preferred SCP/SFTP client to copy the ZIP bundle to the server. For example, with OpenSSH’s `scp`:
+Use o seu cliente SCP/SFTP preferido para copiar o pacote ZIP para o servidor. Por exemplo, com o `scp` do OpenSSH:
 
 ```bash
 
@@ -25,30 +24,30 @@ scp artifacts.zip viewtinet@your-server:/home/viewtinet/
 
 ```
 
-Or with PuTTY PSCP:
+Ou com PuTTY PSCP:
 
 ```bash
 pscp artifacts.zip viewtinet@your-server:/home/viewtinet/
 ```
 
-## **2\. SSH into the Server**
+## **2\. Acesse o Servidor via SSH**
 
-Connect to the server using an SSH client (Linux/macOS ssh, Windows PuTTY, etc.):
+Conecte-se ao servidor usando um cliente SSH (ssh do Linux/macOS, Windows PuTTY, etc.):
 
 ```bash
 ssh viewtinet@your-server
 ```
 
-## **3\. Unzip the Bundle**
+## **3\. Descompacte o Pacote**
 
-Navigate to the directory where you uploaded artifacts.zip and unzip it:
+Navegue até o diretório onde você fez o upload de artifacts.zip e descompacte-o:
 
 ```bash
 cd /home/viewtinet
 unzip artifacts.zip
 ```
 
-You should see output similar to:
+Você deverá ver uma saída semelhante a:
 
 ```bash
 Archive:  artifacts.zip
@@ -60,15 +59,15 @@ Archive:  artifacts.zip
  inflating: bundle/software-bundle-6.3.5-r3243.tgz.bin
 ```
 
-## **4\. Deploy the New Software**
+## **4\. Implante o Novo Software**
 
-Run the deploy script to unpack and install everything under /opt/vn/software:
+Execute o script de implantação para desempacotar e instalar tudo em /opt/vn/software:
 
 ```bash
 ./bundle/deploy.sh
 ```
 
-Example output (truncated):
+Exemplo de saída (truncada):
 
 ```bash
 Uncompressing and deploying software... This may take a while.
@@ -87,25 +86,25 @@ Setting up viewtinet-builder (6.3.3243) ...
 Deployment complete.
 ```
 
-**Warning:** The numeric suffixes (e.g., 6.3.5-r3243, 1745401625) will differ based on the bundle version and timestamp.
+**Aviso:** Os sufixos numéricos (ex.: 6.3.5-r3243, 1745401625) diferirão com base na versão do pacote e no carimbo de data/hora.
 
-## **5\. Load Docker Images**
+## **5\. Carregue as Imagens Docker**
 
-Finally, update and load all container images for the newly deployed software:
+Por fim, atualize e carregue todas as imagens de contêiner para o software recém-implantado:
 
 ```bash
 /opt/vn/viewtinet-builder/install-packages.sh --software-directory /opt/vn/software
 ```
 
-This step pulls and loads Docker images for every module. Depending on your server’s CPU, memory, and network bandwidth, this may take several minutes.
+Esta etapa baixa e carrega as imagens Docker para cada módulo. Dependendo da CPU, memória e largura de banda de rede do seu servidor, isso pode levar vários minutos.
 
-> **Note:** After loading new software images, the system automatically triggers a restart **only** for the `viewtimanager` module.
+> **Nota:** Após carregar novas imagens de software, o sistema aciona automaticamente uma reinicialização **apenas** para o módulo `viewtimanager`.
 
-There are two ways to load updated module versions:
+Existem duas maneiras de carregar versões de módulos atualizadas:
 
 ---
 
-#### 1\. Full solution restart
+#### 1\. Reinício completo da solução
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/stop-all.sh
@@ -113,9 +112,9 @@ There are two ways to load updated module versions:
 /opt/vn/viewtinet-builder/scripts/start-all.sh
 ```
 
-> ⚠️ This approach takes the longest and will cause a complete outage of data collection, ingestion, and visualization across the platform.
+> ⚠️ Esta abordagem é a mais demorada e causará uma interrupção completa da coleta de dados, ingestão e visualização em toda a plataforma.
 
-2.  **Module-by-module restart** (recommended for shorter downtime)<br />
-    Use the individual module scripts described in the chapter _[Operating Viewtinet Containers via Scripts](http:#?target=20U-C19U-8N7-KWB)_. Although this still incurs brief unavailability per module, total impact is much lower than a full restart.
+2.  **Reinício módulo por módulo** (recomendado para menor tempo de inatividade)<br />
+    Use os scripts individuais de módulo descritos no capítulo _[Operating Viewtinet Containers via Scripts](http:#?target=20U-C19U-8N7-KWB)_. Embora isso ainda incorra em breve indisponibilidade por módulo, o impacto total é muito menor que um reinício completo.
 
 <br />

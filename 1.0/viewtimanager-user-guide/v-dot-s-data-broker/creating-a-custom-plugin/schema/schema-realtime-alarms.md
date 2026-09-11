@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 18:48:00'
 ---
-# **<span align="center">Real-Time Alarms</span>**
+# **<span align="center">Alarmes em Tempo Real (Real-Time Alarms)</span>**
 
 <br />
 
-In addition to defining the data structure, the **Schema Stage** allows administrators to configure **Real-Time Alarms**. Viewtinet supports both Query-based (scheduled) alarms and Real-Time alarms, but this stage specifically deals with the latter.
+Além de definir a estrutura de dados, a **etapa de Schema** permite que os administradores configurem **Alarmes em Tempo Real**. A Viewtinet suporta tanto alarmes baseados em consulta (agendados) quanto alarmes em Tempo Real, mas esta etapa lida especificamente com os últimos.
 
 <br />
 
@@ -21,11 +21,11 @@ In addition to defining the data structure, the **Schema Stage** allows administ
 
 ---
 
-## **Understanding "Real-Time" Evaluation**
+## **Entendendo a Avaliação em "Tempo Real"**
 
-The term "Real-Time" in this context refers strictly to **the exact moment the raw data is being inserted into the database**. 
+O termo "Tempo Real" neste contexto refere-se estritamente ao **momento exato em que os dados brutos estão sendo inseridos no banco de dados**. 
 
-During the ETL process (Extract, Transform, Load), the metric is captured and simultaneously forwarded to the Alarms Module for immediate evaluation against a threshold. This approach does **not** require a scheduled database query.
+Durante o processo de ETL (Extrair, Transformar, Carregar), a métrica é capturada e simultaneamente encaminhada ao Módulo de Alarmes para avaliação imediata em relação a um limite (threshold). Esta abordagem **não** requer uma consulta programada (agendada) ao banco de dados.
 
 <br />
 
@@ -33,22 +33,22 @@ During the ETL process (Extract, Transform, Load), the metric is captured and si
 
 <br />
 
-> [!WARNING] **Evaluation Timing and Polling Frequency**
-> Because the evaluation happens upon database insertion, the actual frequency of the alarm evaluation depends entirely on your extraction polling frequency. For example, if you are using an SNMP plugin that polls data every **5 minutes**, the "real-time" evaluation will occur every 5 minutes when that batch of data is inserted.
+> [!WARNING] **Sincronismo de Avaliação e Frequência de Polling**
+> Como a avaliação acontece no momento da inserção no banco de dados, a frequência real da avaliação do alarme depende inteiramente de sua frequência de polling de extração. Por exemplo, se você estiver usando um plugin SNMP que faz o polling de dados a cada **5 minutos**, a avaliação em "tempo real" ocorrerá a cada 5 minutos quando aquele lote de dados for inserido.
 
 <br />
 
 ---
 
-## **Configuring a Real-Time Alarm**
+## **Configurando um Alarme em Tempo Real**
 
-To create a new alarm, scroll down to the **Alarms** section within the Schema configuration and follow these steps:
+Para criar um novo alarme, role para baixo até a seção **Alarms** (Alarmes) dentro da configuração do Schema e siga estes passos:
 
-**Step 1:** Click on the **ADD ALARM** button.
+**Passo 1:** Clique no botão **ADD ALARM** (Adicionar Alarme).
 
-**Step 2:** Provide a descriptive **Alarm name**.
+**Passo 2:** Forneça um nome descritivo para o **Alarm name** (Nome do Alarme).
 
-**Step 3:** From the **Metrics** dropdown, select the specific metric column that you want to monitor (e.g., `cpu_usage`, `interface-in-octets`).
+**Passo 3:** No menu suspenso **Metrics** (Métricas), selecione a coluna métrica específica que você deseja monitorar (ex., `cpu_usage`, `interface-in-octets`).
 
 <br />
 
@@ -58,14 +58,14 @@ To create a new alarm, scroll down to the **Alarms** section within the Schema c
 
 ---
 
-### **Defining Alarm Dimensions and Keys**
+### **Definindo Dimensões e Chaves do Alarme (Alarm Dimensions and Keys)**
 
-**Step 4:** You must add the dimensions that will accompany the alarm to provide context. Click the **ADD NEW DIMENSION** button.
+**Passo 4:** Você deve adicionar as dimensões que acompanharão o alarme para fornecer contexto. Clique no botão **ADD NEW DIMENSION** (Adicionar Nova Dimensão).
 
-**Step 5:** From the added dimensions, you must select at least one dimension to act as the **Key** by checking its corresponding box. 
+**Passo 5:** Das dimensões adicionadas, você deve selecionar pelo menos uma dimensão para atuar como a **Chave (Key)**, marcando a sua caixa de seleção correspondente. 
 
-> [!NOTE] **What is an Alarm Key?**
-> As indicated by the system tooltip, if a dimension is marked as a **key**, each unique value of that dimension can raise a distinct, separate alarm. For example, if `host` is the key, the system tracks the metric separately for each individual IP address or host name, raising independent alarms for each one that breaches the threshold.
+> [!NOTE] **O que é uma Chave de Alarme (Alarm Key)?**
+> Conforme indicado pela dica (tooltip) do sistema, se uma dimensão é marcada como uma **chave**, cada valor exclusivo dessa dimensão pode gerar um alarme distinto e separado. Por exemplo, se `host` for a chave, o sistema rastreia a métrica separadamente para cada endereço IP ou nome de host individual, gerando alarmes independentes para cada um que violar o limite (threshold).
 
 <br />
 
@@ -75,17 +75,17 @@ To create a new alarm, scroll down to the **Alarms** section within the Schema c
 
 ---
 
-### **Applying Filters**
+### **Aplicando Filtros**
 
-By default, every added dimension has its **Filter** set to `Full`. This means the alarm will be evaluated against the entire dataset arriving at the database for that metric.
+Por padrão, cada dimensão adicionada tem seu **Filtro (Filter)** definido como `Full` (Total). Isso significa que o alarme será avaliado em relação a todo o conjunto de dados que chega ao banco de dados para aquela métrica.
 
-However, you can restrict the alarm to only evaluate specific segments of your network:
+No entanto, você pode restringir o alarme para apenas avaliar segmentos específicos de sua rede:
 
-**Step 6:** Change the Filter dropdown from `Full` to `Partial`.
+**Passo 6:** Mude o menu suspenso Filter de `Full` para `Partial`.
 
-**Step 7:** A **Filter Type** dropdown will appear. Select the evaluation criteria you wish to use (e.g., `IPs`, `IP range`, `Subnets`, `Identifiers`, `starts-with`, `contains`, `regex`).
+**Passo 7:** Um menu suspenso **Filter Type** (Tipo de Filtro) aparecerá. Selecione os critérios de avaliação que deseja usar (ex., `IPs`, `IP range`, `Subnets`, `Identifiers`, `starts-with`, `contains`, `regex`).
 
-**Step 8:** In the **Value** field on the right, enter the specific string, IP, or regex pattern against which the data should be evaluated.
+**Passo 8:** No campo **Value** (Valor) à direita, insira a string específica, o IP ou o padrão regex em relação ao qual os dados devem ser avaliados.
 
 <br />
 
@@ -93,4 +93,4 @@ However, you can restrict the alarm to only evaluate specific segments of your n
 
 <br />
 
-Once the alarm structure is defined here in the Schema stage, the actual rules (Severity, Condition Thresholds, and Actions like Email or Telegram) are configured later from the **Viewtisight** interface.
+Uma vez definida a estrutura do alarme aqui na etapa de Schema, as regras reais (Severity / Gravidade, Condition Thresholds / Limites de Condição e Actions / Ações como Email ou Telegram) são configuradas posteriormente a partir da interface do **Viewtisight**.

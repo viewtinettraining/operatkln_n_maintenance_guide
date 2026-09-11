@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 15:00:33'
 ---
-# **<span align="center">Classification Rules</span>**
+# **<span align="center">Regras de Classificação</span>**
 
 <br />
 
-The **Classification Rules** section is where you define _what_ specific traffic flows you want to manage. These rules are the foundation of any Viewtify QoS policy. You can create rules based on deep packet inspection (DPI) classification or standard network parameters.
+A seção de **Regras de Classificação** é onde você define _quais_ fluxos de tráfego específicos deseja gerenciar. Essas regras são a base de qualquer política de QoS do Viewtify. Você pode criar regras baseadas na classificação de inspeção profunda de pacotes (DPI) ou em parâmetros de rede padrão.
 
 <br />
 
@@ -21,22 +21,22 @@ The **Classification Rules** section is where you define _what_ specific traffic
 
 ---
 
-## **Types of Rules**
+## **Tipos de Regras**
 
-You can classify traffic using a wide variety of parameters. Modern versions of the Viewtify engine support recognizing over **8,100 different applications** natively via DPI. The available classification types include:
+Você pode classificar o tráfego usando uma ampla variedade de parâmetros. Versões modernas da engine do Viewtify suportam o reconhecimento de mais de **8.100 aplicativos diferentes** nativamente via DPI. Os tipos de classificação disponíveis incluem:
 
--   **Application:** Specific applications recognized by DPI (e.g., YouTube, Netflix, Office365).
--   **Protocol:** Transport layer protocols (TCP, UDP, ICMP).
--   **Port & Port Range:** Specific source/destination ports or ranges.
--   **IP, IP Range & Subnet:** Source or destination IP addresses and subnets.
--   **VLAN:** Virtual LAN tags.
--   **Time:** Time-based rules (useful when combined with other parameters).
+-   **Application:** Aplicativos específicos reconhecidos pelo DPI (ex., YouTube, Netflix, Office365).
+-   **Protocol:** Protocolos da camada de transporte (TCP, UDP, ICMP).
+-   **Port & Port Range:** Portas ou intervalos de origem/destino específicos.
+-   **IP, IP Range & Subnet:** Endereços IP e sub-redes de origem ou destino.
+-   **VLAN:** Tags de LAN virtual.
+-   **Time:** Regras baseadas em tempo (úteis quando combinadas com outros parâmetros).
 
 <br />
 
-### **Filtering Rules**
+### **Filtrando Regras**
 
-As your list of classification rules grows, you can easily find specific entries using the **Filter by type** dropdown at the top of the screen. This allows you to filter the view to only show IPs, Subnets, Ports, Protocols, or VLANs.
+À medida que sua lista de regras de classificação cresce, você pode encontrar entradas específicas facilmente usando o menu suspenso **Filter by type** no topo da tela. Isso permite que você filtre a visualização para mostrar apenas IPs, sub-redes, portas, protocolos ou VLANs.
 
 <br />
 
@@ -46,29 +46,29 @@ As your list of classification rules grows, you can easily find specific entries
 
 ---
 
-## **Creating a Classification Rule**
+## **Criando uma Regra de Classificação**
 
-To create a new classification rule, follow this step-by-step guide:
+Para criar uma nova regra de classificação, siga este guia passo a passo:
 
-1.  Click on the **+ ADD NEW** button at the bottom of the list.
-2.  Insert a unique and descriptive **Name** for the rule in the first column.
-3.  Select the **Type** of parameter you want to use from the dropdown (e.g., Ports, Subnet, Application).
-4.  Enter the corresponding **Value** in the third column (e.g., `443` for a port, `192.168.1.0/24` for a subnet). The information requested will adapt based on the type you selected.
-5.  Click the **SAVE CHANGES** button (with a checkmark icon) to save the new rule.
+1.  Clique no botão **+ ADD NEW** na parte inferior da lista.
+2.  Insira um **Name** descritivo e único para a regra na primeira coluna.
+3.  Selecione o **Type** de parâmetro que você deseja usar no menu suspenso (ex., Portas, Sub-rede, Aplicativo).
+4.  Insira o **Value** correspondente na terceira coluna (ex., `443` para uma porta, `192.168.1.0/24` para uma sub-rede). A informação solicitada se adaptará com base no tipo que você selecionou.
+5.  Clique no botão **SAVE CHANGES** (com um ícone de marca de seleção) para salvar a nova regra.
 
-To return to the main configuration menu, simply click on the **Back** button.
+Para retornar ao menu de configuração principal, simplesmente clique no botão **Back**.
 
 <br />
 
 ---
 
-## **Validations and Warnings**
+## **Validações e Avisos**
 
-To prevent configuration mistakes that could impact traffic flow, Viewtify QoS includes built-in validations.
+Para evitar erros de configuração que possam impactar o fluxo de tráfego, o QoS do Viewtify inclui validações integradas.
 
-### **Validation Errors**
+### **Erros de Validação**
 
-Every rule is validated before it can be saved. **Errors must be fixed** prior to saving a policy. For example, if you leave a mandatory field blank or try to create a rule with a duplicated name, the system will highlight the fields in red.
+Toda regra é validada antes de poder ser salva. **Os erros devem ser corrigidos** antes de salvar uma política. Por exemplo, se você deixar um campo obrigatório em branco ou tentar criar uma regra com um nome duplicado, o sistema destacará os campos em vermelho.
 
 <br />
 
@@ -76,9 +76,9 @@ Every rule is validated before it can be saved. **Errors must be fixed** prior t
 
 <br />
 
-### **Warnings**
+### **Avisos**
 
-Warnings notify you of potential issues, such as entering a value that already exists. Unlike strict errors, warnings serve as a heads-up to double-check your configuration.
+Os avisos notificam você sobre problemas potenciais, como inserir um valor que já existe. Ao contrário de erros estritos, os avisos servem como um alerta para você verificar duplamente sua configuração.
 
 <br />
 
@@ -88,10 +88,10 @@ Warnings notify you of potential issues, such as entering a value that already e
 
 ---
 
-## **Searching and Deleting Rules**
+## **Pesquisando e Excluindo Regras**
 
--   **Deleting Rules:** Classification rules can be deleted **only if they are not used** in any active or saved policy. This safeguard prevents breaking existing QoS configurations.
--   **Search Tool:** If you need to delete a rule but the system prevents it, use the **Search (magnifying glass icon)** option next to the rule. This feature helps you find the exact policy (Use Case) where the classification rule is currently being used, allowing you to remove it from the policy first.
+-   **Excluindo Regras:** As regras de classificação podem ser excluídas **apenas se não estiverem em uso** em nenhuma política ativa ou salva. Essa proteção evita a quebra de configurações de QoS existentes.
+-   **Ferramenta de Pesquisa:** Se você precisar excluir uma regra, mas o sistema impedir, use a opção de **Search (ícone de lupa)** ao lado da regra. Esse recurso ajuda a encontrar a política exata (Caso de Uso) onde a regra de classificação está sendo usada atualmente, permitindo que você a remova primeiro da política.
 
 <br />
 

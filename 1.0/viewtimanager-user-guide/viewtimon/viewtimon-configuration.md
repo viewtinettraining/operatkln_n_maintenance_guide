@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 18:56:18'
 ---
-# **<span align="center">Viewtimon Configuration</span>**
+# **<span align="center">Configuração do Viewtimon</span>**
 
 <br />
 
-The **CONFIGURATION** tab within the Viewtimon interface is where you define the core processing parameters, activate specific traffic inspectors, and enable advanced troubleshooting features.
+A guia **CONFIGURATION** dentro da interface do Viewtimon é onde você define os parâmetros principais de processamento, ativa inspetores de tráfego específicos e habilita recursos avançados de solução de problemas.
 
 <br />
 
@@ -21,30 +21,30 @@ The **CONFIGURATION** tab within the Viewtimon interface is where you define the
 
 ---
 
-## **1\. Viewtimon Configuration (Instances)**
+## **1\. Configuração do Viewtimon (Instâncias)**
 
-This section governs the fundamental resources allocated to the DPI engine.
+Esta seção rege os recursos fundamentais alocados ao mecanismo DPI.
 
--   **Number of Instances:** This field defines how many DPI engine instances will run in parallel. The recommended sizing is **1 instance for every 500 Mbps of traffic** that the probe is expected to process. Properly sizing this ensures the system can handle the traffic volume without dropping packets.
--   **Reporting period (secs):** Defines how frequently the engine aggregates and flushes the obtained metrics into the database (e.g., `1 min`).
+-   **Number of Instances:** Este campo define quantas instâncias do mecanismo DPI serão executadas em paralelo. O dimensionamento recomendado é de **1 instância para cada 500 Mbps de tráfego** que a sonda deverá processar. Dimensionar isso corretamente garante que o sistema possa lidar com o volume de tráfego sem perder pacotes.
+-   **Reporting period (secs):** Define a frequência com que o mecanismo agrega e descarrega as métricas obtidas no banco de dados (por exemplo, `1 min`).
 
-## **2\. Inspectors**
+## **2\. Inspetores (Inspectors)**
 
-Inspectors are specialized internal modules responsible for dissecting specific application protocols.
+Os inspetores são módulos internos especializados responsáveis por dissecar protocolos de aplicativos específicos.
 
-By enabling these checkboxes (TLS, DNS, VOIP, HTTP, DHCP, FTP), you activate the corresponding inspector.
+Ao ativar essas caixas de seleção (TLS, DNS, VOIP, HTTP, DHCP, FTP), você ativa o inspetor correspondente.
 
-> <div class="sd-callout" data-callout-type="info"><strong>KPI Collection</strong> These inspectors are directly responsible for obtaining the rich protocol-specific metrics. The KPIs that each inspector is able to extract are fully detailed in the <a href="kpireference.md" target="_blank">KPI Reference</a> page. If an inspector is disabled, its corresponding KPIs will not be collected.</div>
+> <div class="sd-callout" data-callout-type="info"><strong>Coleta de KPI</strong> Esses inspetores são diretamente responsáveis por obter as ricas métricas específicas de protocolo. Os KPIs que cada inspetor é capaz de extrair são detalhados na página de <a href="kpireference.md" target="_blank">Referência de KPI</a>. Se um inspetor estiver desabilitado, seus KPIs correspondentes não serão coletados.</div>
 
-## **3\. Viewtimon Sniffer**
+## **3\. Sniffer do Viewtimon**
 
-The **Viewtimon Sniffer** is an advanced feature that transforms the probe into a full packet capture tool (similar to Wireshark), allowing for deep forensic analysis of network traffic.
+O **Viewtimon Sniffer** é um recurso avançado que transforma a sonda em uma ferramenta completa de captura de pacotes (semelhante ao Wireshark), permitindo uma análise forense profunda do tráfego de rede.
 
-By checking the **Enable** box, the engine begins saving raw `pcap` files based on the traffic it sees.
+Ao marcar a caixa **Enable**, o mecanismo começa a salvar arquivos `pcap` brutos com base no tráfego que ele vê.
 
-You can further control this feature using:
+Você pode controlar ainda mais esse recurso usando:
 
--   **Packet Truncation:** Allows you to limit the maximum length of captured packets (e.g., `32766` bytes). Truncating packets is useful if you only need to inspect headers rather than full payloads, saving significant disk space.
--   **Capture Filters:** You can add specific filters (`Type`, `Value`, `Length`) so the sniffer only captures traffic matching certain criteria (e.g., specific IP addresses or ports), rather than capturing all network traffic.
+-   **Packet Truncation:** Permite limitar o comprimento máximo dos pacotes capturados (por exemplo, `32766` bytes). Truncar pacotes é útil se você precisar inspecionar apenas os cabeçalhos em vez de cargas úteis completas, economizando um espaço em disco significativo.
+-   **Capture Filters:** Você pode adicionar filtros específicos (`Type`, `Value`, `Length`) para que o sniffer capture apenas o tráfego que corresponda a determinados critérios (por exemplo, endereços IP ou portas específicas), em vez de capturar todo o tráfego da rede.
 
 <br />

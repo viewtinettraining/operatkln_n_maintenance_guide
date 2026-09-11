@@ -1,5 +1,4 @@
 ---
-reusableId: 82
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Managing Your Appliance via IPMI'
 id: Y8N-05NK-T9Q-L5F
@@ -7,15 +6,15 @@ slug: managing-your-appliance-via-ipmi
 isVisible: true
 lastUpdated: '2025-10-15 10:38:49'
 ---
-# **<span align="center">Managing Your Appliance via IPMI</span>**
+# **<span align="center">Gerenciando o Seu Appliance via IPMI</span>**
 
 <br />
 
-To access the out-of-band management tool IPMI via the web from your computer using your preferred browser, please visit [https://x.x.x.x](https://x.x.x.x) where x.x.x.x is the IP address configured in the previous step.
+Para acessar a ferramenta de gerenciamento out-of-band IPMI via web do seu computador usando seu navegador preferido, visite [https://x.x.x.x](https://x.x.x.x) onde x.x.x.x é o endereço IP configurado na etapa anterior.
 
 <br />
 
-You will see a screen to enter the username and password for accessing the IPMI tool. Please contact support@viewtinet.com or your Viewtinet representative to obtain the access credentials
+Você verá uma tela para inserir o nome de usuário e a senha para acessar a ferramenta IPMI. Entre em contato com support@viewtinet.com ou com seu representante da Viewtinet para obter as credenciais de acesso.
 
 <br />
 
@@ -27,25 +26,25 @@ You will see a screen to enter the username and password for accessing the IPMI 
 
 <br />
 
-## **Remote Control:**
+## **Controle Remoto:**
 
-To take remote control of your appliance and operate from the CLI, you will need to select the 'Remote Control' menu located on the left, as shown below.
+Para assumir o controle remoto do seu appliance e operar a partir da CLI, você precisará selecionar o menu 'Remote Control' (Controle Remoto) localizado à esquerda, conforme mostrado abaixo.
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/iChPY4wB4NwahWpEFHVT.png"></figure>
 
-From this section, with the options shown in the red boxes, and by clicking the 'Launch Console' button, you will be able to access the operating system console,
+A partir desta seção, com as opções mostradas nas caixas vermelhas, e clicando no botão 'Launch Console' (Iniciar Console), você poderá acessar o console do sistema operacional,
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/xyi36NMuEVSEcTWd/images/6qODhEp33BW9FW14hbK3.png"></figure>
 
-where you will need to enter the user credentials (user: viewtinet, password: viewtinet) to take remote control, simulating being connected through a monitor and keyboard.
+onde você precisará inserir as credenciais do usuário (usuário: viewtinet, senha: viewtinet) para assumir o controle remoto, simulando estar conectado por meio de um monitor e teclado.
 
 <br />
 
-<div class="sd-callout" data-callout-type="warning">If the default credentials for the CLI console result in a connection error, please contact support@viewtinet.com or your Viewtinet sales representative</div>
+<div class="sd-callout" data-callout-type="warning">Se as credenciais padrão para o console da CLI resultarem em um erro de conexão, entre em contato com support@viewtinet.com ou seu representante de vendas da Viewtinet</div>
 
 <br />
 

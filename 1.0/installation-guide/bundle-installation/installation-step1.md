@@ -1,7 +1,6 @@
 ---
-reusableId: 70
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Passo 1 da Instalação '
+title: 'Installation step1 '
 id: SM3-711J-KFE-QS7
 slug: installation-step1
 isVisible: true
@@ -30,9 +29,9 @@ Uncompressing and deploying software... This may take a while. Please wait.
 Please write the bundle passphrase:
 ```
 
-<div class="sd-callout" data-callout-type="info">Neste ponto, insira a <strong>senha (passphrase)</strong> enviada junto com o seu bundle.</div>
+<div class="sd-callout" data-callout-type="info">Neste momento, insira a <strong>frase secreta (passphrase)</strong> que foi enviada junto com o seu pacote (bundle).</div>
 
-Após inserir a senha, o sistema prosseguirá com a implantação. Ao final do processo, você verá uma saída semelhante à mostrada abaixo:
+Após inserir a frase secreta, o sistema prosseguirá com a implantação. Ao final do processo, você verá uma saída semelhante à mostrada abaixo:
 
 ```bash
 Deploying current software

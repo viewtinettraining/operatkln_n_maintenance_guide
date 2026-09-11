@@ -1,5 +1,4 @@
 ---
-reusableId: 53
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Operational Scripts'
 id: 86R-WT9P-MP0-NDE
@@ -7,23 +6,23 @@ slug: operational-scripts
 isVisible: true
 lastUpdated: '2025-10-15 16:11:57'
 ---
-# **<span align="center">Operational CLI Scripts</span>**
+# **<span align="center">Scripts Operacionais da CLI</span>**
 
-Viewtinet includes a set of general-purpose CLI scripts that allow administrators to perform routine operations and maintenance tasks efficiently. These scripts are located in:
+A Viewtinet inclui um conjunto de scripts da CLI de propósito geral que permitem aos administradores realizar operações de rotina e tarefas de manutenção de forma eficiente. Estes scripts estão localizados em:
 
 ```
 /opt/vn/viewtinet-builder/scripts/
 ```
 
-They are executable directly by the `viewtinet` user and cover a wide range of operations, including starting and stopping the full platform, exporting/importing backups, performing log cleanup, and running diagnostics.
+Eles são executáveis diretamente pelo usuário `viewtinet` e cobrem uma ampla gama de operações, incluindo iniciar e parar a plataforma completa, exportar/importar backups, realizar limpeza de logs e executar diagnósticos.
 
 ---
 
-## **Key Operational Scripts**
+## **Principais Scripts Operacionais**
 
 #### `start-all.sh`
 
-Starts all modules in the correct order.
+Inicia todos os módulos na ordem correta.
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/start-all.sh
@@ -31,7 +30,7 @@ Starts all modules in the correct order.
 
 #### `stop-all.sh`
 
-Stops all modules in a safe and orderly manner.
+Para todos os módulos de forma segura e ordenada.
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/stop-all.sh
@@ -39,7 +38,7 @@ Stops all modules in a safe and orderly manner.
 
 #### `start-gui.sh`
 
-Starts only the GUI modules.
+Inicia apenas os módulos da interface gráfica (GUI).
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/start-gui.sh
@@ -47,7 +46,7 @@ Starts only the GUI modules.
 
 #### `stop-gui.sh`
 
-Stops only the GUI modules.
+Para apenas os módulos da interface gráfica (GUI).
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/stop-gui.sh
@@ -55,15 +54,15 @@ Stops only the GUI modules.
 
 ---
 
-## **Additional Utility Scripts**
+## **Scripts Utilitários Adicionais**
 
-<table><tbody><tr><th><p><span align="center">Script</span></p></th><th><p><span align="center">Description</span></p></th></tr><tr><td><p><code>get_logs.sh</code></p></td><td><p>Collects logs from active containers</p></td></tr><tr><td><p><code>get_node_ip.sh</code></p></td><td><p>Retrieves the IP address of the current node</p></td></tr><tr><td><p><code>check_ip.sh</code>, <code>check_vrrp.sh</code></p></td><td><p>Verifies IP assignments and VRRP configuration</p></td></tr><tr><td><p><code>init.sh</code></p></td><td><p>Initializes required folders and permissions</p></td></tr><tr><td><p><code>update-repo.sh</code></p></td><td><p>Updates the repository metadata</p></td></tr><tr><td><p><code>uncompress-file.sh</code></p></td><td><p>Extracts <code>.tar.gz</code> or <code>.tgz</code> files</p></td></tr><tr><td><p><code>exec_job.sh</code></p></td><td><p>Executes a predefined scheduled job</p></td></tr></tbody></table>
+<table><tbody><tr><th><p><span align="center">Script</span></p></th><th><p><span align="center">Descrição</span></p></th></tr><tr><td><p><code>get_logs.sh</code></p></td><td><p>Coleta logs de contêineres ativos</p></td></tr><tr><td><p><code>get_node_ip.sh</code></p></td><td><p>Recupera o endereço IP do nó atual</p></td></tr><tr><td><p><code>check_ip.sh</code>, <code>check_vrrp.sh</code></p></td><td><p>Verifica as atribuições de IP e a configuração do VRRP</p></td></tr><tr><td><p><code>init.sh</code></p></td><td><p>Inicializa pastas necessárias e permissões</p></td></tr><tr><td><p><code>update-repo.sh</code></p></td><td><p>Atualiza os metadados do repositório</p></td></tr><tr><td><p><code>uncompress-file.sh</code></p></td><td><p>Extrai arquivos <code>.tar.gz</code> ou <code>.tgz</code></p></td></tr><tr><td><p><code>exec_job.sh</code></p></td><td><p>Executa uma tarefa agendada predefinida</p></td></tr></tbody></table>
 
 ---
 
-## **Execution and Permissions**
+## **Execução e Permissões**
 
-All scripts in this directory are preconfigured to be executed by the `viewtinet` user and do not require `sudo`.
+Todos os scripts neste diretório são pré-configurados para serem executados pelo usuário `viewtinet` e não requerem `sudo`.
 
 ```bash
 cd /opt/vn/viewtinet-builder/scripts/
@@ -72,46 +71,46 @@ cd /opt/vn/viewtinet-builder/scripts/
 
 ---
 
-## **Operational Scripts by Task Category**
+## **Scripts Operacionais por Categoria de Tarefa**
 
-<table><tbody><tr><th><p><strong><span align="center">Category</span></strong></p></th><th><p><strong><span align="center">Script</span></strong></p></th><th><p><strong><span align="center">Description</span></strong></p></th></tr><tr><td><p><strong>Startup / Shutdown</strong></p></td><td><p><code>start-all.sh</code>, <code>stop-all.sh</code></p></td><td><p>Starts or stops all modules</p></td></tr><tr><td><p><br></p></td><td><p><code>start-gui.sh</code>, <code>stop-gui.sh</code></p></td><td><p>Starts or stops GUI modules only</p></td></tr><tr><td><p><strong>Backup &amp; Restore</strong></p></td><td><p><code>export-backup.sh</code>, <code>import-backup.sh</code></p></td><td><p>Export and restore configuration and MongoDB backups</p></td></tr><tr><td><p><strong>Diagnostics</strong></p></td><td><p><code>troubleshooting.sh</code>, <code>get_logs.sh</code></p></td><td><p>System checks and log collection</p></td></tr><tr><td><p><strong>Disk Maintenance</strong></p></td><td><p><code>docker-images-housekeeping.sh</code></p></td><td><p>Cleans unused Docker images</p></td></tr><tr><td><p><br></p></td><td><p><code>housekeeping_viewtinet_logger_folder.sh</code></p></td><td><p>Cleans local log folders</p></td></tr><tr><td><p><strong>System Info</strong></p></td><td><p><code>get_node_ip.sh</code>, <code>check_ip.sh</code>, <code>check_vrrp.sh</code></p></td><td><p>Retrieves IP/VRRP info</p></td></tr><tr><td><p><strong>Utilities</strong></p></td><td><p><code>init.sh</code>, <code>exec_job.sh</code>, <code>uncompress-file.sh</code>, <code>update-repo.sh</code></p></td><td><p>Various helper tools</p></td></tr></tbody></table>
+<table><tbody><tr><th><p><strong><span align="center">Categoria</span></strong></p></th><th><p><strong><span align="center">Script</span></strong></p></th><th><p><strong><span align="center">Descrição</span></strong></p></th></tr><tr><td><p><strong>Inicialização / Desligamento</strong></p></td><td><p><code>start-all.sh</code>, <code>stop-all.sh</code></p></td><td><p>Inicia ou para todos os módulos</p></td></tr><tr><td><p><br></p></td><td><p><code>start-gui.sh</code>, <code>stop-gui.sh</code></p></td><td><p>Inicia ou para apenas módulos GUI</p></td></tr><tr><td><p><strong>Backup e Restauração</strong></p></td><td><p><code>export-backup.sh</code>, <code>import-backup.sh</code></p></td><td><p>Exporta e restaura configurações e backups do MongoDB</p></td></tr><tr><td><p><strong>Diagnósticos</strong></p></td><td><p><code>troubleshooting.sh</code>, <code>get_logs.sh</code></p></td><td><p>Verificações de sistema e coleta de logs</p></td></tr><tr><td><p><strong>Manutenção de Disco</strong></p></td><td><p><code>docker-images-housekeeping.sh</code></p></td><td><p>Limpa imagens Docker não utilizadas</p></td></tr><tr><td><p><br></p></td><td><p><code>housekeeping_viewtinet_logger_folder.sh</code></p></td><td><p>Limpa pastas locais de log</p></td></tr><tr><td><p><strong>Informações do Sistema</strong></p></td><td><p><code>get_node_ip.sh</code>, <code>check_ip.sh</code>, <code>check_vrrp.sh</code></p></td><td><p>Recupera informações de IP/VRRP</p></td></tr><tr><td><p><strong>Utilitários</strong></p></td><td><p><code>init.sh</code>, <code>exec_job.sh</code>, <code>uncompress-file.sh</code>, <code>update-repo.sh</code></p></td><td><p>Várias ferramentas de apoio</p></td></tr></tbody></table>
 
 ---
 
-## **Backup and Restore Scripts: Detailed Usage**
+## **Scripts de Backup e Restauração: Uso Detalhado**
 
-Viewtinet includes two key scripts to manage backup and restore operations:
+A Viewtinet inclui dois scripts principais para gerenciar as operações de backup e restauração:
 
--   `export-backup.sh`: Creates a backup of essential configuration and data components.
--   `import-backup.sh`: Restores a previously generated backup.
+-   `export-backup.sh`: Cria um backup da configuração essencial e dos componentes de dados.
+-   `import-backup.sh`: Restaura um backup gerado anteriormente.
 
-These scripts are designed to help administrators quickly preserve and recover system state, especially during migrations, upgrades, or incident recovery.
+Estes scripts são projetados para ajudar os administradores a preservar e recuperar rapidamente o estado do sistema, especialmente durante migrações, atualizações ou recuperação de incidentes.
 
 <br />
 
-## **Creating a Backup (**`export-backup.sh`**)**
+## **Criando um Backup (**`export-backup.sh`**)**
 
-**Location:**<br />
+**Localização:**<br />
 `/opt/vn/viewtinet-builder/scripts/export-backup.sh`
 
-**Usage:**
+**Uso:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/export-backup.sh /path/to/backup-dir/
 ```
 
-This script performs the following actions:
+Este script executa as seguintes ações:
 
-1.  Validates that a backup directory path has been provided.
-2.  Creates a timestamped folder in the specified location.
-3.  Archives the contents of:
+1.  Valida que um caminho de diretório de backup foi fornecido.
+2.  Cria uma pasta com data e hora no local especificado.
+3.  Arquiva o conteúdo de:
     
-    -   `/opt/vn/viewtinet-builder` → platform scripts and binaries
-    -   `/opt/vn/config` → full system and module configuration
-4.  Uses `docker exec` and `mongodump` to dump the contents of the MongoDB database running inside the `viewtiauth` container.
-5.  Compresses all generated folders (`viewtinet-builder`, `config`, and MongoDB dump) into `.tgz` archive files.
+    -   `/opt/vn/viewtinet-builder` → scripts e binários da plataforma
+    -   `/opt/vn/config` → configuração completa do sistema e dos módulos
+4.  Usa `docker exec` e `mongodump` para extrair o conteúdo do banco de dados MongoDB rodando dentro do contêiner `viewtiauth`.
+5.  Comprime todas as pastas geradas (`viewtinet-builder`, `config`, e o dump do MongoDB) em arquivos de arquivo `.tgz`.
 
-**Example Output in the Backup Directory:**
+**Exemplo de Saída no Diretório de Backup:**
 
 ```
 config_viewtinet_bk_1681234567.tgz
@@ -121,44 +120,44 @@ viewtiauth_viewtinet_bk_1681234567.tgz
 
 ---
 
-## **Restoring a Backup (**`import-backup.sh`**)**
+## **Restaurando um Backup (**`import-backup.sh`**)**
 
-**Location:**<br />
+**Localização:**<br />
 `/opt/vn/viewtinet-builder/scripts/import-backup.sh`
 
-**Usage:**
+**Uso:**
 
 ```bash
 /opt/vn/viewtinet-builder/scripts/import-backup.sh /path/to/backup-dir/
 ```
 
-This script restores only the **MongoDB database** used by the `viewtiauth` module. It performs the following steps:
+Este script restaura apenas o **banco de dados MongoDB** usado pelo módulo `viewtiauth`. Ele executa as seguintes etapas:
 
-1.  Validates the existence of the MongoDB `.tgz` archive in the specified directory.
-2.  Extracts the archive and copies the MongoDB dump into the `viewtiauth_viewtinet-viewtiauth-mongo_1` container using `docker cp`.
-3.  Executes `mongorestore` inside the container to reimport the data.
-4.  Cleans up temporary files after completion.
+1.  Valida a existência do arquivo `.tgz` do MongoDB no diretório especificado.
+2.  Extrai o arquivo e copia o dump do MongoDB para o contêiner `viewtiauth_viewtinet-viewtiauth-mongo_1` usando `docker cp`.
+3.  Executa `mongorestore` dentro do contêiner para reimportar os dados.
+4.  Limpa arquivos temporários após a conclusão.
 
-> ⚠️ **Caution:** This process **overwrites** the current database for `viewtiauth`. It should only be performed when the module is stopped and during controlled recovery operations.
-
----
-
-#### 🧠 Notes and Recommendations
-
--   These scripts must be run as the `viewtinet` user — no `sudo` is required.
--   Always ensure the platform or affected module (e.g., `viewtiauth`) is stopped before performing a restore.
--   For a full snapshot of the platform, combine this with a `stop-all.sh` operation.
--   Store backup folders securely and verify integrity before restoring.
--   Use consistent naming and archiving practices for backup directories.
-
-> 💡 Include a copy of the generated `.tgz` files when contacting support for recovery assistance.
+> ⚠️ **Atenção:** Este processo **sobrescreve** o banco de dados atual do `viewtiauth`. Ele deve ser realizado apenas quando o módulo estiver parado e durante operações de recuperação controladas.
 
 ---
 
-## **Backup Script Summary Table**
+#### 🧠 Notas e Recomendações
 
-<table><tbody><tr><th><p>Script</p></th><th><p>Description</p></th><th><p>Includes</p></th></tr><tr><td><p><code>export-backup.sh</code></p></td><td><p>Creates a backup of configs and MongoDB for <code>viewtiauth</code></p></td><td><p><code>/opt/vn/viewtinet-builder</code>, <code>/opt/vn/config</code>, <code>mongodump</code></p></td></tr><tr><td><p><code>import-backup.sh</code></p></td><td><p>Restores <code>viewtiauth</code> MongoDB data from backup</p></td><td><p>Extracts, copies, and restores with <code>mongorestore</code></p></td></tr></tbody></table>
+-   Estes scripts devem ser executados como o usuário `viewtinet` — nenhum `sudo` é necessário.
+-   Sempre garanta que a plataforma ou o módulo afetado (ex., `viewtiauth`) esteja parado antes de realizar uma restauração.
+-   Para obter um retrato completo da plataforma, combine isso com uma operação `stop-all.sh`.
+-   Armazene as pastas de backup de forma segura e verifique a integridade antes de restaurar.
+-   Use práticas consistentes de nomenclatura e arquivamento para os diretórios de backup.
 
-> ✅ Recommended: run `export-backup.sh` regularly and before any upgrade or major change.
+> 💡 Inclua uma cópia dos arquivos `.tgz` gerados ao entrar em contato com o suporte para assistência de recuperação.
+
+---
+
+## **Tabela Resumo dos Scripts de Backup**
+
+<table><tbody><tr><th><p>Script</p></th><th><p>Descrição</p></th><th><p>Inclui</p></th></tr><tr><td><p><code>export-backup.sh</code></p></td><td><p>Cria um backup de configurações e do MongoDB para o <code>viewtiauth</code></p></td><td><p><code>/opt/vn/viewtinet-builder</code>, <code>/opt/vn/config</code>, <code>mongodump</code></p></td></tr><tr><td><p><code>import-backup.sh</code></p></td><td><p>Restaura os dados do MongoDB do <code>viewtiauth</code> a partir do backup</p></td><td><p>Extrai, copia e restaura com o <code>mongorestore</code></p></td></tr></tbody></table>
+
+> ✅ Recomendado: execute o `export-backup.sh` regularmente e antes de qualquer atualização ou grande alteração.
 
 <br />

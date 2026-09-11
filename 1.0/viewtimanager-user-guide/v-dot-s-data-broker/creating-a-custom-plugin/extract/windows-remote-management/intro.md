@@ -1,5 +1,4 @@
 ---
-reusableId: 152
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Intro
 id: SOU-4DMA-MVG-KSA
@@ -7,31 +6,31 @@ slug: intro
 isVisible: true
 lastUpdated: '2025-09-04 12:44:22'
 ---
-# **<span align="center">Windows Remote Management (WinRM)</span>**
+# **<span align="center">Gerenciamento Remoto do Windows (WinRM)</span>**
 
 <br />
 
-The **Windows Remote Management (WinRM) Connector** enables Viewtilog to securely connect to Windows servers and retrieve a wide range of performance metrics, logs, and system information.<br />
-By leveraging Microsoft’s native **WinRM protocol**, this connector provides agentless monitoring, eliminating the need to install additional software on the target Windows hosts.
+O **Conector de Gerenciamento Remoto do Windows (WinRM)** permite que o Viewtilog se conecte com segurança a servidores Windows e recupere uma ampla gama de métricas de desempenho, logs e informações do sistema.<br />
+Ao aproveitar o **protocolo nativo WinRM** da Microsoft, este conector fornece monitoramento sem agente, eliminando a necessidade de instalação de software adicional nos hosts Windows de destino.
 
 <br />
 
-## **Key Capabilities**
+## **Principais Recursos**
 
--   **Performance Metrics**: Collect counters such as CPU utilization, memory usage, disk I/O, and network statistics.
--   **System Information**: Gather details including uptime, running processes, installed hotfixes, and system configuration.
--   **Event Logs**: Query Windows event logs (e.g., Security, Application, System) for specific events such as logon attempts, service state changes, or errors.
--   **Agentless Access**: Uses WinRM over HTTP/HTTPS to communicate, ensuring minimal overhead on the monitored system.
-
-<br />
-
-## **Typical Use Cases**
-
--   Monitoring resource consumption of critical Windows servers.
--   Collecting logon and security events from domain controllers.
--   Tracking disk usage and performance on application servers.
--   Auditing configuration and system health without deploying additional agents.
+-   **Métricas de Desempenho**: Coleta contadores como a utilização da CPU, uso da memória, E/S (I/O) de disco e estatísticas de rede.
+-   **Informações do Sistema**: Reúne detalhes que incluem o tempo de atividade, processos em execução, hotfixes instalados e configuração do sistema.
+-   **Logs de Eventos**: Consulta logs de eventos do Windows (ex., Segurança, Aplicativo, Sistema) para eventos específicos como tentativas de logon, mudanças de estado de serviços ou erros.
+-   **Acesso sem Agente**: Usa o WinRM via HTTP/HTTPS para se comunicar, garantindo sobrecarga mínima no sistema monitorado.
 
 <br />
 
-📌 The WinRM Connector is ideal for organizations with Windows-based infrastructures, as it integrates seamlessly with the Visual Smart Data Broker (VSDB) ETL pipeline to provide visibility of server health and security events in real time.
+## **Casos de Uso Típicos**
+
+-   Monitoramento do consumo de recursos de servidores Windows críticos.
+-   Coleta de eventos de logon e segurança a partir de controladores de domínio.
+-   Rastreamento do uso do disco e desempenho em servidores de aplicativos.
+-   Auditoria de configuração e de integridade do sistema sem implementação de agentes adicionais.
+
+<br />
+
+📌 O Conector WinRM é ideal para organizações com infraestruturas baseadas em Windows, pois se integra perfeitamente ao pipeline ETL do Visual Smart Data Broker (VSDB) com o objetivo de fornecer visibilidade da integridade do servidor e dos eventos de segurança em tempo real.

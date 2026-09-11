@@ -1,5 +1,4 @@
 ---
-reusableId: 150
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Syslog
 id: 9KD-EY7D-1I9-Y1X
@@ -7,66 +6,66 @@ slug: syslog
 isVisible: true
 lastUpdated: '2025-09-03 16:25:58'
 ---
-# **<span align="center">Syslog Connector</span>**
+# **<span align="center">Conector Syslog</span>**
 
-The **Syslog Connector** is used to process syslog messages that have been previously captured by the **Ethernet Streamer** connector. Similar to the Netflow connector, it operates as a **scheduled pipeline**, meaning it runs periodically based on the configured execution frequency.
+O **Conector Syslog** é utilizado para processar mensagens de syslog que foram previamente capturadas pelo conector **Ethernet Streamer**. Semelhante ao conector Netflow, ele opera como um **pipeline agendado**, o que significa que é executado periodicamente com base na frequência de execução configurada.
 
-Unlike Netflow, the Syslog protocol does not require selecting a version, which simplifies its configuration.
+Ao contrário do Netflow, o protocolo Syslog não requer a seleção de uma versão, o que simplifica sua configuração.
 
 <br />
 
-## **Key Characteristics**
+## **Principais Características**
 
--   Works together with the **Ethernet Streamer** pipeline, which dumps raw syslog traffic into a specific directory.
--   Periodically processes the dumped files and extracts syslog messages.
--   Each syslog record is then parsed into structured fields for further analysis.
--   Highly scalable, as multiple threads can be configured for concurrent processing.
+-   Funciona em conjunto com o pipeline **Ethernet Streamer**, o qual despeja o tráfego syslog bruto num diretório específico.
+-   Processa periodicamente os arquivos despejados e extrai as mensagens de syslog.
+-   Cada registro de syslog é então convertido em campos estruturados para posterior análise.
+-   Altamente escalável, pois múltiplas threads podem ser configuradas para processamento simultâneo.
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-From the provided screenshot:
+A partir da captura de tela fornecida:
 
-1.  **Connector Type**<br />
-    Select **Syslog Connector** as the connector type.
-2.  **Pipeline Name**<br />
-    Define a unique name for the pipeline (e.g., `my_syslog_connector`).
-3.  **Number of Threads**<br />
-    Configure the number of concurrent threads.
+1.  **Tipo de Conector**<br />
+    Selecione **Syslog Connector** como o tipo de conector.
+2.  **Nome do Pipeline**<br />
+    Defina um nome único para o pipeline (ex., `my_syslog_connector`).
+3.  **Número de Threads**<br />
+    Configure o número de threads simultâneas.
     
-    -   More threads = faster processing.
-    -   However, higher values increase CPU and memory consumption.
-4.  **Execution Configuration**
+    -   Mais threads = processamento mais rápido.
+    -   Contudo, valores mais altos aumentam o consumo de CPU e memória.
+4.  **Configuração de Execução**
     
-    -   **Frequency Type**: Scheduled or periodic.
-    -   **Cron Expression**: Defines how often the pipeline will run (e.g., every minute).
-    -   **Number of Executions**: `-1` indicates unlimited executions.
-5.  **Paths**
+    -   **Tipo de Frequência**: Agendado ou periódico.
+    -   **Expressão Cron**: Define com que frequência o pipeline será executado (ex., a cada minuto).
+    -   **Número de Execuções**: `-1` indica execuções ilimitadas.
+5.  **Caminhos**
     
-    -   **Collected Path**: Directory where Ethernet Streamer dumps raw syslog traffic.
-    -   **Processing Path**: Temporary directory used while processing files.
-    -   **Processed Path**: Final directory where processed files are stored.
-6.  **File Handling**
+    -   **Caminho Coletado (Collected Path)**: Diretório onde o Ethernet Streamer despeja o tráfego syslog bruto.
+    -   **Caminho de Processamento (Processing Path)**: Diretório temporário usado durante o processamento dos arquivos.
+    -   **Caminho Processado (Processed Path)**: Diretório final onde os arquivos processados são armazenados.
+6.  **Manipulação de Arquivos**
     
-    -   **Suffix**: Defines the format of files to be processed (e.g., `.csv`).
-    -   **Max Files**: Maximum number of files to read per execution cycle.
-    -   **Chunk Size**: Splits large files into smaller chunks for more efficient processing.
+    -   **Sufixo**: Define o formato dos arquivos a serem processados (ex., `.csv`).
+    -   **Máx de Arquivos**: Número máximo de arquivos a serem lidos por ciclo de execução.
+    -   **Tamanho do Bloco (Chunk Size)**: Divide arquivos grandes em partes menores para um processamento mais eficiente.
         
         <br />
         
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/nnoeT0qAXnL7T0qi/images/M6zx6jJzAjbqb3WU5xu0.png" align="center"></figure>
 
-## **Example Scenario**
+## **Cenário de Exemplo**
 
-If the **Ethernet Streamer** is configured to capture syslog traffic from multiple devices on port 514 and dump the data into `/opt/vn/dhyana/var/data/syslog/collected`, then the Syslog Connector will:
+Se o **Ethernet Streamer** for configurado para capturar tráfego syslog de vários dispositivos na porta 514 e despejar os dados em `/opt/vn/dhyana/var/data/syslog/collected`, então o Conector Syslog irá:
 
-1.  Periodically read files from this directory.
-2.  Process and decode the syslog messages.
-3.  Store the structured output in the processed directory for use in later stages of the ETL pipeline.
+1.  Ler periodicamente os arquivos desse diretório.
+2.  Processar e decodificar as mensagens syslog.
+3.  Armazenar a saída estruturada no diretório processado para uso em etapas posteriores do pipeline ETL.
 
 ---
 
-> ⚠️ **Important Note**<br />
-> The Syslog Connector **depends on a properly configured Ethernet Streamer pipeline**. Without it, there will be no traffic to process.
+> ⚠️ **Nota Importante**<br />
+> O Conector Syslog **depende de um pipeline Ethernet Streamer devidamente configurado**. Sem ele, não haverá tráfego para ser processado.
 
 <br />

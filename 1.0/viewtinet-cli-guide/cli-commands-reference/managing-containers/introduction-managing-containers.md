@@ -1,5 +1,4 @@
 ---
-reusableId: 47
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Introduction managing containers'
 id: IU4-C0WP-LEC-76S
@@ -7,17 +6,17 @@ slug: introduction-managing-containers
 isVisible: true
 lastUpdated: '2025-10-15 15:58:44'
 ---
-# **<span align="center">Managing Modules and Containers via CLI</span>**
+# **<span align="center">Gerenciando Módulos e Contêineres via CLI</span>**
 
-<span align="justify">This chapter provides a reference for using CLI commands to monitor and manage the status of Viewtinet modules and their associated Docker containers. These operations are essential for system administrators and support engineers when performing routine maintenance, validating service availability, or troubleshooting issues.</span>
+<span align="justify">Este capítulo fornece uma referência para o uso de comandos CLI para monitorar e gerenciar o status dos módulos Viewtinet e seus contêineres Docker associados. Essas operações são essenciais para administradores de sistema e engenheiros de suporte ao realizar manutenções de rotina, validar a disponibilidade de serviços ou solucionar problemas.</span>
 
-You will learn how to:
+Você vai aprender a:
 
--   Check whether containers are running
--   View detailed status of individual services
--   Restart specific modules or containers
--   Perform full system restarts when required
+-   Verificar se os contêineres estão em execução
+-   Ver o status detalhado de serviços individuais
+-   Reiniciar módulos ou contêineres específicos
+-   Realizar reinícios completos do sistema quando necessário
 
-<span align="justify">All examples assume a deployment based on Docker and Docker Compose, as used in Viewtinet environments. Proper use of these commands ensures minimal downtime and precise control over the platform’s microservices architecture.</span>
+<span align="justify">Todos os exemplos assumem uma implantação baseada em Docker e Docker Compose, como usado nos ambientes Viewtinet. O uso adequado desses comandos garante tempo de inatividade mínimo e controle preciso sobre a arquitetura de microsserviços da plataforma.</span>
 
 <br />

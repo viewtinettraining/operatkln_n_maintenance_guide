@@ -11,22 +11,22 @@ lastUpdated: '2026-05-21 12:00:00'
 
 <br />
 
-The **Math Operation** grid handler allows you to perform mathematical operations using selected numerical fields from your data flow. The calculated result of the operation is then stored in a completely new field added to the grid.
+O handler de grid **Math Operation** permite que você realize operações matemáticas usando campos numéricos selecionados do seu fluxo de dados. O resultado calculado da operação é então armazenado em um campo completamente novo adicionado à grid.
 
-This is particularly useful for dynamically calculating percentages, ratios, deltas, or converting units (like bytes to gigabytes) on the fly during the ETL process.
+Isso é particularmente útil para calcular dinamicamente porcentagens, proporções, deltas ou converter unidades (como bytes para gigabytes) instantaneamente durante o processo ETL.
 
 ---
 
-## **Configuration Steps**
+## **Etapas de Configuração**
 
-Configuring the **Math Operation** grid handler involves following these sequential steps:
+A configuração do handler de grid **Math Operation** envolve as seguintes etapas sequenciais:
 
-1. **Add the Grid-Handler**: Click on the "ADD NEW GRID-HANDLER" button.
-2. **Select the Grid Handler Type**: Choose **Math Operation** from the `Grid Handler Type` dropdown menu.
+1. **Adicionar o Grid-Handler**: Clique no botão "ADD NEW GRID-HANDLER".
+2. **Selecionar o Tipo de Grid Handler**: Escolha **Math Operation** no menu suspenso `Grid Handler Type`.
 
 <br />
 
-3. **Select the Fields**: From the `Fields` dropdown, select the numerical fields that you want to include in your mathematical operation.
+3. **Selecionar os Fields**: No menu suspenso `Fields`, selecione os campos numéricos que você deseja incluir em sua operação matemática.
 
 <br />
 
@@ -34,7 +34,7 @@ Configuring the **Math Operation** grid handler involves following these sequent
 
 <br />
 
-4. **Define the Expression**: In the `Expression` input box, insert the desired mathematical formula. You can use standard mathematical operators, conditionals (like `if`), and reference the exact field names you selected in the previous step.
+4. **Definir a Expression**: Na caixa de entrada `Expression`, insira a fórmula matemática desejada. Você pode usar operadores matemáticos padrão, condicionais (como `if`) e referenciar os nomes exatos dos campos que você selecionou na etapa anterior.
 
 <br />
 
@@ -42,7 +42,7 @@ Configuring the **Math Operation** grid handler involves following these sequent
 
 <br />
 
-5. **Set the Column Name**: In the `Column Name` option, type the name of the new field where the result of the mathematical operation will be stored. Keep in mind that this is a completely new field that will be added to the database schema.
+5. **Definir o Column Name**: Na opção `Column Name`, digite o nome do novo campo onde o resultado da operação matemática será armazenado. Tenha em mente que este é um campo completamente novo que será adicionado ao esquema do banco de dados.
 
 <br />
 

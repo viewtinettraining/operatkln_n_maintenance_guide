@@ -11,21 +11,21 @@ lastUpdated: '2026-05-21 11:17:32'
 
 <br />
 
-The **Regex** grid handler allows you to extract and map values from a string column using regular expressions, creating new columns in the process.
+O handler de grid **Regex** permite extrair e mapear valores de uma coluna de string usando expressões regulares, criando novas colunas no processo.
 
-This is highly useful for parsing complex or unstructured string data, such as custom log formats, Syslog messages, or unformatted text payloads, into individual searchable database fields.
+Isso é altamente útil para analisar dados de string complexos ou não estruturados, como formatos de log personalizados, mensagens Syslog ou cargas úteis de texto não formatadas, em campos de banco de dados pesquisáveis individualmente.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-The handler (internally known as `grid-regex`) has the following configuration parameters:
+O handler (conhecido internamente como `grid-regex`) possui os seguintes parâmetros de configuração:
 
--   **Regex Column**: The name of the column to apply the regular expressions to.
--   **Output Fields**: Semicolon-separated list of new columns to create from regex matches.
--   **Regex Group**: Defines a regular expression identifier and how to map its capture groups to output columns. You can define multiple _regex-group_ blocks to try several regexes in order.
--   **Regular Expression**: The regex pattern to apply.
--   **Regex Field**: Maps a capture group (by index, starting from 1) to an output column.
+-   **Regex Column**: O nome da coluna à qual as expressões regulares serão aplicadas.
+-   **Output Fields**: Lista separada por ponto e vírgula de novas colunas a serem criadas a partir das correspondências da regex.
+-   **Regex Group**: Define um identificador de expressão regular e como mapear seus grupos de captura para as colunas de saída. Você pode definir múltiplos blocos _regex-group_ para tentar várias regexes em ordem.
+-   **Regular Expression**: O padrão regex a ser aplicado.
+-   **Regex Field**: Mapeia um grupo de captura (por índice, começando em 1) para uma coluna de saída.
 
 <br />
 
@@ -33,7 +33,7 @@ The handler (internally known as `grid-regex`) has the following configuration p
 
 <br />
 
-When you click the pencil icon () next to a Regex Group, you can edit the specific mapping of capture groups to their respective output column names:
+Ao clicar no ícone de lápis () ao lado de um Regex Group, você pode editar o mapeamento específico dos grupos de captura para os respectivos nomes de coluna de saída:
 
 <br />
 
@@ -43,9 +43,9 @@ When you click the pencil icon () next to a Regex Group, you can edit the specif
 
 ---
 
-## **Expected Behaviour**
+## **Comportamento Esperado**
 
-Given the previous example configuration (`MySQL` regex group on the `syslog_record` column) and the following grid:
+Dada a configuração do exemplo anterior (grupo de regex `MySQL` na coluna `syslog_record`) e a seguinte grid:
 
 <br />
 
@@ -53,17 +53,17 @@ Given the previous example configuration (`MySQL` regex group on the `syslog_rec
 
 <br />
 
-The resulting grid will be:
+A grid resultante será:
 
 <table><tbody><tr><th><p>syslog_record</p></th><th><p>priority</p></th><th><p>datetime</p></th><th><p>hostname</p></th><th><p>process</p></th><th><p>pid</p></th><th><p>message</p></th></tr><tr><td><p><code>&lt;30&gt;Dec 29 16:58:56 LOPOIDCBD01 mysqld_exporter[1201]: ts=2025-12-29T21...</code></p></td><td><p><code>&lt;30&gt;</code></p></td><td><p><code>Dec 29 16:58:56</code></p></td><td><p><code>LOPOIDCBD01</code></p></td><td><p><code>mysqld_exporter</code></p></td><td><p><code>1201</code></p></td><td><p><code>ts=2025-12-29T21...</code></p></td></tr></tbody></table>
 
 <br />
 
-### **Explanation:**
+### **Explicação:**
 
--   The handler applies the regex `^(\&lt;\d+\&gt;)\s(\w{3}\s+\d+\s+[\d:]+)\s+([^\s]+)\s+([^[\s:]+)(?:[(\d+)])?:\s+(.)$` to each value in the `syslog_record` column.
--   For each match, it extracts the capture groups by their index (starting from 1) and assigns them to the columns defined in the `Regex Fields` section (`priority`, `datetime`, `hostname`, `process`, `pid`, `message`).
--   If the regex does not match (e.g., `invalid_data`), the new columns are left empty for that row.
--   **The original column is preserved;** new columns are appended to the grid without modifying or removing the source data.
+-   O handler aplica a regex `^(\&lt;\d+\&gt;)\s(\w{3}\s+\d+\s+[\d:]+)\s+([^\s]+)\s+([^[\s:]+)(?:[(\d+)])?:\s+(.)$` a cada valor na coluna `syslog_record`.
+-   Para cada correspondência, ele extrai os grupos de captura pelo seu índice (começando a partir de 1) e os atribui às colunas definidas na seção `Regex Fields` (`priority`, `datetime`, `hostname`, `process`, `pid`, `message`).
+-   Se a regex não corresponder (por exemplo, `invalid_data`), as novas colunas ficarão vazias para essa linha.
+-   **A coluna original é preservada;** as novas colunas são anexadas à grid sem modificar ou remover os dados de origem.
 
 <br />

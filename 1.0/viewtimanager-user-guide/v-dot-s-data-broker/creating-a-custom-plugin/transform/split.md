@@ -11,20 +11,20 @@ lastUpdated: '2026-05-21 13:53:43'
 
 <br />
 
-The **Split** grid handler allows you to subdivide a single grid column into one or more fragments by using a specific delimiter (separator) character. It then takes a specific fragment (based on its numerical index) and saves it into a completely new column within your database grid.
+O handler de grid **Split** permite subdividir uma única coluna da grid em um ou mais fragmentos usando um caractere delimitador (separador) específico. Em seguida, ele pega um fragmento específico (com base em seu índice numérico) e o salva em uma coluna completamente nova na grid do seu banco de dados.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To configure the **Split** grid handler, you must define the following parameters:
+Para configurar o handler de grid **Split**, você deve definir os seguintes parâmetros:
 
--   **Split Column**: The original column that contains the text string you want to subdivide (e.g., `syslog_record`).
--   **Separator**: The exact character or string used as the delimiter to split the text (e.g., `%`, `,`, `|`, or `-`).
--   **Field Idx**: The numerical index of the fragment you want to extract. **Note that the index starts at** `1`.
--   **New Column Name**: The name of the new column where the extracted fragment will be stored.
+-   **Split Column**: A coluna original que contém a string de texto que você deseja subdividir (por exemplo, `syslog_record`).
+-   **Separator**: O caractere exato ou string usada como delimitador para dividir o texto (por exemplo, `%`, `,`, `|` ou `-`).
+-   **Field Idx**: O índice numérico do fragmento que você deseja extrair. **Observe que o índice começa em** `1`.
+-   **New Column Name**: O nome da nova coluna onde o fragmento extraído será armazenado.
 
-You can add the `Split` grid handler multiple times if you need to extract several different indices from the same original column into different new columns.
+Você pode adicionar o handler de grid `Split` várias vezes se precisar extrair diversos índices diferentes da mesma coluna original para diferentes novas colunas.
 
 <br />
 
@@ -34,33 +34,33 @@ You can add the `Split` grid handler multiple times if you need to extract sever
 
 ---
 
-## **Expected Behaviour**
+## **Comportamento Esperado**
 
-To better understand how the **Split** grid handler behaves, let's use a fictitious log message based on the configuration shown in the image above.
+Para entender melhor como o handler de grid **Split** se comporta, vamos usar uma mensagem de log fictícia com base na configuração mostrada na imagem acima.
 
-Suppose our `syslog_record` column contains the following event structure where fields are separated by a `%` character: `[EVENT_TYPE]%[EVENT_NAME]%[IP_ADDRESS]`.
+Suponha que nossa coluna `syslog_record` contenha a seguinte estrutura de evento onde os campos são separados por um caractere `%`: `[EVENT_TYPE]%[EVENT_NAME]%[IP_ADDRESS]`.
 
-Given the following grid:
+Dada a seguinte grid:
 
 <table><tbody><tr><th><p>syslog_record</p></th></tr><tr><td><p><code>SystemAlert%DiskFailure%10.0.0.5</code></p></td></tr><tr><td><p><code>Authentication%UserLogin%192.168.1.20</code></p></td></tr><tr><td><p><code>invalid_log_format</code></p></td></tr></tbody></table>
 
 <br />
 
-If we apply the two Split configurations shown in the image:
+Se aplicarmos as duas configurações de Split mostradas na imagem:
 
-1.  Extracting **Index 1** into a new column named `event_type` using `%` as the separator.
-2.  Extracting **Index 2** into a new column named `event` using `%` as the separator.
+1.  Extraindo o **Índice 1 (Index 1)** para uma nova coluna chamada `event_type` usando `%` como separador.
+2.  Extraindo o **Índice 2 (Index 2)** para uma nova coluna chamada `event` usando `%` como separador.
 
-The resulting grid will be:
+A grid resultante será:
 
 <table><tbody><tr><th><p>syslog_record</p></th><th><p>event_type</p></th><th><p>event</p></th></tr><tr><td><p><code>SystemAlert%DiskFailure%10.0.0.5</code></p></td><td><p><code>SystemAlert</code></p></td><td><p><code>DiskFailure</code></p></td></tr><tr><td><p><code>Authentication%UserLogin%192.168.1.20</code></p></td><td><p><code>Authentication</code></p></td><td><p><code>UserLogin</code></p></td></tr><tr><td><p><code>invalid_log_format</code></p></td><td><p><code>invalid_log_format</code></p></td><td><p><br></p></td></tr></tbody></table>
 
 <br />
 
-### **Explanation:**
+### **Explicação:**
 
--   For the first row (`SystemAlert%DiskFailure%10.0.0.5`), the string is split by `%` into three parts: `SystemAlert` (Index 1), `DiskFailure` (Index 2), and `10.0.0.5` (Index 3). The handler accurately extracts Index 1 into `event_type` and Index 2 into `event`.
--   For the row containing `invalid_log_format` (which lacks the separator), the string cannot be split. Therefore, the entire original string acts as Index 1 (placed in `event_type`), and since there is no Index 2, the `event` column remains empty.
--   The original `syslog_record` column is fully preserved.
+-   Para a primeira linha (`SystemAlert%DiskFailure%10.0.0.5`), a string é dividida por `%` em três partes: `SystemAlert` (Índice 1), `DiskFailure` (Índice 2) e `10.0.0.5` (Índice 3). O handler extrai com precisão o Índice 1 para `event_type` e o Índice 2 para `event`.
+-   Para a linha contendo `invalid_log_format` (que não possui o separador), a string não pode ser dividida. Portanto, a string original inteira atua como o Índice 1 (colocada em `event_type`), e como não há Índice 2, a coluna `event` permanece vazia.
+-   A coluna original `syslog_record` é totalmente preservada.
 
 <br />

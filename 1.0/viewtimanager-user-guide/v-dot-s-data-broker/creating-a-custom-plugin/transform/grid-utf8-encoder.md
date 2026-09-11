@@ -11,18 +11,18 @@ lastUpdated: '2026-05-22 09:21:08'
 
 <br />
 
-The **Grid UTF8 Encoder** grid handler is designed to explicitly encode the entire content of the grid into UTF-8 format during the transformation stage.
+O handler de grid **Grid UTF8 Encoder** foi projetado para codificar explicitamente todo o conteúdo da grid no formato UTF-8 durante a etapa de transformação.
 
-This is crucial when dealing with data sources that export logs or records in legacy or alternative character encodings (such as `iso-8859-1`), ensuring that special characters and symbols are correctly ingested and displayed in the time-series database without corruption.
+Isso é crucial ao lidar com fontes de dados que exportam logs ou registros em codificações de caracteres legadas ou alternativas (como `iso-8859-1`), garantindo que caracteres e símbolos especiais sejam ingeridos e exibidos corretamente no banco de dados de séries temporais sem corrupção.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To configure this grid handler, you only need to define its original encoding format:
+Para configurar este handler de grid, você só precisa definir o formato de codificação original:
 
--   **Grid Handler Type**: Select `Grid UTF8 Encoder`.
--   **Current Encoding**: From the dropdown menu, select the original encoding format that the incoming data is currently using (e.g., `iso-8859-1`). The handler will automatically translate this into standard `UTF-8`.
+-   **Grid Handler Type**: Selecione `Grid UTF8 Encoder`.
+-   **Current Encoding**: No menu suspenso, selecione o formato de codificação original que os dados de entrada estão usando atualmente (por exemplo, `iso-8859-1`). O handler o traduzirá automaticamente para o padrão `UTF-8`.
 
 <br />
 
@@ -32,10 +32,10 @@ To configure this grid handler, you only need to define its original encoding fo
 
 ---
 
-## **Best Practices & Recommendations**
+## **Melhores Práticas e Recomendações**
 
-> \[!IMPORTANT\] **Execution Order:** If you need to use the Grid UTF8 Encoder, it is highly recommended that you place it as the **very first** handler in your Grid Handlers list.
+> \[!IMPORTANT\] **Ordem de Execução:** Se você precisar usar o Grid UTF8 Encoder, é altamente recomendável que o coloque como o **primeiríssimo** handler em sua lista de Grid Handlers.
 > 
-> You can reorder your handlers by clicking the blue **Move Up** () arrow button, as shown in the image above. Encoding the payload at the very beginning ensures that any subsequent handlers (like Split, Regex, or Math Operations) process the data with the correct UTF-8 character mapping, preventing parsing errors on special characters.
+> Você pode reordenar seus handlers clicando no botão azul da seta **Move Up** (), conforme mostrado na imagem acima. Codificar a carga logo no início garante que quaisquer handlers subsequentes (como Split, Regex ou Math Operations) processem os dados com o mapeamento de caracteres UTF-8 correto, evitando erros de análise em caracteres especiais.
 
 <br />

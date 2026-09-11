@@ -1,5 +1,4 @@
 ---
-reusableId: 100
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Prerequisites
 id: K8S-P9GS-SJQ-339
@@ -7,17 +6,17 @@ slug: prerequisites
 isVisible: true
 lastUpdated: '2025-10-15 14:58:01'
 ---
-# **<span align="center">Prerequisites</span>**
+# **<span align="center">Pré-requisitos</span>**
 
-<span align="justify">Before you can effectively use the Configuration Manager feature in Viewtinet, it is essential to prepare your inventory and access credentials. This chapter outlines the necessary prerequisites and the steps to verify them within the Inventory module.</span>
+<span align="justify">Antes que você possa usar efetivamente o recurso Configuration Manager no Viewtinet, é essencial preparar seu inventário e credenciais de acesso. Este capítulo descreve os pré-requisitos necessários e os passos para verificá-los dentro do módulo Inventory (Inventário).</span>
 
-## **1\. Devices Added to Inventory**
+## **1\. Dispositivos Adicionados ao Inventário**
 
-<span align="justify">Ensure that all devices to be managed are added to the Inventory. Devices can be imported via CSV files, autodiscovery, or added manually.</span>
+<span align="justify">Certifique-se de que todos os dispositivos a serem gerenciados sejam adicionados ao Inventário. Os dispositivos podem ser importados por meio de arquivos CSV, descoberta automática (autodiscovery) ou adicionados manualmente.</span>
 
-<span align="justify">The detailed process for provisioning devices into the inventory is explained in the Inventory chapter.</span>
+<span align="justify">O processo detalhado de provisionamento de dispositivos no inventário é explicado no capítulo de Inventário.</span>
 
-<span align="justify">In the Inventory overview tab, you will see a list of devices along with key details such as IP address, device name, OID groups, operating system, software version, device type, and vendor</span>
+<span align="justify">Na aba de visão geral do Inventário (Inventory overview), você verá uma lista de dispositivos, juntamente com detalhes importantes, como endereço IP, nome do dispositivo, grupos OID, sistema operacional, versão do software, tipo de dispositivo e fabricante (vendor).</span>
 
 <br />
 
@@ -25,30 +24,30 @@ lastUpdated: '2025-10-15 14:58:01'
 
 <br />
 
-## **2\. Device Filtering**
+## **2\. Filtragem de Dispositivos**
 
-<span align="justify">To use the Configuration Manager feature, it is necessary to have a filter created that selects the devices to be included. This filter defines the subset of devices on which configuration tasks will operate.</span>
+<span align="justify">Para utilizar o recurso Configuration Manager, é necessário ter um filtro criado que selecione os dispositivos a serem incluídos. Esse filtro define o subconjunto de dispositivos em que as tarefas de configuração atuarão.</span>
 
-<span align="justify">The creation and management of filters is explained in detail in the Inventory chapter. Filters allow you to target devices based on attributes such as vendor, operating system, IP address, or other metadata.</span>
+<span align="justify">A criação e o gerenciamento de filtros são explicados em detalhes no capítulo de Inventário. Os filtros permitem direcionar dispositivos com base em atributos como fabricante, sistema operacional, endereço IP ou outros metadados.</span>
 
-<span align="justify">Filters can also be combined with logical operators (AND, OR, NOT) to precisely refine the device selection.</span>
+<span align="justify">Os filtros também podem ser combinados com operadores lógicos (AND, OR, NOT) para refinar com precisão a seleção do dispositivo.</span>
 
 <br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/CglaXww1LUAHyUeKk61W.png"></figure>
 
-## **<span class="text-large"><br></span>3\. Access Credentials Configuration**
+## **<span class="text-large"><br></span>3\. Configuração das Credenciais de Acesso**
 
-<span align="justify">Credentials can be added by using the Viewtinet provisioning template or by importing your own CSV file.</span>
+<span align="justify">As credenciais podem ser adicionadas usando o modelo de provisionamento do Viewtinet ou importando seu próprio arquivo CSV.</span>
 
-<span align="justify">If these credentials have not been imported using the methods mentioned above, it is necessary to create the credentials manually within the Inventory module.</span>
+<span align="justify">Se essas credenciais não tiverem sido importadas usando os métodos mencionados acima, será necessário criá-las manualmente no módulo Inventário.</span>
 
-<span align="justify">In the Credentials tab of Inventory, verify that you have defined the necessary credentials, including:</span>
+<span align="justify">Na aba Credentials (Credenciais) do Inventário, verifique se você definiu as credenciais necessárias, incluindo:</span>
 
--   <span align="justify">SSH access credentials (port, username, authentication type, password or key)</span>
--   <span align="justify">Telnet access credentials if applicable</span>
+-   <span align="justify">Credenciais de acesso SSH (porta, nome de usuário, tipo de autenticação, senha ou chave)</span>
+-   <span align="justify">Credenciais de acesso Telnet, se aplicável</span>
 
-To create a new credential, click the \*\*"ADD New Credential"\*\* button and configure the connection parameters for the devices you want to include in the Configuration Manager feature.
+Para criar uma nova credencial, clique no botão \*\*"ADD New Credential"\*\* e configure os parâmetros de conexão dos dispositivos que você deseja incluir no recurso Configuration Manager.
 
 <br />
 
@@ -68,16 +67,16 @@ To create a new credential, click the \*\*"ADD New Credential"\*\* button and co
 
 <br />
 
-## **4\. Device-Credential Relations**
+## **4\. Relações entre Dispositivo e Credencial**
 
-<span align="justify">Finally, assign credentials to devices by creating relations in the Relations tab. This mapping is necessary so Configuration Manager knows which credentials to use to access each device.</span>
+<span align="justify">Por fim, atribua as credenciais aos dispositivos criando relações (relations) na aba Relations. Esse mapeamento é necessário para que o Configuration Manager saiba quais credenciais usar para acessar cada dispositivo.</span>
 
-<span align="justify">In the Relations tab, filter devices and credentials to assign them accordingly.</span>
+<span align="justify">Na aba Relations, filtre os dispositivos e as credenciais para atribuí-los de acordo.</span>
 
 <br />
 
-Once these prerequisites are met — devices added, filtered, credentials configured, and relations assigned — you will have the necessary setup to create and run configuration tasks in the Configuration Manager feature.
+Assim que esses pré-requisitos forem atendidos — dispositivos adicionados, filtrados, credenciais configuradas e relações atribuídas — você terá a configuração necessária para criar e executar tarefas de configuração no recurso Configuration Manager.
 
 ---
 
-This preparation ensures secure, targeted, and efficient management of device configurations within your network.
+Essa preparação garante um gerenciamento seguro, direcionado e eficiente das configurações de dispositivos em sua rede.

@@ -7,19 +7,19 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-25 17:36:00'
 ---
-# **<span align="center">Creating Aggregated Tables</span>**
+# **<span align="center">Criando Tabelas Agregadas</span>**
 
 <br />
 
-In high-volume environments, querying raw data spanning long periods (weeks or months) can be resource-intensive. To optimize performance and visualization speed, the **Schema Stage** allows for the creation of **Aggregated Tables**.
+Em ambientes de alto volume, consultar dados brutos abrangendo longos períodos (semanas ou meses) pode consumir muitos recursos. Para otimizar o desempenho e a velocidade de visualização, a **etapa Schema** (Schema Stage) permite a criação de **Tabelas Agregadas** (Aggregated Tables).
 
 <br />
 
 ---
 
-## **What are Aggregated Tables?**
+## **O que são Tabelas Agregadas?**
 
-Aggregated tables store **pre-processed, summarized data** derived from detailed raw records. Instead of keeping millions of individual data points, the platform calculates summaries (using functions like `sum()`, `avg()`, `count()`) at regular intervals and stores the results.
+Tabelas agregadas armazenam **dados pré-processados e resumidos** derivados de registros brutos detalhados. Em vez de manter milhões de pontos de dados individuais, a plataforma calcula resumos (usando funções como `sum()`, `avg()`, `count()`) em intervalos regulares e armazena os resultados.
 
 <br />
 
@@ -27,20 +27,20 @@ Aggregated tables store **pre-processed, summarized data** derived from detailed
 
 <br />
 
-By querying these optimized tables instead of the raw data, dashboards load significantly faster and the volume of stored data is drastically reduced.
+Ao consultar estas tabelas otimizadas em vez dos dados brutos, os dashboards carregam significativamente mais rápido e o volume de dados armazenados é drasticamente reduzido.
 
 <br />
 
 ---
 
-## **Granularities in Aggregated Tables**
+## **Granularidades em Tabelas Agregadas**
 
-Aggregated tables are created based on different time **granularities**. The platform can automatically generate secondary tables that summarize the data at various intervals:
+Tabelas agregadas são criadas com base em diferentes **granularidades** de tempo. A plataforma pode gerar tabelas secundárias automaticamente que resumem os dados em vários intervalos:
 
--   Every 60 seconds (1-minute detail)
--   Every 5 minutes (medium granularity)
--   Every 1 hour
--   Every 24 hours (daily trend)
+-   A cada 60 segundos (detalhe de 1 minuto)
+-   A cada 5 minutos (granularidade média)
+-   A cada 1 hora
+-   A cada 24 horas (tendência diária)
 
 <br />
 
@@ -48,15 +48,15 @@ Aggregated tables are created based on different time **granularities**. The pla
 
 <br />
 
-Using the `snmp_interface_records_info` table as an example, the system appends the granularity in seconds to the table name (e.g., `_agg_if_300` for 5 minutes, `_agg_if_3600` for 1 hour). Viewtisight will automatically query the most appropriate table depending on the time range selected in the dashboard.
+Usando a tabela `snmp_interface_records_info` como exemplo, o sistema anexa a granularidade em segundos ao nome da tabela (ex., `_agg_if_300` para 5 minutos, `_agg_if_3600` para 1 hora). O Viewtisight consultará automaticamente a tabela mais apropriada dependendo do intervalo de tempo selecionado no dashboard.
 
 <br />
 
 ---
 
-## **Enabling Aggregated Tables**
+## **Habilitando Tabelas Agregadas**
 
-You can selectively enable or disable the creation of aggregated tables for each specific granularity using the **Enabled** checkboxes in the Model Settings.
+Você pode habilitar ou desabilitar seletivamente a criação de tabelas agregadas para cada granularidade específica usando as caixas de seleção **Enabled** (Habilitado) nas Configurações de Modelo (Model Settings).
 
 <br />
 
@@ -64,20 +64,20 @@ You can selectively enable or disable the creation of aggregated tables for each
 
 <br />
 
-> [!WARNING] **Consider Polling Frequency**
-> It is crucial to consider the frequency of data collection before enabling an aggregated table.
-> - **Minimum Granularity:** If the Extract stage collects data via SNMP every **5 minutes**, this represents your minimum possible granularity. It makes no sense to enable the 1-minute aggregation table because no new data arrives at that speed.
-> - **Useless Aggregation:** For data like SNMP Interfaces, even if data is collected every minute, there is usually only one record per interface per minute. Aggregating one record into a 1-minute table provides no compression or performance benefit, so the 1-minute aggregation should be disabled.
+> [!WARNING] **Considere a Frequência de Polling**
+> É crucial considerar a frequência de coleta de dados antes de habilitar uma tabela agregada.
+> - **Granularidade Mínima:** Se a etapa Extract coleta dados via SNMP a cada **5 minutos**, essa representa sua granularidade mínima possível. Não faz sentido habilitar a tabela de agregação de 1 minuto porque nenhum dado novo chega a essa velocidade.
+> - **Agregação Inútil:** Para dados como Interfaces SNMP, mesmo que os dados sejam coletados a cada minuto, geralmente há apenas um registro por interface por minuto. Agregar um registro numa tabela de 1 minuto não fornece nenhum benefício de compactação ou desempenho, portanto, a agregação de 1 minuto deve ser desativada.
 
 <br />
 
 ---
 
-## **Retention Policies per Granularity**
+## **Políticas de Retenção por Granularidade**
 
-Finally, one of the biggest advantages of aggregated tables is that they allow you to maintain long-term historical data without consuming massive amounts of disk space. 
+Por fim, uma das maiores vantagens das tabelas agregadas é que elas permitem manter dados históricos de longo prazo sem consumir quantidades massivas de espaço em disco. 
 
-Using the **Retention Period** dropdowns, you can define exactly how long the data should be kept on the hard drive for each specific granularity.
+Usando os menus suspensos de **Retention Period** (Período de Retenção), você pode definir exatamente por quanto tempo os dados devem ser mantidos no disco rígido para cada granularidade específica.
 
 <br />
 
@@ -85,20 +85,20 @@ Using the **Retention Period** dropdowns, you can define exactly how long the da
 
 <br />
 
-A common configuration strategy is:
--   **1 Minute:** Kept for only a few days (if enabled).
--   **5 Minutes:** Kept for several months.
--   **1 Hour / 1 Day:** Kept for years, allowing for long-term historical trend analysis and capacity planning with a minimal storage footprint.
+Uma estratégia de configuração comum é:
+-   **1 Minuto:** Mantido apenas por alguns dias (se habilitado).
+-   **5 Minutos:** Mantido por vários meses.
+-   **1 Hora / 1 Dia:** Mantido por anos, permitindo a análise de tendências históricas de longo prazo e planejamento de capacidade com o mínimo impacto de armazenamento.
 
 <br />
 
 ---
 
-## **Step-by-Step Configuration**
+## **Configuração Passo a Passo**
 
-To manually define the structure of an aggregated table, follow these steps:
+Para definir manualmente a estrutura de uma tabela agregada, siga estes passos:
 
-**Step 1:** Scroll down to the **Aggregated Tables** section and click the **ADD AGGREGATED TABLE** button.
+**Passo 1:** Role para baixo até a seção **Aggregated Tables** (Tabelas Agregadas) e clique no botão **ADD AGGREGATED TABLE** (Adicionar Tabela Agregada).
 
 <br />
 
@@ -106,7 +106,7 @@ To manually define the structure of an aggregated table, follow these steps:
 
 <br />
 
-**Step 2:** A new configuration block will appear. You can change the default **Aggregated table name** if needed.
+**Passo 2:** Um novo bloco de configuração aparecerá. Você pode alterar o nome padrão **Aggregated table name** (Nome da tabela agregada), se necessário.
 
 <br />
 
@@ -114,10 +114,10 @@ To manually define the structure of an aggregated table, follow these steps:
 
 <br />
 
-**Step 3:** The system provides one default empty field. Clicking on the dropdown will display all the Dimensions and Metrics available from the main table. 
+**Passo 3:** O sistema fornece um campo vazio padrão. Clicar no menu suspenso exibirá todas as Dimensões e Métricas disponíveis a partir da tabela principal. 
 
-> [!IMPORTANT] **Configuration Order**
-> You must configure **Dimensions first**, followed by the **Metrics**. 
+> [!IMPORTANT] **Ordem de Configuração**
+> Você deve configurar as **Dimensões (Dimensions) primeiro**, seguidas pelas **Métricas (Metrics)**. 
 
 <br />
 
@@ -128,7 +128,7 @@ To manually define the structure of an aggregated table, follow these steps:
 
 <br />
 
-**Step 4:** To add additional dimensions or metrics to your aggregated table, simply click the **ADD NEW FIELD** button at the bottom of the table block. 
+**Passo 4:** Para adicionar dimensões ou métricas adicionais à sua tabela agregada, basta clicar no botão **ADD NEW FIELD** (Adicionar Novo Campo) na parte inferior do bloco da tabela. 
 
 <br />
 
@@ -136,10 +136,10 @@ To manually define the structure of an aggregated table, follow these steps:
 
 <br />
 
-**Step 5:** Continue adding all the desired **Dimensions** first.
+**Passo 5:** Continue adicionando todas as **Dimensões** desejadas primeiro.
 
-> [!TIP] **Tenant Field First**
-> It is highly recommended to place the field that identifies the **tenant** (e.g., `tenant`, `customer_id`) as the very first dimension in the list. This optimizes query performance in multi-tenant environments.
+> [!TIP] **Campo de Locatário (Tenant) Primeiro**
+> É altamente recomendável colocar o campo que identifica o **tenant** (ex., `tenant`, `customer_id`) como a primeiríssima dimensão na lista. Isso otimiza o desempenho das consultas em ambientes multi-inquilino.
 
 <br />
 
@@ -147,7 +147,7 @@ To manually define the structure of an aggregated table, follow these steps:
 
 <br />
 
-**Step 6:** Once all dimensions are defined, you can start adding your **Metrics**. For every metric you add, you must select the required **Aggregation Function** (e.g., `sum`, `avg`, `max`, `count`) that will be used to compress the data points into a single summarized value.
+**Passo 6:** Uma vez definidas todas as dimensões, você pode começar a adicionar as suas **Métricas**. Para cada métrica que adicionar, você deve selecionar a respectiva **Aggregation Function** (Função de Agregação, ex., `sum`, `avg`, `max`, `count`) necessária que será usada para comprimir os pontos de dados num único valor resumido.
 
 <br />
 

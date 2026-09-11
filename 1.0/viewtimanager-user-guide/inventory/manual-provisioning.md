@@ -1,24 +1,23 @@
 ---
-reusableId: 92
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Manual Provisioning'
-id: 0ZW-JMJT-U8F-TQY
+id: CT2-JXYB-K5I-RKQ
 slug: manual-provisioning
 isVisible: true
 isSearchable: true
-lastUpdated: '2026-06-04 07:53:27'
+lastUpdated: '2026-09-10 19:57:41'
 ---
-# **<span align="center">Manual Provisioning</span>**
+# **<span align="center">Provisionamento Manual</span>**
 
-<span align="justify">Manual provisioning is the last resort for onboarding data sources into your inventory when CSV import or Autodiscovery are not feasible (for example, for isolated devices or one-off entries). It allows you to add individual devices one at a time and fill in only the fields you need.</span>
+<span align="justify">O provisionamento manual é o último recurso para integrar fontes de dados em seu inventário quando a importação por CSV ou a Autodescoberta não forem viáveis (por exemplo, para dispositivos isolados ou entradas únicas). Ele permite que você adicione dispositivos individuais, um de cada vez, e preencha apenas os campos que você precisa.</span>
 
 ---
 
-## **Step 1: Open the Devices Overview**
+## **Etapa 1: Abrir a Visão Geral de Dispositivos**
 
-1.  In the Viewtinet web console, click **Inventory** in the left menu.
-2.  Select the **OVERVIEW** tab.
-3.  Ensure **DEVICES** is active.
+1.  No console web do Viewtinet, clique em **Inventory** no menu esquerdo.
+2.  Selecione a aba **OVERVIEW**.
+3.  Certifique-se de que **DEVICES** está ativo.
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/0tBi4Nrk7U6B7I4LzHrT.png"><br />
@@ -26,95 +25,94 @@ lastUpdated: '2026-06-04 07:53:27'
 
 ---
 
-### **Step 2: Add a New Device Row**
+### **Etapa 2: Adicionar uma Nova Linha de Dispositivo**
 
-Scroll to the bottom of the device list and click **\+ ADD NEW DEVICE**.<br />
+Role até a parte inferior da lista de dispositivos e clique em **\+ ADD NEW DEVICE**.<br />
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/F5rfRcbeKTL193zgcOwR.png"></figure>
 
-A blank row appears at the top or bottom of the table where you can enter device details.
+Uma linha em branco aparece no topo ou na parte inferior da tabela, onde você pode inserir os detalhes do dispositivo.
 
 ---
 
-### **Step 3: Fill in Mandatory and Optional Fields**
+### **Etapa 3: Preencher os Campos Obrigatórios e Opcionais**
 
-Enter the required information and any additional details:
+Insira as informações necessárias e quaisquer detalhes adicionais:
 
-<table><tbody><tr><th><p>Field</p></th><th><p>Description</p></th><th><p>Required?</p></th></tr><tr><td><p><strong>IP / Hostname</strong></p></td><td><p>Device’s IP address or DNS name</p></td><td><p>Yes ⭐</p></td></tr><tr><td><p><strong>oid_group_names</strong></p></td><td><p>Comma-separated OID group(s)</p></td><td><p>Yes ⭐</p></td></tr><tr><td><p><strong>sw_version</strong></p></td><td><p>Software/OS version (e.g. Forti OS 7.10)</p></td><td><p>No</p></td></tr><tr><td><p><strong>source</strong></p></td><td><p>Inventory source (e.g. <code>user_defined</code>)</p></td><td><p>No</p></td></tr><tr><td><p><strong>device</strong></p></td><td><p>Friendly device name</p></td><td><p>No</p></td></tr><tr><td><p><strong>mac</strong></p></td><td><p>MAC address</p></td><td><p>No</p></td></tr><tr><td><p><strong>sys_object_id</strong></p></td><td><p>SNMP sysObjectID</p></td><td><p>No</p></td></tr><tr><td><p><strong>system_name</strong></p></td><td><p>SNMP systemName</p></td><td><p>No</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Campo</p></th><th><p>Descrição</p></th><th><p>Obrigatório?</p></th></tr><tr><td><p><strong>IP / Hostname</strong></p></td><td><p>Endereço IP ou nome DNS do dispositivo</p></td><td><p>Sim ⭐</p></td></tr><tr><td><p><strong>oid_group_names</strong></p></td><td><p>Grupo(s) OID separados por vírgula</p></td><td><p>Sim ⭐</p></td></tr><tr><td><p><strong>sw_version</strong></p></td><td><p>Versão do Software/SO (ex: Forti OS 7.10)</p></td><td><p>Não</p></td></tr><tr><td><p><strong>source</strong></p></td><td><p>Origem do inventário (ex: <code>user_defined</code>)</p></td><td><p>Não</p></td></tr><tr><td><p><strong>device</strong></p></td><td><p>Nome amigável do dispositivo</p></td><td><p>Não</p></td></tr><tr><td><p><strong>mac</strong></p></td><td><p>Endereço MAC</p></td><td><p>Não</p></td></tr><tr><td><p><strong>sys_object_id</strong></p></td><td><p>sysObjectID SNMP</p></td><td><p>Não</p></td></tr><tr><td><p><strong>system_name</strong></p></td><td><p>systemName SNMP</p></td><td><p>Não</p></td></tr></tbody></table>
 
-> In the example below, **red** outlines indicate mandatory fields; **blue** outlines show optional fields:<br />
+> No exemplo abaixo, os contornos **vermelhos** indicam os campos obrigatórios; os contornos **azuis** mostram os campos opcionais:<br />
 > 
 > <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/28EBGy32GS1VuH0daxa1.png" align="center"></figure>
 
 ---
 
-### **Step 4: Save Your Entry**
+### **Etapa 4: Salvar a sua Entrada**
 
-Once you’ve completed the fields, scroll down and click **SAVE CHANGES**. A confirmation banner will appear:
+Depois de preencher os campos, role para baixo e clique em **SAVE CHANGES** (Salvar Alterações). Um banner de confirmação aparecerá:
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/CfVxgjH8g4f4g0NSrgEs.png" align="center"></figure>
 
-<span align="justify">Your device is now in the inventory and ready for credential assignments, relation mapping, and plugin configuration as detailed in earlier chapters.</span>
+<span align="justify">O seu dispositivo agora está no inventário e pronto para a atribuição de credenciais, mapeamento de relações e configuração de plugins, conforme detalhado nos capítulos anteriores.</span>
 
-### **Configuring Credentials**
+### **Configurando Credenciais**
 
-<span align="justify">In Viewtinet, Credentials define how the system authenticates both to collect counters &amp; metrics (SNMP &amp; ICMP) and to manage configurations (SSH/Telnet) on your devices. Each protocol requires its own credential entry:</span>
+<span align="justify">No Viewtinet, as Credenciais definem como o sistema se autentica tanto para coletar contadores e métricas (SNMP e ICMP) quanto para gerenciar configurações (SSH/Telnet) em seus dispositivos. Cada protocolo requer sua própria entrada de credencial:</span>
 
--   **ICMP**: Basic reachability and latency checks.
--   **SNMP v1/v2c/v3**: Poll counters, tables and other device metrics.
--   **SSH / Telnet**: CLI access for advanced configuration.<br />
+-   **ICMP**: Verificações básicas de alcance e latência.
+-   **SNMP v1/v2c/v3**: Consulta contadores, tabelas e outras métricas de dispositivos.
+-   **SSH / Telnet**: Acesso via CLI para configuração avançada.<br />
     
 
-### **Step 1: Open the Credentials Tab**<br />
+### **Etapa 1: Abrir a Aba de Credenciais**<br />
 
-1.  In the Viewtinet web console, click **Inventory → Credentials**.
-2.  The Credentials table shows existing entries and supported protocol columns.
+1.  No console web do Viewtinet, clique em **Inventory → Credentials**.
+2.  A tabela de Credenciais exibe as entradas existentes e colunas de protocolos suportados.
     
     <br />
     
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/hqDwDbbd9JssBb4T7vcQ.png">
-    
 
 <br />
 
-### **Step 2: Add a New Credential**<br />
+### **Etapa 2: Adicionar uma Nova Credencial**<br />
 
-1.  Click **\+ ADD NEW CREDENTIAL** at the bottom of the table.
+1.  Clique em **\+ ADD NEW CREDENTIAL** na parte inferior da tabela.
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/4Iyvj9HhwA7wAEGhMEIN.png"><br />
     
-2.  A new blank row is added. Under **Protocol**, select the desired protocol (e.g., **snmp**).
+2.  Uma nova linha em branco é adicionada. Em **Protocol**, selecione o protocolo desejado (ex: **snmp**).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/ZwfBwI3MFDPy4wETiOyx.png"><br />
     
 
-### **Step 3: Configure SNMP Credentials**<br />
+### **Etapa 3: Configurar as Credenciais SNMP**<br />
 
-1.  In the **SNMP Version** column, choose **2c** (or v1/v3 as needed).
+1.  Na coluna **SNMP Version**, escolha **2c** (ou v1/v3 conforme a necessidade).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/sL9Qqkc4gIvotWf4RNvL.png"><br />
     
-2.  Enter the **Community** string (mandatory for v1/v2c).
+2.  Insira a string de **Community** (obrigatório para v1/v2c).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/XjTleODdmXQNcldspFk8.png"><br />
-    <span align="center">(In this example, we use training.)</span><br />
+    <span align="center">(Neste exemplo, nós usamos training.)</span><br />
     
-3.  For **SNMP v3**, you would also fill in **Security Level**, **Auth Protocol**, **Auth Passphrase**, **Priv Protocol**, and **Priv Passphrase**.
+3.  Para **SNMP v3**, você também preencheria **Security Level**, **Auth Protocol**, **Auth Passphrase**, **Priv Protocol** e **Priv Passphrase**.
 
 <br />
 
-### **Step 4: Save Your Changes**
+### **Etapa 4: Salvar suas Alterações**
 
-1.  After completing all required fields, click the **SAVE CHANGES** button at the bottom right.
+1.  Após preencher todos os campos obrigatórios, clique no botão **SAVE CHANGES** no canto inferior direito.
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/gATCIy4xaapGL0n371bV.png"><br />
     
-2.  A success notification confirms your credentials were saved.
+2.  Uma notificação de sucesso confirma que suas credenciais foram salvas.
     
     <br />
     
@@ -125,69 +123,69 @@ Once you’ve completed the fields, scroll down and click **SAVE CHANGES**. A co
 
 <br />
 
-## **Mapping Credentials to Manually Added Devices**
+## **Mapeando Credenciais para Dispositivos Adicionados Manualmente**
 
-Once you’ve added devices manually, you can assign one or more credential sets (ICMP, SNMP, etc.) to them via the **Relations** tab:
+Depois de adicionar dispositivos manualmente, você pode atribuir um ou mais conjuntos de credenciais (ICMP, SNMP, etc.) a eles através da aba **Relations**:
 
 <br />
 
-### 1\. Switch to the Relations View
+### 1\. Mudar para a Visualização de Relações (Relations)
 
-Click **Relations** under the Inventory header.<br />
+Clique em **Relations** sob o cabeçalho do Inventory.<br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/M434Wi0r1xSTV0mZ8uVO.png" align="center"></figure>
 
-### **2 Isolate Your Manual Device**
+### **2 Isolar o seu Dispositivo Manual**
 
-Use the filter box or Query Builder to select just your manually added host (e.g. `dev.ip == '10.10.10.1'`).
+Use a caixa de filtro ou o Query Builder (Construtor de Consultas) para selecionar apenas o host que você adicionou manualmente (ex: `dev.ip == '10.10.10.1'`).
 
--   Click the pencil icon to open Query Builder.
--   Add a rule: **ip == 10.10.10.1**, then click **OK**.
+-   Clique no ícone do lápis para abrir o Query Builder.
+-   Adicione uma regra: **ip == 10.10.10.1** e clique em **OK**.
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/PFvq1gQUmWnNQz9uEcPE.png"><br />
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/gWZoUG7ischO3WERtMW7.png"><br />
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/k5J2VLIUXSHI7fwv5tiV.png"><br />
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/GXCSoUvQJob9PB30VKBy.png"><br />
 
-### **3\. Select the Device(s)**
+### **3\. Selecionar o(s) Dispositivo(s)**
 
-Check the box next to the device row(s) you want to map credentials for.<br />
+Marque a caixa ao lado da(s) linha(s) do(s) dispositivo(s) para os quais deseja mapear as credenciais.<br />
 
-### 4\. Select Credential(s)
+### 4\. Selecionar Credencial(is)
 
-Scroll down to the **Credentials** pane, apply any filters if needed, and check the boxes for the credentials to assign (e.g. ICMP & SNMP).<br />
+Role para baixo até o painel **Credentials**, aplique filtros, se necessário, e marque as caixas das credenciais a serem atribuídas (ex: ICMP & SNMP).<br />
 
-### 5\. Save the Relations
+### 5\. Salvar as Relações
 
-Click **SAVE CHANGES** at the bottom right. A confirmation banner will appear.<br />
+Clique em **SAVE CHANGES** no canto inferior direito. Um banner de confirmação aparecerá.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/kWCwmObEro6HVfTWQHsr.png"><br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/M37UrzvpYxOBhrhKY7bS.png" align="center"></figure>
 
-Your manually added device(s) are now correctly related to the chosen credential sets.
+Os dispositivos adicionados manualmente agora estão corretamente relacionados aos conjuntos de credenciais escolhidos.
 
 ---
 
-## **Installing Plugins**
+## **Instalando Plugins**
 
-The final step in provisioning your data sources is to install—or modify—one or more Viewtinet plugins. In this guide, we’ll demonstrate installing the **Network Monitoring** plugin for the devices you’ve just defined.
+A etapa final no provisionamento das suas fontes de dados é instalar — ou modificar — um ou mais plugins do Viewtinet. Neste guia, demonstraremos a instalação do plugin **Network Monitoring** para os dispositivos que você acabou de definir.
 
-> **Note:** In this example we’re installing **all** data‐source plugins under **Network Monitoring**, so we don’t apply a device filter. However, you _can_ use filters when you need to install plugins only for a specific vendor or device group.
+> **Nota:** Neste exemplo, estamos instalando **todos** os plugins de fontes de dados sob **Network Monitoring**, por isso não aplicamos um filtro de dispositivo. No entanto, você _pode_ usar filtros quando precisar instalar plugins apenas para um fabricante específico ou grupo de dispositivos.
 
 <br />
 
-### **1\. Switch to the Plugins Tab**
+### **1\. Mudar para a Aba Plugins**
 
-Click **PLUGINS** in the Inventory header.<br />
+Clique em **PLUGINS** no cabeçalho do Inventory.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/EuzQxt95Yl2BNABFbOFA.png">
 
 <br />
 
-### **2\. Define a Filter for Your Plugin Scope**
+### **2\. Definir um Filtro para o Escopo do seu Plugin**
 
-If you only want to modify/install for a specific device group, click **\+ ADD NEW FILTER**, name it, open the Query Builder, add a rule (e.g. `dev.ip == '10.10.10.1'`), and click **OK**.<br />
+Se desejar apenas modificar/instalar para um grupo de dispositivos específico, clique em **\+ ADD NEW FILTER** (Adicionar Novo Filtro), dê um nome, abra o Query Builder, adicione uma regra (ex: `dev.ip == '10.10.10.1'`) e clique em **OK**.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/MPI9StDO2yZmtp92gmyp.png"><br />
 
@@ -197,9 +195,9 @@ If you only want to modify/install for a specific device group, click **\+ ADD N
 
 <br />
 
-### **3\. Associate Devices with Plugins**
+### **3\. Associar Dispositivos aos Plugins**
 
-In the PLUGINS list, expand network monitoring and check the boxes for:
+Na lista de PLUGINS, expanda network monitoring e marque as caixas para:
 
 -   snmp\_device\_config
 -   snmp\_if\_config
@@ -217,38 +215,38 @@ In the PLUGINS list, expand network monitoring and check the boxes for:
 
 <br />
 
-### **4\. Start the Modify & Install Process**
+### **4\. Iniciar o Processo de Modificar & Instalar**
 
 <br />
 
-Click **MODIFY AND INSTALL PLUGINS** at the bottom right.<br />
+Clique em **MODIFY AND INSTALL PLUGINS** no canto inferior direito.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/njWjunon8KXcL25Cizes.png"><br />
 
 <br />
 
-### **5\. Confirm Plugin Actions**
+### **5\. Confirmar as Ações de Plugin**
 
-In the “Select plugins” dialog:
+Na caixa de diálogo “Select plugins” (Selecionar plugins):
 
--   Ensure **Network Monitoring** is checked under **PLUGINS TO BE MODIFIED**
--   Check **Also INSTALL them**
--   Check **Unattended installation**
--   Click **OK**
+-   Verifique se **Network Monitoring** está marcado em **PLUGINS TO BE MODIFIED**
+-   Marque **Also INSTALL them** (Também instalá-los)
+-   Marque **Unattended installation** (Instalação autônoma)
+-   Clique em **OK**
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/5OhwEfQMIXOOSf0Nwvxh.png" align="center"></figure>
 
 <br />
 
-### **6\. Finish Installation**
+### **6\. Concluir a Instalação**
 
-A success banner confirms the plugin was modified. You’ll be redirected to the Visual Smart Data Broker console—click **FINISH INSTALLATION** to complete.
+Um banner de sucesso confirma que o plugin foi modificado. Você será redirecionado ao console Visual Smart Data Broker—clique em **FINISH INSTALLATION** (Concluir Instalação) para finalizar.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/Y8TUddYn4gzRAFtsIVkg.png" align="center"></figure>
 
-With this complete, your pipelines will now begin pulling metrics, counters, and other data dimensions into the database according to the configuration you’ve defined.
+Com isso concluído, os seus pipelines começarão a puxar métricas, contadores e outras dimensões de dados para o banco de dados de acordo com a configuração que você definiu.
 
 <br />
 <br />

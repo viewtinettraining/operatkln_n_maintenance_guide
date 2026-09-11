@@ -1,7 +1,6 @@
 ---
-reusableId: 44
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Abordagem de Microsserviços'
+title: 'Microservices Approach'
 id: OWE-SBWL-ZGV-PXH
 slug: microservices-approach
 isVisible: true
@@ -9,35 +8,35 @@ lastUpdated: '2025-10-15 15:56:46'
 ---
 # **<span align="center">Arquitetura de Microsserviços</span>**
 
-<span align="justify">O Viewtinet é construído sobre uma arquitetura baseada em microsserviços, onde cada módulo é composto por vários containers Docker que realizam funções específicas e isoladas. Esse design aprimora a escalabilidade, a flexibilidade e o desempenho, ao mesmo tempo que permite implantação modular, solução de problemas simplificada e uso eficiente de recursos.</span>
+<span align="justify">O Viewtinet é construído sobre uma arquitetura baseada em microsserviços, onde cada módulo é composto por múltiplos contêineres Docker que executam funções específicas e isoladas. Esse design aprimora a escalabilidade, flexibilidade e desempenho, permitindo implantações modulares, solução de problemas simplificada e uso eficiente de recursos.</span>
 
 ## **Principais Benefícios da Abordagem de Microsserviços**
 
--   **Escalabilidade**: Os containers podem ser escalados independentemente com base na carga.
--   **Flexibilidade**: Os módulos podem ser atualizados ou reiniciados sem afetar todo o sistema.
--   **Isolamento de Falhas**: Erros em um container não derrubam toda a plataforma.
+-   **Escalabilidade**: Os contêineres podem ser escalados independentemente com base na carga.
+-   **Flexibilidade**: Os módulos podem ser atualizados ou reiniciados sem afetar o sistema inteiro.
+-   **Isolamento de Falhas**: Erros em um contêiner não derrubam a plataforma completa.
 -   **Otimização de Recursos**: Os serviços consomem apenas o que precisam.
--   **Implantação Independente**: Cada componente pode ser implantado, atualizado ou revertido de forma independente.
+-   **Implantação Independente**: Cada componente pode ser implantado, atualizado ou revertido independentemente.
 
 ## **Composição Modular**
 
-Cada produto Viewtinet — **Viewtilog**, **Viewtimon** e **Viewtify QoS** — é composto por vários módulos, incluindo:
+Cada produto Viewtinet—**Viewtilog**, **Viewtimon** e **Viewtify QoS**—é composto por vários módulos, incluindo:
 
--   **Viewtimanager**: Gerencia configuração, tratamento de plugins e orquestração de módulos.
+-   **Viewtimanager**: Gerencia a configuração, manipulação de plugins e orquestração de módulos.
 -   **Viewtisight**: Fornece dashboards, relatórios e visualização de dados.
 -   **Viewtiauth**: Gerencia autenticação e controle de acesso.
--   **Dhyana**: Implementa pipelines ETL para coleta e transformação de dados.
--   **Viewticore**: Funciona como data warehouse e motor de séries temporais.
--   **HA\_Proxy**: Gerencia balanceamento de carga e serviços de proxy.
--   **License Checker**: Trata a validação e aplicação de licenças.
+-   **Dhyana**: Implementa pipelines de ETL para coleta e transformação de dados.
+-   **Viewticore**: Funciona como o data warehouse e motor de séries temporais.
+-   **HA\_Proxy**: Gerencia o balanceamento de carga e serviços de proxy.
+-   **License Checker**: Lida com a validação e aplicação de licenciamento.
 
-## **Módulos GUI e Seus Containers**
+## **Módulos de GUI e Seus Contêineres**
 
-Cada módulo GUI (ex.: Viewtimanager, Viewtiauth, Viewtisight) normalmente inclui:
+Cada módulo de GUI (ex.: Viewtimanager, Viewtiauth, Viewtisight) tipicamente inclui:
 
--   **Container de Frontend**: Apresenta a interface do usuário e gerencia as interações.
--   **Container de Backend**: Processa lógica de negócios, autenticação ou tarefas de configuração.
--   **Container MongoDB**: Armazena estado persistente, configuração ou preferências do usuário.
+-   **Contêiner Frontend**: Apresenta a interface do usuário e lida com interações.
+-   **Contêiner Backend**: Processa regras de negócios, autenticação ou tarefas de configuração.
+-   **Contêiner MongoDB**: Armazena estado persistente, configuração ou preferências do usuário.
 
 Essa separação permite uma arquitetura mais limpa e facilita a depuração ou manutenção de cada função dentro da plataforma.
 
@@ -45,7 +44,7 @@ Essa separação permite uma arquitetura mais limpa e facilita a depuração ou 
 
 ## **Camadas de Processamento de Dados no Viewtilog (Dhyana)**
 
-O módulo backend **Dhyana** segue um padrão clássico de microsserviço **ETL (Extrair, Transformar, Carregar)**:
+O módulo backend **Dhyana** segue um padrão clássico de microsserviço **ETL (Extract, Transform, Load)**:
 
 -   **Camada de Extração**: Coleta dados de protocolos como SNMP, NetFlow, Syslog, ICMP, etc.
 -   **Camada de Transformação**: Aplica filtros, conversões, processamento de regex e cálculos matemáticos.
@@ -59,7 +58,7 @@ Esse processamento baseado em pipeline é definido via arquivos XML e é altamen
 
 **Viewticore** é o data warehouse de séries temporais que suporta:
 
--   Escalabilidade multi-nó e execução paralela de consultas
+-   Escalabilidade multinó e execução paralela de consultas
 -   Políticas de retenção de dados
 -   Funções SQL (GROUP BY, JOIN, ORDER BY, etc.)
 -   Agregação, gerenciamento de alarmes e exportação de documentos (PDF)
@@ -67,4 +66,4 @@ Esse processamento baseado em pipeline é definido via arquivos XML e é altamen
 
 ---
 
-A arquitetura de microsserviços no Viewtinet não apenas suporta fluxos de trabalho complexos de observabilidade e análise, mas também torna a plataforma altamente adaptável e fácil de gerenciar por meio de operações via CLI.
+A arquitetura de microsserviços no Viewtinet não apenas suporta fluxos de trabalho complexos de observabilidade e análise, mas também torna a plataforma altamente adaptável e fácil de gerenciar através de operações via CLI.

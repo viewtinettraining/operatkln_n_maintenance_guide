@@ -1,5 +1,4 @@
 ---
-reusableId: 149
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: SSH
 id: DNT-JX5E-QQ6-D9Q
@@ -7,42 +6,42 @@ slug: ssh
 isVisible: true
 lastUpdated: '2025-09-03 16:05:08'
 ---
-# **<span align="center">SSH Query Connector</span>**
+# **<span align="center">Conector de Consulta SSH</span>**
 
-The **SSH Query Connector** allows Viewtilog to connect to remote devices using SSH and retrieve system metrics or execute custom commands.<br />
-This connector is particularly useful when you need to monitor servers or network devices where SNMP or other protocols are not enabled, but SSH access is available.<br />
-It is a **scheduled connector**, meaning it runs periodically based on the defined execution frequency.
-
-<br />
-
-## **Key Features**
-
--   Establishes an SSH session with the target host.
--   Collects standard metrics such as:
-    
-    -   **CPU usage**
-    -   **Memory utilization**
-    -   **Disk usage**
-    -   **Network interfaces**
-    -   **Uptime**
--   Allows execution of **custom commands** defined by the user.
--   Supports **password-based authentication** or other SSH methods.
+O **Conector de Consulta SSH** permite que o Viewtilog se conecte a dispositivos remotos usando SSH e recupere métricas do sistema ou execute comandos personalizados.<br />
+Este conector é particularmente útil quando você precisa monitorar servidores ou dispositivos de rede nos quais o SNMP ou outros protocolos não estão habilitados, mas o acesso SSH está disponível.<br />
+Ele é um **conector agendado**, o que significa que é executado periodicamente com base na frequência de execução definida.
 
 <br />
 
-## **Configuration Parameters**
+## **Principais Recursos**
 
-From the screenshots provided:
-
-1.  **Connector Type**<br />
-    Select **SSH Query Connector** as the connector type.
-2.  **Pipeline Name**<br />
-    Define a unique name for the pipeline (e.g., `my_ssh_connector`).
-3.  **Execution Configuration**
+-   Estabelece uma sessão SSH com o host de destino.
+-   Coleta métricas padrão como:
     
-    -   **Frequency Type**: Scheduled or periodic.
-    -   **Cron Expression**: Defines how often the queries will be executed (e.g., every minute).
-    -   **Number of Executions**: `-1` means unlimited executions.
+    -   **Uso de CPU**
+    -   **Utilização de memória**
+    -   **Uso de disco**
+    -   **Interfaces de rede**
+    -   **Tempo de atividade (Uptime)**
+-   Permite a execução de **comandos personalizados** definidos pelo usuário.
+-   Suporta **autenticação baseada em senha** ou outros métodos SSH.
+
+<br />
+
+## **Parâmetros de Configuração**
+
+A partir das capturas de tela fornecidas:
+
+1.  **Tipo de Conector**<br />
+    Selecione **SSH Query Connector** como o tipo de conector.
+2.  **Nome do Pipeline**<br />
+    Defina um nome único para o pipeline (ex., `my_ssh_connector`).
+3.  **Configuração de Execução**
+    
+    -   **Tipo de Frequência**: Agendado ou periódico.
+    -   **Expressão Cron**: Define com que frequência as consultas serão executadas (ex., a cada minuto).
+    -   **Número de Execuções**: `-1` significa execuções ilimitadas.
         
         <br />
         
@@ -51,14 +50,14 @@ From the screenshots provided:
     
     <br />
     
-4.  **Host Configuration**
+4.  **Configuração do Host**
     
-    -   **Host Name**: IP address or hostname of the device (e.g., `10.30.23.10`).
-    -   **Port**: Default SSH port is `22`.
-    -   **User**: SSH username (e.g., `viewtinet`).
-    -   **Authentication Type**: Password (other methods may be available).
-    -   **Password**: Corresponding password for authentication.
-    -   Multiple hosts can be added if required
+    -   **Nome do Host**: Endereço IP ou nome do host do dispositivo (ex., `10.30.23.10`).
+    -   **Porta**: A porta SSH padrão é `22`.
+    -   **Usuário**: Nome de usuário SSH (ex., `viewtinet`).
+    -   **Tipo de Autenticação**: Senha (outros métodos podem estar disponíveis).
+    -   **Senha**: A senha correspondente para a autenticação.
+    -   Múltiplos hosts podem ser adicionados, se necessário.
         
         <br />
         
@@ -67,29 +66,29 @@ From the screenshots provided:
     
     <br />
     
-5.  **Queries**<br />
-    Choose the type of query to execute. Available options include:
+5.  **Consultas (Queries)**<br />
+    Escolha o tipo de consulta a ser executada. As opções disponíveis incluem:
     
-    -   `cpu` → Retrieve CPU usage.
-    -   `disk` → Disk utilization.
-    -   `memory` → Memory usage.
-    -   `network` → Network interface metrics.
-    -   `service` → Service status.
-    -   `uname` → System information.
-    -   `uptime` → System uptime.
-    -   `cmd` → Execute a custom command.
+    -   `cpu` → Recuperar uso de CPU.
+    -   `disk` → Utilização de disco.
+    -   `memory` → Uso de memória.
+    -   `network` → Métricas da interface de rede.
+    -   `service` → Status do serviço.
+    -   `uname` → Informações do sistema.
+    -   `uptime` → Tempo de atividade do sistema.
+    -   `cmd` → Executar um comando personalizado.
 
 <br />
 
-## **Example: Querying CPU Metrics**
+## **Exemplo: Consultando Métricas de CPU**
 
--   **Pipeline Name**: `my_ssh_cpu_monitor`
+-   **Nome do Pipeline**: `my_ssh_cpu_monitor`
 -   **Host**: `10.30.23.10`
--   **User**: `viewtinet`
--   **Authentication**: Password
--   **Query Type**: `cpu`
+-   **Usuário**: `viewtinet`
+-   **Autenticação**: Senha
+-   **Tipo de Consulta**: `cpu`
 
-This configuration will connect via SSH and periodically retrieve CPU usage data from the specified host.
+Essa configuração fará a conexão via SSH e recuperará periodicamente os dados de uso de CPU a partir do host especificado.
 
 <br />
 
@@ -101,7 +100,7 @@ This configuration will connect via SSH and periodically retrieve CPU usage data
 
 ---
 
-> ⚠️ **Important Note**<br />
-> Ensure the SSH credentials provided have the necessary permissions to execute the selected queries. For production environments, it is recommended to use restricted, read-only accounts instead of root users.
+> ⚠️ **Nota Importante**<br />
+> Certifique-se de que as credenciais SSH fornecidas tenham as permissões necessárias para executar as consultas selecionadas. Para ambientes de produção, é recomendável usar contas restritas de leitura (read-only) em vez de usuários root.
 
 <br />

@@ -1,5 +1,4 @@
 ---
-reusableId: 126
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: About
 id: AE9-UUBF-A0O-RX1
@@ -7,41 +6,41 @@ slug: about
 isVisible: true
 lastUpdated: '2025-08-28 08:15:30'
 ---
-# **<span align="center">Creating a Custom Plugin</span>**
+# **<span align="center">Criando um Plugin Personalizado</span>**
 
 <br />
 
-<span align="justify">In this subsection, we will explain how to create a custom plugin from scratch. The process will guide you through defining each component of the plugin while exploring all the stages of the ETL cycle Extract, Transform, and Load. By the end of this section, you will understand how to configure connectors, design transformation workflows using grid handlers, and decide how and where the processed data will be loaded, ensuring the plugin fully meets the requirements of your environment.</span>
+<span align="justify">Nesta subseção, explicaremos como criar um plugin personalizado a partir do zero. O processo o guiará na definição de cada componente do plugin, enquanto explora todas as etapas do ciclo ETL: Extrair, Transformar e Carregar. Ao final desta seção, você entenderá como configurar conectores, desenhar fluxos de trabalho de transformação usando grid handlers e decidir como e onde os dados processados serão carregados, garantindo que o plugin atenda totalmente aos requisitos do seu ambiente.</span>
 
 <br />
 
-**Outline of the Creation Process**
+**Esboço do Processo de Criação**
 
 <br />
 
-1.  **Define the Plugin Container**
+1.  **Definir o Contêiner do Plugin**
     
-    -   Assign a name, description, and category.
-    -   Establish the plugin as the mandatory container for one or more pipelines.
-2.  **Configure the Extract Stage**
+    -   Atribuir um nome, descrição e categoria.
+    -   Estabelecer o plugin como o contêiner obrigatório para uma ou mais pipelines.
+2.  **Configurar a Etapa de Extração (Extract)**
     
-    -   Select and configure protocol connectors (e.g., SNMP, ICMP, Syslog, NetFlow, APIs).
-    -   Associate connectors with the data sources to be integrated.
-3.  **Design the Transform Stage**
+    -   Selecionar e configurar os conectores de protocolo (ex., SNMP, ICMP, Syslog, NetFlow, APIs).
+    -   Associar conectores com as fontes de dados a serem integradas.
+3.  **Desenhar a Etapa de Transformação (Transform)**
     
-    -   Add grid handlers to parse, normalize, and enrich incoming data.
-    -   Apply mathematical operations or data mapping rules as needed.
-4.  **Configure the Load Stage**
+    -   Adicionar grid handlers para interpretar (parse), normalizar e enriquecer os dados recebidos.
+    -   Aplicar operações matemáticas ou regras de mapeamento de dados conforme necessário.
+4.  **Configurar a Etapa de Carregamento (Load)**
     
-    -   Decide where the processed data will be stored or exported.
-    -   Options include the Viewtinet TSDB (default), syslog, SCP, or CSV.
-5.  **Integrate Dashboards and Reports**
+    -   Decidir onde os dados processados serão armazenados ou exportados.
+    -   As opções incluem o Viewtinet TSDB (padrão), syslog, SCP ou CSV.
+5.  **Integrar Dashboards e Relatórios**
     
-    -   Link the plugin to existing dashboards, or create new visualizations.
-    -   Ensure the outputs of the ETL pipeline are available for monitoring and analysis.
-6.  **Save and Validate the Plugin**
+    -   Vincular o plugin a dashboards existentes, ou criar novas visualizações.
+    -   Garantir que as saídas do pipeline ETL estejam disponíveis para monitoramento e análise.
+6.  **Salvar e Validar o Plugin**
     
-    -   Deploy the plugin within the Visual Smart Data Broker.
-    -   Verify that data sources are being processed correctly through the defined pipelines.
+    -   Implantar (Deploy) o plugin dentro do Visual Smart Data Broker.
+    -   Verificar se as fontes de dados estão sendo processadas corretamente através das pipelines definidas.
 
 <br />

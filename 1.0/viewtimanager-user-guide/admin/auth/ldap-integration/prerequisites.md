@@ -1,5 +1,4 @@
 ---
-reusableId: 112
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Prerequisites
 id: TC5-RB9Y-U44-GEU
@@ -7,59 +6,59 @@ slug: prerequisites
 isVisible: true
 lastUpdated: '2025-10-15 15:41:10'
 ---
-# **<span align="center">Prerequisites</span>**
+# **<span align="center">Pré-requisitos</span>**
 
-<span align="justify">Integrating Viewtimanager with LDAP Server requires specific configurations to ensure seamless authentication and user management. This chapter outlines the necessary prerequisites, including user permissions, network requirements, and configuration details.</span>
+<span align="justify">A integração do Viewtimanager com o Servidor LDAP requer configurações específicas para garantir a autenticação e o gerenciamento de usuários sem problemas. Este capítulo descreve os pré-requisitos necessários, incluindo permissões de usuário, requisitos de rede e detalhes de configuração.</span>
 
 <br />
 
-## **1\. LDAP User Account Requirements**
+## **1\. Requisitos da Conta de Usuário LDAP**
 
-To connect Viewtimanager with LDAP Server, a dedicated user account must be created in the domain. This account should have the following properties:
+Para conectar o Viewtimanager ao Servidor LDAP, uma conta de usuário dedicada deve ser criada no domínio. Esta conta deve ter as seguintes propriedades:
 
--   **Username:** A unique service account (e.g., `viewtinet_user`).
--   **Permissions:** Read access to the LDAP tree structure to retrieve user and group information.
--   **Non-Expiring Password:** It is recommended to configure the account with a non-expiring password to prevent authentication failures.
+-   **Nome de Usuário:** Uma conta de serviço exclusiva (ex: `viewtinet_user`).
+-   **Permissões:** Acesso de leitura à estrutura de árvore do LDAP para recuperar informações de usuários e grupos.
+-   **Senha que não Expira:** Recomenda-se configurar a conta com uma senha que não expira para evitar falhas de autenticação.
     
     <br />
     
 
-## **2\. Network and Firewall Requirements**
+## **2\. Requisitos de Rede e Firewall**
 
-The following ports must be open for proper communication between Viewtimanager and the LDAP server:
+As seguintes portas devem estar abertas para a comunicação adequada entre o Viewtimanager e o servidor LDAP:
 
--   **TCP 389:** Standard LDAP port for directory queries (non-secure mode).
--   **TCP 636:** Standard LDAPS port for directory queries (secure mode).
+-   **TCP 389:** Porta LDAP padrão para consultas de diretório (modo inseguro).
+-   **TCP 636:** Porta LDAPS padrão para consultas de diretório (modo seguro).
     
     <br />
     
 
-## **3\. LDAP Server Information**
+## **3\. Informações do Servidor LDAP**
 
-Gather the following details before starting the integration:
+Reúna os seguintes detalhes antes de iniciar a integração:
 
--   **Domain Name:** (e.g., `viewtinet.local`)
--   **LDAP Server IP Address:** (e.g., `10.30.23.8 or dc01.viewtinet.local`)
--   **Base DN (Distinguished Name):** (e.g., `DC=viewtinet,DC=local`)
--   **Admin Access DN (Service Account DN):** (e.g., `CN=viewtinet_user,DC=viewtinet,DC=local`)
+-   **Nome do Domínio:** (ex: `viewtinet.local`)
+-   **Endereço IP do Servidor LDAP:** (ex: `10.30.23.8 ou dc01.viewtinet.local`)
+-   **Base DN (Nome Distinto):** (ex: `DC=viewtinet,DC=local`)
+-   **Admin Access DN (DN da Conta de Serviço):** (ex: `CN=viewtinet_user,DC=viewtinet,DC=local`)
     
     <br />
     
 
-## **4\. Time Synchronization**
+## **4\. Sincronização de Tempo**
 
-Both Viewtimanager and the LDAP server must have synchronized time settings to avoid authentication failures due to time drift.
-
-<br />
-
-## **5\. Role by Default**
-
-Unlike Active Directory integration, this version does not support mapping AD groups to specific Viewtinet roles. LDAP users will be auto-provisioned with a single default role on first login. You may use one of the pre-defined roles, or—if a specific role is required create it following the steps in the Roles section of the Viewtimanager User Guide.
+Tanto o Viewtimanager quanto o servidor LDAP devem ter configurações de tempo sincronizadas para evitar falhas de autenticação devido à diferença de tempo.
 
 <br />
 
-### **Next Steps**
+## **5\. Função por Padrão**
 
-<span align="justify">Once these prerequisites are met, the next chapter will guide you through the step-by-step process of configuring Viewtimanager to integrate with LDAP Server, including role assignment to modify the graphical user interface behavior based on user permissions.</span>
+Ao contrário da integração com o Active Directory, esta versão não suporta o mapeamento de grupos do AD para funções específicas do Viewtinet. Os usuários LDAP serão provisionados automaticamente com uma única função padrão no primeiro login. Você pode usar uma das funções predefinidas ou, se uma função específica for necessária, criá-la seguindo os passos na seção Roles do Guia do Usuário do Viewtimanager.
+
+<br />
+
+### **Próximos Passos**
+
+<span align="justify">Assim que esses pré-requisitos forem atendidos, o próximo capítulo o guiará pelo processo passo a passo de configuração do Viewtimanager para se integrar ao Servidor LDAP, incluindo a atribuição de funções para modificar o comportamento da interface gráfica com base nas permissões do usuário.</span>
 
 <br />

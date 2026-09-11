@@ -1,5 +1,4 @@
 ---
-reusableId: 63
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'GUI Logging for AD Users'
 id: 9CB-AQAQ-DQS-CXU
@@ -7,25 +6,25 @@ slug: gui-logging-for-ad-users
 isVisible: true
 lastUpdated: '2025-10-15 15:40:05'
 ---
-# **<span align="center">GUI logging for AD Users</span>**
+# **<span align="center">Acesso à GUI para Usuários do AD</span>**
 
 <br />
 
-Once the Active Directory integration is complete, along with the creation and mapping of roles, you can perform the respective logging test. Users must be created in Active Directory and belong to their corresponding group. The steps are as follows:
+Uma vez que a integração com o Active Directory esteja concluída, juntamente com a criação e o mapeamento de funções, você poderá realizar o respectivo teste de acesso. Os usuários devem ser criados no Active Directory e pertencer ao seu grupo correspondente. Os passos são os seguintes:
 
 <br />
 
-1.  <span align="justify">Please visit the Viewtinet management IP address in your browser, using port 4200 (insecure) or 4201 (secure).</span>
-2.  Enter the username and password
-3.  <span align="justify">If the configuration is correct, Viewtinet will authenticate the user and display the options according to the user's role</span>
+1.  <span align="justify">Por favor, acesse o endereço IP de gerenciamento do Viewtinet no seu navegador, usando a porta 4200 (insegura) ou 4201 (segura).</span>
+2.  Insira o nome de usuário e a senha
+3.  <span align="justify">Se a configuração estiver correta, o Viewtinet autenticará o usuário e exibirá as opções de acordo com a função do usuário</span>
 
 <br />
 
-<span align="justify">For the purposes of this guide, three users have been created and assigned to each of the groups</span>
+<span align="justify">Para os propósitos deste guia, três usuários foram criados e atribuídos a cada um dos grupos</span>
 
 <br />
 
-<table><tbody><tr><td><p><strong><span align="center">User</span></strong></p></td><td><p><strong><span align="center">Active Directory Group</span></strong></p></td><td><p><strong><span align="center">Viewtinet Role</span></strong></p></td><td><p><strong><span align="center">Behavior</span></strong></p></td></tr><tr><td><p><span align="center">user_admin_viewtinet</span></p></td><td><p><span align="center">Admins_Viewtinet</span></p></td><td><p><span align="center">Admin_Viewtinet</span></p></td><td><p><span align="center">Full Acess to Viewtimanager &amp; Viewtisight</span></p></td></tr><tr><td><p><span align="center">user_vs_viewtinet</span></p></td><td><p><span align="center">Viewtisight_Viewtinet</span></p></td><td><p><span align="center">Viewtisight_Viewtinet</span></p></td><td><p>Full Access to Viewtisight &amp; Denied Access to Viewtimanager</p></td></tr><tr><td><p><span align="center">user_ro_viewtinet</span></p></td><td><p>ReadOnly_Viewtinet</p></td><td><p>ReadOnly_Viewtinet</p></td><td><p>Restricted Access to Viewtisight (No dashboard Composer) &amp; Denied Access to Viewtimanager</p></td></tr></tbody></table>
+<table><tbody><tr><td><p><strong><span align="center">Usuário</span></strong></p></td><td><p><strong><span align="center">Grupo do Active Directory</span></strong></p></td><td><p><strong><span align="center">Função do Viewtinet</span></strong></p></td><td><p><strong><span align="center">Comportamento</span></strong></p></td></tr><tr><td><p><span align="center">user_admin_viewtinet</span></p></td><td><p><span align="center">Admins_Viewtinet</span></p></td><td><p><span align="center">Admin_Viewtinet</span></p></td><td><p><span align="center">Acesso Total ao Viewtimanager e Viewtisight</span></p></td></tr><tr><td><p><span align="center">user_vs_viewtinet</span></p></td><td><p><span align="center">Viewtisight_Viewtinet</span></p></td><td><p><span align="center">Viewtisight_Viewtinet</span></p></td><td><p>Acesso Total ao Viewtisight e Acesso Negado ao Viewtimanager</p></td></tr><tr><td><p><span align="center">user_ro_viewtinet</span></p></td><td><p>ReadOnly_Viewtinet</p></td><td><p>ReadOnly_Viewtinet</p></td><td><p>Acesso Restrito ao Viewtisight (Sem Compositor de Painéis) e Acesso Negado ao Viewtimanager</p></td></tr></tbody></table>
 
 <br />
 
@@ -35,7 +34,7 @@ Once the Active Directory integration is complete, along with the creation and m
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/jcK2QHiZKSXbgj9UVl66.png" align="center"></figure>
 
-From the 'Profile' option in the 'Help' button in Viewtisight, you will be able to see the user
+A partir da opção 'Profile' no botão 'Help' no Viewtisight, você poderá ver o usuário
 
 <br />
 
@@ -47,7 +46,7 @@ From the 'Profile' option in the 'Help' button in Viewtisight, you will be able 
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/67xdZpSTXnATYX4X4b8L.png" align="center"></figure>
 
-Full Access to Viewtisight & Viewtimanager
+Acesso Total ao Viewtisight e Viewtimanager
 
 <br />
 
@@ -61,13 +60,13 @@ Full Access to Viewtisight & Viewtimanager
 
 <br />
 
-Full Access to Viewtisight:
+Acesso Total ao Viewtisight:
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/Hzq276bMwR9CXZWaTN7l.png" align="center"></figure>
 
-Viewtimanager Access Denied:
+Acesso Negado ao Viewtimanager:
 
 <br />
 
@@ -79,13 +78,13 @@ Viewtimanager Access Denied:
 
 <br />
 
-Restricted access to Viewtisight without options for creating dashboards, metrics, etc.
+Acesso restrito ao Viewtisight sem opções para criação de painéis (dashboards), métricas, etc.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/5f3sro2CXnrmntow/images/knXaRhkhYqh66S4j5vz3.png" align="center"></figure>
 
-Viewtimanager Access Denied:
+Acesso Negado ao Viewtimanager:
 
 <br />
 

@@ -1,18 +1,17 @@
 ---
-reusableId: 75
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Envio de licença'
+title: 'Upload license'
 id: LV2-HON0-UN1-IZE
 slug: upload-license
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-03-10 16:04:13'
 ---
-# **<span align="center">Envio de Licença</span>**
+# **<span align="center">Carregar Licença</span>**
 
-<div class="sd-callout" data-callout-type="info">Lembre-se que para obter um arquivo de licença, ele será gerado e compartilhado pelo seu representante Viewtinet via e-mail.</div>
+<div class="sd-callout" data-callout-type="info">Lembre-se de que, para obter um arquivo de licença, ele será gerado e compartilhado com você por e-mail pelo seu representante da Viewtinet.</div>
 
-Para enviar a licença, acesse o endereço IP do appliance, máquina virtual ou servidor COTS usando o navegador web de sua preferência e visite **[http://x.x.x.x:4200](http://x.x.x.x:4200)**. Primeiro, conclua o processo de autenticação usando o usuário **admin** e a senha configurada na etapa **“Ativação do usuário admin”**.
+Para carregar a licença, acesse o endereço IP do appliance, máquina virtual ou servidor COTS usando seu navegador web preferido e visite **[http://x.x.x.x:4200](http://x.x.x.x:4200)**. Primeiro, conclua o processo de autenticação usando o usuário **admin** e a senha configurada na etapa **“Ativação do usuário administrador”**.
 
 <br />
 
@@ -20,7 +19,7 @@ Para enviar a licença, acesse o endereço IP do appliance, máquina virtual ou 
 
 <figure align="center" style="width:45%"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/oSdFIJKNSPfP5WxbJzoy.png" width="45%" align="center"></figure>
 
-Uma vez conectado, o "Seletor de Aplicativos" será apresentado, onde você deverá escolher a opção Viewtimanager, conforme mostrado abaixo.
+Após fazer login, o "Seletor de Aplicativos" (App Selector) será exibido, onde você deverá escolher a opção Viewtimanager, conforme mostrado abaixo.
 
 <br />
 
@@ -30,7 +29,7 @@ Uma vez conectado, o "Seletor de Aplicativos" será apresentado, onde você deve
 
 <br />
 
-<div class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"><p>Clique no botão <strong>'CARREGAR ARQUIVO DE LICENÇA'</strong> e selecione o arquivo <strong>.key</strong> fornecido pelo <strong>Viewtinet</strong>.</p></div>
+<div class="markdown prose dark:prose-invert w-full break-words dark markdown-new-styling"><p>Clique no botão <strong>'LOAD LICENSE FILE' (CARREGAR ARQUIVO DE LICENÇA)</strong> e selecione o arquivo <strong>.key</strong> fornecido pela <strong>Viewtinet</strong>.</p></div>
 
 <div class="z-0 flex min-h-[46px] justify-start"><p><br></p></div>
 
@@ -38,7 +37,7 @@ Uma vez conectado, o "Seletor de Aplicativos" será apresentado, onde você deve
 
 <br />
 
-Uma vez que o arquivo for enviado, as funcionalidades do Viewtimanager serão ativadas.
+Assim que o arquivo for carregado, os recursos do Viewtimanager serão ativados.
 
 <br />
 

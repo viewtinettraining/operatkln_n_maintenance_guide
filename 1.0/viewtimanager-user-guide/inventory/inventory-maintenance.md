@@ -1,26 +1,26 @@
 ---
-reusableId: 93
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Inventory Maintenance'
-id: 9Y5-B4O0-0S1-PP5
+id: WQN-ONVQ-FEA-IOR
 slug: inventory-maintenance
 isVisible: true
-lastUpdated: '2025-10-15 14:51:03'
+isSearchable: true
+lastUpdated: '2026-09-10 19:57:18'
 ---
-## **<span align="center"><span class="text-large">Inventory Maintenance Functions</span></span>**
+## **<span align="center"><span class="text-large">Funções de Manutenção do Inventário</span></span>**
 
 <br />
 
-<span align="justify">Beyond provisioning devices and credentials, the Inventory feature offers powerful maintenance capabilities to keep your data clean, organized, and tailored to your needs. In this chapter, you’ll learn how to manage columns, merge or delete records, export datasets, and perform other housekeeping tasks that ensure your inventory remains accurate and actionable.</span>
+<span align="justify">Além de provisionar dispositivos e credenciais, o recurso Inventory (Inventário) oferece poderosas capacidades de manutenção para manter seus dados limpos, organizados e adaptados às suas necessidades. Neste capítulo, você aprenderá a gerenciar colunas, mesclar ou excluir registros, exportar conjuntos de dados e realizar outras tarefas de manutenção para garantir que seu inventário permaneça preciso e acionável.</span>
 
-## **Toggling Visible Columns**
+## **Alternando Colunas Visíveis**
 
-The “Visible columns” picker lets you control which device attributes are shown in the Inventory table. These fields are defined by your provisioning method (CSV import, Autodiscovery or manual entry). This is **not** the place to add new columns—only to enable or disable existing ones.
+O seletor “Visible columns” (Colunas visíveis) permite que você controle quais atributos do dispositivo são exibidos na tabela do Inventory. Esses campos são definidos pelo seu método de provisionamento (importação via CSV, Autodescoberta ou entrada manual). Este **não** é o lugar para adicionar novas colunas — apenas para habilitar ou desabilitar as existentes.
 
 <br />
 
-1.  **Open the Column Picker<br />
-    **Click the dropdown arrow (▾) next to **Visible columns** above the devices table.
+1.  **Abrir o Seletor de Colunas<br />
+    **Clique na seta suspensa (▾) ao lado de **Visible columns** acima da tabela de dispositivos.
     
     <br />
     
@@ -28,8 +28,8 @@ The “Visible columns” picker lets you control which device attributes are sh
     
     <br />
     
-2.  **Enable or Disable Fields<br />
-    **In the list that appears, simply check the box beside any column you want to show, or uncheck to hide it. Columns include attributes such as `device`, `mac`, `oid_group_names`, `sw_version`, `sys_object_id`, `system_name`, etc.
+2.  **Habilitar ou Desabilitar Campos<br />
+    **Na lista que aparece, basta marcar a caixa ao lado de qualquer coluna que deseja exibir ou desmarcar para ocultá-la. As colunas incluem atributos como `device`, `mac`, `oid_group_names`, `sw_version`, `sys_object_id`, `system_name`, etc.
     
     <br />
     
@@ -41,112 +41,112 @@ The “Visible columns” picker lets you control which device attributes are sh
     
     <br />
     
-3.  **Save Layout**<br />
-    Finally, click **Save Changes** to persist your column configuration across sessions.
+3.  **Salvar o Layout**<br />
+    Por fim, clique em **Save Changes** (Salvar Alterações) para manter a configuração de colunas entre as sessões.
 
 ---
 
-## **Adding Custom Columns**
+## **Adicionando Colunas Personalizadas**
 
 <br />
-You can extend your Inventory schema by creating new custom columns to capture device attributes beyond those provided by CSV, Autodiscovery, or manual provisioning.
+Você pode estender o esquema do seu Inventory criando novas colunas personalizadas para capturar atributos de dispositivos além daqueles fornecidos por CSV, Autodescoberta ou provisionamento manual.
 
-1.  **Open the “Add New Column” Dialog**<br />
-    In the Inventory view, click **\+ Add New Column** next to the column-picker dropdown.
+1.  **Abrir a Janela "Add New Column" (Adicionar Nova Coluna)**<br />
+    Na visualização do Inventory, clique em **\+ Add New Column** ao lado da lista suspensa do seletor de colunas.
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/nKy2hAosimX1vN0n1gFi.png" align="center"></figure>
     
     <br />
     
-2.  **Define Your Column**<br />
-    In the modal that appears:
+2.  **Definir a sua Coluna**<br />
+    Na janela modal que aparece:
     
-    -   **Name**: Enter a unique key for the column (e.g. `example_new_column2`, `rack_label`).
-    -   **Copy values from another column** (optional): If you’d like to initialize your new field with data from an existing column, check this box and select the source (e.g. `system_name`).
+    -   **Name**: Insira uma chave única para a coluna (ex: `example_new_column2`, `rack_label`).
+    -   **Copy values from another column** (opcional): Se desejar inicializar seu novo campo com dados de uma coluna existente, marque esta caixa e selecione a origem (ex: `system_name`).
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/emNG7WEfCgkev80asBxJ.png" align="center"></figure>
     
     <br />
     
-3.  **Confirm Addition**<br />
-    Click **OK**. The new column will appear at the end of your table and in the “Visible columns” picker:
+3.  **Confirmar a Adição**<br />
+    Clique em **OK**. A nova coluna aparecerá no final da sua tabela e no seletor "Visible columns":
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/SrtVIIkud1VqINFxJxxZ.png" align="center"></figure>
     
     <br />
     
-4.  **Populate or Adjust Values**
+4.  **Preencher ou Ajustar Valores**
     
-    -   If you copied values in step 2, your new column will already be prefilled.
-    -   Otherwise, click **Apply to all** above the column to set a default, or edit cells individually.
-5.  **Save Your Layout**<br />
-    Click **Save Changes** to persist the new column and its contents across sessions.
+    -   Se você copiou os valores na etapa 2, sua nova coluna já estará preenchida.
+    -   Caso contrário, clique em **Apply to all** (Aplicar a todos) acima da coluna para definir um padrão ou edite as células individualmente.
+5.  **Salvar o Layout**<br />
+    Clique em **Save Changes** para manter a nova coluna e seu conteúdo entre as sessões.
 
-> **Tip:** Custom columns are fully integrated—available for filtering, bulk editing, and CSV export just like built-in fields.
+> **Dica:** Colunas personalizadas são totalmente integradas — estão disponíveis para filtragem, edição em massa e exportação para CSV, assim como os campos embutidos.
 
 ---
 
-## **Merging Duplicate Rows**
+## **Mesclando Linhas Duplicadas**
 
 <br />
 
-When multiple rows represent the same device, you can merge them:
+Quando várias linhas representam o mesmo dispositivo, você pode mesclá-las:
 
-1.  Select the checkbox next to each duplicate row.
-2.  Click **Merge Duplicated Rows** in the toolbar.
-3.  Confirm which values to retain for each column.
-4.  Click **Merge** to consolidate into a single record.
-
----
-
-## **Deleting Records**
-
-To remove obsolete entries:
-
-1.  Select one or more rows using their checkboxes.
-2.  Click **Delete Selected Rows** (trash icon).
-3.  Confirm deletion in the prompt.
+1.  Marque a caixa de seleção ao lado de cada linha duplicada.
+2.  Clique em **Merge Duplicated Rows** (Mesclar Linhas Duplicadas) na barra de ferramentas.
+3.  Confirme quais valores reter para cada coluna.
+4.  Clique em **Merge** para consolidar em um único registro.
 
 ---
 
-## **Exporting Your Inventory**
+## **Excluindo Registros**
 
-You can export any current view to CSV:
+Para remover entradas obsoletas:
 
-1.  Apply filters and adjust columns as needed.
-2.  Click **Export** in the upper-right corner of the devices table.
-3.  Download the generated CSV file.
+1.  Selecione uma ou mais linhas usando as caixas de seleção correspondentes.
+2.  Clique em **Delete Selected Rows** (Excluir Linhas Selecionadas, ícone de lixeira).
+3.  Confirme a exclusão no aviso.
 
 ---
 
-## **Finding Plugins & Pipelines for a Specific Device**
+## **Exportando o seu Inventário**
 
-Sometimes you need to know exactly which monitoring plugins (and their underlying pipelines) are collecting data from a given device. The Inventory view makes this easy:
+Você pode exportar qualquer visualização atual para CSV:
 
-1.  **Locate Your Device**<br />
-    In **Overview → Devices**, scroll or filter to the target row (e.g. `10.10.10.1` or `10.30.23.45`).<br />
+1.  Aplique filtros e ajuste as colunas conforme necessário.
+2.  Clique em **Export** (Exportar) no canto superior direito da tabela de dispositivos.
+3.  Baixe o arquivo CSV gerado.
+
+---
+
+## **Encontrando Plugins e Pipelines para um Dispositivo Específico**
+
+Às vezes, você precisa saber exatamente quais plugins de monitoramento (e seus respectivos pipelines) estão coletando dados de um determinado dispositivo. A visualização do Inventory facilita isso:
+
+1.  **Localizar o seu Dispositivo**<br />
+    Em **Overview → Devices**, role a página ou filtre até chegar na linha desejada (ex: `10.10.10.1` ou `10.30.23.45`).<br />
     
-2.  **Click the Device-Level Search Icon**<br />
-    On the rightmost column of that row, click the 🔍 **“Show plugins using this device”** icon.
+2.  **Clicar no Ícone de Pesquisa no Nível do Dispositivo**<br />
+    Na coluna mais à direita dessa linha, clique no ícone 🔍 **“Show plugins using this device”** (Mostrar plugins usando este dispositivo).
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/6YglcrKNtQFo78sql1bT.png"></figure>
     
     <br />
     
-3.  **See Plugin Assignment Filters**<br />
-    You’ll be taken to the **Plugins** tab, where the filter box is prefilled with your device’s IP. Only plugins currently tied to that device will be listed.
+3.  **Ver os Filtros de Atribuição de Plugins**<br />
+    Você será levado à aba **Plugins**, onde a caixa de filtro já estará preenchida com o IP do seu dispositivo. Somente os plugins atualmente vinculados àquele dispositivo serão listados.
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/uXz7m93Ue00vaqnUqlNj.png"></figure>
     
 
 ---
 
-## **Finding Devices Associated with a Pipeline**
+## **Encontrando Dispositivos Associados a um Pipeline**
 
-If you need to know which inventory devices are tied to a specific data-collection pipeline, follow these steps:
+Se você precisar saber quais dispositivos do inventário estão vinculados a um pipeline de coleta de dados específico, siga estes passos:
 
-1.  **Open the Plugins View**<br />
-    In the Inventory screen, click the **Plugins** tab.
+1.  **Abrir a Visualização de Plugins**<br />
+    Na tela do Inventory, clique na aba **Plugins**.
     
     <br />
     
@@ -154,33 +154,33 @@ If you need to know which inventory devices are tied to a specific data-collecti
     
     <br />
     
-2.  **Expand the Desired Plugin**<br />
-    Find the plugin that contains your pipeline (e.g. **network monitoring**) and click the ▶️ arrow to reveal its pipelines.
+2.  **Expandir o Plugin Desejado**<br />
+    Encontre o plugin que contém seu pipeline (ex: **network monitoring**) e clique na seta ▶️ para exibir seus pipelines.
     
     <br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/oUqdKoqIxhHCDwKF8mHU.png" align="center"></figure>
     
-3.  **Search on the Pipeline Row**<br />
-    Locate the pipeline you care about (e.g. `snmp_device_config`) and click the 🔍 **“Show devices assigned to this pipeline”** icon on that row.
+3.  **Pesquisar na Linha do Pipeline**<br />
+    Localize o pipeline que lhe interessa (ex: `snmp_device_config`) e clique no ícone 🔍 **“Show devices assigned to this pipeline”** (Mostrar dispositivos atribuídos a este pipeline) naquela linha.
     
     <br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/qYi87vjl83SdIacdY4aJ.png" align="center"></figure>
     
-4.  **View the Filtered Device List**<br />
-    A device picker appears, showing only those rows matching the pipeline’s filter (e.g. from the “All devices” or a custom filter like `dev.ip == '10.10.10.1'`). You can scroll through the list or further refine it via the search bar.<br />
+4.  **Ver a Lista de Dispositivos Filtrada**<br />
+    Um seletor de dispositivos aparece, mostrando apenas as linhas correspondentes ao filtro do pipeline (ex: de “All devices” ou de um filtro personalizado como `dev.ip == '10.10.10.1'`). Você pode rolar a lista ou refiná-la usando a barra de pesquisa.<br />
     
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/TlJWz6vwmnWoy25V77rM.png">
     
     <br />
     
-5.  **Inspect or Confirm**
+5.  **Inspecionar ou Confirmar**
     
-    -   Review which IP/Hostnames, OID groups, SNMP versions, etc. are active.
-    -   When you’re done, click **OK** to close the device list.
+    -   Revise quais IPs/Hostnames, grupos de OID, versões do SNMP, etc., estão ativos.
+    -   Quando terminar, clique em **OK** para fechar a lista de dispositivos.
 
-> **Tip:** Use this drill-down anytime you want to audit or troubleshoot exactly which network assets a particular collection pipeline is targeting.
+> **Dica:** Use esse detalhamento sempre que quiser auditar ou solucionar problemas para ver exatamente quais ativos de rede um determinado pipeline de coleta está alvejando.
 
 <br />
-With these tools, you can maintain a lean, accurate inventory that reflects your network’s true state making downstream monitoring, analytics, and reporting far more reliable.
+Com essas ferramentas, você pode manter um inventário enxuto e preciso, que reflita o verdadeiro estado da sua rede, tornando o monitoramento, a análise e a criação de relatórios subsequentes muito mais confiáveis.

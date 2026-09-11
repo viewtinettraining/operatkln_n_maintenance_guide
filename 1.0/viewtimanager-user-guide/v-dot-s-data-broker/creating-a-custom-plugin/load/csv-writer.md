@@ -7,17 +7,17 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-22 13:24:47'
 ---
-# **<span align="center">CSV Writer</span>**
+# **<span align="center">Gravador de CSV (CSV Writer)</span>**
 
 <br />
 
-The **CSV Writer** producer is used to dump the final transformed grid directly into a specific file location within the Operating System. It formats the output into a comma-separated values (CSV) file, making it ideal for creating flat file backups, exporting logs for third-party analysis tools, or generating static periodic reports.
+O produtor **CSV Writer** é usado para despejar a grade final transformada diretamente em um local de arquivo específico dentro do Sistema Operacional. Ele formata a saída em um arquivo de valores separados por vírgulas (CSV), tornando-o ideal para criar backups de arquivos simples, exportar logs para ferramentas de análise de terceiros, ou gerar relatórios periódicos estáticos.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-When you select `CSV Writer` from the producer dropdown, the system will automatically pre-configure the necessary variables using the plugin's name. However, all these fields are entirely customizable.
+Ao selecionar `CSV Writer` no menu suspenso de produtores, o sistema irá pré-configurar automaticamente as variáveis necessárias usando o nome do plugin. No entanto, todos esses campos são totalmente personalizáveis.
 
 <br />
 
@@ -25,17 +25,17 @@ When you select `CSV Writer` from the producer dropdown, the system will automat
 
 <br />
 
--   **CSV Filename**: The name of the resulting file. By default, it takes the `%%%PLUGIN_NAME%%%` macro, but you can explicitly specify the filename (e.g., `icmp`).
--   **CSV Destination Path**: The directory where the file will be saved. By default, it auto-configures a subfolder based on the plugin name.
--   **CSV Separator**: The character used to delimit the columns in the output file. Defaults to a comma (`,`).
--   **Use Timestamp in filenames**: A checkbox that, when enabled, automatically appends the current execution timestamp to the filename. This is highly recommended to prevent files from being overwritten on subsequent executions.
+-   **CSV Filename** (Nome do arquivo CSV): O nome do arquivo resultante. Por padrão, ele pega a macro `%%%PLUGIN_NAME%%%`, mas você pode especificar o nome do arquivo explicitamente (ex., `icmp`).
+-   **CSV Destination Path** (Caminho de Destino do CSV): O diretório onde o arquivo será salvo. Por padrão, ele configura automaticamente uma subpasta baseada no nome do plugin.
+-   **CSV Separator** (Separador CSV): O caractere usado para delimitar as colunas no arquivo de saída. O padrão é uma vírgula (`,`).
+-   **Use Timestamp in filenames** (Usar Timestamp nos nomes dos arquivos): Uma caixa de seleção (checkbox) que, quando habilitada, anexa automaticamente o carimbo de data/hora (timestamp) da execução atual ao nome do arquivo. Isso é altamente recomendado para evitar que arquivos sejam sobrescritos em execuções subsequentes.
 
-> \[!WARNING\] **Important Path Restriction**<br />
-> The root directory for writing these files **must** be `/opt/vn/dhyana/var/data/`. If you attempt to configure a destination path outside of this root directory, the process might fail to write the files due to strict Operating System permission restrictions.
+> \[!WARNING\] **Importante: Restrição de Caminho**<br />
+> O diretório raiz para a gravação desses arquivos **deve** ser `/opt/vn/dhyana/var/data/`. Se você tentar configurar um caminho de destino fora deste diretório raiz, o processo pode falhar em gravar os arquivos devido a restrições estritas de permissão do Sistema Operacional.
 
 <br />
 
-Here is an example of a custom configuration pointing to a specific `icmp/collected` subfolder:
+Aqui está um exemplo de uma configuração personalizada apontando para uma subpasta `icmp/collected` específica:
 
 <br />
 

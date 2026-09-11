@@ -10,7 +10,7 @@ id: 9PX-AV4-WBK-OXM
 
 <br />
 
-The **BYPASS EXTENSIONS** tab provides a list of the available Bypasser plugins installed on the system. It is important to note that **this page is strictly informational**, meaning it displays the status and basic configuration of the extensions, but their operational state (enabled/disabled) is managed from the Bypass Config tab or other sections.
+A guia **BYPASS EXTENSIONS** fornece uma lista dos plug-ins Bypasser disponíveis instalados no sistema. É importante observar que **esta página é estritamente informativa**, o que significa que ela exibe o status e a configuração básica das extensões, mas o estado operacional (ativado/desativado) é gerenciado a partir da guia Bypass Config ou em outras seções.
 
 <br />
 
@@ -22,26 +22,26 @@ The **BYPASS EXTENSIONS** tab provides a list of the available Bypasser plugins 
 
 ## **How Bypass Extensions Work**
 
-A Bypasser plugin functions as an **additional Watchdog** for the appliance. 
+Um plug-in Bypasser funciona como um **Watchdog adicional** para o dispositivo. 
 
-While the "main" Bypasser Watchdog observes any changes to the classifier process ("The Probe"), a plugin can observe essentially anything that yields a "boolean" result (i.e., reporting either **OK** or **ERROR**).
+Enquanto o Watchdog Bypasser "principal" observa quaisquer alterações no processo do classificador ("The Probe"), um plug-in pode observar essencialmente qualquer coisa que produza um resultado "booleano" (ou seja, relatando **OK** ou **ERROR**).
 
 ### **Logical AND Operation**
-When one or more plugins are enabled, they form a **"logical AND"** condition together with the main Bypasser Watchdog. This means that:
-- **ALL** results must return `OK/READY` for the Bypasser to consider the system to be in a normal operational state.
-- If **at least one** plugin is failing, the Bypass device is immediately set to `FORCE_BYPASS`.
+Quando um ou mais plug-ins estão ativados, eles formam uma condição **"logical AND"** juntamente com o Watchdog Bypasser principal. Isso significa que:
+- **TODOS** os resultados devem retornar `OK/READY` para que o Bypasser considere o sistema em um estado operacional normal.
+- Se **pelo menos um** plug-in estiver falhando, o dispositivo de Bypass será imediatamente ajustado para `FORCE_BYPASS`.
 
 ### **Example: Viewtify OPT Plugin**
-For instance, the **Viewtify OPT** plugin acts as a Watchdog specifically for the Viewtify OPT service. 
-If this plugin is enabled, both *The Probe* and the *Viewtify OPT service* must report success. If either of them fails, the Bypasser stops sending heartbeats, and the Bypass device is forced into the `FORCE_BYPASS` state.
+Por exemplo, o plug-in **Viewtify OPT** atua como um Watchdog especificamente para o serviço Viewtify OPT. 
+Se esse plug-in for ativado, tanto o *The Probe* quanto o serviço *Viewtify OPT* devem relatar sucesso. Se qualquer um deles falhar, o Bypasser para de enviar batimentos cardíacos (heartbeats) e o dispositivo de Bypass é forçado para o estado `FORCE_BYPASS`.
 
 ---
 
 ## **Extension States**
 
-There is always a fixed number of deployed (available) plugins that are installed together with the Bypasser itself. However, an extension can either be enabled or disabled:
+Sempre há um número fixo de plug-ins implantados (disponíveis) que são instalados juntamente com o próprio Bypasser. No entanto, uma extensão pode ser ativada ou desativada:
 
-- **Disabled Extension:** Does not affect the internal state or the decision-making of the Bypasser.
-- **Enabled Extension:** Actively monitors its assigned service and can force the system into bypass if it detects a failure (as described in the example above).
+- **Disabled Extension:** Não afeta o estado interno ou a tomada de decisão do Bypasser.
+- **Enabled Extension:** Monitora ativamente seu serviço atribuído e pode forçar o sistema para bypass se detectar uma falha (conforme descrito no exemplo acima).
 
 <br />

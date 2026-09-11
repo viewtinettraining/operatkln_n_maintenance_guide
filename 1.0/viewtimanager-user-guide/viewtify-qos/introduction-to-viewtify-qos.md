@@ -7,37 +7,37 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 11:13:26'
 ---
-# **<span align="center">Introduction to Viewtify QoS</span>**
+# **<span align="center">Introdução ao QoS do Viewtify</span>**
 
 <br />
 
-**Viewtify QoS** is Viewtinet's advanced bandwidth management and Quality of Service module. It provides administrators with precise control over network traffic, ensuring that critical applications receive the necessary resources while limiting the impact of non-essential data transfers
+**Viewtify QoS** é o módulo avançado de gerenciamento de largura de banda e Qualidade de Serviço da Viewtinet. Ele fornece aos administradores controle preciso sobre o tráfego da rede, garantindo que os aplicativos críticos recebam os recursos necessários e, ao mesmo tempo, limitando o impacto das transferências de dados não essenciais.
 
-Through Viewtify QoS, you can create and enforce powerful traffic policies, including:
+Através do QoS do Viewtify, você pode criar e aplicar poderosas políticas de tráfego, incluindo:
 
--   **Rate-Limiting:** Restricting the maximum bandwidth available to specific users, IPs, or applications.
--   **Traffic Shaping:** Smoothing out traffic bursts to maintain a steady and predictable flow of data.
--   **Prioritization:** Giving preference to mission-critical traffic (like VoIP or video conferencing) over lower-priority traffic (like file downloads).
--   **Dropping:** Completely blocking or discarding unwanted or malicious traffic.
-
-<br />
-
----
-
-## **Dependency on Viewtimon**
-
-> <div class="sd-callout" data-callout-type="alert">The Viewtify QoS module is fundamentally tied to the <strong>Viewtimon</strong> DPI engine.</div>
-
-**It is mandatory to deploy Viewtimon** in order to use Viewtify QoS. This is because Viewtify relies entirely on Viewtimon's deep packet inspection (DPI) capabilities to accurately classify the traffic traversing the network. Viewtimon identifies the applications, protocols, and users, and then Viewtify applies the corresponding bandwidth management policies based on that classification.
+-   **Rate-Limiting (Limitação de Taxa):** Restringir a largura de banda máxima disponível para usuários, IPs ou aplicativos específicos.
+-   **Traffic Shaping (Modelagem de Tráfego):** Suavizar rajadas de tráfego para manter um fluxo de dados constante e previsível.
+-   **Prioritization (Priorização):** Dar preferência ao tráfego de missão crítica (como VoIP ou videoconferência) em relação ao tráfego de prioridade mais baixa (como downloads de arquivos).
+-   **Dropping (Descarte):** Bloquear completamente ou descartar tráfego indesejado ou malicioso.
 
 <br />
 
 ---
 
-## **Inline Deployment and Bypasser**
+## **Dependência do Viewtimon**
 
-Unlike traditional monitoring tools that can operate passively on a mirrored port, Viewtify QoS is an active control mechanism. Therefore, it must be deployed **inline** with the network traffic.
+> <div class="sd-callout" data-callout-type="alert">O módulo QoS do Viewtify está fundamentalmente ligado à engine de DPI do <strong>Viewtimon</strong>.</div>
 
-To ensure network high availability and prevent the Viewtinet appliance from becoming a single point of failure, Viewtify QoS is deployed in conjunction with a **hardware bypasser**. The bypasser ensures that if the appliance loses power or the Viewtify service stops, network traffic will physically bypass the appliance and continue flowing without interruption.
+**É obrigatório implantar o Viewtimon** para usar o QoS do Viewtify. Isso ocorre porque o Viewtify depende inteiramente das capacidades de inspeção profunda de pacotes (DPI) do Viewtimon para classificar com precisão o tráfego que atravessa a rede. O Viewtimon identifica os aplicativos, protocolos e usuários e, em seguida, o Viewtify aplica as políticas de gerenciamento de largura de banda correspondentes com base nessa classificação.
 
-_(The specific configuration and management of the bypasser will be explained in detail in subsequent sections)._
+<br />
+
+---
+
+## **Implantação Inline e Bypasser**
+
+Ao contrário das ferramentas tradicionais de monitoramento que podem operar passivamente em uma porta espelhada, o QoS do Viewtify é um mecanismo de controle ativo. Portanto, ele deve ser implantado **inline** (em linha) com o tráfego de rede.
+
+Para garantir a alta disponibilidade da rede e evitar que o appliance da Viewtinet se torne um ponto único de falha, o QoS do Viewtify é implantado em conjunto com um **bypasser de hardware**. O bypasser garante que se o appliance perder energia ou o serviço Viewtify for interrompido, o tráfego da rede ignorará fisicamente o appliance e continuará fluindo sem interrupção.
+
+_(A configuração e o gerenciamento específicos do bypasser serão explicados em detalhes nas seções subsequentes)._

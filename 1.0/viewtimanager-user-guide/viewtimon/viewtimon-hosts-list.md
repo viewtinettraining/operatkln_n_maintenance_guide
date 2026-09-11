@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 10:13:22'
 ---
-# **<span align="center">Viewtimon Hosts List</span>**
+# **<span align="center">Lista de Hosts do Viewtimon</span>**
 
 <br />
 
-The **HOSTS LIST** tab provides an overview of the physical or virtual appliance where the Viewtimon engine is currently deployed and running.
+A guia **HOSTS LIST** fornece uma visão geral da appliance física ou virtual onde o mecanismo do Viewtimon está atualmente implantado e em execução.
 
 <br />
 
@@ -21,14 +21,14 @@ The **HOSTS LIST** tab provides an overview of the physical or virtual appliance
 
 ---
 
-## **Informational Overview**
+## **Visão Geral Informativa**
 
-For the vast majority of users, this tab is **purely informational**. It displays the underlying Hostname or IP Address (e.g., `10.30.23.5`) and LAN interface IP associated with the Viewtimon module. This helps administrators quickly identify which physical or virtual node is currently processing the network traffic.
+Para a grande maioria dos usuários, esta aba é **puramente informativa**. Ela exibe o Nome do Host subjacente ou o Endereço IP (por exemplo, `10.30.23.5`) e o IP da interface LAN associada ao módulo do Viewtimon. Isso ajuda os administradores a identificar rapidamente qual nó físico ou virtual está processando o tráfego de rede no momento.
 
-Additionally, this section displays High Availability (HA) status if applicable (e.g., "No HA will be applied as there are only one host defined" for standalone deployments).
+Além disso, esta seção exibe o status de Alta Disponibilidade (HA) se aplicável (por exemplo, "No HA will be applied as there are only one host defined" para implantações independentes).
 
-> <div class="sd-callout" data-callout-type="warning"><strong>System Architecture Changes</strong> The settings within this tab (such as adding new hosts or uninstalling nodes) directly manipulate the cluster architecture of the Viewtimon engine.</div>
+> <div class="sd-callout" data-callout-type="warning"><strong>Mudanças na Arquitetura do Sistema</strong> As configurações dentro desta guia (como a adição de novos hosts ou a desinstalação de nós) manipulam diretamente a arquitetura de cluster do mecanismo Viewtimon.</div>
 > 
-> **Do not make any changes in this section** unless you have deep architectural knowledge of the deployment or have been explicitly instructed by Viewtinet Support. Modifying these fields without caution can cause severe operational issues and result in the DPI engine completely halting traffic processing.
+> **Não faça nenhuma alteração nesta seção**, a menos que você tenha um profundo conhecimento arquitetônico da implantação ou tenha sido explicitamente instruído pelo Suporte da Viewtinet. Modificar esses campos sem cautela pode causar problemas operacionais graves e resultar na interrupção total do processamento de tráfego pelo mecanismo DPI.
 
 <br />

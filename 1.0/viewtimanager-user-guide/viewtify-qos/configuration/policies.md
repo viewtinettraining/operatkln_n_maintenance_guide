@@ -7,21 +7,21 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-27 16:45:17'
 ---
-# **<span align="center">QoS Policies</span>**
+# **<span align="center">Políticas de QoS</span>**
 
 <br />
 
-The **Policies** section is where the magic happens. It is the canvas where you link your Classification Rules with your QoS Profiles to build the final logic that the Viewtify engine will execute.
+A seção de **Políticas** é onde a mágica acontece. É o quadro onde você vincula suas Regras de Classificação com seus Perfis de QoS para construir a lógica final que a engine do Viewtify irá executar.
 
 <br />
 
-## **Visual Hierarchy Tree**
+## **Árvore de Hierarquia Visual**
 
-Viewtify QoS represents your network policies as a visual, intuitive, multi-level hierarchy tree. Traffic flows from the root of the tree down through the branches, being evaluated at each node until it finds a match.
+O QoS do Viewtify representa suas políticas de rede como uma árvore de hierarquia de vários níveis, visual e intuitiva. O tráfego flui da raiz da árvore para baixo através dos ramos, sendo avaliado em cada nó até encontrar uma correspondência.
 
-### Detailed View
+### Visão Detalhada
 
-By checking the **Detailed View** box at the top, the nodes on the tree expand to show you the exact IP ranges, rules, and bandwidth limits configured at every single step, allowing you to see all policy details at a glance.
+Ao marcar a caixa **Detailed View** no topo, os nós na árvore se expandem para mostrar exatamente os intervalos de IP, regras e limites de largura de banda configurados em cada etapa única, permitindo que você veja todos os detalhes da política em um relance.
 
 <br />
 
@@ -31,47 +31,47 @@ By checking the **Detailed View** box at the top, the nodes on the tree expand t
 
 ---
 
-## **Adding and Editing Policies**
+## **Adicionando e Editando Políticas**
 
-Policies are created within a tree structure where the parent node is the Use Case itself. From there, it branches out into child and sibling nodes (at the same level). The application is fully capable of capturing logical errors during the creation of these policies.
+As políticas são criadas dentro de uma estrutura de árvore onde o nó pai é o próprio Caso de Uso. A partir daí, ele se ramifica em nós filhos e irmãos (no mesmo nível). O aplicativo é totalmente capaz de capturar erros lógicos durante a criação dessas políticas.
 
-### **How to Create a Policy**
+### **Como Criar uma Política**
 
-1.  **Locate the target node:** Find the node (e.g., the Use Case root or an existing policy) over which you want to create the new policy.
-2.  **Left-click on the node:** This action will open a contextual menu.<br />
+1.  **Localize o nó de destino:** Encontre o nó (ex., a raiz do Caso de Uso ou uma política existente) sobre o qual você deseja criar a nova política.
+2.  **Clique com o botão esquerdo no nó:** Esta ação abrirá um menu de contexto.<br />
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-create-1.png" align="center"></figure>
     
     <br />
     
-3.  **Select "Add Child Policy":** From the opened menu, click on this option.<br />
+3.  **Selecione "Add Child Policy":** No menu aberto, clique nesta opção.<br />
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-create-2.png" align="center"></figure>
     
     <br />
     
-4.  **Configure Classification Rules:** A new screen will open to configure the policy. In the first section, you configure the classification rules.
+4.  **Configure as Regras de Classificação:** Uma nova tela será aberta para configurar a política. Na primeira seção, você configura as regras de classificação.
     
-    -   You can define rules by IP, IP Ranges, Subnets, Ports, Protocols, etc. These can be applied as either connection initiators or connection destinations.
-    -   Additionally, you must select the **Classification Type**:
+    -   Você pode definir regras por IP, Intervalos de IP, Sub-redes, Portas, Protocolos, etc. Elas podem ser aplicadas como iniciadores de conexão ou destinos de conexão.
+    -   Além disso, você deve selecionar o **Classification Type**:
         
-        -   **Application:** Traffic is classified based on the individual rules configured for a specifically selected application.<br />
+        -   **Application:** O tráfego é classificado com base nas regras individuais configuradas para um aplicativo especificamente selecionado.<br />
             
             <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-create-3.png" align="center"></figure>
             
             <br />
             
-        -   **Application Group:** In this case, traffic will be classified for the entire selected group of applications.<br />
+        -   **Application Group:** Neste caso, o tráfego será classificado para todo o grupo de aplicativos selecionado.<br />
             
             <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-create-4.png" align="center"></figure>
             
-5.  **Add Multiple Rules and Description:** You can add multiple classification rules to the same policy by clicking the **\+ ADD NEW RULE** button, provided that the application type (Application or Application Group) remains the same for all rules within that node. Additionally, you can add a custom description in the **Connector description** field to better identify the policy's purpose.<br />
+5.  **Adicione Várias Regras e Descrição:** Você pode adicionar várias regras de classificação à mesma política clicando no botão **+ ADD NEW RULE**, desde que o tipo de aplicativo (Application ou Application Group) permaneça o mesmo para todas as regras dentro desse nó. Além disso, você pode adicionar uma descrição personalizada no campo **Connector description** para identificar melhor o propósito da política.<br />
     
     <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-create-5.png" align="center"></figure>
     
-6.  **Select a Profile and Configure its Schedule:** Once the classification rules are set, the next step is to choose the profile (the action to take when the rules are met) in the **Profiles** section below.
+6.  **Selecione um Perfil e Configure seu Agendamento:** Uma vez definidas as regras de classificação, o próximo passo é escolher o perfil (a ação a ser tomada quando as regras forem atendidas) na seção de **Profiles** abaixo.
     
-    -   **Default Profile:** By default, a profile is assigned with the "default" schedule, meaning it applies 24/7, regardless of the time and day. You can change this profile by selecting the desired one from the dropdown menu.<br />
+    -   **Default Profile:** Por padrão, um perfil é atribuído com o agendamento "default", o que significa que se aplica 24/7, independentemente da hora e dia. Você pode alterar este perfil selecionando o perfil desejado no menu suspenso.<br />
         
         <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-profile-1.png" align="center"></figure>
         
@@ -81,14 +81,14 @@ Policies are created within a tree structure where the parent node is the Use Ca
         
         <br />
         
-    -   **Adding a Scheduled Profile:** If you want to apply a different profile (or the same one) but restricted to a specific schedule, click the **\+ ADD NEW PROFILE** button.
-    -   **Modifying the Schedule:** After adding a new profile entry, click the **pencil icon** next to it to edit its time range.<br />
+    -   **Adicionando um Perfil Agendado:** Se você quiser aplicar um perfil diferente (ou o mesmo), mas restrito a um agendamento específico, clique no botão **+ ADD NEW PROFILE**.
+    -   **Modificando o Agendamento:** Após adicionar uma nova entrada de perfil, clique no **ícone de lápis** ao lado dela para editar seu intervalo de tempo.<br />
         
         <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-profile-3.png" align="center"></figure>
         
         <br />
         
-    -   You will then be prompted to configure the exact **Start Time** and **End Time** for when this specific profile should be active.<br />
+    -   Você será solicitado a configurar o **Start Time** e o **End Time** exatos para quando este perfil específico deve estar ativo.<br />
         
         <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-profile-4.png" align="center"></figure>
         
@@ -99,21 +99,21 @@ Policies are created within a tree structure where the parent node is the Use Ca
 
 <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-policies-example-1.png" align="center"></figure>
 
-### **Policy Creation Example**
+### **Exemplo de Criação de Política**
 
-Let's look at a practical example of a completed policy configuration based on the steps above.
+Vamos ver um exemplo prático de uma configuração de política concluída com base nas etapas acima.
 
-In the following image, we have created a policy that:
+Na imagem a seguir, criamos uma política que:
 
-1.  **Classifies traffic:** It specifically targets connections originating from **Range Test 1** (IPs `10.30.24.141` to `10.30.24.146`) when they connect to the **facebook** application.
-2.  **Applies a default profile:** A standard profile (`Max_Rate_10Mbps`) limits their bandwidth to **10 Mbps** by default (24/7).
-3.  **Applies a scheduled profile:** However, we have added a second profile entry (`Max_Rate_50Mbps`) that grants them a higher bandwidth limit of **50 Mbps**, but strictly during the off-hours schedule from **06:00 PM to 08:00 AM**.
+1.  **Classifica o tráfego:** Ela visa especificamente conexões originadas do **Range Test 1** (IPs `10.30.24.141` a `10.30.24.146`) quando eles se conectam ao aplicativo **facebook**.
+2.  **Aplica um perfil padrão:** Um perfil padrão (`Max_Rate_10Mbps`) limita sua largura de banda a **10 Mbps** por padrão (24/7).
+3.  **Aplica um perfil agendado:** No entanto, adicionamos uma segunda entrada de perfil (`Max_Rate_50Mbps`) que concede a eles um limite de largura de banda superior de **50 Mbps**, mas estritamente durante o horário de folga, das **06:00 PM às 08:00 AM**.
 
 ---
 
-## **Policy Validations**
+## **Validações de Política**
 
-Because policies are evaluated sequentially, their structural order matters heavily. Viewtify QoS includes strict validations to prevent logical errors.
+Como as políticas são avaliadas sequencialmente, a sua ordem estrutural é muito importante. O QoS do Viewtify inclui validações rigorosas para evitar erros lógicos.
 
 <br />
 
@@ -121,8 +121,8 @@ Because policies are evaluated sequentially, their structural order matters heav
 
 <br />
 
--   **Error Highlighting:** If changes in profiles create issues (like assigning a profile that no longer exists, or allocating more Min Rate bandwidth than the parent node has available), a validation error will prevent saving, and the affected node will be highlighted in red.
--   **Masked Rules Warning:** The system will warn you if a highly specific classification rule is placed _below_ a very generic one (e.g., placing an IP rule below an "Any IP" rule), meaning the specific rule would never be reached.
--   **App-ID Positioning:** Policies based exclusively on Application ID (DPI signatures) must be placed at the rightmost position before the "Others" node.
+-   **Destaque de Erros:** Se as alterações nos perfis criarem problemas (como atribuir um perfil que não existe mais ou alocar mais largura de banda Min Rate do que o nó pai tem disponível), um erro de validação impedirá o salvamento, e o nó afetado será destacado em vermelho.
+-   **Aviso de Regras Mascaradas:** O sistema irá avisá-lo se uma regra de classificação altamente específica for colocada _abaixo_ de uma regra muito genérica (ex., colocar uma regra de IP abaixo de uma regra "Qualquer IP"), o que significa que a regra específica nunca seria alcançada.
+-   **Posicionamento do App-ID:** As políticas baseadas exclusivamente no Application ID (assinaturas de DPI) devem ser colocadas na posição mais à direita, antes do nó "Others".
 
 <br />

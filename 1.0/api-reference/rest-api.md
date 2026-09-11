@@ -1,22 +1,21 @@
 ---
-reusableId: 178
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'API REST'
+title: 'Rest api'
 id: C1C-3ZC-317-MUQ
 slug: rest-api
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-02 08:54:27'
 ---
-# **<span align="center">API REST</span>**
+# **<span align="center">REST API</span>**
 
 <br />
 
 ## **Sequência de Comunicação de Dados**
 
-A API REST do Viewtisight é responsável por acessar metadados, banco de dados e parâmetros de configuração armazenados na Camada Viewticore, onde toda a complexidade reside. Assim, é possível recuperar todos os dados necessários sem precisar considerar toda a configuração realizada nos bancos de dados, etc.
+A API REST do Viewtisight é responsável por acessar metadados, banco de dados e parâmetros de configuração armazenados na Camada Viewticore, onde reside toda a complexidade. Assim, é possível recuperar todos os dados necessários sem levar em conta toda a configuração realizada em bancos de dados e afins.
 
-Embora essa recuperação de dados seja totalmente descrita na seção de INTEGRAÇÃO DA API, aqui está um exemplo de como a comunicação funciona ao usar a API REST do Viewtisight:
+Embora essa recuperação de dados seja descrita detalhadamente na seção de INTEGRAÇÃO DE API, aqui está um exemplo de como a comunicação funciona ao usar a API REST do Viewtisight:
 
 <br />
 
@@ -30,11 +29,11 @@ Embora essa recuperação de dados seja totalmente descrita na seção de INTEGR
 
 <br />
 
-## **Autenticação**
+## **Autenticação (Auth)**
 
 ### GET /auth/\*
 
-Obtém dados da API Viewtiauth. (`authControllerGet`) **Respostas:**
+Obter da API do Viewtiauth. (`authControllerGet`) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
 -   `401`: Não autorizado.
@@ -43,10 +42,10 @@ Obtém dados da API Viewtiauth. (`authControllerGet`) **Respostas:**
 
 ### POST /auth/\*
 
-Envia dados para a API Viewtiauth. (`authControllerPut`) **Respostas:**
+Postar na API do Viewtiauth. (`authControllerPut`) **Respostas:**
 
 -   `200`: O registro foi consultado/criado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
@@ -57,7 +56,7 @@ Envia dados para a API Viewtiauth. (`authControllerPut`) **Respostas:**
 
 ### POST /dashboards/wall
 
-Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerCreatewall`) **Consome:** `application/json` **Corpo da requisição:** `body DashboardWallDto` (obrigatório) **Respostas:**
+Atualizar uma instância de aplicativo do modelo e persisti-la na fonte de dados. (`dashboardsControllerCreatewall`) **Consome:** `application/json` **Corpo da requisição:** `body DashboardWallDto` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -69,7 +68,7 @@ Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsCont
 
 ### GET /dashboards
 
-Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`dashboardsControllerFindAll`) **Respostas:**
+Encontrar todas as instâncias do modelo correspondentes ao filtro da fonte de dados. (`dashboardsControllerFindAll`) **Respostas:**
 
 -   `200`: Os registros foram consultados com sucesso.
 -   `401`: Não autorizado.
@@ -80,10 +79,10 @@ Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de da
 
 ### GET /dashboards/{name}
 
-Encontra uma instância do modelo pelo `name` na fonte de dados. (`dashboardsControllerFindOne`) **Parâmetros de caminho:** `name` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `name` da fonte de dados. (`dashboardsControllerFindOne`) **Parâmetros de caminho:** `name` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
@@ -92,10 +91,10 @@ Encontra uma instância do modelo pelo `name` na fonte de dados. (`dashboardsCon
 
 ### DELETE /dashboards/{app}/{id}
 
-Exclui uma instância do modelo pelo `id` de `app` na fonte de dados. (`dashboardsControllerRemove`) **Parâmetros de caminho:** `app` (obrigatório), `id` (obrigatório) **Respostas:**
+Excluir uma instância de modelo por `id` do `app` na fonte de dados. (`dashboardsControllerRemove`) **Parâmetros de caminho:** `app` (obrigatório), `id` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi excluído com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
@@ -104,7 +103,7 @@ Exclui uma instância do modelo pelo `id` de `app` na fonte de dados. (`dashboar
 
 ### PUT /dashboards/{app}
 
-Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerUpdate`) **Parâmetros de caminho:** `app` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdateDashboardDto` (obrigatório) **Respostas:**
+Atualizar uma instância de aplicativo do modelo e persisti-la na fonte de dados. (`dashboardsControllerUpdate`) **Parâmetros de caminho:** `app` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdateDashboardDto` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -116,7 +115,7 @@ Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsCont
 
 ### PUT /dashboards/wall/{menu}/{name}
 
-Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsControllerUpdateWallName`) **Parâmetros de caminho:** `menu` (obrigatório), `name` (obrigatório) **Respostas:**
+Atualizar uma instância de aplicativo do modelo e persisti-la na fonte de dados. (`dashboardsControllerUpdateWallName`) **Parâmetros de caminho:** `menu` (obrigatório), `name` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -130,10 +129,10 @@ Atualiza uma instância do modelo e persiste na fonte de dados. (`dashboardsCont
 
 ### POST /data/{set}/query
 
-Encontra uma instância do modelo pelo `set` na fonte de dados. (`dataControllerGetData`) **Parâmetros de caminho:** `set` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body DataDto` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `set` da fonte de dados. (`dataControllerGetData`) **Parâmetros de caminho:** `set` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body DataDto` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
@@ -142,17 +141,17 @@ Encontra uma instância do modelo pelo `set` na fonte de dados. (`dataController
 
 ### GET /data/{set}/fields
 
-Encontra uma instância do modelo pelo `set` na fonte de dados. (`dataControllerGetFields`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `set` da fonte de dados. (`dataControllerGetFields`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
 
 ### GET /data/sets
 
-Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`dataControllerGetSets`) **Respostas:**
+Encontrar todas as instâncias do modelo correspondentes ao filtro da fonte de dados. (`dataControllerGetSets`) **Respostas:**
 
 -   `200`: Os registros foram consultados com sucesso.
 -   `401`: Não autorizado.
@@ -161,11 +160,11 @@ Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de da
 
 <br />
 
-## **Padrão**
+## **Padrão (Default)**
 
 ### GET /queryobjects
 
-Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`queryobjectsControllerFindAll`) **Respostas:**
+Encontrar todas as instâncias do modelo correspondentes ao filtro da fonte de dados. (`queryobjectsControllerFindAll`) **Respostas:**
 
 -   `200`: Os registros foram consultados com sucesso.
 -   `401`: Não autorizado.
@@ -174,10 +173,10 @@ Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de da
 
 ### GET /queryobjects/{set}
 
-Encontra uma instância do modelo pelo `set` na fonte de dados. (`queryobjectsControllerFindOne`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `set` da fonte de dados. (`queryobjectsControllerFindOne`) **Parâmetros de caminho:** `set` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
@@ -186,7 +185,7 @@ Encontra uma instância do modelo pelo `set` na fonte de dados. (`queryobjectsCo
 
 ### DELETE /menus/{menuId}
 
-Modifica as preferências do usuário com base no `userId` (`menusControllerDelete`) **Parâmetros de caminho:** `menuId` (obrigatório) **Respostas:**
+Modificar preferências do usuário com base no `userId` (`menusControllerDelete`) **Parâmetros de caminho:** `menuId` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -196,7 +195,7 @@ Modifica as preferências do usuário com base no `userId` (`menusControllerDele
 
 ### GET /menus
 
-Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`menusControllerFindAll`) **Respostas:**
+Encontrar todas as instâncias do modelo correspondentes ao filtro da fonte de dados. (`menusControllerFindAll`) **Respostas:**
 
 -   `200`: Os registros foram consultados com sucesso.
 -   `401`: Não autorizado.
@@ -205,7 +204,7 @@ Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de da
 
 ### PUT /menus/{menuId}
 
-Modifica as preferências do usuário com base no `userId` (`menusControllerUpdate`) **Parâmetros de caminho:** `menuId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body MenuDto` (obrigatório) **Respostas:**
+Modificar preferências do usuário com base no `userId` (`menusControllerUpdate`) **Parâmetros de caminho:** `menuId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body MenuDto` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -217,23 +216,23 @@ Modifica as preferências do usuário com base no `userId` (`menusControllerUpda
 
 ### POST /pcap
 
-Executa o método gRPC para gerar arquivo Pcap. (`pcapControllerCall`) **Consome:** `application/json` **Corpo da requisição:** `body PcapDto` (obrigatório) **Respostas:**
+Executar método gRPC para gerar arquivo Pcap. (`pcapControllerCall`) **Consome:** `application/json` **Corpo da requisição:** `body PcapDto` (obrigatório) **Respostas:**
 
--   `200`: Arquivo gerado corretamente.
+-   `200`: O arquivo foi gerado corretamente.
 -   `500`: Erro interno do servidor.
 
 ### GET /pcap/getFile/{id}
 
-Executa o método gRPC para gerar arquivo Pcap. (`pcapControllerGetFile`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
+Executar método gRPC para gerar arquivo Pcap. (`pcapControllerGetFile`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
 
--   `200`: Arquivo gerado corretamente.
+-   `200`: O arquivo foi gerado corretamente.
 -   `500`: Erro interno do servidor.
 
 ## Preferências
 
 ### POST /preferences
 
-Cria uma nova instância do modelo e persiste na fonte de dados. (`preferencesControllerCreate`) **Consome:** `application/json` **Corpo da requisição:** `body CreatePreferenceDto` (obrigatório) **Respostas:**
+Criar uma nova instância do modelo e persisti-la na fonte de dados. (`preferencesControllerCreate`) **Consome:** `application/json` **Corpo da requisição:** `body CreatePreferenceDto` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -243,7 +242,7 @@ Cria uma nova instância do modelo e persiste na fonte de dados. (`preferencesCo
 
 ### GET /preferences
 
-Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de dados. (`preferencesControllerFindAll`) **Respostas:**
+Encontrar todas as instâncias do modelo correspondentes ao filtro da fonte de dados. (`preferencesControllerFindAll`) **Respostas:**
 
 -   `200`: Os registros foram consultados com sucesso.
 -   `401`: Não autorizado.
@@ -252,27 +251,27 @@ Encontra todas as instâncias do modelo correspondentes ao filtro na fonte de da
 
 ### GET /preferences/{id}
 
-Encontra uma instância do modelo pelo `id` na fonte de dados. (`preferencesControllerFindOne`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `id` da fonte de dados. (`preferencesControllerFindOne`) **Parâmetros de caminho:** `id` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
 
 ### GET /preferences/getPrefByUserId/{userId}
 
-Encontra uma instância do modelo pelo `userId` na fonte de dados. (`preferencesControllerGetPrefByUserId`) **Parâmetros de caminho:** `userId` (obrigatório) **Respostas:**
+Encontrar uma instância de modelo por `userId` da fonte de dados. (`preferencesControllerGetPrefByUserId`) **Parâmetros de caminho:** `userId` (obrigatório) **Respostas:**
 
 -   `200`: O registro foi consultado com sucesso.
--   `400`: Requisição inválida.
+-   `400`: Requisição ruim (Bad Request).
 -   `401`: Não autorizado.
 -   `403`: Proibido.
 -   `404`: Não encontrado.
 
 ### PUT /preferences/{userId}
 
-Modifica as preferências do usuário com base no `userId` (`preferencesControllerUpdate`) **Parâmetros de caminho:** `userId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdatePreferenceDto` (obrigatório) **Respostas:**
+Modificar preferências do usuário com base no `userId` (`preferencesControllerUpdate`) **Parâmetros de caminho:** `userId` (obrigatório) **Consome:** `application/json` **Corpo da requisição:** `body UpdatePreferenceDto` (obrigatório) **Respostas:**
 
 -   `201`: O registro foi criado com sucesso.
 -   `400`: Entidade não processável.
@@ -343,7 +342,7 @@ Modifica as preferências do usuário com base no `userId` (`preferencesControll
 
 ## **Modelo de Dados**
 
-Entender como as informações são combinadas no modelo de dados é fundamental para realizar integrações com a API REST do Viewtisight.
+Entender como a informação é combinada no modelo de dados é crucial a fim de realizar integrações com a API REST do Viewtisight.
 
 <br />
 
@@ -351,9 +350,9 @@ Entender como as informações são combinadas no modelo de dados é fundamental
 
 <br />
 
--   **Relatórios** são armazenados em sua própria coleção. Esses objetos podem ser incorporados em consultas para obter os KQIs desejados.
--   **Metadados** são necessários para saber quais conjuntos (ex.: tabelas) podem ser consultados e quais campos estão disponíveis para cada conjunto.
+-   **Relatórios** (Reports) são armazenados em sua própria coleção. Estes objetos podem ser embutidos em consultas a fim de obter os KQIs desejados.
+-   **Metadados** (Metadata) são necessários para saber quais conjuntos (por exemplo, tabelas) podem ser consultados e quais campos estão disponíveis para cada conjunto.
 
-Uma vez combinadas essas duas fontes de dados, uma consulta correta pode ser gerada para recuperar dados da Camada de Dados.
+Uma vez que essas duas fontes de dados são combinadas, uma consulta correta pode ser gerada a fim de recuperar dados da Camada de Dados.
 
-Caso dashboards tenham sido fornecidos ou criados pela interface gráfica do Viewtisight, existe uma fonte de dados adicional chamada **Dashboards**, que é um conjunto de vários KQIs combinados para fornecer estatísticas significativas. Esses são úteis para executar um conjunto predefinido de consultas.
+Caso os dashboards tenham sido fornecidos ou criados pela interface gráfica (GUI) do Viewtisight, há uma fonte de dados adicional chamada **Dashboards** que é um conjunto de vários KQIs combinados juntos para fornecer estatísticas significativas. Estes são úteis para realizar um conjunto predefinido de consultas.

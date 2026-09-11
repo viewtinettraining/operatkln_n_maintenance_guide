@@ -10,7 +10,7 @@ id: H4I-A1D-ZM6-Q3O
 
 <br />
 
-This section covers the networking configurations for the **Viewtimon** and **Viewtify QoS** modules. It is important to note that this configuration has **nothing to do** with the management network configuration of the appliance or the service network used for log collection, metrics, SNMP, Netflow, and APIs by the Viewtilog module.
+Esta seção cobre as configurações de rede para os módulos **Viewtimon** e **Viewtify QoS**. É importante notar que esta configuração **não tem nada a ver** com a configuração de rede de gerenciamento do dispositivo ou com a rede de serviço usada para coleta de logs, métricas, SNMP, Netflow e APIs pelo módulo Viewtilog.
 
 <br />
 
@@ -18,12 +18,12 @@ This section covers the networking configurations for the **Viewtimon** and **Vi
 
 ## **Management & Service Planes in DPI Solutions**
 
-In the context of DPI (Deep Packet Inspection) solutions, **management** and **service planes** refer to the distinct functional layers that handle different aspects of network operations:
+No contexto de soluções DPI (Deep Packet Inspection), planos de gerenciamento (**management**) e serviço (**service planes**) referem-se às camadas funcionais distintas que lidam com diferentes aspectos das operações de rede:
 
-- **Management Plane:** This plane is responsible for the configuration, monitoring, and administration of the DPI solution. It includes functionalities such as policy enforcement, user authentication, system logging, and performance monitoring.
-- **Service Plane (Wire Data):** This plane focuses on processing and analyzing network traffic. It handles tasks such as packet inspection, traffic classification, QoS enforcement, and security policies application.
+- **Management Plane:** Este plano é responsável pela configuração, monitoramento e administração da solução DPI. Ele inclui funcionalidades como aplicação de políticas, autenticação de usuários, log do sistema e monitoramento de desempenho.
+- **Service Plane (Wire Data):** Este plano foca no processamento e análise do tráfego de rede. Ele lida com tarefas como inspeção de pacotes, classificação de tráfego, aplicação de QoS e aplicação de políticas de segurança.
 
-These planes work together to ensure efficient network traffic analysis, policy enforcement, and overall system reliability.
+Esses planos trabalham juntos para garantir a análise eficiente do tráfego de rede, a aplicação de políticas e a confiabilidade geral do sistema.
 
 <br />
 
@@ -31,16 +31,16 @@ These planes work together to ensure efficient network traffic analysis, policy 
 
 ## **Interface and IP Address Combinations for Viewtimon**
 
-Viewtimon works with a copy of the traffic, which can be provided through port-mirroring, using a TAP, or with port span. In this case, each interface captures network traffic without interfering with its flow.
+O Viewtimon trabalha com uma cópia do tráfego, que pode ser fornecida através de port-mirroring, usando um TAP, ou com port span. Neste caso, cada interface captura o tráfego de rede sem interferir no seu fluxo.
 
-- **No interface pairing is required**, meaning that if there are **M interfaces, all can be used simultaneously (Service Plane)**.
+- **No interface pairing is required**, o que significa que, se houver **M interfaces, todas poderão ser usadas simultaneamente (Service Plane)**.
 - **IP addresses are assigned only to management interfaces (Management Plane)**.
 
 <br />
 
 ### **Viewtimon Deployment**
 
-Viewtinet needs to receive a copy of IP traffic for Wire Data observability. As illustrated below, this can be done with a TAP, port span, or packet broker.
+A Viewtinet precisa receber uma cópia do tráfego IP para observabilidade dos Wire Data. Conforme ilustrado abaixo, isso pode ser feito com um TAP, port span ou packet broker.
 
 <br />
 
@@ -52,16 +52,16 @@ Viewtinet needs to receive a copy of IP traffic for Wire Data observability. As 
 
 ## **Interface and IP Address Combinations for Viewtify QoS**
 
-- Viewtify QoS operates in **bridge mode** at Layer 2 of the OSI model.
-- A **Bridge mode** deployment typically requires **pairs of interfaces** to act as a transparent bridge.
-- If there are **N physical interfaces**, they can be grouped into pairs to form **N/2 Bridge links**.
-- Since traffic passes through without modifying IPs, interfaces in Bridge mode **usually do not have assigned IP addresses (Service Plane)**, except for a dedicated management interface **(Management Plane)**.
+- O Viewtify QoS opera no modo ponte (**bridge mode**) na Camada 2 do modelo OSI.
+- A implantação no **Bridge mode** normalmente requer **pares de interfaces** para atuar como uma ponte transparente.
+- Se houver **N interfaces físicas**, elas podem ser agrupadas em pares para formar **N/2 Bridge links**.
+- Como o tráfego passa por lá sem modificar IPs, as interfaces em modo Bridge **geralmente não têm endereços IP atribuídos (Service Plane)**, exceto por uma interface de gerenciamento dedicada **(Management Plane)**.
 
 <br />
 
 ### **Viewtify Deployment**
 
-For Traffic Control, Viewtinet needs to be deployed inline with a passive bypass.
+Para Controle de Tráfego, o Viewtinet precisa ser implantado em linha (inline) com um bypass passivo.
 
 <br />
 
@@ -73,11 +73,11 @@ For Traffic Control, Viewtinet needs to be deployed inline with a passive bypass
 
 ## **The Viewtinet Bypass Device**
 
-The bypass is a mandatory device when deploying Viewtify QoS inline. The **Bypasser** is a watchdog process for the Classifier (The Probe).
+O bypass é um dispositivo obrigatório ao implantar o Viewtify QoS inline. O **Bypasser** é um processo de watchdog para o Classificador (The Probe).
 
-- The Bypasser process sends periodic heartbeats to the Viewtinet Bypass device to indicate that the Classifier is up and running normally.
-- Sending heartbeats puts/keeps the Bypass device in an **Active State**, so network traffic is directed through the Appliance Server (The Probe).
-- If the Bypasser process stops sending heartbeats (indicating failure), the Bypass device switches internally to **Bypass State**, so network traffic is bypassed directly between the LAN and Internet, not sending traffic through the Appliance server.
+- O processo Bypasser envia batimentos cardíacos (heartbeats) periódicos ao dispositivo de Bypass da Viewtinet para indicar que o Classificador está ativo e funcionando normalmente.
+- O envio de heartbeats coloca/mantém o dispositivo de Bypass em um estado ativo (**Active State**), para que o tráfego de rede seja direcionado através do Servidor do Appliance (The Probe).
+- Se o processo Bypasser parar de enviar heartbeats (indicando falha), o dispositivo de Bypass muda internamente para o estado de bypass (**Bypass State**), de modo que o tráfego de rede é contornado (bypassed) diretamente entre a LAN e a Internet, não enviando o tráfego através do servidor do Appliance.
 
 <br />
 
@@ -90,29 +90,29 @@ The bypass is a mandatory device when deploying Viewtify QoS inline. The **Bypas
 
 ### **Heartbeats and Operations**
 
-- Heartbeats are sent every 100 ms by the Bypasser process to the Bypass device to indicate that everything is OK.
-- If the Bypasser process detects an error, no heartbeats are sent.
-- The Bypasser process is used as a Watchdog for The Probe. Optionally, extensions may be used as Watchdogs for other services, such as Viewtify OPT.
-- The Bypasser process also handles Heartbeats, USB detection, and acts as a configuration server, controlled by the ViewtiManager.
-- The Watchdogged process (The Probe) is a "smart watchdogged process", which indicates if it is "operational" or not through Push Notifications. In this case, "operational" means that The Probe is running and may process incoming network traffic.
-- The Bypasser process subscribes to the Push Notifications to detect any "operational changes" in The Probe.
-- The ViewtiManager can control the Bypasser process through its web-based GUI.
-- All communication between the Bypasser process and the Bypass device goes through a USB cable. The Bypass device also uses USB as its power supply. Without power, the Bypass device switches to Bypass State automatically.
+- Os heartbeats são enviados a cada 100 ms pelo processo Bypasser ao dispositivo de Bypass para indicar que está tudo OK.
+- Se o processo Bypasser detectar um erro, nenhum heartbeat será enviado.
+- O processo Bypasser é usado como Watchdog para o The Probe. Opcionalmente, extensões podem ser usadas como Watchdogs para outros serviços, como Viewtify OPT.
+- O processo Bypasser também gerencia os Heartbeats, a detecção USB e atua como servidor de configuração, controlado pelo ViewtiManager.
+- O processo monitorado (The Probe) é um "processo inteligente com watchdog", que indica se está "operacional" ou não através de notificações Push (Push Notifications). Neste caso, "operacional" significa que o The Probe está em execução e pode processar tráfego de rede de entrada.
+- O processo Bypasser assina as notificações Push para detectar quaisquer "mudanças operacionais" no The Probe.
+- O ViewtiManager pode controlar o processo Bypasser através de sua GUI baseada na web.
+- Toda a comunicação entre o processo Bypasser e o dispositivo de Bypass ocorre através de um cabo USB. O dispositivo de Bypass também usa USB como sua fonte de alimentação. Sem energia, o dispositivo de Bypass muda para o Bypass State automaticamente.
 
 ### **Failure Detection**
 
-If the Viewtinet Bypass device does not receive a heartbeat within a (configurable) timeout period, this is considered a failure, and the device switches to Bypass State. Failures are defined as:
+Se o dispositivo de Bypass da Viewtinet não receber um heartbeat dentro de um período de tempo limite (configurável), isso é considerado uma falha, e o dispositivo muda para o estado de Bypass (Bypass State). As falhas são definidas como:
 
-- Classifier failure (reporting NOT_READY, process died, not responding to Bypasser, etc.)
-- Bypasser failure (process died, etc.)
-- Server failure (power off, kernel panic, etc.)
-- USB cable disconnected (this powers off the Viewtinet Bypass device)
+- Falha no classificador (relatando NOT_READY, processo morreu, não está respondendo ao Bypasser, etc.)
+- Falha no Bypasser (processo morreu, etc.)
+- Falha no servidor (desligado, kernel panic, etc.)
+- Cabo USB desconectado (isso desliga o dispositivo de Bypass da Viewtinet)
 
 ### **Active State & Bypass State**
 
-- Without any failures, the Viewtinet Bypass device should send all traffic to the Classifier, and is said to be in an **Active State**.
-- When a failure occurs, the Viewtinet Bypass device redirects all traffic, and is said to be in a **Bypass State**.
-- The Viewtinet Bypass device may be configured to work either in the Active State or in the Bypass State without any power (that is, when the USB cable is disconnected).
+- Sem nenhuma falha, o dispositivo de Bypass da Viewtinet deve enviar todo o tráfego para o Classificador e é dito estar em um estado ativo (**Active State**).
+- Quando ocorre uma falha, o dispositivo de Bypass da Viewtinet redireciona todo o tráfego e é dito estar em um estado de Bypass (**Bypass State**).
+- O dispositivo de Bypass da Viewtinet pode ser configurado para funcionar tanto no Active State quanto no Bypass State sem nenhuma energia (ou seja, quando o cabo USB está desconectado).
 
 <br />
 
@@ -125,9 +125,9 @@ If the Viewtinet Bypass device does not receive a heartbeat within a (configurab
 
 ### **MultiSegment**
 
-The Bypass device may use up to 8 segments (depending on how many hardware modules are installed). Each segment may use an individual network traffic route.
+O dispositivo de Bypass pode usar até 8 segmentos (dependendo de quantos módulos de hardware estão instalados). Cada segmento pode usar uma rota de tráfego de rede individual.
 
-- With the MultiSegment option **disabled**, the same settings are applied to all segments. That means that bypassing an Appliance Server on one segment (`FORCE_BYPASS`), is also applied to all other segments.
-- With the MultiSegment option **enabled**, each segment may be set to `NORMAL_OPERATION` or `FORCE_BYPASS` individually. That means that traffic on one segment may bypass an Appliance Server (`FORCE_BYPASS`), while traffic on another segment is processed by the Appliance Server (`NORMAL_OPERATION`).
+- Com a opção MultiSegment **disabled** (desativada), as mesmas configurações são aplicadas a todos os segmentos. Isso significa que contornar (bypassing) um Servidor do Appliance em um segmento (`FORCE_BYPASS`) também é aplicado a todos os outros segmentos.
+- Com a opção MultiSegment **enabled** (ativada), cada segmento pode ser definido como `NORMAL_OPERATION` ou `FORCE_BYPASS` individualmente. Isso significa que o tráfego em um segmento pode ignorar (bypass) um Servidor do Appliance (`FORCE_BYPASS`), enquanto o tráfego em outro segmento é processado pelo Servidor do Appliance (`NORMAL_OPERATION`).
 
 <br />

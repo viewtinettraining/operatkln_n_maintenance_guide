@@ -1,5 +1,4 @@
 ---
-reusableId: 52
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Troubleshooting
 id: XRV-WRYD-2NW-IYL
@@ -7,38 +6,38 @@ slug: troubleshooting
 isVisible: true
 lastUpdated: '2025-10-15 16:09:54'
 ---
-# **<span align="center">Troubleshooting Script</span>**
+# **<span align="center">Script de Solução de Problemas (Troubleshooting)</span>**
 
-The `troubleshooting.sh` script is a comprehensive diagnostic tool designed for Viewtinet deployments running on Ubuntu servers. Its main purpose is to automate the health verification of core system resources and the Viewtinet microservice modules. It checks for container availability, logs, disk and memory usage, configuration files, database health, and more.
+O script `troubleshooting.sh` é uma ferramenta de diagnóstico abrangente projetada para implantações da Viewtinet em execução em servidores Ubuntu. Seu principal objetivo é automatizar a verificação de saúde dos recursos centrais do sistema e dos módulos de microsserviços da Viewtinet. Ele verifica a disponibilidade dos contêineres, logs, uso de disco e memória, arquivos de configuração, saúde do banco de dados e muito mais.
 
-This script is especially useful for scheduled checks via cron jobs, providing alarm generation and log saving capabilities for long-term tracking and alerting.
+Este script é especialmente útil para verificações programadas por meio de tarefas cron, fornecendo recursos de geração de alarmes e salvamento de logs para rastreamento e alertas de longo prazo.
 
-It supports the following modules:
+Ele suporta os seguintes módulos:
 
--   **System**: general health of CPU, memory, partitions, interfaces.
--   **Viewtimanager**: frontend, backend, database, and network checks.
--   **Viewticore**: internal components and storage usage.
--   **Viewtisight**: service and endpoint availability.
--   **Viewtiauth**: container and network validations.
--   **Bypasser**: device state and plugin integrity.
--   **Viewtimon**: log, config, and pipeline verifications.
--   **Sniffer**: pcap partition and live capture services.
--   **Dhyana**: connector processing, data freshness, and pipelines.
--   **HA**: PostgreSQL replication and cluster consistency checks.
+-   **System**: saúde geral da CPU, memória, partições, interfaces.
+-   **Viewtimanager**: verificações do frontend, backend, banco de dados e rede.
+-   **Viewticore**: componentes internos e uso de armazenamento.
+-   **Viewtisight**: disponibilidade de serviços e endpoints.
+-   **Viewtiauth**: validações de contêiner e rede.
+-   **Bypasser**: estado do dispositivo e integridade do plugin.
+-   **Viewtimon**: verificações de log, configuração e pipelines.
+-   **Sniffer**: partição pcap e serviços de captura ao vivo.
+-   **Dhyana**: processamento de conectores, frescor dos dados e pipelines.
+-   **HA**: verificações de replicação do PostgreSQL e consistência do cluster.
 
 <br />
 
-## **Usage**
+## **Uso**
 
-### **Basic Usage**
+### **Uso Básico**
 
 ```bash
 $ sudo  /opt/vn/viewtinet-builder/scripts/troubleshooting.sh
 ```
 
-This will run all checks and output a global health summary.
+Isso executará todas as verificações e emitirá um resumo de saúde global.
 
-### Optional Flags
+### Sinalizadores Opcionais (Flags)
 
 ```bash
   -h | --help                         Show help message
@@ -53,15 +52,15 @@ This will run all checks and output a global health summary.
 
 <br />
 
-## **Module Selection**
+## **Seleção de Módulo**
 
-You can specify individual modules to check:
+Você pode especificar módulos individuais para verificação:
 
 ```bash
 sudo  /opt/vn/viewtinet-builder/scripts/troubleshooting.sh dhyana
 ```
 
-To check only system health:
+Para verificar apenas a saúde do sistema:
 
 ```bash
 sudo  /opt/vn/viewtinet-builder/scripts/troubleshooting.sh system
@@ -69,40 +68,40 @@ sudo  /opt/vn/viewtinet-builder/scripts/troubleshooting.sh system
 
 <br />
 
-## **Alarm and Dhyana Export Features**
+## **Recursos de Exportação de Alarmes e Dhyana**
 
-### Alarm Generation (`-a`)
+### Geração de Alarmes (`-a`)
 
-When executed with the `-a` option, the script will activate alarm generation and output a CSV file compatible with Viewtinet's **Self Monitoring plugin**. This allows automatic ingestion of system and module statuses as structured alarms.
+Quando executado com a opção `-a`, o script ativará a geração de alarmes e emitirá um arquivo CSV compatível com o plugin **Self Monitoring** da Viewtinet. Isso permite a ingestão automática de status do sistema e de módulos como alarmes estruturados.
 
-The output CSV includes:
+O arquivo CSV de saída inclui:
 
--   Timestamp
--   Alarm name
--   Severity (clear, minor, major, critical)
--   Description
+-   Timestamp (Data e hora)
+-   Nome do alarme
+-   Severidade (clear, minor, major, critical)
+-   Descrição
 
-This enables seamless integration with alarm dashboards and alerting rules.
-
-<br />
-
-## **Dhyana Pipeline Statistics (**`-d`**)**
-
-The `-d` option enables an advanced export of **Dhyana pipeline status metrics** to a CSV file in the specified directory. This file is designed for ingestion by the **Dhyana Dashboard plugin** and is typically used to generate graphs and reports about pipeline health.
-
-The data includes:
-
--   Pipeline name and PID
--   Execution status
--   Error count in logs (if `--dhyana-logs` is enabled)
-
-> ⚠️ This is useful for performance analytics, but enabling `--dhyana-logs` may slow down execution in environments with many pipelines.
+Isso possibilita uma integração perfeita com dashboards de alarmes e regras de alerta.
 
 <br />
 
-## **Optional Deep Checks**
+## **Estatísticas de Pipeline do Dhyana (**`-d`**)**
 
--   `--dhyana-logs`: Deep scan of Dhyana container logs to extract pipeline-related errors. It enhances precision but increases runtime, especially in environments with many concurrent pipelines.
--   `--dhyana-files`: Enables verification of every subdirectory in `/opt/vn/dhyana/var/data/` to detect stale or oversized files. This check is verbose and should be used selectively.
+A opção `-d` habilita uma exportação avançada de **métricas de status de pipeline do Dhyana** para um arquivo CSV no diretório especificado. Este arquivo é projetado para ingestão pelo plugin **Dhyana Dashboard** e é normalmente usado para gerar gráficos e relatórios sobre a saúde do pipeline.
+
+Os dados incluem:
+
+-   Nome e PID do pipeline
+-   Status da execução
+-   Contagem de erros nos logs (se `--dhyana-logs` estiver habilitado)
+
+> ⚠️ Isso é útil para análise de desempenho, mas habilitar `--dhyana-logs` pode retardar a execução em ambientes com muitos pipelines.
+
+<br />
+
+## **Verificações Profundas Opcionais**
+
+-   `--dhyana-logs`: Varredura profunda dos logs do contêiner Dhyana para extrair erros relacionados ao pipeline. Isso aumenta a precisão, mas aumenta o tempo de execução, especialmente em ambientes com muitos pipelines concorrentes.
+-   `--dhyana-files`: Habilita a verificação de cada subdiretório em `/opt/vn/dhyana/var/data/` para detectar arquivos inativos ou superdimensionados. Esta verificação é detalhada e deve ser usada seletivamente.
 
 <br />

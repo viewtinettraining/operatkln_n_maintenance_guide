@@ -1,5 +1,4 @@
 ---
-reusableId: 109
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Roles
 id: W27-FT60-N0W-47N
@@ -7,27 +6,27 @@ slug: roles
 isVisible: true
 lastUpdated: '2025-10-15 15:30:41'
 ---
-# **<span align="center">Roles</span>**
+# **<span align="center">Funções (Roles)</span>**
 
-The **Roles** feature lets you define custom permission sets that control what actions users and groups can perform within the Viewtinet platform. Once a role is created, you can assign it to individual users or to user groups, tailoring access to system functions and data.
+O recurso de **Funções (Roles)** permite definir conjuntos de permissões personalizadas que controlam quais ações usuários e grupos podem realizar na plataforma Viewtinet. Uma vez criada uma função, você pode atribuí-la a usuários individuais ou a grupos de usuários, adaptando o acesso às funções e aos dados do sistema.
 
 <br />
 
-## **Accessing the Roles Page**
+## **Acessando a Página de Funções**
 
-1.  In the left-hand menu, click **Admin**.
-2.  Select the **Roles** tab.
-3.  Click **Add New** to create a new role.
+1.  No menu à esquerda, clique em **Admin**.
+2.  Selecione a aba **Roles**.
+3.  Clique em **Add New** para criar uma nova função.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/16nOqMXyycj4FF5iFmKc.png" align="center"></figure>
 
 <br />
 
-## **Role Details**
+## **Detalhes da Função (Role Details)**
 
-In the **Role Details** panel, specify:
+No painel de **Detalhes da Função**, especifique:
 
-<table><tbody><tr><th><p>Field</p></th><th><p>Description</p></th></tr><tr><td><p><strong>Name</strong></p></td><td><p>A unique identifier for the role (e.g., <code>Network Admin</code>).</p></td></tr><tr><td><p><strong>Description</strong></p></td><td><p>A brief summary of the role’s purpose or typical use case.</p></td></tr><tr><td><p><strong>Created at</strong></p></td><td><p>Timestamp when the role was created (read-only).</p></td></tr><tr><td><p><strong>Updated at</strong></p></td><td><p>Timestamp of the most recent modification (read-only).</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Campo</p></th><th><p>Descrição</p></th></tr><tr><td><p><strong>Nome (Name)</strong></p></td><td><p>Um identificador exclusivo para a função (ex: <code>Administrador de Rede</code>).</p></td></tr><tr><td><p><strong>Descrição (Description)</strong></p></td><td><p>Um breve resumo do propósito da função ou caso de uso típico.</p></td></tr><tr><td><p><strong>Criado em (Created at)</strong></p></td><td><p>Carimbo de data/hora de quando a função foi criada (somente leitura).</p></td></tr><tr><td><p><strong>Atualizado em (Updated at)</strong></p></td><td><p>Carimbo de data/hora da modificação mais recente (somente leitura).</p></td></tr></tbody></table>
 
 <br />
 
@@ -35,11 +34,11 @@ In the **Role Details** panel, specify:
 
 <br />
 
-## **Role Permissions**
+## **Permissões da Função (Role Permissions)**
 
-Use the dual-list interface to grant or revoke granular permissions. Select from the left (“Available”) and move into the right (“Selected”).
+Use a interface de lista dupla para conceder ou revogar permissões granulares. Selecione na esquerda (“Available” - Disponíveis) e mova para a direita (“Selected” - Selecionadas).
 
-<table><tbody><tr><th><p>Permission</p></th><th><p>Description</p></th></tr><tr><td><p>VM_ADMIN_AUTH_FILTERED</p></td><td><p>Removes <strong>Auth</strong> tab from Admin area</p></td></tr><tr><td><p>VM_ADMIN_AUTH_INTEGRATIONS_FILTERED</p></td><td><p>Filters to allow only the <strong>Integrations</strong> section in Auth tab</p></td></tr><tr><td><p>VM_ADMIN_AUTH_ONLY</p></td><td><p>Removes all Admin tabs except <strong>Auth</strong></p></td></tr><tr><td><p>VM_ADMIN_GROUPS_FILTERED</p></td><td><p>Removes <strong>Groups</strong> tab from Admin area</p></td></tr><tr><td><p>VM_ADMIN_MODULE</p></td><td><p>Access to Viewtimanager <strong>Admin</strong> module</p></td></tr><tr><td><p>VM_ADMIN_ROLES_FILTERED</p></td><td><p>Removes <strong>Roles</strong> tab from Admin area</p></td></tr><tr><td><p>VM_ADMIN_TENANTS_FILTERED</p></td><td><p>Removes <strong>Tenants</strong> tab from Admin area</p></td></tr><tr><td><p>VM_ADMIN_USERS_FILTERED</p></td><td><p>Removes <strong>Users</strong> tab from Admin area</p></td></tr><tr><td><p>VM_BACKEND_ACCESS</p></td><td><p>Access to <strong>Backend Access</strong> module</p></td></tr><tr><td><p>VM_CONFIGURATION_MANAGER_MODULE</p></td><td><p>Access to Configuration Manager module</p></td></tr><tr><td><p>VM_DATA_SOURCES_MODULE</p></td><td><p>Access to <strong>Viewtilog</strong> / Data Sources module</p></td></tr><tr><td><p>VM_DEVEL_ACCESS</p></td><td><p>Access to all Viewtimanager, including R&amp;D areas</p></td></tr><tr><td><p>VS_DEVEL_ACCESS</p></td><td><p>Access to all Viewtisight, including advanced features</p></td></tr><tr><td><p>VM_FULL_ACCESS</p></td><td><p>Full access to Viewtimanager (excl. R&amp;D)</p></td></tr><tr><td><p>VS_FULL_ACCESS</p></td><td><p>Full access to Viewtisight</p></td></tr><tr><td><p>VM_HOME_MODULE</p></td><td><p>Access to Viewtimanager <strong>Home</strong></p></td></tr><tr><td><p>VM_INVENTORY_MODULE</p></td><td><p>Access to Viewtimanager <strong>Inventory</strong> module</p></td></tr><tr><td><p>VM_PLUGINS_MODULE</p></td><td><p>Access to <strong>V.S. Data Broker</strong></p></td></tr><tr><td><p>VM_QOS_MODULE</p></td><td><p>Access to Viewtify QoS module</p></td></tr><tr><td><p>VS_READ_ONLY</p></td><td><p>Read-only access to all Viewtisight</p></td></tr><tr><td><p>VS_READ_ONLY_ALARMS_NO_EVENTS</p></td><td><p>Read-only Viewtisight, but no alarms events</p></td></tr><tr><td><p>VM_VIEWTIFYOPT_MODULE</p></td><td><p>Access to ViewtifyOpt module</p></td></tr><tr><td><p>VM_VIEWTIMON_INSPECTORS</p></td><td><p>Allows modifying inspectors in the Viewtimon tab</p></td></tr><tr><td><p>VM_VIEWTIMON_MODULE</p></td><td><p>Access to Viewtimon module</p></td></tr><tr><td><p>VM_VIEWTISIGHT_MODULE</p></td><td><p>Access to Viewtisight module</p></td></tr><tr><td><p>VS_NO_CONTROL_CENTER</p></td><td><p>Block access to Control Center (Alarms &amp; Notifications)</p></td></tr><tr><td><p>VM_NO_QOS_CONFIGURATION</p></td><td><p>Disable QoS configuration view</p></td></tr><tr><td><p>VS_NO_SCHEDULER</p></td><td><p>Deny access to Scheduler</p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Permissão</p></th><th><p>Descrição</p></th></tr><tr><td><p>VM_ADMIN_AUTH_FILTERED</p></td><td><p>Remove a aba <strong>Auth</strong> da área Admin</p></td></tr><tr><td><p>VM_ADMIN_AUTH_INTEGRATIONS_FILTERED</p></td><td><p>Filtra para permitir apenas a seção <strong>Integrations</strong> na aba Auth</p></td></tr><tr><td><p>VM_ADMIN_AUTH_ONLY</p></td><td><p>Remove todas as abas de Admin, exceto <strong>Auth</strong></p></td></tr><tr><td><p>VM_ADMIN_GROUPS_FILTERED</p></td><td><p>Remove a aba <strong>Groups</strong> da área Admin</p></td></tr><tr><td><p>VM_ADMIN_MODULE</p></td><td><p>Acesso ao módulo <strong>Admin</strong> do Viewtimanager</p></td></tr><tr><td><p>VM_ADMIN_ROLES_FILTERED</p></td><td><p>Remove a aba <strong>Roles</strong> da área Admin</p></td></tr><tr><td><p>VM_ADMIN_TENANTS_FILTERED</p></td><td><p>Remove a aba <strong>Tenants</strong> da área Admin</p></td></tr><tr><td><p>VM_ADMIN_USERS_FILTERED</p></td><td><p>Remove a aba <strong>Users</strong> da área Admin</p></td></tr><tr><td><p>VM_BACKEND_ACCESS</p></td><td><p>Acesso ao módulo de <strong>Acesso ao Backend (Backend Access)</strong></p></td></tr><tr><td><p>VM_CONFIGURATION_MANAGER_MODULE</p></td><td><p>Acesso ao módulo Configuration Manager</p></td></tr><tr><td><p>VM_DATA_SOURCES_MODULE</p></td><td><p>Acesso ao módulo <strong>Viewtilog</strong> / Data Sources</p></td></tr><tr><td><p>VM_DEVEL_ACCESS</p></td><td><p>Acesso a todo o Viewtimanager, incluindo áreas de P&D (R&amp;D)</p></td></tr><tr><td><p>VS_DEVEL_ACCESS</p></td><td><p>Acesso a todo o Viewtisight, incluindo recursos avançados</p></td></tr><tr><td><p>VM_FULL_ACCESS</p></td><td><p>Acesso total ao Viewtimanager (exceto P&D)</p></td></tr><tr><td><p>VS_FULL_ACCESS</p></td><td><p>Acesso total ao Viewtisight</p></td></tr><tr><td><p>VM_HOME_MODULE</p></td><td><p>Acesso ao <strong>Home</strong> do Viewtimanager</p></td></tr><tr><td><p>VM_INVENTORY_MODULE</p></td><td><p>Acesso ao módulo <strong>Inventory</strong> do Viewtimanager</p></td></tr><tr><td><p>VM_PLUGINS_MODULE</p></td><td><p>Acesso ao <strong>V.S. Data Broker</strong></p></td></tr><tr><td><p>VM_QOS_MODULE</p></td><td><p>Acesso ao módulo Viewtify QoS</p></td></tr><tr><td><p>VS_READ_ONLY</p></td><td><p>Acesso somente leitura a todo o Viewtisight</p></td></tr><tr><td><p>VS_READ_ONLY_ALARMS_NO_EVENTS</p></td><td><p>Viewtisight somente leitura, mas sem eventos de alarmes</p></td></tr><tr><td><p>VM_VIEWTIFYOPT_MODULE</p></td><td><p>Acesso ao módulo ViewtifyOpt</p></td></tr><tr><td><p>VM_VIEWTIMON_INSPECTORS</p></td><td><p>Permite modificar inspetores na aba Viewtimon</p></td></tr><tr><td><p>VM_VIEWTIMON_MODULE</p></td><td><p>Acesso ao módulo Viewtimon</p></td></tr><tr><td><p>VM_VIEWTISIGHT_MODULE</p></td><td><p>Acesso ao módulo Viewtisight</p></td></tr><tr><td><p>VS_NO_CONTROL_CENTER</p></td><td><p>Bloqueia o acesso ao Control Center (Alarmes e Notificações)</p></td></tr><tr><td><p>VM_NO_QOS_CONFIGURATION</p></td><td><p>Desabilita a visualização de configuração de QoS</p></td></tr><tr><td><p>VS_NO_SCHEDULER</p></td><td><p>Nega acesso ao Scheduler (Agendador)</p></td></tr></tbody></table>
 
 <br />
 
@@ -47,11 +46,11 @@ Use the dual-list interface to grant or revoke granular permissions. Select from
 
 <br />
 
-## **Role Sets (Data Access)**
+## **Conjuntos da Função (Role Sets / Data Access)**
 
-In **Role Sets**, determine which database tables (“sets”) this role can query. Use the dual-list to move items from **Allowed Sets** to **Forbidden Sets**.
+Em **Role Sets**, determine quais tabelas de banco de dados (“conjuntos”/sets) esta função pode consultar. Use a lista dupla para mover itens de **Allowed Sets** (Conjuntos Permitidos) para **Forbidden Sets** (Conjuntos Proibidos).
 
-> **Customization Note:** Any sets placed in **Forbidden Sets** cannot be queried by this role, effectively preventing access to those underlying tables or metrics.
+> **Nota de Personalização:** Quaisquer conjuntos colocados em **Forbidden Sets** não podem ser consultados por esta função, impedindo efetivamente o acesso a essas tabelas subjacentes ou métricas.
 
 <br />
 
@@ -59,9 +58,9 @@ In **Role Sets**, determine which database tables (“sets”) this role can que
 
 <br />
 
-## **Role Groups**
+## **Grupos da Função (Role Groups)**
 
-The **Role Groups** panel lists user groups already associated with this role. You **cannot** modify group assignments here—use **Admin → Groups** to add or remove this role from any group.
+O painel **Role Groups** lista os grupos de usuários já associados a essa função. Você **não pode** modificar atribuições de grupo aqui — use **Admin → Groups** para adicionar ou remover essa função de qualquer grupo.
 
 <br />
 
@@ -69,9 +68,9 @@ The **Role Groups** panel lists user groups already associated with this role. Y
 
 <br />
 
-## **Role Users**
+## **Usuários da Função (Role Users)**
 
-Similarly, the **Role Users** panel shows individual users who have this role. To change user-role associations, navigate to **Admin → Users**.
+Da mesma forma, o painel **Role Users** mostra os usuários individuais que têm essa função. Para alterar associações de usuário-função, acesse **Admin → Users**.
 
 <br />
 
@@ -79,6 +78,6 @@ Similarly, the **Role Users** panel shows individual users who have this role. T
 
 <br />
 
-**Remember:** After updating any section (Details, Permissions, Sets), click **Save Changes** at the bottom of the page to apply your configuration.
+**Lembre-se:** Depois de atualizar qualquer seção (Details, Permissions, Sets), clique em **Save Changes** na parte inferior da página para aplicar sua configuração.
 
 <br />

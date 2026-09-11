@@ -1,70 +1,69 @@
 ---
-reusableId: 91
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Autodiscovery
-id: 886-AHCG-3JX-Q97
+id: EOY-4ORU-YGC-AEB
 slug: autodiscovery
 isVisible: false
 isSearchable: true
-lastUpdated: '2026-05-26 16:07:32'
+lastUpdated: '2026-09-10 19:57:53'
 ---
-## **<span align="center"><span class="text-large">Provisioning via Autodiscovery</span></span>**
+## **<span align="center"><span class="text-large">Provisionamento via Autodescoberta</span></span>**
 
 <br />
 
-<span align="justify">Autodiscovery allows you to dynamically scan your network ranges and automatically onboard devices into Viewtinet—no CSV file required. Unlike CSV import (which relies on a static list of IPs/hostnames), Autodiscovery:</span>
+<span align="justify">A Autodescoberta (Autodiscovery) permite que você escaneie dinamicamente as faixas da sua rede e integre automaticamente os dispositivos ao Viewtinet — sem a necessidade de um arquivo CSV. Diferente da importação por CSV (que depende de uma lista estática de IPs/hostnames), a Autodescoberta:</span>
 
--   **Discovers unknown devices** on the fly
--   **Gathers live SNMP/ICMP data** during the scan
--   **Auto-populates inventory fields** such as MAC address, sysObjectID, and systemName
+-   **Descobre dispositivos desconhecidos** em tempo real
+-   **Coleta dados SNMP/ICMP ao vivo** durante a varredura
+-   **Preenche automaticamente campos do inventário**, como endereço MAC, sysObjectID e systemName
 
 ---
 
-### **Step 1: Launch Autodiscovery**
+### **Etapa 1: Iniciar a Autodescoberta**
 
-1.  In the Viewtinet web console, click **Inventory** → **AUTODISCOVERY**.
-2.  Click **LAUNCH NEW AUTO DISCOVERY**.<br />
+1.  No console web do Viewtinet, clique em **Inventory** → **AUTODISCOVERY**.
+2.  Clique em **LAUNCH NEW AUTO DISCOVERY**.<br />
     
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/ph8kCTL7Ob1x3I4Jk7F5.png" align="center"></figure>
 
 ---
 
-### **Step 2: Specify Targets**
+### **Etapa 2: Especificar os Alvos**
 
-Enter one or more nmap‐compatible target specifications in the **Targets** field. Supported formats include:
+Insira uma ou mais especificações de alvo compatíveis com o nmap no campo **Targets**. Os formatos suportados incluem:
 
--   **Single IP**: `10.30.23.41`
--   **Range of IPs**: `10.30.23.41-50`
--   **CIDR block**: `10.30.23.0/24`
--   **Comma‐separated list**: `10.30.23.41,10.30.23.42,10.30.23.50`
--   **Hostname or DNS name**: `router1.example.com`
--   Then fill in **Pipeline Name**, **Depth**, **Execute Timeout**, and **Community string**, and click **RUN** to start the discovery.<br />
+-   **IP Único**: `10.30.23.41`
+-   **Intervalo de IPs**: `10.30.23.41-50`
+-   **Bloco CIDR**: `10.30.23.0/24`
+-   **Lista separada por vírgulas**: `10.30.23.41,10.30.23.42,10.30.23.50`
+-   **Hostname ou nome DNS**: `router1.example.com`
+-   Em seguida, preencha **Pipeline Name**, **Depth**, **Execute Timeout** e **Community string**, e clique em **RUN** para iniciar a descoberta.<br />
     
 
 l
 
 ---
 
-### **Step 3: Review & Pre-Process Results**
+### **Etapa 3: Revisar e Pré-Processar Resultados**
 
-Once the scan completes (✅ icon):
+Assim que a varredura for concluída (ícone ✅):
 
-1.  Select the execution ID in the left pane.
-2.  Switch to the **DEVICES** tab under Autodiscovery.
-3.  A preview table lists discovered hosts with columns like IP/Hostname, MAC, sw\_version, sys\_object\_id, and system\_name.
-4.  Use the filter box or Query Builder to include or exclude devices before import.
+1.  Selecione o ID de execução no painel esquerdo.
+2.  Mude para a aba **DEVICES** em Autodiscovery.
+3.  Uma tabela de visualização lista os hosts descobertos com colunas como IP/Hostname, MAC, sw\_version, sys\_object\_id e system\_name.
+4.  Use a caixa de filtro ou o Query Builder (Construtor de Consultas) para incluir ou excluir dispositivos antes de importar.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/KqkUIcnfHxf2LnQNavEx.png" align="center"></figure>
 
 ---
 
-### **Step 4: Import into Inventory**
+### **Etapa 4: Importar para o Inventário**
 
-1.  Tick the checkboxes for the devices you want to onboard (or use the header checkbox to select all).
-2.  Click **IMPORT INTO INVENTORY** at the top right.
-3.  The selected hosts are added to your main Inventory view, ready for credential relations and plugin assignments.
-4.  Switch to the \*\*OVERVIEW\*\* tab under \*\*Inventory\*\* to see the newly imported hosts.<br />
+1.  Marque as caixas de seleção dos dispositivos que você deseja integrar (ou use a caixa de seleção do cabeçalho para selecionar todos).
+2.  Clique em **IMPORT INTO INVENTORY** (Importar para o Inventário) no canto superior direito.
+3.  Os hosts selecionados são adicionados à visualização principal do seu Inventory, prontos para relações de credenciais e atribuições de plugins.
+4.  Mude para a aba **OVERVIEW** em **Inventory** para ver os hosts recém-importados.<br />
     
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/kmSiJa5aXDQgeBSmESFX.png" align="center"></figure>
@@ -83,46 +82,46 @@ Once the scan completes (✅ icon):
 
 ---
 
-### **Step 5: Inventory Filtering**
+### **Etapa 5: Filtragem de Inventário**
 
-<span align="justify">Viewtinet’s Inventory includes a powerful, flexible Filter Builder that lets you query, combine, and save device filters on‐the‐fly. Use filters to narrow down large inventories by any device attribute—IP/Hostname, vendor, OS version, and more.</span>
+<span align="justify">O Inventory do Viewtinet inclui um poderoso e flexível Filter Builder (Construtor de Filtros) que permite consultar, combinar e salvar filtros de dispositivos em tempo real. Use filtros para restringir grandes inventários por qualquer atributo de dispositivo — IP/Hostname, fabricante, versão de SO e muito mais.</span>
 
 <br />
 
-1.  **Open the Query Builder**<br />
-    Click the pencil icon next to the filter box to launch the advanced Query Builder.
+1.  **Abra o Query Builder**<br />
+    Clique no ícone de lápis ao lado da caixa de filtro para iniciar o avançado Query Builder.
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/MXu73yQf9PQRXkztxfqm.png"></figure>
     
     <br />
     
-2.  **Add Rules or Groups**<br />
-    In the builder modal, click **\+ Add Rule** to add a single condition, or **\+ Add Group** to combine multiple rules with AND/OR logic.
+2.  **Adicionar Regras ou Grupos**<br />
+    No modal do construtor, clique em **\+ Add Rule** (Adicionar Regra) para adicionar uma única condição, ou **\+ Add Group** (Adicionar Grupo) para combinar múltiplas regras com a lógica AND/OR.
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/tDSps7m7zKJLOrEJklbl.png"></figure>
     
     <br />
     
-3.  **Select a Field**<br />
-    For each rule, choose the inventory field you want to filter on (e.g., `device`, `ip`, `vendor`, `operating_system`).
+3.  **Selecionar um Campo**<br />
+    Para cada regra, escolha o campo de inventário pelo qual deseja filtrar (ex: `device`, `ip`, `vendor`, `operating_system`).
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/xlDB8Eocp9EaZu4u55ye.png"></figure>
     
     <br />
     
-4.  **Choose an Operator**<br />
-    Pick an operator to define your match criteria:
+4.  **Escolher um Operador**<br />
+    Selecione um operador para definir seus critérios de correspondência:
     
-    -   `==` (equals)
-    -   `!=` (not equals)
-    -   `Contains` / `Not contains`
-    -   `Starts with` / `Ends with`
-    -   `Is empty` / `Is not empty`
+    -   `==` (igual a)
+    -   `!=` (diferente de)
+    -   `Contains` / `Not contains` (Contém / Não contém)
+    -   `Starts with` / `Ends with` (Começa com / Termina com)
+    -   `Is empty` / `Is not empty` (Está vazio / Não está vazio)
     
     <br />
     
-5.  **Enter a Value and Apply**<br />
-    Type the comparison value (e.g., `contains vlog`) and click **OK**. The filter expression appears in the main Inventory view.
+5.  **Inserir um Valor e Aplicar**<br />
+    Digite o valor de comparação (ex: `contains vlog`) e clique em **OK**. A expressão do filtro aparecerá na visualização principal do Inventory.
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/pQiVYiyFoCxueO9OLiWQ.png"></figure>
     
@@ -130,8 +129,8 @@ Once the scan completes (✅ icon):
     
     <br />
     
-6.  **Save Your Filter**<br />
-    To reuse this filter later, click **SAVE FILTER**, give it a name, and click **OK**.
+6.  **Salvar o seu Filtro**<br />
+    Para reutilizar este filtro posteriormente, clique em **SAVE FILTER**, dê um nome a ele e clique em **OK**.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/ETWH7S4Rbm8yYQn3qAX5.png"></figure>
 
@@ -140,23 +139,23 @@ Once the scan completes (✅ icon):
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/TyELEQPUtYFvh4oPpzdK.png" align="center"></figure>
 
 <br />
-<span align="justify">With the Filter Builder you can quickly drill down into your inventory, combine complex conditions, and save your most-used queries for one-click access. Next, we’ll show how to create dynamic groups based on these filters.</span>
+<span align="justify">Com o Filter Builder você pode investigar detalhadamente o seu inventário, combinar condições complexas e salvar suas consultas mais utilizadas para acesso em um clique. A seguir, nós mostraremos como criar grupos dinâmicos com base nesses filtros.</span>
 
 ### <br />
 
-**Step 6: Selecting and Assigning OID Groups**
+**Etapa 6: Selecionando e Atribuindo Grupos de OID**
 
-<span align="justify">An OID Group is a named collection of SNMP Object Identifiers (OIDs) that specifies exactly which metrics and counters to poll from a device. By assigning OID groups, you ensure Viewtinet collects the correct set of SNMP data for each device type.</span>
+<span align="justify">Um Grupo de OID (OID Group) é uma coleção nomeada de Identificadores de Objeto (OIDs) SNMP que especifica exatamente quais métricas e contadores consultar a partir de um dispositivo. Ao atribuir grupos de OID, você garante que o Viewtinet colete o conjunto correto de dados SNMP para cada tipo de dispositivo.</span>
 
-### **Add the OID Groups Column**<br />
+### **Adicionar a Coluna OID Groups**<br />
 
-1.  In the Inventory view, click the **?** help icon, then choose **Add New Column**.
+1.  Na visualização do Inventory, clique no ícone de ajuda **?**, e então escolha **Add New Column**.
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/sdPthHO5Dg0kgR3mAPX2.png"></figure>
     
     <br />
     
-2.  In the **System Fields** modal, expand **VSDB** and click the **+** next to **oid\_group\_names**, then click **OK**.<br />
+2.  Na modal **System Fields**, expanda **VSDB** e clique no **+** ao lado de **oid\_group\_names**, depois clique em **OK**.<br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/Z8nyy9z58mAbOekycAzm.png" align="center"></figure>
     
@@ -166,63 +165,63 @@ Once the scan completes (✅ icon):
     
     <br />
     
-3.  The new **oid\_group\_names** column now appears in your device list.
+3.  A nova coluna **oid\_group\_names** aparece agora em sua lista de dispositivos.
     
     <br />
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/OizNID3L0VLDfPz27pTq.png"></figure>
     
-    ⚠️ **Note:** The **oid\_group\_names** column only needs to be added **once**; it will remain available in the inventory view thereafter.
+    ⚠️ **Nota:** A coluna **oid\_group\_names** precisa ser adicionada **apenas uma vez**; ela permanecerá disponível na visualização do inventário a partir de então.
     
     <br />
     
-    **Filter and Assign OID Group Values**
+    **Filtrar e Atribuir Valores para Grupos de OID**
     
     <br />
     
-4.  Filter your data sources\*\*.\*\* Use the inventory filters to narrow down the devices you wish to configure—e.g., filter by system\_name `vlog`—so that OID groups are assigned only to the relevant subset.<br />
+4.  Filtre suas fontes de dados**.** Use os filtros de inventário para restringir os dispositivos que você deseja configurar — ex: filtrar por system\_name `vlog` — de forma que os grupos de OID sejam atribuídos apenas ao subconjunto relevante.<br />
     
-5.  Enter the OID group name\*\*.\*\* In the oid\_group\_names header input (or per-row cell), type the OID group name—comma-separated if assigning multiple groups (e.g. `net-SNMPAgent,general`)—and press **Enter**. A dropdown will suggest existing group names as you type.<br />
+5.  Insira o nome do grupo OID**.** No cabeçalho oid\_group\_names (ou na célula individual por linha), digite o nome do grupo OID — separado por vírgula se atribuir vários grupos (ex: `net-SNMPAgent,general`) — e pressione **Enter**. Uma lista suspensa irá sugerir nomes de grupos existentes à medida que você digita.<br />
     
     <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/QG7S1JvWEb4iWs9A/images/rcbmo0FluC7TpecKN6SD.png"></figure>
     
     <br />
     
-6.  **Apply to your selection.** After pressing **Enter**, the group name is applied to all filtered (selected) rows or to individual rows as needed.
+6.  **Aplicar à sua seleção.** Depois de pressionar **Enter**, o nome do grupo é aplicado a todas as linhas filtradas (selecionadas) ou a linhas individuais conforme necessário.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/4aZZbkyLX9r1YOx9hcBt.png" align="center"></figure>
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/PZYnOtxUxQ4ZWC29hrjD.png"></figure>
 
-### **Step 3: Save Your Changes**
+### **Etapa 3: Salvar suas Alterações**
 
 <br />
-Click **SAVE CHANGES** at the bottom right to persist your OID group assignments.<br />
+Clique em **SAVE CHANGES** no canto inferior direito para persistir suas atribuições de grupos de OID.<br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/DCkyap8nQzAZPY5XjIbx.png" align="center"></figure>
 
-A confirmation banner will appear once the inventory is successfully saved.<br />
+Um banner de confirmação aparecerá assim que o inventário for salvo com sucesso.<br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/b6EsvUPa4hddixDTteBa.png" align="center"></figure>
 
 ---
 
-### **Configuring Credentials**
+### **Configurando Credenciais**
 
-In Viewtinet, **Credentials** define how the system authenticates both to **collect counters & metrics** (SNMP, ICMP, WMI) and to **manage configurations** (SSH/HTTPS) on your devices. Each protocol requires its own credential entry:
+No Viewtinet, as **Credenciais** definem como o sistema se autentica tanto para **coletar contadores e métricas** (SNMP, ICMP, WMI) quanto para **gerenciar configurações** (SSH/HTTPS) em seus dispositivos. Cada protocolo requer sua própria entrada de credencial:
 
--   **ICMP**: Basic reachability and latency checks.
--   **SNMP v1/v2c/v3**: Poll counters, tables and other device metrics.
--   **SSH / Telnet**: CLI access for advanced configuration.
+-   **ICMP**: Verificações básicas de alcance e latência.
+-   **SNMP v1/v2c/v3**: Consultar contadores, tabelas e outras métricas de dispositivos.
+-   **SSH / Telnet**: Acesso CLI para configuração avançada.
 
-> ⚠️ **Note:** If during Autodiscovery you chose **Import credentials**, any SNMP credentials discovered will be automatically added to your inventory. In that case, the **only credential** you need to create manually is **ICMP**
+> ⚠️ **Nota:** Se durante a Autodescoberta você escolheu **Import credentials**, quaisquer credenciais SNMP descobertas serão automaticamente adicionadas ao seu inventário. Nesse caso, a **única credencial** que você precisa criar manualmente é a de **ICMP**
 
-If SNMP credentials were **not** imported via Autodiscovery, the following steps will show you how to configure them manually.
+Se as credenciais SNMP **não** foram importadas via Autodescoberta, as etapas a seguir mostrarão como configurá-las manualmente.
 
-### **Step 1: Open the Credentials Tab**<br />
+### **Etapa 1: Abrir a Aba de Credenciais**<br />
 
-1.  In the Viewtinet web console, click **Inventory → Credentials**.
-2.  The Credentials table shows existing entries and supported protocol columns.
+1.  No console web do Viewtinet, clique em **Inventory → Credentials**.
+2.  A tabela de Credenciais exibe as entradas existentes e colunas de protocolos suportados.
     
     <br />
     
@@ -230,44 +229,44 @@ If SNMP credentials were **not** imported via Autodiscovery, the following steps
 
 <br />
 
-### **Step 2: Add a New Credential**<br />
+### **Etapa 2: Adicionar uma Nova Credencial**<br />
 
-1.  Click **\+ ADD NEW CREDENTIAL** at the bottom of the table.
+1.  Clique em **\+ ADD NEW CREDENTIAL** na parte inferior da tabela.
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/4Iyvj9HhwA7wAEGhMEIN.png"><br />
     
-2.  A new blank row is added. Under **Protocol**, select the desired protocol (e.g., **snmp**).
+2.  Uma nova linha em branco é adicionada. Em **Protocol**, selecione o protocolo desejado (ex: **snmp**).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/ZwfBwI3MFDPy4wETiOyx.png"><br />
     
 
-### **Step 3: Configure SNMP Credentials**<br />
+### **Etapa 3: Configurar as Credenciais SNMP**<br />
 
-1.  In the **SNMP Version** column, choose **2c** (or v1/v3 as needed).
+1.  Na coluna **SNMP Version**, escolha **2c** (ou v1/v3 conforme necessário).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/sL9Qqkc4gIvotWf4RNvL.png"><br />
     
-2.  Enter the **Community** string (mandatory for v1/v2c).
+2.  Insira a string de **Community** (obrigatória para v1/v2c).
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/XjTleODdmXQNcldspFk8.png"><br />
-    <span align="center">(In this example, we use training.)</span><br />
+    <span align="center">(Neste exemplo, nós usamos training.)</span><br />
     
-3.  For **SNMP v3**, you would also fill in **Security Level**, **Auth Protocol**, **Auth Passphrase**, **Priv Protocol**, and **Priv Passphrase**.
+3.  Para **SNMP v3**, você também preencheria **Security Level**, **Auth Protocol**, **Auth Passphrase**, **Priv Protocol** e **Priv Passphrase**.
 
 <br />
 
-### **Step 4: Save Your Changes**
+### **Etapa 4: Salvar suas Alterações**
 
-1.  After completing all required fields, click the **SAVE CHANGES** button at the bottom right.
+1.  Após concluir todos os campos obrigatórios, clique no botão **SAVE CHANGES** no canto inferior direito.
     
     <br />
     <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/gATCIy4xaapGL0n371bV.png"><br />
     
-2.  A success notification confirms your credentials were saved.
+2.  Uma notificação de sucesso confirmará que suas credenciais foram salvas.
     
     <br />
     
@@ -276,81 +275,81 @@ If SNMP credentials were **not** imported via Autodiscovery, the following steps
 
 <br />
 
-## **Managing Device–Credential Relations**
+## **Gerenciando Relações de Dispositivos e Credenciais**
 
-<span align="justify">The Relations tab lets you assign one or more credential entries to a set of devices. You can use filters to select exactly the devices you need—e.g. all switches using SNMP v2c with a specific community—and then relate them to the matching SNMP credential.</span>
+<span align="justify">A aba Relations permite atribuir uma ou mais entradas de credenciais a um conjunto de dispositivos. Você pode usar filtros para selecionar exatamente os dispositivos que você precisa — ex: todos os switches que usam SNMP v2c com uma comunidade específica — e depois relacioná-los à credencial SNMP correspondente.</span>
 
 <br />
 
-### **Step 1: Open the Relations Tab**
+### **Etapa 1: Abrir a Aba de Relações (Relations)**
 
-In the Inventory console, click **Relations** to view the device–credential mapping interface.
+No console do Inventory, clique em **Relations** para visualizar a interface de mapeamento entre dispositivos e credenciais.
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/DFACzLKlGIcuFAkiJkyt.png"></figure>
 
-### **Step 2: Filter Devices**
+### **Etapa 2: Filtrar Dispositivos**
 
-Use the filter box or Query Builder to narrow the device list. You can pick a specific subset (for example `dev.sw_version == '2c'` or `dev.vendor == 'LINUX'`), or choose the All devices filter if every data source uses the same SNMP community (or for simple protocols like ICMP).
+Use a caixa de filtro ou o Query Builder para restringir a lista de dispositivos. Você pode escolher um subconjunto específico (por exemplo `dev.sw_version == '2c'` ou `dev.vendor == 'LINUX'`), ou escolher o filtro "All devices" (Todos os dispositivos) se cada fonte de dados usar a mesma comunidade SNMP (ou para protocolos simples como ICMP).
 
 ### <br />
 
-**Step 3: Select Devices**
+**Etapa 3: Selecionar Dispositivos**
 
 <figure><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/vJU5IFke2vtFfn3lKfHc.png"></figure>
 
-Once filtered, use the checkboxes in the first column to select all matching devices (or pick individual entries).
+Uma vez filtrados, use as caixas de seleção na primeira coluna para selecionar todos os dispositivos correspondentes (ou escolha entradas individuais).
 
-### **Step 4: Select Credentials**
+### **Etapa 4: Selecionar Credenciais**
 
-Scroll down to the Credentials panel. Use its filter to find the credential entry you want (for instance, your `snmp-2c-training` community). Then select the checkbox next to that credential.
+Role para baixo até o painel Credentials (Credenciais). Use seu filtro para encontrar a entrada de credencial que você deseja (por exemplo, sua comunidade `snmp-2c-training`). Em seguida, selecione a caixa de seleção ao lado dessa credencial.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/liOmqW0ZkTVsNPw0xenp.png" align="center"></figure>
 
-### **Step 5: Save Relations**
+### **Etapa 5: Salvar as Relações**
 
-Click **SAVE CHANGES** at the bottom right to apply your assignments. A confirmation toast will appear once the relations are saved.
+Clique em **SAVE CHANGES** (Salvar Alterações) no canto inferior direito para aplicar suas atribuições. Uma notificação de confirmação (toast) aparecerá assim que as relações forem salvas.
 
 <br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/rqPy2bh7qTD1TmfvbVPH.png" align="center"></figure>
 
-<span align="justify">By using filters together with bulk selection, you can quickly assign specific credential sets—SNMP communities, SSH keys, or ICMP settings—to exactly the devices that need them, ensuring each device uses the correct authentication parameters</span>.
+<span align="justify">Ao usar filtros em conjunto com a seleção em massa, você pode rapidamente atribuir conjuntos de credenciais específicos — comunidades SNMP, chaves SSH ou configurações ICMP — exatamente aos dispositivos que necessitam deles, garantindo que cada dispositivo use os parâmetros de autenticação corretos</span>.
 
 ---
 
-## **Installing Plugins**
+## **Instalando Plugins**
 
 <br />
 
-Viewtinet uses a **plugin framework** to map inventory data into data‐processing pipelines. In this section we’ll install the **Network Monitoring** plugin for all of your data sources.
+O Viewtinet usa um **framework de plugins** para mapear dados do inventário em pipelines de processamento de dados. Nesta seção nós vamos instalar o plugin **Network Monitoring** para todas as suas fontes de dados.
 
 <br />
 
-> ⚠️ **Disclaimer:** Because we’re applying **all** data sources to the **Network Monitoring** plugin, **no filters** are used in this step. Filters become essential when you want to install **vendor-specific** plugins only on certain devices.
+> ⚠️ **Aviso:** Como nós estamos aplicando **todas** as fontes de dados para o plugin **Network Monitoring**, **nenhum filtro** é usado nesta etapa. Os filtros se tornam essenciais quando você quer instalar plugins **específicos de um fabricante** somente em certos dispositivos.
 
 ---
 
 <br />
 
-### **Step 1: Open the Plugins Tab**
+### **Etapa 1: Abrir a Aba de Plugins**
 
-In the Inventory console, click **PLUGINS**.
+No console do Inventory, clique em **PLUGINS**.
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/2SiOKpo4yqgk0Y5Stzmb.png" align="center"></figure>
 
 ### <br />
 
-**Step 2: (No Filters) Select “All devices”**
+**Etapa 2: (Sem Filtros) Selecionar "All devices"**
 
-Since we’re installing across every data source, check the **All devices** filter.<br />
+Já que nós estamos instalando em todas as fontes de dados, marque o filtro **All devices**.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/XwzPHTpvcjM6LwxBrGXL.png"><br />
 
-### **Step 3: Pick the Network Monitoring Plugin**
+### **Etapa 3: Escolher o Plugin Network Monitoring**
 
-In the **Plugins** panel, expand **network monitoring** and select:
+No painel de **Plugins**, expanda **network monitoring** e selecione:
 
 -   **snmp\_device\_config**
 -   **snmp\_if\_config**
@@ -360,40 +359,40 @@ In the **Plugins** panel, expand **network monitoring** and select:
 
 <br />
 
-### **Step 4: Modify and Install**
+### **Etapa 4: Modificar e Instalar**
 
-Click **MODIFY AND INSTALL PLUGINS** at the bottom right.<br />
+Clique em **MODIFY AND INSTALL PLUGINS** no canto inferior direito.<br />
 
 <img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/kq16Kb1vv4xS6zHgQp2P.png"><br />
 
-### **Step 5: Confirm Plugin Selection**
+### **Etapa 5: Confirmar a Seleção de Plugins**
 
-In the **Select plugins** modal:
+No modal **Select plugins**:
 
-1.  Ensure **network monitoring** is checked under **PLUGINS TO BE MODIFIED**
-2.  Check **Also INSTALL them**
-3.  (Optional) Check **Unattended installation**
-4.  Click **OK**<br />
+1.  Certifique-se de que **network monitoring** está marcado em **PLUGINS TO BE MODIFIED**
+2.  Marque **Also INSTALL them**
+3.  (Opcional) Marque **Unattended installation**
+4.  Clique em **OK**<br />
     
     <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/aIftba2pgGkskspMAdit.png" align="center"></figure>
     
     <br />
     
 
-### **Step 6: Installation Success**
+### **Etapa 6: Sucesso na Instalação**
 
-A green toast confirms:
+Um aviso verde confirmará:
 
-> **1 plugins successfully modified. Redirecting to V.S. Data Broker…**<br />
+> **1 plugins successfully modified. Redirecting to V.S. Data Broker…** (1 plugins modificados com sucesso. Redirecionando para V.S. Data Broker…)<br />
 > 
 > <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/HU2IAsKk1LIqnsKJpa6V.png" align="center"></figure>
 > 
 > <br />
 
-You’ll be redirected to **Visual Smart Data Broker**. Click **FINISH INSTALLATION** to complete the process.<br />
+Você será redirecionado para o **Visual Smart Data Broker**. Clique em **FINISH INSTALLATION** para completar o processo.<br />
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/CkzMkmJlfIGDBui4/images/BIvAlNoBMTl2Hm4sYHMi.png" align="center"></figure>
 
-At this point, according to your pipeline configuration, **metrics, counters, and all dimensions** from your data sources are now being ingested into the database for analysis and dashboarding.
+Neste ponto, de acordo com a configuração do seu pipeline, as **métricas, contadores e todas as dimensões** das suas fontes de dados estão sendo ingeridas no banco de dados para análise e criação de dashboards.
 
-With Autodiscovery, you can keep your inventory fresh and accurate by discovering, filtering, and importing devices in a single workflow—no manual CSV editing necessary<br />
+Com a Autodescoberta, você pode manter o seu inventário atualizado e preciso descobrindo, filtrando e importando dispositivos em um único fluxo de trabalho — não sendo necessária a edição manual de arquivos CSV.<br />

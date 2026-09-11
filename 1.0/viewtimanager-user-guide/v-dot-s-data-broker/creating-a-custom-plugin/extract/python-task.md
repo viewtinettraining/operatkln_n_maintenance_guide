@@ -1,5 +1,4 @@
 ---
-reusableId: 146
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Python Task'
 id: G0B-9DU5-VOF-55K
@@ -7,23 +6,23 @@ slug: python-task
 isVisible: true
 lastUpdated: '2025-09-03 10:30:56'
 ---
-# **<span align="center">Python Task Connector</span>**
+# **<span align="center">Conector Python Task</span>**
 
-The **Python Task Connector** allows users to integrate custom Python programs into the Visual Smart Data Broker (VSDB). Through this connector, it is possible to collect metrics, logs, or any other type of data from sources accessible via Python code.
+O **Conector Python Task** permite aos usuários integrarem programas Python customizados no Visual Smart Data Broker (VSDB). Por meio desse conector, é possível coletar métricas, logs ou qualquer outro tipo de dado de fontes acessíveis via código Python.
 
-This provides a flexible way to extend Viewtinet integrations when no standard connector is available. The Python Task executes user-developed scripts and transforms their output into records compatible with Viewtinet’s time-series database.
+Isso fornece uma maneira flexível de estender as integrações do Viewtinet quando não há um conector padrão disponível. A Tarefa Python executa os scripts desenvolvidos pelo usuário e transforma suas saídas em registros compatíveis com o banco de dados de série temporal do Viewtinet.
 
 ---
 
-## **Creating Your Python Program**
+## **Criando seu Programa Python**
 
-To use the Python Task Connector, you must create a Python program in the following directory of the Viewtilog server:
+Para usar o Conector Python Task, você deve criar um programa Python no seguinte diretório do servidor Viewtilog:
 
 ```bash
 /opt/vn/dhyana/bin
 ```
 
-Your script must follow a predefined template to be compatible with the Python Loader.
+Seu script deve seguir um template predefinido para ser compatível com o Python Loader.
 
 ```python
 import sys
@@ -38,22 +37,22 @@ _config: dict = None
 def init(config: dict):
     global _config
     _config = config
-    # Example: endpoint = _config.get("endpoint")
+    # Exemplo: endpoint = _config.get("endpoint")
 
 def read() -> DataWrapper:
     global _config
-    # Implement your logic here
-    data = DataWrapper.wrap(YOUR_DICT)
+    # Implemente sua lógica aqui
+    data = DataWrapper.wrap(SEU_DICIONARIO)
     return data
 ```
 
 <br />
 
-### **Example: Collecting CPU Usage from Linux** `/proc/stat`
+### **Exemplo: Coletando o Uso da CPU do Linux em** `/proc/stat`
 
 <br />
 
-The following script reads CPU usage from the `/proc/stat` file, calculates the CPU utilization percentage, and returns it with a timestamp. This script can be saved in `/opt/vn/dhyana/bin/cpu_monitor.py`.
+O script a seguir lê as estatísticas de uso da CPU a partir do arquivo `/proc/stat`, calcula a porcentagem de utilização da CPU, e retorna isso junto de um carimbo de data/hora. Este script pode ser salvo em `/opt/vn/dhyana/bin/cpu_monitor.py`.
 
 <br />
 
@@ -74,23 +73,23 @@ def init(config: dict):
     _config = config
 
 def read() -> DataWrapper:
-    # Get the current timestamp in milliseconds
+    # Obtém o timestamp atual em milissegundos
     timestamp = int(time.time()  1000000)
 
-    # Read CPU statistics from /proc/stat
+    # Lê estatísticas de CPU do /proc/stat
     with open("/proc/stat", "r") as f:
         line = f.readline()
     parts = line.split()
 
-    # Extract user, nice, system, idle times
+    # Extrai tempos user, nice, system, idle
     user, nice, system, idle = map(int, parts[1:5])
 
-    # Calculate total and usage percentage
+    # Calcula o total e o percentual de uso
     total = user + nice + system + idle
     busy = total - idle
     cpu_usage_percent = (busy / total)  100 if total > 0 else 0
 
-    # Prepare dictionary output
+    # Prepara o dicionário de saída
     result = [
         {
             "timestamp": timestamp,
@@ -98,15 +97,15 @@ def read() -> DataWrapper:
         }
     ]
 
-    # Wrap the dictionary into DataWrapper
+    # Envolve o dicionário num DataWrapper
     return DataWrapper.wrap(result)
 ```
 
 <br />
 
-### **Example Output**
+### **Saída de Exemplo**
 
-If executed at runtime, the connector may produce records like:
+Se executado em tempo de execução, o conector pode produzir registros como:
 
 ```json
 [
@@ -118,29 +117,29 @@ If executed at runtime, the connector may produce records like:
 ]
 ```
 
--   `timestamp`: Mandatory field in milliseconds.
--   `cpu_usage`: The measured CPU utilization percentage.
+-   `timestamp`: Campo obrigatório em milissegundos.
+-   `cpu_usage`: O percentual medido de uso da CPU.
 
 <br />
 
-### **Workflow Summary**
+### **Resumo do Fluxo de Trabalho**
 
-1.  Save your script under `/opt/vn/dhyana/bin`.
-2.  Ensure it follows the Python Loader template (`init` + `read` functions).
-3.  Implement your logic inside the `read()` method.
-4.  Return data as a list of dictionaries with at least a **timestamp** field.
+1.  Salve seu script em `/opt/vn/dhyana/bin`.
+2.  Garanta que ele siga o template do Python Loader (funções `init` + `read`).
+3.  Implemente sua lógica dentro do método `read()`.
+4.  Retorne os dados como uma lista de dicionários contendo pelo menos um campo **timestamp**.
 
-<div data-start="3573" data-end="3752"><p><br></p><div class="sd-callout" data-callout-type="alert"><strong>Important</strong><br>The Python program must always return data with a <strong>timestamp</strong> field (in microseconds 16 digits). Without it, the records cannot be stored in Viewtinet’s time-series database.</div></div>
-
-<br />
-
-Once you have developed and saved your Python script under `/opt/vn/dhyana/bin`, the next step is to configure the **Extract Stage** of your pipeline. This stage links the Python code you created with the Viewtinet ETL process.
+<div data-start="3573" data-end="3752"><p><br></p><div class="sd-callout" data-callout-type="alert"><strong>Importante</strong><br>O programa Python deve sempre retornar os dados com um campo <strong>timestamp</strong> (em microssegundos, 16 dígitos). Sem isso, os registros não poderão ser armazenados no banco de dados de série temporal do Viewtinet.</div></div>
 
 <br />
 
-## **Step 2: Configure the Extract Stage**
+Uma vez que você desenvolveu e salvou o script Python no caminho `/opt/vn/dhyana/bin`, o próximo passo será configurar o **Estágio Extract** (Extração) no seu pipeline. Esta etapa faz a ligação entre o código Python que você criou e o processo ETL do Viewtinet.
 
-Follow these steps to set up the Python Task Connector:
+<br />
+
+## **Passo 2: Configurando o Estágio Extract**
+
+Siga estes passos para configurar o Conector Python Task:
 
 <br />
 
@@ -150,39 +149,39 @@ Follow these steps to set up the Python Task Connector:
 
 <br />
 
-1.  **Select the Connector Type**<br />
-    From the dropdown menu, choose **Python Task Connector**.
-2.  **Name of the Pipeline**<br />
-    Enter a unique pipeline name. Example: `my_python_task`.
-3.  **Execution Configuration**
+1.  **Selecione o Tipo de Conector**<br />
+    No menu suspenso, escolha **Python Task Connector**.
+2.  **Nome do Pipeline**<br />
+    Insira um nome único para o pipeline. Exemplo: `my_python_task`.
+3.  **Configuração de Execução**
     
-    -   Choose the **Frequency Type**: `Scheduled` or `Periodic`.
-    -   Define the **Cron Expression** if using scheduled execution (e.g., every minute).
-    -   Set the **Number of Executions**:
+    -   Escolha o **Tipo de Frequência**: `Agendado` (Scheduled) ou `Periódico` (Periodic).
+    -   Defina a **Expressão Cron** ao utilizar a execução agendada (ex., a cada minuto).
+    -   Configure o **Número de Execuções**:
         
-        -   `-1` means infinite execution.
-        -   Any positive integer limits the number of runs.
-4.  **Program Path**<br />
-    Specify the directory where your Python script is stored, usually:<br />
+        -   `-1` significa uma execução infinita.
+        -   Qualquer inteiro positivo vai limitar a quantidade de vezes que a tarefa será executada.
+4.  **Caminho do Programa**<br />
+    Determine o diretório no qual o seu script Python está salvo; normalmente:<br />
     `/opt/vn/dhyana/bin/`
-5.  **Module Name**<br />
-    Enter the name of your Python file (without the `.py` extension).<br />
-    Example: for `cpu_monitor.py`, write `cpu_monitor`.
-6.  **Main Function**<br />
-    Set the function to be executed inside the script. By convention, it must be `read`.
-7.  **Arguments (Optional)**<br />
-    If your Python script requires parameters, you can define them here by specifying a **name** and **value** pair. These will be passed to your script at runtime.
-8.  **Define the Output Fields**
+5.  **Nome do Módulo**<br />
+    Insira o nome de seu arquivo Python (omitindo a extensão `.py`).<br />
+    Exemplo: em `cpu_monitor.py`, você deverá colocar `cpu_monitor`.
+6.  **Função Principal**<br />
+    Especifique a função que será executada de dentro do script. Por convenção, deve ser a `read`.
+7.  **Argumentos (Opcional)**<br />
+    Se o script Python requerer a passagem de parâmetros, você poderá defini-los aqui mediante uma configuração de chaves **nome** (name) e **valor** (value). Eles serão então transmitidos ao seu script em tempo de execução.
+8.  **Defina os Campos de Saída**
     
-    -   Add the fields that your Python script will return.
-    -   **Mandatory field:** `timestamp` → type must be `ulong`.
-    -   Define additional fields as needed (e.g., `cpu_usage`, `memory_usage`, etc.).
-    -   These fields must match the keys in the dictionary returned by your Python script.
+    -   Adicione os campos que seu script Python retornará.
+    -   **Campo obrigatório:** `timestamp` → o tipo deve ser `ulong`.
+    -   Defina os campos adicionais conforme a necessidade (ex., `cpu_usage`, `memory_usage`, etc.).
+    -   Esses campos deverão bater com as chaves do dicionário de dados gerado por seu script Python.
 
-✅ Example configuration:
+✅ Configuração de Exemplo:
 
--   **Field Name:** `timestamp` → **Field Type:** `ulong`
--   **Field Name:** `cpu_usage` → **Field Type:** `ulong`
+-   **Nome do Campo:** `timestamp` → **Tipo de Campo:** `ulong`
+-   **Nome do Campo:** `cpu_usage` → **Tipo de Campo:** `ulong`
 
 <br />
 

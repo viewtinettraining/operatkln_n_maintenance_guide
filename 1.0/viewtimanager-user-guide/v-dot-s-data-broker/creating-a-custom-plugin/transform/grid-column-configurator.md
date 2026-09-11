@@ -11,17 +11,17 @@ lastUpdated: '2026-05-22 11:17:41'
 
 <br />
 
-The **Grid Column Configurator** handler is designed to let you define the strict order and presence of columns within your data grid.
+O handler **Grid Column Configurator** foi projetado para permitir que você defina a ordem estrita e a presença das colunas dentro da sua grid de dados.
 
-By explicitly specifying the output fields, you ensure that the payload maintains a consistent, standardized schema before it is inserted into the database. This is especially useful for organizing large datasets or normalizing structures from varying log sources.
+Ao especificar explicitamente os campos de saída, você garante que a carga mantenha um esquema consistente e padronizado antes de ser inserida no banco de dados. Isso é especialmente útil para organizar grandes conjuntos de dados ou normalizar estruturas de diferentes fontes de log.
 
 ---
 
-## **Configuration Parameters**
+## **Parâmetros de Configuração**
 
-To use this handler, select `Grid Column Configurator` from the dropdown menu. The interface will display a read-only preview string of your current **Output fields**.
+Para usar este handler, selecione `Grid Column Configurator` no menu suspenso. A interface exibirá uma string de visualização somente leitura dos seus **Output fields** atuais.
 
-To define or modify the exact order of the columns, click on the **Edit Output Fields** pencil icon () located on the right side of the handler.
+Para definir ou modificar a ordem exata das colunas, clique no ícone de lápis **Edit Output Fields** () localizado no lado direito do handler.
 
 <br />
 
@@ -29,15 +29,15 @@ To define or modify the exact order of the columns, click on the **Edit Output F
 
 <br />
 
-### **Editing the Schema**
+### **Editando o Esquema**
 
-Clicking the pencil icon opens the **Editing Output Fields** modal window.
+Clicar no ícone de lápis abre a janela modal **Editing Output Fields**.
 
-In this window, you can freely manage your columns:
+Nesta janela, você pode gerenciar livremente suas colunas:
 
--   **Adding Fields**: Type the exact name of the column you want to include and separate it using a comma (`,`) or a semicolon (`;`). The system will automatically convert it into an interactive tag.
--   **Removing Fields**: Click the `X` icon next to any tag to remove it from the grid's output completely.
--   **Ordering Fields**: The order in which the tags appear here dictates the strict left-to-right sequence of the columns in the final grid structure.
+-   **Adicionando Campos**: Digite o nome exato da coluna que deseja incluir e separe-a usando uma vírgula (`,`) ou um ponto e vírgula (`;`). O sistema a converterá automaticamente em uma tag interativa.
+-   **Removendo Campos**: Clique no ícone `X` ao lado de qualquer tag para removê-la completamente da saída da grid.
+-   **Ordenando Campos**: A ordem em que as tags aparecem aqui determina a sequência estrita da esquerda para a direita das colunas na estrutura final da grid.
 
 <br />
 
@@ -45,6 +45,6 @@ In this window, you can freely manage your columns:
 
 <br />
 
-> \[!TIP\] Use this handler as one of the last steps in your transformation pipeline to guarantee that your final payload structure is clean and correctly formatted for ingestion.
+> \[!TIP\] Use este handler como uma das últimas etapas no seu pipeline de transformação para garantir que sua estrutura final da carga esteja limpa e formatada corretamente para ingestão.
 
 <br />

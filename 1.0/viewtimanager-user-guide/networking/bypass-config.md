@@ -10,7 +10,7 @@ id: DVT-MAD-BHQ-LDF
 
 <br />
 
-The **BYPASS CONFIG** tab allows you to configure the behavior of the network segments (pairs of physical ports). From this screen, you can manage how traffic is handled by the appliance, either processing it normally or bypassing it completely.
+A guia **BYPASS CONFIG** permite que você defina o comportamento dos segmentos de rede (pares de portas físicas). A partir desta tela, você pode gerenciar como o tráfego é tratado pelo dispositivo, processando-o normalmente ou ignorando-o (bypassing) completamente.
 
 <br />
 
@@ -22,14 +22,14 @@ The **BYPASS CONFIG** tab allows you to configure the behavior of the network se
 
 ## **Global vs. Per-Segment Bypass**
 
-The bypass functionality can be controlled either globally for the entire appliance or individually per segment.
+A funcionalidade de bypass pode ser controlada globalmente para todo o dispositivo ou individualmente por segmento.
 
-- **Global Bypass:** You can set the entire appliance into bypass mode by using the global switch.
+- **Global Bypass:** Você pode colocar todo o dispositivo no modo bypass usando a chave global.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/networking-bypass-config-3.png" align="center"></figure>
   <br />
 
-- **Multi-segment Feature:** When the multi-segment feature is enabled, you can configure bypass settings for each segment individually. This allows you to set specific segments to *Normal Operation* while forcing others into *Bypass*.
+- **Multi-segment Feature:** Quando o recurso de múltiplos segmentos está ativado, você pode configurar as opções de bypass para cada segmento individualmente. Isso permite definir segmentos específicos para *Normal Operation* enquanto força outros para *Bypass*.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/networking-bypass-config-4.png" align="center"></figure>
   <br />
@@ -38,7 +38,7 @@ The bypass functionality can be controlled either globally for the entire applia
 
 ## **Per-Segment Configuration Options**
 
-Expanding a segment provides several advanced configuration options tailored to specific networking needs:
+Expandir um segmento fornece diversas opções avançadas de configuração adaptadas a necessidades de rede específicas:
 
 <br />
 
@@ -47,16 +47,16 @@ Expanding a segment provides several advanced configuration options tailored to 
 <br />
 
 - **Use VLANs:** 
-  - By activating this checkbox, the QoS engine will classify the source of internal connections based on the VLAN tag of the packet. 
-  - In QinQ environments, the outermost VLAN will be read. 
-  - *Default Behavior:* If disabled, the QoS engine classifies the connection source using the IP address.
+  - Ao ativar esta caixa de seleção, o motor de QoS classificará a origem das conexões internas com base na tag de VLAN do pacote. 
+  - Em ambientes QinQ, a VLAN mais externa será lida. 
+  - *Default Behavior:* Se desabilitado, o motor de QoS classifica a origem da conexão usando o endereço IP.
 
-- **Extensions:** These dropdowns allow you to configure extensions for special use cases.
+- **Extensions:** Estes menus suspensos permitem que você configure extensões para casos de uso especiais.
 
 - **Use Fail Port:** 
-  - When enabled, if one of the two ports in the segment fails, the system will automatically shut down the peer port of that segment. This forces the entire segment into bypass mode, ensuring traffic continuity.
+  - Quando ativado, se uma das duas portas no segmento falhar, o sistema desativará automaticamente a porta par (peer port) desse segmento. Isso força o segmento inteiro para o modo bypass, garantindo a continuidade do tráfego.
 
 - **One failure is enough:** 
-  - Activating this option ensures that the segment enters bypass mode immediately upon a single failure. This prevents network "flapping" issues where intermittent link drops could cause the appliance to constantly switch in and out of bypass mode.
+  - Ativar esta opção garante que o segmento entre no modo bypass imediatamente após uma única falha. Isso evita problemas de "flapping" na rede, onde quedas intermitentes de link poderiam fazer o dispositivo entrar e sair constantemente do modo bypass.
 
 <br />

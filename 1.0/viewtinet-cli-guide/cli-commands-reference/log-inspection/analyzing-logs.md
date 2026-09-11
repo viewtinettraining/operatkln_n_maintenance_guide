@@ -1,5 +1,4 @@
 ---
-reusableId: 51
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Analyzing Logs'
 id: ABY-3TLV-XA4-MNN
@@ -7,30 +6,30 @@ slug: analyzing-logs
 isVisible: true
 lastUpdated: '2025-10-15 16:06:47'
 ---
-# **<span align="center">Analyzing Logs in Viewtinet</span>**
+# **<span align="center">Analisando Logs no Viewtinet</span>**
 
-Log analysis is a fundamental part of operating and troubleshooting the Viewtinet platform. There are two main ways to access logs in a Viewtinet environment:
+A análise de logs é uma parte fundamental da operação e solução de problemas da plataforma Viewtinet. Existem duas maneiras principais de acessar os logs em um ambiente Viewtinet:
 
-1.  **Accessing historical log files stored on disk**
-2.  **Inspecting logs directly from running containers using** `docker logs`
+1.  **Acessando arquivos históricos de log armazenados no disco**
+2.  **Inspecionando os logs diretamente dos contêineres em execução usando** `docker logs`
 
-Each method serves different use cases and has its advantages and limitations. This chapter describes both approaches in detail and shows how to use them effectively.
+Cada método serve a casos de uso diferentes e possui suas vantagens e desvantagens. Este capítulo descreve ambas as abordagens em detalhes e mostra como usá-las de forma eficaz.
 
 ---
 
-## **Method 1:**
+## **Método 1:**
 
-### Viewing Logs from `/var/log/viewtinet`
+### Visualizando Logs de `/var/log/viewtinet`
 
 <br />
 
-Viewtinet modules write their logs to files under the directory:
+Os módulos do Viewtinet gravam seus logs em arquivos no diretório:
 
 ```
 /var/log/viewtinet/
 ```
 
-Each module has its own log file. Some examples of the files you may find include:
+Cada módulo possui seu próprio arquivo de log. Alguns exemplos dos arquivos que você pode encontrar incluem:
 
 ```
 viewtinet-active-probe.log
@@ -47,80 +46,80 @@ viewtinet-viewticore.log
 viewtinet-viewtisight.log
 ```
 
-These files store logs **persistently and historically**, even after container restarts or system reboots.
+Esses arquivos armazenam logs **historicamente e de forma persistente**, mesmo após o reinício dos contêineres ou do sistema.
 
 <br />
 
-#### 🔍 Example command:
+#### 🔍 Exemplo de comando:
 
 ```bash
 less /var/log/viewtinet/viewtinet-viewticore.log
 ```
 
-You can also use tools like `grep` to filter messages:
+Você também pode usar ferramentas como `grep` para filtrar mensagens:
 
 ```bash
 grep ERROR /var/log/viewtinet/viewtinet-viewtimanager.log
 ```
 
-#### ✅ Advantages:
+#### ✅ Vantagens:
 
--   Long-term historical data is available.
--   Logs from all containers of a module are consolidated.
--   Easier for forensic analysis or root-cause investigations.
+-   Os dados históricos a longo prazo estão disponíveis.
+-   Os logs de todos os contêineres de um módulo são consolidados.
+-   Mais fácil para análises forenses ou investigações de causa raiz.
 
-#### ⚠️ Disadvantages:
+#### ⚠️ Desvantagens:
 
--   Logs can be extensive and harder to search without filters.
--   Not ideal for quick, container-specific checks.
+-   Os logs podem ser extensos e difíceis de pesquisar sem filtros.
+-   Não é ideal para verificações rápidas específicas de um contêiner.
 
 ---
 
-## **Method 2:**
+## **Método 2:**
 
-### Using `docker logs &lt;container&gt;`
-
-<br />
-
-You can also inspect logs directly from a specific running container using the `docker logs` command. This provides **real-time** or recent logs from the target container only.
+### Usando `docker logs &lt;container&gt;`
 
 <br />
 
-#### 🔍 Example command:
+Você também pode inspecionar os logs diretamente de um contêiner em execução específico usando o comando `docker logs`. Isso fornece os logs **em tempo real** ou os mais recentes de um contêiner específico.
+
+<br />
+
+#### 🔍 Exemplo de comando:
 
 ```bash
 docker logs viewtimanager_viewtinet-viewtimanager-backend_1
 ```
 
-To follow logs live:
+Para seguir os logs ao vivo:
 
 ```bash
 docker logs -f viewtiauth_viewtinet-viewtiauth-backend_1
 ```
 
-This method is ideal for monitoring immediate behavior after restarting a service or when debugging a container that is not working properly.
+Este método é ideal para monitorar o comportamento imediato após reiniciar um serviço ou ao depurar um contêiner que não está funcionando adequadamente.
 
 <br />
 
-#### ✅ Advantages:
+#### ✅ Vantagens:
 
--   Logs are shown in real time.
--   Focused on a single container — more precise.
--   Helpful for active debugging.
+-   Os logs são exibidos em tempo real.
+-   Focado em um único contêiner — mais preciso.
+-   Útil para depuração ativa.
 
-#### ⚠️ Disadvantages:
+#### ⚠️ Desvantagens:
 
--   In high-traffic environments, logs may only include the **last few minutes**.
--   Not persistent — logs are lost if the container is removed.
+-   Em ambientes de alto tráfego, os logs podem incluir apenas os **últimos minutos**.
+-   Não é persistente — os logs são perdidos se o contêiner for removido.
 
 ---
 
-## **Choosing the Right Method**
+## **Escolhendo o Método Correto**
 
 <br />
 
-<table><tbody><tr><th><p>Use Case</p></th><th><p>Recommended Method</p></th></tr><tr><td><p>Historical analysis</p></td><td><p><code>/var/log/viewtinet</code></p></td></tr><tr><td><p>Real-time debugging</p></td><td><p><code>docker logs</code></p></td></tr><tr><td><p>Filtering errors across all logs</p></td><td><p><code>/var/log/viewtinet + grep</code></p></td></tr><tr><td><p>Container-specific issues</p></td><td><p><code>docker logs &lt;container&gt;</code></p></td></tr><tr><td><p>Checking after restart</p></td><td><p><code>docker logs -f</code></p></td></tr></tbody></table>
+<table><tbody><tr><th><p>Caso de Uso</p></th><th><p>Método Recomendado</p></th></tr><tr><td><p>Análise histórica</p></td><td><p><code>/var/log/viewtinet</code></p></td></tr><tr><td><p>Depuração em tempo real</p></td><td><p><code>docker logs</code></p></td></tr><tr><td><p>Filtrando erros em todos os logs</p></td><td><p><code>/var/log/viewtinet + grep</code></p></td></tr><tr><td><p>Problemas específicos de contêineres</p></td><td><p><code>docker logs &lt;container&gt;</code></p></td></tr><tr><td><p>Verificação após o reinício</p></td><td><p><code>docker logs -f</code></p></td></tr></tbody></table>
 
-> **Tip:** You can combine both methods for a complete view — start with `docker logs` for recent activity, and fall back to the file-based logs for deeper context.
+> **Dica:** Você pode combinar ambos os métodos para uma visualização completa — comece com `docker logs` para a atividade recente, e utilize os logs baseados em arquivos para obter um contexto mais profundo.
 
 <br />

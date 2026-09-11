@@ -1,5 +1,4 @@
 ---
-reusableId: 48
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Viewing Container Status'
 id: 1GM-1PE0-3E1-IFM
@@ -7,35 +6,35 @@ slug: viewing-container-status
 isVisible: true
 lastUpdated: '2025-10-15 15:59:03'
 ---
-# **<span align="center">Viewing Container Status</span>**
+# **<span align="center">Visualizando o Status do Contêiner</span>**
 
 <br />
 
-To list all running containers, Viewtinet provides a convenient alias in the CLI called `dps`, which maps to the following command:
+Para listar todos os contêineres em execução, a Viewtinet fornece um alias conveniente na CLI chamado `dps`, que mapeia para o seguinte comando:
 
 ```bash
 sudo docker ps
 ```
 
-You can simply execute:
+Você pode simplesmente executar:
 
 ```bash
 $ dps
 ```
 
-When you run the `dps` command (an alias for `sudo docker ps`), the CLI returns a table showing the current state of all active Docker containers in the Viewtinet environment. Each row corresponds to a container and includes useful details such as:
+Quando você executa o comando `dps` (um alias para `sudo docker ps`), a CLI retorna uma tabela mostrando o estado atual de todos os contêineres Docker ativos no ambiente Viewtinet. Cada linha corresponde a um contêiner e inclui detalhes úteis como:
 
--   **CONTAINER ID**: The unique identifier for the container.
--   **IMAGE**: The Docker image used to create the container, including the version (e.g., `viewtinet/viewtimanager/backend:6.3.5`).
--   **COMMAND**: The entrypoint or command used to start the container.
--   **CREATED**: How long ago the container was started.
--   **STATUS**: Indicates whether the container is running, how long it has been up, and whether it is healthy.
--   **PORTS**: Lists the ports being used and exposed by the container (e.g., `0.0.0.0:4500-&gt;4000/tcp`).
--   **NAMES**: The assigned name for the container, which typically includes the module and container role (e.g., `viewtimanager_viewtinet-viewtimanager-backend_1`).
+-   **CONTAINER ID**: O identificador único para o contêiner.
+-   **IMAGE**: A imagem Docker usada para criar o contêiner, incluindo a versão (ex., `viewtinet/viewtimanager/backend:6.3.5`).
+-   **COMMAND**: O ponto de entrada ou comando usado para iniciar o contêiner.
+-   **CREATED**: Quanto tempo atrás o contêiner foi iniciado.
+-   **STATUS**: Indica se o contêiner está em execução, há quanto tempo está ativo e se está saudável.
+-   **PORTS**: Lista as portas que estão sendo usadas e expostas pelo contêiner (ex., `0.0.0.0:4500-&gt;4000/tcp`).
+-   **NAMES**: O nome atribuído ao contêiner, que normalmente inclui o módulo e a função do contêiner (ex., `viewtimanager_viewtinet-viewtimanager-backend_1`).
 
-This output is extremely useful for diagnosing issues, verifying that all expected services are running, and identifying containers that might be misconfigured or failing. It also helps track which version of each component (e.g., `:6.3.5`) is currently deployed.
+Esta saída é extremamente útil para diagnosticar problemas, verificar se todos os serviços esperados estão em execução e identificar contêineres que podem estar mal configurados ou falhando. Também ajuda a rastrear qual versão de cada componente (ex., `:6.3.5`) está implantada atualmente.
 
-Below is a sample output from a fully deployed Viewtinet system:
+Abaixo está um exemplo de saída de um sistema Viewtinet totalmente implantado:
 
 ```
 CONTAINER ID   IMAGE                                     COMMAND                  CREATED        STATUS                  PORTS                                                                                          NAMES
@@ -49,6 +48,6 @@ ae188f58470c   viewtinet/mongodb:6.3.5                   "docker-entrypoint.s…
 ...
 ```
 
-> **Note**: This is a real example based on a running Viewtinet system. The actual output will depend on the modules deployed and their current state.
+> **Nota**: Este é um exemplo real baseado em um sistema Viewtinet em execução. A saída real dependerá dos módulos implantados e de seu estado atual.
 
 <br />

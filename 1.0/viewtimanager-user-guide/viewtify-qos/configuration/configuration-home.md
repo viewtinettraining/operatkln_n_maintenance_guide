@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 15:12:09'
 ---
-# **<span align="center">Configuration</span>**
+# **<span align="center">Configuração</span>**
 
 <br />
 
-The **Configuration** tab is the central hub and starting point for managing your Viewtify QoS deployment. From this main menu, you have direct access to the three foundational pillars required to build any bandwidth management strategy: **Classification Rules**, **Profiles**, and **Policies**.
+A aba de **Configuração** é o centro principal e ponto de partida para gerenciar sua implantação do QoS do Viewtify. A partir deste menu principal, você tem acesso direto aos três pilares fundamentais necessários para construir qualquer estratégia de gerenciamento de largura de banda: **Regras de Classificação**, **Perfis** e **Políticas**.
 
 <br />
 
@@ -21,14 +21,14 @@ The **Configuration** tab is the central hub and starting point for managing you
 
 ---
 
-## **Navigation Hub**
+## **Hub de Navegação**
 
-Depending on what you need to configure or adjust, simply click on the corresponding icon to enter that specific section:
+Dependendo do que você precisa configurar ou ajustar, basta clicar no ícone correspondente para entrar naquela seção específica:
 
--   **Classification Rules:** Click here to define _what_ traffic you want to manage (e.g., identifying specific applications, IPs, or ports).
--   **Profiles:** Click here to define _how_ you want to manage the traffic (e.g., setting minimum guarantees, maximum throughput limits, or priorities).
--   **Policies:** Click here to tie it all together. This section allows you to assign your Profiles to your Classification Rules within a visual hierarchy tree to enforce the final QoS logic.
+-   **Classification Rules:** Clique aqui para definir _qual_ tráfego você deseja gerenciar (ex., identificar aplicativos específicos, IPs ou portas).
+-   **Profiles:** Clique aqui para definir _como_ você deseja gerenciar o tráfego (ex., definir garantias mínimas, limites máximos de taxa de transferência ou prioridades).
+-   **Policies:** Clique aqui para juntar tudo. Esta seção permite que você atribua seus Perfis às suas Regras de Classificação em uma árvore de hierarquia visual para impor a lógica final do QoS.
 
-> <div class="sd-callout" data-callout-type="tip"><strong>Best Practice:</strong> We recommend configuring your environment from left to right. Start by creating the necessary <strong>Classification Rules</strong>, then define the <strong>Profiles</strong>, and finally, combine them in the <strong>Policies</strong> section.</div>
+> <div class="sd-callout" data-callout-type="tip"><strong>Melhor Prática:</strong> Recomendamos configurar seu ambiente da esquerda para a direita. Comece criando as <strong>Regras de Classificação</strong> necessárias, depois defina os <strong>Perfis</strong> e, por fim, combine-os na seção de <strong>Políticas</strong>.</div>
 
 <br />

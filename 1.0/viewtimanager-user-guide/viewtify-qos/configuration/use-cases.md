@@ -7,21 +7,21 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 15:00:50'
 ---
-# **<span align="center">Use Cases</span>**
+# **<span align="center">Casos de Uso</span>**
 
 <br />
 
-In Viewtify QoS, every entire policy tree that you build and save is stored as a **Use Case**. This structure allows you to maintain multiple different network policy designs simultaneously without losing your work. A **Policy Tree** is the hierarchical structure where you define the different traffic management rules, linking classification rules to QoS profiles, determining priorities and bandwidth allocations for each traffic type.
+No QoS do Viewtify, cada árvore de política inteira que você constrói e salva é armazenada como um **Caso de Uso**. Essa estrutura permite que você mantenha vários designs de política de rede diferentes simultaneamente, sem perder seu trabalho. Uma **Árvore de Políticas** é a estrutura hierárquica onde você define as diferentes regras de gerenciamento de tráfego, vinculando regras de classificação a perfis de QoS, determinando prioridades e alocações de largura de banda para cada tipo de tráfego.
 
 <br />
 
 ---
 
-## **Creating a Use Case**
+## **Criando um Caso de Uso**
 
-To add a new Use Case, follow these steps:
+Para adicionar um novo Caso de Uso, siga estas etapas:
 
-1.  From the Configuration Home, click on the **POLICIES** button.
+1.  No Home de Configuração, clique no botão **POLICIES**.
 
 <br />
 
@@ -29,7 +29,7 @@ To add a new Use Case, follow these steps:
 
 <br />
 
-2.  Click on the **+ ADD NEW USE CASE** button.
+2.  Clique no botão **+ ADD NEW USE CASE**.
 
 <br />
 
@@ -37,8 +37,8 @@ To add a new Use Case, follow these steps:
 
 <br />
 
-3.  This will take you to the Use Case configuration section. Here you must enter a descriptive name and configure both the **Download bandwidth** and **Upload bandwidth**. **Note:** This represents the maximum total bandwidth that will be available for this specific Use Case.
-4.  Click on **SAVE** to generate and save the change at the policy structure level.
+3.  Isso o levará à seção de configuração do Caso de Uso. Aqui você deve inserir um nome descritivo e configurar tanto a **Download bandwidth** quanto a **Upload bandwidth**. **Nota:** Isso representa a largura de banda total máxima que estará disponível para este Caso de Uso específico.
+4.  Clique em **SAVE** para gerar e salvar a alteração no nível de estrutura da política.
 
 <br />
 
@@ -46,22 +46,22 @@ To add a new Use Case, follow these steps:
 
 <br />
 
-5.  This action will lead you to the screen where you can start building the policy tree (this process will be explained in detail later).
-6.  Once your Use Case and policy tree are ready, you must click on the **APPLY QOS** button. This final step is what actually applies and enforces the Use Case along with all its created policies on the network traffic.
+5.  Essa ação o levará à tela onde você pode começar a construir a árvore de políticas (este processo será explicado em detalhes posteriormente).
+6.  Uma vez que seu Caso de Uso e a árvore de políticas estiverem prontos, você deve clicar no botão **APPLY QOS**. Esta etapa final é o que realmente aplica e impõe o Caso de Uso, juntamente com todas as suas políticas criadas, no tráfego da rede.
 
 <br />
 
 ---
 
-## **Managing Multiple Use Cases**
+## **Gerenciando Vários Casos de Uso**
 
-The platform has the capability to store several Use Cases (each being a complete set of policies), but **only one can be active at a time**. 
+A plataforma tem a capacidade de armazenar vários Casos de Uso (sendo cada um, um conjunto completo de políticas), mas **apenas um pode estar ativo por vez**. 
 
-To activate a Use Case or switch to a different one, simply follow these steps:
-1. Select the desired Use Case from the dropdown menu.
-2. Click on the **APPLY QOS** button.
+Para ativar um Caso de Uso ou mudar para um diferente, basta seguir estas etapas:
+1. Selecione o Caso de Uso desejado no menu suspenso.
+2. Clique no botão **APPLY QOS**.
 
-The currently active Use Case will be marked with the word **(active)** in the dropdown.
+O Caso de Uso atualmente ativo será marcado com a palavra **(active)** no menu suspenso.
 
 <br />
 
@@ -75,14 +75,14 @@ The currently active Use Case will be marked with the word **(active)** in the d
 
 ---
 
-## **Exporting and Importing**
+## **Exportando e Importando**
 
-Network deployments often span multiple sites or require migrating configurations between different Viewtimanager instances. This feature is also highly useful for creating **backups** of your policies, allowing you to quickly recover your entire policy set in the event of a disaster or a corrupted use case.
+As implantações de rede frequentemente abrangem vários locais ou exigem a migração de configurações entre diferentes instâncias do Viewtimanager. Esse recurso também é altamente útil para criar **backups** de suas políticas, permitindo que você recupere rapidamente todo o seu conjunto de políticas em caso de um desastre ou de um caso de uso corrompido.
 
-### **How to Export a Use Case**
-1. Click on the **parent node** (the very top node) of the entire policy tree.
-2. From the context menu, click on **Export Use Case**.
-3. The configuration will be saved to your local disk as a JSON file.
+### **Como Exportar um Caso de Uso**
+1. Clique no **nó pai** (o nó mais alto) de toda a árvore de políticas.
+2. No menu de contexto, clique em **Export Use Case**.
+3. A configuração será salva em seu disco local como um arquivo JSON.
 
 <br />
 
@@ -90,9 +90,9 @@ Network deployments often span multiple sites or require migrating configuration
 
 <br />
 
-### **How to Import a Use Case**
-1. Click on the **IMPORT USE CASE** button located at the top right of the screen.
-2. Select the previously exported backup file from your local disk to restore or replicate the policy tree.
+### **Como Importar um Caso de Uso**
+1. Clique no botão **IMPORT USE CASE** localizado na parte superior direita da tela.
+2. Selecione o arquivo de backup exportado anteriormente no seu disco local para restaurar ou replicar a árvore de políticas.
 
 <br />
 
@@ -102,21 +102,21 @@ Network deployments often span multiple sites or require migrating configuration
 
 ---
 
-## **History View**
+## **Visão de Histórico**
 
-To track the historical changes made to your Use Cases and policies, you can utilize the **History View** functionality.
+Para rastrear as alterações históricas feitas em seus Casos de Uso e políticas, você pode utilizar a funcionalidade de **History View**.
 
-- Click on the **SWITCH TO HISTORY VIEW** button to access this feature.
+- Clique no botão **SWITCH TO HISTORY VIEW** para acessar este recurso.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-usecases-history-1.png" align="center"></figure>
   <br />
 
-- Once activated, the main dropdown will present a chronological list of changes and applied use cases.
+- Depois de ativado, o menu suspenso principal apresentará uma lista cronológica de alterações e casos de uso aplicados.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-usecases-history-2.png" align="center"></figure>
   <br />
 
-- To return to the standard active and draft use cases list, simply click on the **SWITCH TO USE CASES VIEW** button.
+- Para retornar à lista padrão de casos de uso ativos e rascunhos, basta clicar no botão **SWITCH TO USE CASES VIEW**.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-usecases-history-3.png" align="center"></figure>
 
@@ -124,13 +124,13 @@ To track the historical changes made to your Use Cases and policies, you can uti
 
 ---
 
-## **Search within a Use Case**
+## **Pesquisar dentro de um Caso de Uso**
 
-As your policy trees grow more complex, you can easily locate specific elements using the built-in search tool. This feature allows you to find an IP, a classification rule, or a QoS profile.
+À medida que suas árvores de políticas se tornam mais complexas, você pode facilmente localizar elementos específicos usando a ferramenta de pesquisa integrada. Esse recurso permite que você encontre um IP, uma regra de classificação ou um perfil de QoS.
 
-To use the search tool:
-1. Type your search criteria in the **search box** located above the policy tree area.
-2. The system will automatically highlight the matching node and trace the path from the parent node down to the result.
+Para usar a ferramenta de pesquisa:
+1. Digite seus critérios de pesquisa na **caixa de pesquisa** localizada acima da área da árvore de políticas.
+2. O sistema destacará automaticamente o nó correspondente e traçará o caminho desde o nó pai até o resultado.
 
 <br />
 
@@ -140,16 +140,16 @@ To use the search tool:
 
 ---
 
-## **Detailed View**
+## **Visão Detalhada**
 
-To inspect the deeper configurations of your Use Case, you can enable the **Detailed View** functionality. 
+Para inspecionar as configurações mais profundas de seu Caso de Uso, você pode habilitar a funcionalidade de **Detailed View**. 
 
-- By clicking the **Detailed View** checkbox located above the tree, the visual representation will expand.
+- Ao clicar na caixa de seleção **Detailed View** localizada acima da árvore, a representação visual se expandirá.
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-usecases-detailed-1.png" align="center"></figure>
   <br />
 
-- The expanded view displays detailed information directly on the canvas, including specific parameters for nodes, connectors, and policies (such as exact max up/down rates, configured IP subsets, and component IDs).
+- A visualização expandida exibe informações detalhadas diretamente no quadro, incluindo parâmetros específicos para nós, conectores e políticas (como taxas máximas exatas de up/down, subconjuntos de IP configurados e IDs de componentes).
   <br />
   <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/viewtify-usecases-detailed-2.png" align="center"></figure>
 

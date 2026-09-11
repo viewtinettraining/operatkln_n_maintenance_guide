@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 15:34:26'
 ---
-# **<span align="center">QoS Profiles</span>**
+# **<span align="center">Perfis de QoS</span>**
 
 <br />
 
-If Classification Rules define _what_ traffic you are managing, **QoS Profiles** define _how_ that traffic should be handled. By assigning a profile to a rule, you instruct the engine on how to shape, limit, or prioritize the flow.
+Se as Regras de Classificação definem _qual_ tráfego você está gerenciando, os **Perfis de QoS** definem _como_ esse tráfego deve ser tratado. Ao atribuir um perfil a uma regra, você instrui a engine sobre como moldar, limitar ou priorizar o fluxo.
 
 <br />
 
@@ -21,19 +21,19 @@ If Classification Rules define _what_ traffic you are managing, **QoS Profiles**
 
 ---
 
-## **Types of Profiles**
+## **Tipos de Perfis**
 
-Viewtify QoS offers six fundamental types of profiles to address different network needs:
+O QoS do Viewtify oferece seis tipos fundamentais de perfis para atender a diferentes necessidades de rede:
 
-1.  **Max Rate:** Sets a maximum throughput limit to non-critical or heavy applications (e.g., capping streaming or P2P downloads) to prevent them from saturating the link.
-2.  **Max Rate (%):** Used generally in child policies to define a maximum throughput limit as a percentage of the parent policy's bandwidth.
-3.  **Min Rate:** Allocates a guaranteed minimum quantity of bandwidth to critical applications, ensuring they function smoothly even during network congestion.
-4.  **Min Rate (%):** Used generally in child policies to define a guaranteed minimum bandwidth as a percentage of the parent policy's bandwidth.
-5.  **Priority Queue:** Sets different transmission priorities according to the sensitivity of the flows.
-6.  **Drop:** Instantly drops the packets of undesired or malicious flows, effectively blocking the traffic.
-7.  **Normal QoS:** Leaves the inherited QoS settings intact without applying new restrictions at this level.
-8.  **Real Time:** Specifically created and optimized for conference, voice, and VoIP applications to ensure minimal latency.
-9.  **No QoS:** No QoS is set for the flow. In case of link saturation, these packets are the most likely to be dropped by the network hardware.
+1.  **Max Rate:** Define um limite máximo de taxa de transferência para aplicativos não críticos ou pesados (ex., limitando downloads de streaming ou P2P) para evitar que eles saturem o link.
+2.  **Max Rate (%):** Usado geralmente em políticas filhas para definir um limite máximo de taxa de transferência como uma porcentagem da largura de banda da política pai.
+3.  **Min Rate:** Aloca uma quantidade mínima garantida de largura de banda para aplicativos críticos, garantindo que eles funcionem perfeitamente mesmo durante o congestionamento da rede.
+4.  **Min Rate (%):** Usado geralmente em políticas filhas para definir uma largura de banda mínima garantida como uma porcentagem da largura de banda da política pai.
+5.  **Priority Queue:** Define diferentes prioridades de transmissão de acordo com a sensibilidade dos fluxos.
+6.  **Drop:** Descarta instantaneamente os pacotes de fluxos indesejados ou maliciosos, bloqueando efetivamente o tráfego.
+7.  **Normal QoS:** Deixa as configurações de QoS herdadas intactas, sem aplicar novas restrições neste nível.
+8.  **Real Time:** Criado e otimizado especificamente para aplicativos de conferência, voz e VoIP para garantir latência mínima.
+9.  **No QoS:** Nenhum QoS é definido para o fluxo. Em caso de saturação do link, esses pacotes são os mais propensos a serem descartados pelo hardware de rede.
 
 <br />
 
@@ -43,9 +43,9 @@ Viewtify QoS offers six fundamental types of profiles to address different netwo
 
 ---
 
-## **Priority Levels**
+## **Níveis de Prioridade**
 
-When using Priority Queue profiles, there are **3 core priority levels** available: High, Medium, and Low.
+Ao usar perfis Priority Queue, há **3 níveis de prioridade principais** disponíveis: High, Medium e Low.
 
 <br />
 
@@ -53,19 +53,19 @@ When using Priority Queue profiles, there are **3 core priority levels** availab
 
 <br />
 
--   **Hierarchical Application:** Priorities are applied in a hierarchical way. Each level inherits the priority of its higher levels within the policy tree.
--   **Logical Combinations:** Through the combination of priorities across different branches of your policy tree, you can create up to **16 logical priority levels** for extremely granular traffic management.
+-   **Aplicação Hierárquica:** As prioridades são aplicadas de forma hierárquica. Cada nível herda a prioridade de seus níveis mais altos dentro da árvore de políticas.
+-   **Combinações Lógicas:** Por meio da combinação de prioridades em diferentes ramos da sua árvore de políticas, você pode criar até **16 níveis de prioridade lógica** para um gerenciamento de tráfego extremamente granular.
 
 <br />
 
 ---
 
-## **Symmetric and Asymmetric Rates**
+## **Taxas Simétricas e Assimétricas**
 
-When configuring bandwidth limits, you have the flexibility to define how upload and download traffic are handled.
+Ao configurar os limites de largura de banda, você tem a flexibilidade de definir como o tráfego de upload e download será tratado.
 
--   **Combined Rates:** Max and Min rates can be applied within the same profile for both inbound and outbound traffic, reducing the total number of rules needed in your policy.
--   **Symmetry:** You can configure the profile with **Symmetric** rates (e.g., 200 Kbps down / 200 Kbps up) or **Asymmetric** rates (e.g., 14 Mbps down / 12 Mbps up) using the equal/not-equal toggle button between the fields.
+-   **Taxas Combinadas:** As taxas Máx e Mín podem ser aplicadas dentro do mesmo perfil para o tráfego de entrada e de saída, reduzindo o número total de regras necessárias em sua política.
+-   **Simetria:** Você pode configurar o perfil com taxas **Simétricas** (ex., 200 Kbps down / 200 Kbps up) ou taxas **Assimétricas** (ex., 14 Mbps down / 12 Mbps up) usando o botão de alternância de igual/diferente entre os campos.
 
 <br />
 
@@ -75,11 +75,11 @@ When configuring bandwidth limits, you have the flexibility to define how upload
 
 ---
 
-## **Creating a QoS Profile**
+## **Criando um Perfil de QoS**
 
-To create and configure a QoS profile based on your network needs, follow these steps:
+Para criar e configurar um perfil de QoS com base nas necessidades da sua rede, siga estas etapas:
 
-1.  Click on the **+ ADD NEW** button to create a new row.
+1.  Clique no botão **+ ADD NEW** para criar uma nova linha.
 
 <br />
 
@@ -87,7 +87,7 @@ To create and configure a QoS profile based on your network needs, follow these 
 
 <br />
 
-2.  Enter a unique **Name** for your profile. If you try to save without filling the mandatory fields, the system will highlight the row in red.
+2.  Insira um **Name** único para o seu perfil. Se você tentar salvar sem preencher os campos obrigatórios, o sistema destacará a linha em vermelho.
 
 <br />
 
@@ -95,8 +95,8 @@ To create and configure a QoS profile based on your network needs, follow these 
 
 <br />
 
-3.  Select the **Type** from the dropdown menu (e.g., `Max Rate`).
-4.  In the **Download/Priority** and **Upload** boxes, enter the bandwidth you want to control (e.g., `300 Kbps`). By default, the profile will be **Symmetric**, meaning the Download and Upload rates are equal.
+3.  Selecione o **Type** no menu suspenso (ex., `Max Rate`).
+4.  Nas caixas **Download/Priority** e **Upload**, insira a largura de banda que você deseja controlar (ex., `300 Kbps`). Por padrão, o perfil será **Symmetric**, o que significa que as taxas de Download e Upload são iguais.
 
 <br />
 
@@ -104,7 +104,7 @@ To create and configure a QoS profile based on your network needs, follow these 
 
 <br />
 
-5.  If you need to configure an **Asymmetric** profile (where Download and Upload limits are different), click on the equal symbol (`=`) between the boxes.
+5.  Se você precisar configurar um perfil **Assimétrico** (onde os limites de Download e Upload são diferentes), clique no símbolo de igual (`=`) entre as caixas.
 
 <br />
 
@@ -112,7 +112,7 @@ To create and configure a QoS profile based on your network needs, follow these 
 
 <br />
 
-6.  The symbol will change to a not-equal sign (`≠`), allowing you to configure the upload speed independently according to your needs.
+6.  O símbolo mudará para um sinal de diferente (`≠`), permitindo que você configure a velocidade de upload independentemente, de acordo com suas necessidades.
 
 <br />
 
@@ -122,12 +122,12 @@ To create and configure a QoS profile based on your network needs, follow these 
 
 ---
 
-## **Searching and Deleting Profiles**
+## **Pesquisando e Excluindo Perfis**
 
-Similar to classification rules, safety validations prevent you from breaking active configurations.
+Da mesma forma que nas regras de classificação, validações de segurança evitam que você quebre configurações ativas.
 
--   QoS Profiles can be deleted **only if they are not used** in any policy.
--   The **Search** option (magnifying glass) helps you find exactly which policy is currently using the profile, so you can reassign it before attempting deletion.
+-   Os Perfis de QoS podem ser excluídos **apenas se não estiverem em uso** em nenhuma política.
+-   A opção de **Search** (lupa) ajuda você a encontrar exatamente qual política está usando o perfil no momento, para que você possa reatribuí-lo antes de tentar a exclusão.
 
 <br />
 
@@ -143,7 +143,7 @@ Similar to classification rules, safety validations prevent you from breaking ac
 
 <br />
 
-To delete a profile, locate the desired profile and click on the **trash can icon**. However, if a profile is currently being used in a Use Case or Policy, the system will protect it and it will not be possible to delete it.
+Para excluir um perfil, localize o perfil desejado e clique no **ícone de lixeira**. No entanto, se um perfil estiver sendo usado atualmente em um Caso de Uso ou Política, o sistema o protegerá e não será possível excluí-lo.
 
 <br />
 

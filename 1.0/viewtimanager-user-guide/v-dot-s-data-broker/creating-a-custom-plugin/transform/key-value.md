@@ -11,29 +11,29 @@ lastUpdated: '2026-05-21 12:00:00'
 
 <br />
 
-The **Key Value** grid handler is designed to parse and extract values from a string or record that contains data in a delimited key-value format (e.g., `key1=value1,key2=value2,key3=value3,key_n=value-n`). 
+O handler de grid **Key Value** é projetado para analisar e extrair valores de uma string ou registro que contém dados em um formato delimitado de chave-valor (por exemplo, `key1=value1,key2=value2,key3=value3,key_n=value-n`). 
 
-By using this handler, the system automatically creates new database columns corresponding to the keys found in the record, and populates them with their associated values.
+Ao usar este handler, o sistema cria automaticamente novas colunas no banco de dados correspondentes às chaves encontradas no registro, e as preenche com seus valores associados.
 
 ---
 
-## **Context and Use Case**
+## **Contexto e Caso de Uso**
 
-A very common use case for this grid handler involves integrations with network devices and security appliances (such as firewalls or intrusion detection systems) that export event logs via Syslog. These logs frequently use the **CEF (Common Event Format)**, which encapsulates multiple data fields inside a single message payload as key-value pairs. 
+Um caso de uso muito comum para este handler de grid envolve integrações com dispositivos de rede e appliances de segurança (como firewalls ou sistemas de detecção de intrusão) que exportam logs de eventos via Syslog. Esses logs usam frequentemente o **CEF (Common Event Format)**, que encapsula vários campos de dados dentro de uma única carga útil de mensagem como pares de chave-valor. 
 
-For more information about CEF format, you can refer to the official [Micro Focus ArcSight CEF documentation](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.3/cef-implementation-standard/) or similar industry standards.
+Para obter mais informações sobre o formato CEF, você pode consultar a documentação oficial [Micro Focus ArcSight CEF documentation](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.3/cef-implementation-standard/) ou padrões da indústria semelhantes.
 
-Using the **Key Value** grid handler on a `syslog_record` column allows the ETL process to explode the CEF payload and properly index each property into its own column.
+O uso do handler de grid **Key Value** em uma coluna `syslog_record` permite que o processo ETL exploda a carga CEF e indexe adequadamente cada propriedade em sua própria coluna.
 
 <br />
 
 ---
 
-## **Configuration Steps**
+## **Etapas de Configuração**
 
-Configuring the **Key Value** grid handler involves following these sequential steps:
+A configuração do handler de grid **Key Value** envolve as seguintes etapas sequenciais:
 
-1. **Add the Grid-Handler**: Click on the "ADD NEW GRID-HANDLER" button and select **Key Value** from the `Grid Handler Type` dropdown menu.
+1. **Adicionar o Grid-Handler**: Clique no botão "ADD NEW GRID-HANDLER" e selecione **Key Value** no menu suspenso `Grid Handler Type`.
 
 <br />
 
@@ -41,7 +41,7 @@ Configuring the **Key Value** grid handler involves following these sequential s
 
 <br />
 
-2. **Select the Message Column**: From the `Message Column` dropdown, select the field that contains the raw key-value string. Normally, for Syslog events, this column is `syslog_record`.
+2. **Selecionar a Message Column**: No menu suspenso `Message Column`, selecione o campo que contém a string bruta de chave-valor. Normalmente, para eventos Syslog, esta coluna é `syslog_record`.
 
 <br />
 
@@ -49,10 +49,10 @@ Configuring the **Key Value** grid handler involves following these sequential s
 
 <br />
 
-3. **Define Output Fields**: Click on the pencil icon (<i class="fa fa-pencil"></i>) to edit the Output Fields. This will open a text editor popup where you can define which keys will be extracted into new columns.
+3. **Definir Output Fields**: Clique no ícone de lápis (<i class="fa fa-pencil"></i>) para editar os campos de saída (Output Fields). Isso abrirá um pop-up de editor de texto onde você pode definir quais chaves serão extraídas para novas colunas.
    
    > [!TIP]
-   > The easiest way to configure this is to prepare the list of fields separated by commas in a simple text editor, paste the entire string into the input box, press Enter, and then click **SAVE**.
+   > A maneira mais fácil de configurar isso é preparar a lista de campos separados por vírgulas em um editor de texto simples, colar a string inteira na caixa de entrada, pressionar Enter e, em seguida, clicar em **SAVE**.
 
 <br />
 
@@ -60,7 +60,7 @@ Configuring the **Key Value** grid handler involves following these sequential s
 
 <br />
 
-4. **Enable CEF Header (Optional)**: If the incoming logs follow the Common Event Format, be sure to check the **"Has CEF Header"** checkbox. This instructs the parser to handle the standard CEF prefix before extracting the key-value pairs.
+4. **Habilitar o Cabeçalho CEF (Opcional)**: Se os logs de entrada seguirem o Common Event Format (CEF), certifique-se de marcar a caixa de seleção **"Has CEF Header"**. Isso instrui o analisador a lidar com o prefixo padrão CEF antes de extrair os pares chave-valor.
 
 <br />
 

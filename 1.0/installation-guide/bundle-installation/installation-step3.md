@@ -1,7 +1,6 @@
 ---
-reusableId: 72
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Passo 3 da Instalação'
+title: 'Installation step3'
 id: NES-8Y4E-3UP-06J
 slug: installation-step3
 isVisible: true
@@ -12,13 +11,13 @@ lastUpdated: '2026-03-10 16:03:49'
 
 <br />
 
-<div class="sd-callout" data-callout-type="info">Nesta etapa, as imagens de contêiner serão carregadas e serão realizadas configurações relacionadas à rede interna, redirecionamento de portas e outras tarefas</div>
+<div class="sd-callout" data-callout-type="info">Nesta etapa, as imagens de contêiner serão carregadas e a configuração relacionada à rede interna, encaminhamento de portas e outras tarefas será realizada</div>
 
-Para executar esta etapa, é necessário reconectar-se ao servidor via SSH, da mesma forma que foi feito na seção "Conexão SSH".
+Para executar esta etapa, você precisará se reconectar ao servidor via SSH, exatamente como foi feito na seção "Conexão SSH".
 
 <br />
 
-Uma vez logado novamente no sistema, você deve re-executar o comando conforme mostrado abaixo
+Após fazer login novamente no sistema, você deve reexecutar o comando conforme mostrado abaixo
 
 ```bash
 /opt/vn/viewtinet-builder/install.sh
@@ -26,7 +25,7 @@ Uma vez logado novamente no sistema, você deve re-executar o comando conforme m
 
 <figure align="center"><img src="https://app.snazzydocs.com/storage/users/ucsRFoMgaUeUU6iR/docs/DbeVQqyuMpxgxMbG/images/6xbmupKSjiebm9onwJ0e.png" align="center"></figure>
 
-Ao final, você terá uma mensagem de conclusão da instalação semelhante à mostrada abaixo
+Ao final, você receberá uma mensagem de conclusão da instalação semelhante à mostrada abaixo
 
 <br />
 

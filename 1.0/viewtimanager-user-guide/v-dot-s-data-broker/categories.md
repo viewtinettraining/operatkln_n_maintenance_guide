@@ -1,5 +1,4 @@
 ---
-reusableId: 128
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Categories
 id: P4N-UHDZ-PL5-KCG
@@ -7,11 +6,11 @@ slug: categories
 isVisible: true
 lastUpdated: '2025-08-28 08:37:18'
 ---
-# **<span align="center">Plugin Categories</span>**
+# **<span align="center">Categorias de Plugins</span>**
 
 <br />
 
-Each plugin belongs to one category.
+Cada plugin pertence a uma categoria.
 
 <br />
 
@@ -19,13 +18,13 @@ Each plugin belongs to one category.
 
 <br />
 
-The available categories are the following:
+As categorias disponíveis são as seguintes:
 
 -   CDR
 -   ICMP
--   My Category
--   Network
--   Optimization
+-   Minha Categoria (My Category)
+-   Rede (Network)
+-   Otimização (Optimization)
 -   SNMP
 -   SSH
 -   Sflow
@@ -33,7 +32,7 @@ The available categories are the following:
 -   Viewtinet
 -   WMI
 
-When you click on one category, it will filter the available plugin accordingly.
+Quando você clica em uma categoria, os plugins disponíveis são filtrados de acordo.
 
 <br />
 

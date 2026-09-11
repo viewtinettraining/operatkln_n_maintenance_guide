@@ -13,7 +13,7 @@ lastUpdated: '2026-05-21 08:30:54'
 
 ## Conceito de Grid
 
-Durante a fase de Extração, todas as informações obtidas são armazenadas em uma estrutura em memória chamada **Grid**. Para simplificar o processo de compreensão, pense nela como uma matriz ou tabela com linhas e colunas.
+Durante a fase de Extração (Extraction), todas as informações obtidas são armazenadas em uma estrutura em memória chamada **Grid**. Para simplificar o processo de compreensão, pense nela como uma matriz ou tabela com linhas e colunas.
 
 A Grid, como estrutura, é enviada ao **processo de Transformação** para realizar ações como adicionar, remover, modificar ou criar novos campos com base nos dados obtidos na etapa de Extração.
 
@@ -21,7 +21,7 @@ A Grid, como estrutura, é enviada ao **processo de Transformação** para reali
 
 ## O que são Grid Handlers?
 
-Os **Grid Handlers** são os componentes ou operações individuais utilizados dentro da Etapa de Transformação para manipular a Grid. Ao aplicar diferentes handlers, os dados obtidos na etapa anterior podem ser amplamente transformados e refinados antes de avançarem para a próxima fase do pipeline.
+Os **Grid Handlers** são os componentes individuais ou operações usadas dentro da Etapa de Transformação (Transform Stage) para manipular a Grid. Ao aplicar diferentes handlers, os dados obtidos na etapa anterior podem ser amplamente transformados e refinados antes de passarem para a próxima fase do pipeline.
 
 Esses handlers são incrivelmente versáteis e são capazes de:
 
@@ -37,7 +37,7 @@ Esses handlers são incrivelmente versáteis e são capazes de:
 
 ### Como Adicionar um Novo Grid Handler
 
-Para adicionar um novo Grid Handler à sua etapa de Transformação, siga os seguintes passos:
+Para adicionar um novo Grid Handler à sua etapa de Transformação, siga estas etapas:
 
 **Passo 1:** Clique no botão **"+ ADD NEW GRID HANDLER"** localizado na parte inferior do painel de configuração da etapa de Transformação.
 
@@ -47,7 +47,7 @@ Para adicionar um novo Grid Handler à sua etapa de Transformação, siga os seg
 
 <br />
 
-**Passo 2:** Um novo cartão de **Grid Handler** aparecerá. Clique no campo suspenso **"Grid Handler Type"** para revelar a lista de todos os handlers disponíveis.
+**Passo 2:** Um novo cartão **Grid Handler** aparecerá. Clique no campo suspenso **"Grid Handler Type"** para revelar a lista de todos os handlers disponíveis.
 
 <br />
 
@@ -63,6 +63,6 @@ Para adicionar um novo Grid Handler à sua etapa de Transformação, siga os seg
 
 <br />
 
-<div class="sd-callout" data-callout-type="info"><p><strong>Nota:</strong> Este procedimento aplica-se a <strong>todos</strong> os Grid Handlers descritos nas seções seguintes. Cada tipo de handler possui seus próprios campos de configuração específicos que aparecerão assim que forem selecionados no menu suspenso.</p></div>
+<div class="sd-callout" data-callout-type="info"><strong>Nota:</strong> Este procedimento se aplica a <strong>todos</strong> os Grid Handlers descritos nas seções seguintes. Cada tipo de handler tem seus próprios campos de configuração específicos que aparecerão uma vez selecionados na lista suspensa.</div>
 
 <br />

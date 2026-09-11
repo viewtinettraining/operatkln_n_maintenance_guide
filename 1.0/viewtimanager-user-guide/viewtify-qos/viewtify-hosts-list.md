@@ -7,11 +7,11 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-26 10:13:22'
 ---
-# **<span align="center">Viewtify Hosts List</span>**
+# **<span align="center">Lista de Hosts Viewtify (Viewtify Hosts List)</span>**
 
 <br />
 
-The **HOSTS LIST** tab provides an overview of the physical or virtual appliance where the Viewtify engine is currently deployed and running.
+A aba **HOSTS LIST** fornece uma visão geral do appliance físico ou virtual onde o motor Viewtify está atualmente implantado e em execução.
 
 <br />
 
@@ -21,14 +21,14 @@ The **HOSTS LIST** tab provides an overview of the physical or virtual appliance
 
 ---
 
-## **Informational Overview**
+## **Visão Geral Informativa**
 
-For the vast majority of users, this tab is **purely informational**. It displays the underlying Hostname or IP Address (e.g., `10.30.23.5`) and LAN interface IP associated with the Viewtify module. This helps administrators quickly identify which physical or virtual node is currently processing the network traffic.
+Para a grande maioria dos usuários, esta aba é **puramente informativa**. Ela exibe o Hostname ou Endereço IP subjacente (ex., `10.30.23.5`) e o IP da interface LAN associada ao módulo Viewtify. Isso ajuda os administradores a identificar rapidamente qual nó físico ou virtual está processando o tráfego de rede no momento.
 
-Additionally, this section displays High Availability (HA) status if applicable (e.g., "No HA will be applied as there are only one host defined" for standalone deployments).
+Além disso, esta seção exibe o status de Alta Disponibilidade (HA), se aplicável (ex., "Nenhum HA será aplicado, pois há apenas um host definido" para implantações independentes).
 
-> <div class="sd-callout" data-callout-type="warning"><strong>System Architecture Changes</strong> The settings within this tab (such as adding new hosts or uninstalling nodes) directly manipulate the cluster architecture of the Viewtify engine.</div>
+> <div class="sd-callout" data-callout-type="warning"><strong>Alterações na Arquitetura do Sistema</strong> As configurações dentro desta aba (como adicionar novos hosts ou desinstalar nós) manipulam diretamente a arquitetura de cluster do motor Viewtify.</div>
 > 
-> **Do not make any changes in this section** unless you have deep architectural knowledge of the deployment or have been explicitly instructed by Viewtinet Support. Modifying these fields without caution can cause severe operational issues and result in the DPI engine completely halting traffic processing.
+> **Não faça nenhuma alteração nesta seção**, a menos que você tenha um profundo conhecimento arquitetônico da implantação ou tenha sido explicitamente instruído pelo Suporte Viewtinet. Modificar esses campos sem cautela pode causar problemas operacionais graves e resultar na interrupção total do processamento de tráfego do motor DPI.
 
 <br />

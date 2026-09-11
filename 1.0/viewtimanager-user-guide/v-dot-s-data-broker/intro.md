@@ -1,5 +1,4 @@
 ---
-reusableId: 120
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Intro
 id: DCR-EHY-UBI-HN8
@@ -7,66 +6,66 @@ slug: intro
 isVisible: true
 lastUpdated: '2025-10-15 15:05:59'
 ---
-# **<span align="center">Introduction</span>**
+# **<span align="center">Introdução</span>**
 
 <br />
 
-## **Purpose of this Manual**
+## **Objetivo deste Manual**
 
-<span align="justify">This manual explains how to understand and operate the Visual Smart Data Broker (VSDB) within the Viewtinet platform. It introduces what VSDB is, its key capabilities, and how it fits in the overall solution so that administrators can configure reliable, scalable data pipelines for observability.</span>
+<span align="justify">Este manual explica como entender e operar o Visual Smart Data Broker (VSDB) dentro da plataforma Viewtinet. Ele apresenta o que é o VSDB, suas principais capacidades e como ele se encaixa na solução geral para que os administradores possam configurar pipelines de dados escaláveis e confiáveis para observabilidade.</span>
 
-##**Scope**
+##**Escopo**
 
-This chapter covers:
+Este capítulo cobre:
 
--   What the Visual Smart Data Broker is.
--   Its main characteristics and benefits.
--   The role of VSDB as the **ETL engine** of the Viewtinet platform.
+-   O que é o Visual Smart Data Broker.
+-   Suas principais características e benefícios.
+-   O papel do VSDB como a **engine de ETL** da plataforma Viewtinet.
 
-(Detailed configuration, and advanced operations are covered in later chapters.)
+(Configuração detalhada e operações avançadas são abordadas em capítulos posteriores.)
 
-##**Target Audience**
+##**Público-Alvo**
 
--   System and platform administrators
--   Network/observability engineers
--   IT/OT operations teams
--   Security/monitoring analysts
+-   Administradores de sistemas e da plataforma
+-   Engenheiros de rede/observabilidade
+-   Equipes de operações de TI/OT
+-   Analistas de segurança/monitoramento
 
-A basic understanding of networking concepts, Linux administration, and common telemetry/logging protocols is recommended.
+É recomendada uma compreensão básica de conceitos de redes, administração de Linux e protocolos comuns de telemetria/log.
 
-##**What is the Visual Smart Data Broker?**
+##**O que é o Visual Smart Data Broker?**
 
-The **Visual Smart Data Broker (VSDB)** is a core Viewtinet component that provides a **visual, no-code interface for ETL (Extract, Transform, Load)** operations.
+O **Visual Smart Data Broker (VSDB)** é um componente central da Viewtinet que fornece uma **interface visual, sem código, para operações de ETL (Extract, Transform, Load)**.
 
--   **Extract**: Collects data from heterogeneous sources across IT, OT, and IoT environments using multiple protocols and formats (e.g., logs, metrics, flows, APIs).
--   **Transform**: Normalizes, enriches, and structures raw records by adding metadata, applying filters, and harmonizing schemas.
--   **Load**: Routes the processed and consistent data into Viewtinet modules for storage, dashboards, analytics, and alerting.
+-   **Extrair (Extract)**: Coleta dados de fontes heterogêneas através de ambientes TI, OT e IoT usando múltiplos protocolos e formatos (ex., logs, métricas, fluxos, APIs).
+-   **Transformar (Transform)**: Normaliza, enriquece e estrutura registros brutos adicionando metadados, aplicando filtros e harmonizando esquemas.
+-   **Carregar (Load)**: Direciona os dados processados e consistentes para os módulos da Viewtinet para armazenamento, dashboards, análises e alertas.
 
-By configuring ETL pipelines visually, administrators can define how data is acquired, transformed, and delivered without writing complex code or queries.
+Ao configurar pipelines de ETL visualmente, os administradores podem definir como os dados são adquiridos, transformados e entregues sem escrever códigos ou consultas complexas.
 
-In short, VSDB is the **ETL engine of Viewtinet**: the point where raw, disparate inputs are turned into consistent, high-quality telemetry ready for analysis.
+Em resumo, o VSDB é a **engine de ETL da Viewtinet**: o ponto onde entradas brutas e díspares são transformadas em telemetria consistente e de alta qualidade, pronta para análise.
 
-##**Key Features**
+##**Recursos Principais**
 
--   **Visual ETL Pipelines**<br />
-    Build and modify extraction, transformation, and loading flows through an intuitive UI.
--   **Multi-Source Extraction**<br />
-    Connect to diverse sources and protocols (SNMP, NetFlow, Syslog, Windows RM, APIs, and more).
--   **Transformation & Enrichment**<br />
-    Standardize fields, enrich data with context (tags, geolocation, device metadata), and apply filtering rules.
--   **Load & Routing**<br />
-    Deliver structured datasets to the appropriate Viewtinet modules for storage and analysis.
--   **Retention & Governance Aware**<br />
-    Apply retention policies and governance rules to optimize storage and ensure compliance.
--   **Scalability & Resilience**<br />
-    Handle high-volume data streams with horizontal scalability.
--   **Operational Transparency**<br />
-    Provide counters, logs, and monitoring tools to validate ETL pipeline health.
+-   **Pipelines ETL Visuais**<br />
+    Construa e modifique fluxos de extração, transformação e carregamento através de uma interface intuitiva (UI).
+-   **Extração de Múltiplas Fontes**<br />
+    Conecte-se a diversos protocolos e fontes (SNMP, NetFlow, Syslog, Windows RM, APIs e mais).
+-   **Transformação e Enriquecimento**<br />
+    Padronize campos, enriqueça dados com contexto (tags, geolocalização, metadados de dispositivos) e aplique regras de filtragem.
+-   **Carregamento e Roteamento**<br />
+    Entregue conjuntos de dados estruturados aos módulos adequados da Viewtinet para armazenamento e análise.
+-   **Retenção e Conformidade**<br />
+    Aplique políticas de retenção e regras de governança para otimizar o armazenamento e garantir a conformidade.
+-   **Escalabilidade e Resiliência**<br />
+    Lide com fluxos de dados de alto volume através da escalabilidade horizontal.
+-   **Transparência Operacional**<br />
+    Forneça contadores, logs e ferramentas de monitoramento para validar a saúde da pipeline de ETL.
     
     <br />
     
 
-##**Understanding the ETL Cycle with Visual Smart Data Broker**
+##**Entendendo o Ciclo de ETL com o Visual Smart Data Broker**
 
 ```mermaid
 flowchart TB
@@ -121,65 +120,65 @@ flowchart TB
   style Load fill:#fff6d1,stroke:#333,stroke-width:1px
 ```
 
-The diagram above illustrates how the **Visual Smart Data Broker (VSDB)** implements the ETL (Extract, Transform, Load) process within the Viewtinet platform. This cycle is the foundation of how raw data is converted into structured, actionable information.
+O diagrama acima ilustra como o **Visual Smart Data Broker (VSDB)** implementa o processo de ETL (Extract, Transform, Load) dentro da plataforma Viewtinet. Esse ciclo é a base de como dados brutos são convertidos em informações estruturadas e acionáveis.
 
-### **1\. Sources**
+### **1\. Fontes (Sources)**
 
-Data can come from multiple and heterogeneous environments:
+Os dados podem vir de ambientes múltiplos e heterogêneos:
 
--   **Routers and switches** generating flow records.
--   **Servers** producing system metrics and logs.
--   **Firewalls** exporting security events.
--   **APIs** exposing external datasets.
--   **Other devices**, including IoT sensors or any system capable of producing logs or counters.
+-   **Roteadores e switches** gerando registros de fluxo (flow records).
+-   **Servidores** produzindo métricas de sistema e logs.
+-   **Firewalls** exportando eventos de segurança.
+-   **APIs** expondo conjuntos de dados externos.
+-   **Outros dispositivos**, incluindo sensores IoT ou qualquer sistema capaz de produzir logs ou contadores.
 
-All these devices feed information into the system through different protocols.
+Todos esses dispositivos fornecem informações para o sistema através de diferentes protocolos.
 
-### **2\. Extract**
+### **2\. Extração (Extract)**
 
-The **Extract stage** uses **protocol connectors** to acquire data from the sources.<br />
-These connectors support multiple protocols such as **SNMP, ICMP, NetFlow, Syslog, APIs**, and more.
+A **etapa de Extração** usa **conectores de protocolo** para adquirir dados das fontes.<br />
+Esses conectores suportam múltiplos protocolos como **SNMP, ICMP, NetFlow, Syslog, APIs**, e mais.
 
--   Connectors act as the **interface layer** between devices and the platform.
--   A single protocol can serve different device types (e.g., SNMP works for routers, switches, servers, and firewalls).
--   The result of this stage is the raw ingestion of logs, counters, events, and flows into the broker.
+-   Os conectores atuam como a **camada de interface** entre os dispositivos e a plataforma.
+-   Um único protocolo pode atender a diferentes tipos de dispositivos (ex., o SNMP funciona para roteadores, switches, servidores e firewalls).
+-   O resultado desta etapa é a ingestão bruta de logs, contadores, eventos e fluxos no broker.
 
-### **3\. Transform**
+### **3\. Transformação (Transform)**
 
-Once data is ingested, it passes through a set of **Grid Handlers** that execute transformation operations in sequence.<br />
-Each handler type performs a specific function:
+Uma vez que os dados são ingeridos, eles passam por um conjunto de **Grid Handlers** que executam operações de transformação em sequência.<br />
+Cada tipo de handler executa uma função específica:
 
--   **Parsing handler** → interprets raw messages and extracts fields.
--   **Normalization handler** → harmonizes formats into a common schema.
--   **Math operations handler** → applies calculations or aggregates values.
--   **Data mapping handler** → remaps fields into standardized names or structures.
--   **Enrichment handler** → adds context such as tags, geolocation, or device metadata.
+-   **Handler de parsing** → interpreta mensagens brutas e extrai os campos.
+-   **Handler de normalização** → harmoniza os formatos em um esquema (schema) comum.
+-   **Handler de operações matemáticas** → aplica cálculos ou agrega valores.
+-   **Handler de mapeamento de dados** → remapeia campos para nomes ou estruturas padronizadas.
+-   **Handler de enriquecimento** → adiciona contexto como tags, geolocalização ou metadados do dispositivo.
 
-The goal of this stage is to transform heterogeneous raw inputs into **coherent and enriched datasets** that are ready for analysis.
+O objetivo desta etapa é transformar entradas brutas heterogêneas em **conjuntos de dados coerentes e enriquecidos** que estejam prontos para análise.
 
-### **4\. Load**
+### **4\. Carregamento (Load)**
 
-Finally, the **Load stage** determines where the processed data will be stored or exported.
+Finalmente, a **etapa de Carregamento** determina onde os dados processados serão armazenados ou exportados.
 
--   By default, information is stored in the **Viewtinet Time Series Database (TSDB)** for long-term retention and analytics.
--   Alternatively, data can be exported to external systems:
+-   Por padrão, a informação é armazenada no **Viewtinet Time Series Database (TSDB)** para retenção de longo prazo e análises.
+-   Alternativamente, os dados podem ser exportados para sistemas externos:
     
-    -   **Syslog export** for integration with third-party SIEM or logging tools.
-    -   **SCP export** for transferring files to another server.
-    -   **CSV file** export for manual analysis or integration with external workflows.
+    -   **Exportação via Syslog** para integração com SIEMs ou ferramentas de log de terceiros.
+    -   **Exportação via SCP** para transferir arquivos para outro servidor.
+    -   **Exportação de arquivo CSV** para análise manual ou integração com fluxos de trabalho externos.
 
-This stage ensures that data ends up in the **right place**, either for visualization in dashboards, correlation with other systems, or external storage.
+Esta etapa garante que os dados terminem no **lugar certo**, seja para visualização em dashboards, correlação com outros sistemas ou armazenamento externo.
 
 ---
 
-## **Summary**
+## **Resumo**
 
-The **ETL cycle** in the Visual Smart Data Broker provides a **flexible, visual, and no-code approach** to data integration:
+O **ciclo ETL** no Visual Smart Data Broker fornece uma **abordagem flexível, visual e sem código** para integração de dados:
 
-1.  **Extract** heterogeneous data from any device via connectors.
-2.  **Transform** the data through Grid Handlers for parsing, normalization, calculations, mapping, and enrichment.
-3.  **Load** the processed information into the Viewtinet TSDB by default, or export it to external systems.
+1.  **Extrair (Extract)** dados heterogêneos de qualquer dispositivo via conectores.
+2.  **Transformar (Transform)** os dados através de Grid Handlers para parsing, normalização, cálculos, mapeamento e enriquecimento.
+3.  **Carregar (Load)** as informações processadas no Viewtinet TSDB por padrão, ou exportá-las para sistemas externos.
 
-This process guarantees that raw and diverse data streams are turned into **structured, enriched, and actionable information** across the Viewtinet ecosystem.
+Esse processo garante que fluxos de dados brutos e diversos se tornem **informações estruturadas, enriquecidas e acionáveis** por todo o ecossistema da Viewtinet.
 
 <br />

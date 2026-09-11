@@ -1,5 +1,4 @@
 ---
-reusableId: 54
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Readme First Updating '
 id: DDC-YZMU-EHR-VBH
@@ -7,23 +6,23 @@ slug: readme-first-updating
 isVisible: true
 lastUpdated: '2025-10-15 16:13:05'
 ---
-# **<span align="center">Updating Viewtinet</span>**
+# **<span align="center">Atualizando o Viewtinet</span>**
 
-<span align="justify">In this chapter we’ll cover how to update your entire Viewtinet platform—or individual modules—using only the command-line interface (CLI). Updates are distributed as ZIP bundles and must be uploaded to your Ubuntu Server instances (physical appliances or VMs) before applying them.</span>
+<span align="justify">Neste capítulo, abordaremos como atualizar toda a sua plataforma Viewtinet — ou módulos individuais — usando apenas a interface de linha de comando (CLI). As atualizações são distribuídas como pacotes ZIP e devem ser carregadas em suas instâncias do Ubuntu Server (appliances físicos ou VMs) antes de aplicá-las.</span>
 
-### Prerequisites
+### Pré-requisitos
 
-Before you begin, ensure you have:
+Antes de começar, certifique-se de ter:
 
--   **SSH access** to the target server(s), with firewall rules permitting TCP port **22** from your workstation.
--   A CLI-capable terminal on your local machine (Linux/macOS Terminal, Windows PowerShell, etc.).
--   One of the following SCP/SFTP clients installed for bundle upload:
+-   **Acesso SSH** ao(s) servidor(es) de destino, com regras de firewall permitindo a porta TCP **22** a partir da sua estação de trabalho.
+-   Um terminal com capacidade para CLI na sua máquina local (Terminal Linux/macOS, Windows PowerShell, etc.).
+-   Um dos seguintes clientes SCP/SFTP instalados para upload do pacote:
     
     -   **WinSCP**
     -   **FileZilla**
     -   **PuTTY PSCP**
-    -   **OpenSSH’s** `scp` (native on Linux/macOS; available in Windows 10+)
+    -   `scp` do **OpenSSH** (nativo no Linux/macOS; disponível no Windows 10+)
 
-> **Note:** Both the full-platform update bundle and the module-specific ZIP archives are provided directly by Viewtinet engineers. At the time of writing, there is no public repository for these bundles.
+> **Nota:** Tanto o pacote de atualização da plataforma completa quanto os arquivos ZIP específicos de módulos são fornecidos diretamente pelos engenheiros da Viewtinet. No momento da redação deste documento, não há um repositório público para esses pacotes.
 
-Subsequent sections will walk through the CLI commands to apply these bundles, verify versions, and confirm a successful update.
+As seções subsequentes guiarão você pelos comandos da CLI para aplicar esses pacotes, verificar as versões e confirmar uma atualização bem-sucedida.

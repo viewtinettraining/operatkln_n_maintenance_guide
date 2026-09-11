@@ -1,5 +1,4 @@
 ---
-reusableId: 57
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Updating a single module'
 id: D9M-IWLN-96U-LDX
@@ -7,38 +6,38 @@ slug: updating-a-single-module
 isVisible: true
 lastUpdated: '2025-10-15 16:21:31'
 ---
-# **<span align="center">Updating a Single Module via CLI</span>**
+# **<span align="center">Atualizando um Único Módulo via CLI</span>**
 
-This section describes how to update just one Viewtinet module (for example, `dhyana`) using the CLI. The update bundle contains only the Docker image archives for that module.
+Esta seção descreve como atualizar apenas um módulo do Viewtinet (por exemplo, `dhyana`) usando a CLI. O pacote de atualização contém apenas os arquivos de imagem Docker para esse módulo.
 
-> **Note:** As with the full-platform bundle, module update ZIPs are provided by Viewtinet engineers; there is no public repository at this time.
+> **Nota:** Assim como o pacote da plataforma completa, os ZIPs de atualização de módulos são fornecidos por engenheiros da Viewtinet; não há repositório público no momento.
 
 ---
 
-## **1\. Upload the Module Bundle**
+## **1\. Faça o Upload do Pacote do Módulo**
 
-Copy the module ZIP bundle to your server via SCP/SFTP. For example:
+Copie o pacote ZIP do módulo para o seu servidor via SCP/SFTP. Por exemplo:
 
 ```bash
 scp dhyana-artifacts.zip viewtinet@your-server:/home/viewtinet/
 ```
 
-## **2\. SSH Into the Server**
+## **2\. Acesse o Servidor via SSH**
 
 ```bash
 ssh viewtinet@your-server
 ```
 
-## **3\. Unzip into a Module-Specific Directory**
+## **3\. Descompacte em um Diretório Específico do Módulo**
 
-Create a staging directory named software/ by unzipping:
+Crie um diretório de preparação chamado software/ descompactando:
 
 ```bash
 cd /home/viewtinet
 unzip dhyana-artifacts.zip
 ```
 
-Example output:
+Exemplo de saída:
 
 ```bash
 Archive:  artifacts.zip
@@ -50,7 +49,7 @@ Archive:  artifacts.zip
  inflating: software/dhyana/viewtinet-zookeeper-6.3.5.tar.gz
 ```
 
-Resulting tree:
+Árvore resultante:
 
 ```bash
 └── software
@@ -62,27 +61,27 @@ Resulting tree:
         └── viewtinet-zookeeper-6.3.5.tar.gz
 ```
 
-## **4\. Backup the Existing Module**
+## **4\. Faça Backup do Módulo Existente**
 
-Move the current module folder out of the way:
+Mova a pasta atual do módulo para fora do caminho:
 
 ```bash
 mv /opt/vn/software/dhyana/ /opt/vn/software/dhyana_backup
 ```
 
-**Tip**: You can name your backup directory with a timestamp or version suffix to identify it, e.g. /opt/vn/software/dhyana\_backup\_$(date +%Y%m%d)}
+**Dica**: Você pode nomear seu diretório de backup com um carimbo de data/hora ou sufixo de versão para identificá-lo, ex.: /opt/vn/software/dhyana\_backup\_$(date +%Y%m%d)}
 
 <br />
 
-## **5\. Deploy the New Module Files:**
+## **5\. Implante os Novos Arquivos do Módulo:**
 
-Copy the new module directory into place. The -r flag is required for directories; -v (verbose) is optional:
+Copie o novo diretório do módulo para o local. A flag -r é necessária para diretórios; -v (verbose) é opcional:
 
 ```bash
 cp -rv ./software/dhyana/ /opt/vn/software/
 ```
 
-Example output:
+Exemplo de saída:
 
 ```bash
 './software/dhyana/images.txt' -> '/opt/vn/software/dhyana/images.txt'
@@ -94,14 +93,14 @@ Example output:
 
 <br />
 
-## **6\. Load the Module Docker Images**
+## **6\. Carregue as Imagens Docker do Módulo**
 
-Use the install-packages.sh script with the --software-directory and --module flags to load and install the new container images for the module. Replace with the module name:
+Use o script install-packages.sh com as flags --software-directory e --module para carregar e instalar as novas imagens de contêiner para o módulo. Substitua pelo nome do módulo:
 
 ```bash
 /opt/vn/viewtinet-builder/install-packages.sh ---software-directory /opt/vn/software --module dhyana
 ```
 
-This command pulls and loads the Docker image archives for the dhyana module. Execution time will vary based on CPU, memory, and network bandwidth.
+Este comando baixa e carrega os arquivos de imagem Docker para o módulo dhyana. O tempo de execução variará com base na CPU, memória e largura de banda da rede.
 
-⚠️ After loading the images, remember to restart the module using the scripts described in [Operating Viewtinet Containers](http:#?target=20U-C19U-8N7-KWB) via Scripts to apply the update.<br />
+⚠️ Após carregar as imagens, lembre-se de reiniciar o módulo usando os scripts descritos em [Operating Viewtinet Containers](http:#?target=20U-C19U-8N7-KWB) via Scripts para aplicar a atualização.<br />

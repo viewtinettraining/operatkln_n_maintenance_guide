@@ -1,36 +1,35 @@
 ---
-reusableId: 180
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Integração com o Viewtisight'
+title: 'Viewtisight integration'
 id: DQQ-811-GFO-MAV
 slug: viewtisight-integration
 isVisible: true
 isSearchable: true
 lastUpdated: '2026-06-02 08:55:09'
 ---
-# **<span align="center">INTEGRAÇÃO COM O VIEWTISIGHT</span>**
+# **<span align="center">INTEGRAÇÃO DO VIEWTISIGHT</span>**
 
 <br />
 
-A integração do Viewtisight é feita principalmente via iframes. Nesta seção, são apresentados os passos para integrar o Viewtisight em interfaces gráficas de terceiros.
+A integração do Viewtisight é feita principalmente via iframes. Nesta seção, são expostos os passos para integrar o Viewtisight em interfaces gráficas (GUIs) de terceiros.
 
 <br />
 
 ## **Token de Autenticação**
 
-Os tokens podem ser obtidos conforme explicado na seção de Autenticação ou por meio de uma requisição POST semelhante feita pelo navegador.
+Os tokens podem ser obtidos conforme explicado na seção de Autenticação ou por meio de uma requisição POST semelhante feita via navegador.
 
-Observe que, se nenhum token for solicitado, o iframe será redirecionado para a interface do Viewtiauth para gerar um novo graficamente.
+Note que se nenhum token for solicitado, o iframe redirecionará para a interface do Viewtiauth para gerar um novo graficamente.
 
 <br />
 
 ## **Incorporando Dashboards**
 
-Os dashboards criados no Viewtisight podem ser incorporados em interfaces gráficas de terceiros. O formato de URL a ser utilizado em iframes é o seguinte:
+Dashboards criados no Viewtisight podem ser incorporados em interfaces gráficas (GUIs) de terceiros. O formato da URL a ser usado em iframes é o seguinte:
 
 `$VIEWTISIGHT_URL/dashboard/$dashboard_name?hidePanels=true&auth=$TOKEN`
 
-Onde `$TOKEN` é o valor cipher obtido conforme explicado na seção de Autenticação (não confundir com `access_token`, que é utilizado para chamadas de API).
+Onde `$TOKEN` é o valor da cifra obtido conforme explicado na seção de Autenticação (não deve ser confundido com `access_token`, que é usado para chamadas de API).
 
 Por exemplo, dado o seguinte dashboard:
 
@@ -44,39 +43,39 @@ A URL do iframe é:
 
 <br />
 
-### **Parâmetros de URL**
+### **Parâmetros da URL**
 
--   `hidePanels`: Indica se os painéis devem ser ocultados ou não. Valores possíveis: `true`/`false` (`true` recomendado para iframes).
--   `auth`: Token de Autenticação para poder realizar consultas. _Observação: Se nenhum token for definido na URL anterior, a janela do iframe será redirecionada para a interface do Viewtiauth para gerar um novo graficamente._
+-   `hidePanels`: Indica se os painéis devem ser ocultados ou não. Valores possíveis: `true`/`false` (`true` é recomendado para iframes).
+-   `auth`: Token de Autenticação para poder executar consultas. _Nota: Se nenhum token for definido na url anterior, a janela do iframe redirecionará para a interface do Viewtiauth para gerar um novo graficamente._
 
 <br />
 
-## **Incorporando Cards**
+## **Incorporando Cartões (Cards)**
 
-Os cards criados a partir de dashboards podem ser isolados via URL para visualizar apenas um card específico pelo seu id.
+Cartões criados a partir de dashboards podem ser isolados via URL para visualizar apenas um cartão específico através de seu id.
 
-A URL para incorporar um card específico de qualquer dashboard é a seguinte:
+A URL para incorporar um cartão específico de qualquer dashboard é a seguinte:
 
 `$VIEWTISIGHT_URL/dashboard/$dashboard_name?cardId=$CARD_ID&auth=$TOKEN`
 
 <br />
 
-### **Parâmetros de URL**
+### **Parâmetros da URL**
 
--   `cardId`: ID do card a filtrar no dashboard. Estes passos podem ser realizados para obter o `card_id`:
+-   `cardId`: ID do cartão a ser filtrado no dashboard. Os seguintes passos podem ser realizados para obter o `card_id`:
     
-    1.  Clique no botão no canto superior direito do card e clique em **Editar**:<br />
+    1.  Clique no botão no canto superior direito do cartão e clique em **Edit** (Editar):<br />
         
         <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/api-integration-img8.png" align="center"></figure>
         
         <br />
         
-    2.  O construtor de Card será exibido. Clique na seção **Raw Data** e copie o conteúdo do atributo `card_id`:<br />
+    2.  O construtor de cartão aparecerá. Clique na seção **Raw Data** (Dados Brutos) e copie o conteúdo do atributo `card_id`:<br />
         
         <figure align="center"><img src="https://viewtinettraining.github.io/viewtinettraining635.github.io/images/api-integration-img9.png" align="center"></figure>
         
         <br />
         
--   `auth`: Token de Autenticação para poder realizar consultas. _Observação: Se nenhum token for definido na URL anterior, a janela do iframe será redirecionada para a interface do Viewtiauth para gerar um novo graficamente._
+-   `auth`: Token de Autenticação para poder executar consultas. _Nota: Se nenhum token for definido na url anterior, a janela do iframe redirecionará para a interface do Viewtiauth para gerar um novo graficamente._
 
 <br />

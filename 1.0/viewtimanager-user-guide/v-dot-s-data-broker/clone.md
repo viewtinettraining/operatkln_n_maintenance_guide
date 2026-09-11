@@ -1,5 +1,4 @@
 ---
-reusableId: 130
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: Clone
 id: 0F4-467C-E8D-CUU
@@ -7,9 +6,9 @@ slug: clone
 isVisible: true
 lastUpdated: '2025-10-15 15:18:32'
 ---
-# **<span align="center">Clone</span>**
+# **<span align="center">Clonar</span>**
 
-You clone any plugin by clicking the clone button on the plugin description page.
+Você pode clonar qualquer plugin clicando no botão de clone na página de descrição do plugin.
 
 <br />
 
@@ -17,7 +16,7 @@ You clone any plugin by clicking the clone button on the plugin description page
 
 <br />
 
-This will clone the plugin and will create an exact copy. This new plugin is not installed and will not cause any action over the existing plugin or existing data sets.
+Isso clonará o plugin e criará uma cópia exata. Este novo plugin não está instalado e não causará nenhuma ação sobre o plugin existente ou sobre os conjuntos de dados existentes.
 
 <br />
 

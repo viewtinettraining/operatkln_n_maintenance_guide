@@ -1,5 +1,4 @@
 ---
-reusableId: 139
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
 title: 'Producers '
 id: DWK-9MRZ-IG3-0YN
@@ -8,35 +7,35 @@ isVisible: true
 isSearchable: true
 lastUpdated: '2026-05-22 11:33:02'
 ---
-# **<span align="center">Producers</span>**
+# **<span align="center">Produtores (Producers)</span>**
 
 <br />
 
-Once the data has passed through the **Extract** and **Transform** stages of the ETL cycle, the **Load stage** defines where the processed records will be stored or exported.<br />
-In Viewtinet, these destinations are managed through components called **Producers**.
+Uma vez que os dados tenham passado pelas etapas de **Extração (Extract)** e **Transformação (Transform)** do ciclo ETL, a **etapa de Carregamento (Load)** define onde os registros processados serão armazenados ou exportados.<br />
+Na Viewtinet, esses destinos são gerenciados por meio de componentes chamados **Produtores (Producers)**.
 
-A **Producer** is responsible for delivering the transformed data to a specific output, whether it is local storage, a database, a file, or an external system. By configuring a Producer, administrators decide the final destination of the data and how it will be made available for dashboards, reports, or external integrations.
+Um **Produtor** é responsável por entregar os dados transformados a uma saída específica, seja ela um armazenamento local, um banco de dados, um arquivo ou um sistema externo. Ao configurar um Produtor, os administradores decidem o destino final dos dados e como eles serão disponibilizados para dashboards, relatórios ou integrações externas.
 
-The available Producers include:
+Os Produtores disponíveis incluem:
 
--   **Aggregator**
--   **CSV Writer**
--   **Rotational CSV Writer**
--   **Syslog Producer**
--   **SCP Producer**
--   **ViewtinetDB Producer**
--   **Kafka Producer**
+-   **Aggregator** (Agregador)
+-   **CSV Writer** (Gravador de CSV)
+-   **Rotational CSV Writer** (Gravador de CSV Rotativo)
+-   **Syslog Producer** (Produtor de Syslog)
+-   **SCP Producer** (Produtor via SCP)
+-   **ViewtinetDB Producer** (Produtor do ViewtinetDB)
+-   **Kafka Producer** (Produtor de Kafka)
 
-Each of these Producers offers different options for storing or exporting data, depending on the integration and operational requirements.
+Cada um desses Produtores oferece diferentes opções para armazenar ou exportar dados, dependendo dos requisitos operacionais e de integração.
 
 ---
 
-## **How to Add a New Producer**
+## **Como Adicionar um Novo Produtor**
 
-Regardless of the destination type, the initial step to configure **any** of the available producers is always the same.
+Independentemente do tipo de destino, o passo inicial para configurar **qualquer** um dos produtores disponíveis é sempre o mesmo.
 
-1.  Navigate to the **Load** stage of your V.S. Data Broker plugin configuration.
-2.  Click on the **\+ ADD NEW PRODUCER** button.
+1.  Navegue até a etapa **Load** (Carregar) na configuração do seu plugin no V.S. Data Broker.
+2.  Clique no botão **\+ ADD NEW PRODUCER** (Adicionar Novo Produtor).
 
 <br />
 
@@ -44,7 +43,7 @@ Regardless of the destination type, the initial step to configure **any** of the
 
 <br />
 
-3.  A new empty Producer box will appear indicating that selecting a Producer Type is a mandatory field.
+3.  Uma nova caixa de Produtor vazia aparecerá, indicando que selecionar um Tipo de Produtor (Producer Type) é um campo obrigatório.
 
 <br />
 
@@ -52,7 +51,7 @@ Regardless of the destination type, the initial step to configure **any** of the
 
 <br />
 
-4.  Open the **Producer Type** dropdown menu and select the specific producer you wish to configure.
+4.  Abra o menu suspenso **Producer Type** (Tipo de Produtor) e selecione o produtor específico que deseja configurar.
 
 <br />
 
@@ -60,6 +59,6 @@ Regardless of the destination type, the initial step to configure **any** of the
 
 <br />
 
-> \[!NOTE\] The specific configuration parameters, use cases, and integration examples for each individual producer type are explained in detail in the following sections.
+> \[!NOTE\] Os parâmetros de configuração específicos, casos de uso e exemplos de integração para cada tipo de produtor individual são explicados em detalhes nas seções a seguir.
 
 <br />
