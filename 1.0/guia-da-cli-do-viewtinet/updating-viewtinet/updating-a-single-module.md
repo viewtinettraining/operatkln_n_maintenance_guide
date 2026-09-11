@@ -103,4 +103,4 @@ Use o script install-packages.sh com as flags --software-directory e --module pa
 
 Este comando baixa e carrega os arquivos de imagem Docker para o módulo dhyana. O tempo de execução variará com base na CPU, memória e largura de banda da rede.
 
-⚠️ Após carregar as imagens, lembre-se de reiniciar o módulo usando os scripts descritos em [Operating Viewtinet Containers](/1.0/viewtinet-cli-guide/cli-commands-reference/managing-containers/operating-viewtinet-containers-via-scripts) via Scripts para aplicar a atualização.<br />
+⚠️ Após carregar as imagens, lembre-se de reiniciar o módulo usando os scripts descritos em [Operating Viewtinet Containers](/1.0/guia-da-cli-do-viewtinet/cli-commands-reference/managing-containers/operating-viewtinet-containers-via-scripts) via Scripts para aplicar a atualização.<br />

@@ -1,4 +1,4 @@
-- installation-guide:
+- guia-de-instalacao:
   - about-installation-guide
   - os-configurations:
     - hdd-partitioning
@@ -32,7 +32,7 @@
     - ipmi-ip-address-configuration
     - managing-your-appliance-via-ipmi
     - changing-the-management-ip-address
-- viewtimanager-user-guide:
+- guia-do-usuario-do-viewtimanager:
   - about-viewtimanager-user-guide
   - login
   - gui-overview
@@ -165,7 +165,7 @@
         - ldap-integration
     - updates
   - license
-- viewtinet-cli-guide:
+- guia-da-cli-do-viewtinet:
   - about-cli-guide
   - software-architecture:
     - microservices-approach
@@ -186,7 +186,7 @@
     - readme-first-updating
     - updating-bundle
     - updating-a-single-module
-- api-reference:
+- referencia-da-api:
   - introduction
   - rest-api
   - rest-api-integration
