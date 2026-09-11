@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: MongoDB
+title: 'MongoDB'
 id: SA1-E5WL-D7Z-2NZ
 slug: mongodb
 isVisible: true

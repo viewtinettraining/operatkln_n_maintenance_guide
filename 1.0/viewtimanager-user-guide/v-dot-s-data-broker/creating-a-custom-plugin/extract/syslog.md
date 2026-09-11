@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Syslog
+title: 'Syslog'
 id: 9KD-EY7D-1I9-Y1X
 slug: syslog
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewing Installed Docker Images'
+title: 'Visualizando Imagens Docker Instaladas'
 id: R1C-WGZV-8OK-AI9
 slug: viewing-installed-docker-images
 isVisible: true

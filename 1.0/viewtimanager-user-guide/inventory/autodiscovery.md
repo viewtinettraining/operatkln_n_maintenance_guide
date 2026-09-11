@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Autodiscovery
+title: 'Descoberta Automática (Autodiscovery)'
 id: EOY-4ORU-YGC-AEB
 slug: autodiscovery
 isVisible: false

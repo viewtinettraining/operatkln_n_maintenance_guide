@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Operating System Setup'
+title: 'Configuração do Sistema Operacional'
 id: DM2-XF36-ELR-TFC
 slug: operating-system-setup
 isVisible: true

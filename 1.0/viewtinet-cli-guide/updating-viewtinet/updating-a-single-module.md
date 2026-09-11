@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Updating a single module'
+title: 'Atualizando um Único Módulo'
 id: D9M-IWLN-96U-LDX
 slug: updating-a-single-module
 isVisible: true

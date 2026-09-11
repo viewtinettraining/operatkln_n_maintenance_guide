@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Clone
+title: 'Clonar'
 id: 0F4-467C-E8D-CUU
 slug: clone
 isVisible: true

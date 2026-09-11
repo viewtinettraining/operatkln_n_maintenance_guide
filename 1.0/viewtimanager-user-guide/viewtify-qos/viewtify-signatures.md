@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtify Signatures'
+title: 'Assinaturas do Viewtify'
 id: 0IJ-VAK-I2Y-BBS
 slug: viewtify-signatures
 isVisible: true

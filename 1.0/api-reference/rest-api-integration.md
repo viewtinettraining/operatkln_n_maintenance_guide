@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Rest api integration'
+title: 'Integração via API REST'
 id: R4L-IQM-VCO-LYU
 slug: rest-api-integration
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'CSV Decorator'
+title: 'Decorador CSV'
 id: CSV-DEC0-GH1-TR4
 slug: csv-decorator
 isVisible: true

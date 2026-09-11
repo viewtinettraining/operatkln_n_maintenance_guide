@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Microservices Approach'
+title: 'Abordagem de Microsserviços'
 id: OWE-SBWL-ZGV-PXH
 slug: microservices-approach
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtimon Hosts List'
+title: 'Lista de Hosts do Viewtimon'
 id: SOA-EQD-8Z7-I99
 slug: viewtimon-hosts-list
 isVisible: true

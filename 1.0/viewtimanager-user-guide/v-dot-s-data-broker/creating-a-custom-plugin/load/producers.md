@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Producers '
+title: 'Produtores (Producers)'
 id: DWK-9MRZ-IG3-0YN
 slug: producers
 isVisible: true

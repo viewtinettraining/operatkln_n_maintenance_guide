@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Roles
+title: 'Funções'
 id: W27-FT60-N0W-47N
 slug: roles
 isVisible: true

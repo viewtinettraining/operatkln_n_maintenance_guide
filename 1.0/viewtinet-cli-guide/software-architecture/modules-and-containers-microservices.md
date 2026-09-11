@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Modules and Containers (microservices)'
+title: 'Módulos e Contêineres (Microsserviços)'
 id: JIR-EBUA-I9H-GJI
 slug: modules-and-containers-microservices
 isVisible: true

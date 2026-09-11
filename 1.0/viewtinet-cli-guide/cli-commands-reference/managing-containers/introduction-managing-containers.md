@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Introduction managing containers'
+title: 'Introdução ao Gerenciamento de Contêineres'
 id: IU4-C0WP-LEC-76S
 slug: introduction-managing-containers
 isVisible: true

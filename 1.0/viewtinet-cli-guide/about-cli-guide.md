@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About CLI Guide'
+title: 'Sobre o Guia CLI'
 id: 486-TZTP-0YW-J40
 slug: about-cli-guide
 isVisible: true

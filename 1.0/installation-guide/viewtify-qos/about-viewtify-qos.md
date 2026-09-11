@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Viewtify QoS'
+title: 'Sobre o Viewtify QoS'
 id: EAT-B1R5-K2J-QOR
 slug: about-viewtify-qos
 isVisible: true

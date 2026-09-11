@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Cluster Installation'
+title: 'Instalação em Cluster'
 id: NQU-2BQB-PAX-CE8
 slug: cluster-installation
 isVisible: true

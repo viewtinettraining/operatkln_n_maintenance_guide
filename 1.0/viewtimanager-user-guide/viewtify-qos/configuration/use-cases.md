@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Use Cases'
+title: 'Casos de Uso'
 id: GJV-9YI-K8L-7S9
 slug: use-cases
 isVisible: true

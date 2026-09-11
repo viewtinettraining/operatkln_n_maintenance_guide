@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewing Container Status'
+title: 'Visualizando o Status dos Contêineres'
 id: 1GM-1PE0-3E1-IFM
 slug: viewing-container-status
 isVisible: true

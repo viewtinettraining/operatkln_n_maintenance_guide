@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Changing the Management IP Address'
+title: 'Alterando o Endereço IP de Gerenciamento'
 id: 99S-98I2-CCR-W37
 slug: changing-the-management-ip-address
 isVisible: true

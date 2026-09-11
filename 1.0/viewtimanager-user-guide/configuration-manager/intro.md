@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Intro
+title: 'Introdução'
 id: BA2-AW0H-58U-X3Z
 slug: intro
 isVisible: true

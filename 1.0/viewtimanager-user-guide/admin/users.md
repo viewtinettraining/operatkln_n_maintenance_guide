@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Users
+title: 'Usuários'
 id: P4I-KSRN-3QJ-RPV
 slug: users
 isVisible: true

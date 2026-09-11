@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Intro
+title: 'Introdução'
 id: DCR-EHY-UBI-HN8
 slug: intro
 isVisible: true

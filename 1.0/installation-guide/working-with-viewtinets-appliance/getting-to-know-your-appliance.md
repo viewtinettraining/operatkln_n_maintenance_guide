@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Getting To Know Your Appliance'
+title: 'Conhecendo o seu Appliance'
 id: 2PL-6EPV-GGQ-5D7
 slug: getting-to-know-your-appliance
 isVisible: true

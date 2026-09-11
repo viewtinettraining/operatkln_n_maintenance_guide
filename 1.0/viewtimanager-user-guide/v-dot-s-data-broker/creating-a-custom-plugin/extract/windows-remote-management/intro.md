@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Intro
+title: 'Introdução'
 id: SOU-4DMA-MVG-KSA
 slug: intro
 isVisible: true

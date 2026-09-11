@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: ICMP
+title: 'ICMP'
 id: NTA-4FAZ-5QN-QO6
 slug: icmp
 isVisible: true

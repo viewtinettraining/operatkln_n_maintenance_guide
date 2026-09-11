@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Tenants
+title: 'Tenants'
 id: 70B-79M2-SF8-1QC
 slug: tenants
 isVisible: true

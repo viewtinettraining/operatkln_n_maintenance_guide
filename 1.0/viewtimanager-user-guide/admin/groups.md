@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Groups
+title: 'Grupos'
 id: JQS-NBVT-IRA-L3E
 slug: groups
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Installation step1 '
+title: 'Passo 1 da Instalação'
 id: SM3-711J-KFE-QS7
 slug: installation-step1
 isVisible: true

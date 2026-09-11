@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Introduction
+title: 'Introdução'
 id: SEI-EBT-IKZ-LTB
 slug: introduction
 isVisible: true

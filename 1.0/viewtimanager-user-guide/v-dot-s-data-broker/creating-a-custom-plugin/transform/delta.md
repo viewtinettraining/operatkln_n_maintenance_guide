@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Delta
+title: 'Delta'
 id: O5N-F9C-S8E-1VL
 slug: delta
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Schema Configuration'
+title: 'Configuração de Esquema (Schema)'
 id: SCH-CNF-STG-002
 slug: schema-configuration
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Managing Your Appliance via IPMI'
+title: 'Gerenciando o seu Appliance via IPMI'
 id: Y8N-05NK-T9Q-L5F
 slug: managing-your-appliance-via-ipmi
 isVisible: true

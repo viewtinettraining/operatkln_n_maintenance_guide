@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid Replace'
+title: 'Substituição em Grade'
 id: ZDE-USR-M4L-84X
 slug: grid-replace
 isVisible: true

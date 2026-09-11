@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid ICMP'
+title: 'Grade ICMP'
 id: JNC-MDX-IUI-QRJ
 slug: grid-icmp
 isVisible: true

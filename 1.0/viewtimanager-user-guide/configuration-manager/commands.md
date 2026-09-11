@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Commands
+title: 'Comandos'
 id: 5WZ-R2WG-2H8-CLS
 slug: commands
 isVisible: true

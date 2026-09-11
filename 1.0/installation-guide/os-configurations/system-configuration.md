@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'System Configuration'
+title: 'Configuração do Sistema'
 id: GG6-I8VJ-HKN-FYJ
 slug: system-configuration
 isVisible: true

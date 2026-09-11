@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'GUI Logging for AD Users'
+title: 'Registro na GUI para Usuários do AD'
 id: 9CB-AQAQ-DQS-CXU
 slug: gui-logging-for-ad-users
 isVisible: true

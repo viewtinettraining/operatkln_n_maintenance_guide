@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'GUI Overview'
+title: 'Visão Geral da GUI'
 id: FJO-8GB2-32F-P4J
 slug: gui-overview
 isVisible: true

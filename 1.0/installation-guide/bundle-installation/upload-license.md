@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Upload license'
+title: 'Fazer Upload da Licença'
 id: LV2-HON0-UN1-IZE
 slug: upload-license
 isVisible: true

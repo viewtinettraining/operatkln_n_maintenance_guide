@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'LDAP Integration'
+title: 'Integração com LDAP'
 id: JM9-C49U-IKN-5JA
 slug: ldap-integration
 isVisible: true

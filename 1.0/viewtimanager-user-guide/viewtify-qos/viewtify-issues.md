@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtify Issues'
+title: 'Problemas do Viewtify'
 id: CSQ-424-MV3-UWZ
 slug: viewtify-issues
 isVisible: true

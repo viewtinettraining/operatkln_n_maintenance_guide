@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Tasks
+title: 'Tarefas'
 id: QLK-CBX1-ANW-UDR
 slug: tasks
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtimon Configuration'
+title: 'Configuração do Viewtimon'
 id: D4S-M0QZ-2PC-2AM
 slug: viewtimon-configuration
 isVisible: true

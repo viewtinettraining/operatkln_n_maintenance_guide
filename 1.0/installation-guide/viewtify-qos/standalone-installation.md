@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Standalone Installation'
+title: 'Instalação Autônoma (Standalone)'
 id: 2DJ-N7C3-94R-9K7
 slug: standalone-installation
 isVisible: true

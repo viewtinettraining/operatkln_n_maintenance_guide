@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Regex
+title: 'Regex'
 id: 2CV-MCK-FEE-ZSX
 slug: regex
 isVisible: true

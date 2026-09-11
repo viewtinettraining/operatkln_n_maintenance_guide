@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Column Remover'
+title: 'Removedor de Coluna'
 id: RVF-1N2E-SDZ-KI3
 slug: column-remover
 isVisible: true

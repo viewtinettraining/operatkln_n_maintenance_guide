@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Prerequisites
+title: 'Pré-requisitos'
 id: K8S-P9GS-SJQ-339
 slug: prerequisites
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Cluster Installation'
+title: 'Instalação em Cluster'
 id: ND7-Z3HP-QAV-NIZ
 slug: cluster-installation
 isVisible: true

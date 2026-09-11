@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Split
+title: 'Divisão (Split)'
 id: P8G-AJA-YBT-F5B
 slug: split
 isVisible: true

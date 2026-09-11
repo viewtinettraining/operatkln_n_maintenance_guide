@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid handlers intro (PT)'
+title: 'Introdução aos Manipuladores de Grade'
 id: PTB-GH1-INT-R0X
 slug: grid-handlers-intro-pt
 isVisible: false

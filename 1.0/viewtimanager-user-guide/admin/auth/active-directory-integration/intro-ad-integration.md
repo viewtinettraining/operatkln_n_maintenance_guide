@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Intro AD Integration '
+title: 'Introdução à Integração com o AD'
 id: JXO-TPZ-EKP-ARK
 slug: intro-ad-integration
 isVisible: true

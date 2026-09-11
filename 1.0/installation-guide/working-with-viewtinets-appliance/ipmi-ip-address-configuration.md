@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'IPMI IP Address Configuration'
+title: 'Configuração do Endereço IP do IPMI'
 id: GTF-VP32-JNO-C00
 slug: ipmi-ip-address-configuration
 isVisible: true

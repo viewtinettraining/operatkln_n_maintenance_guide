@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Bypass Extensions'
+title: 'Extensões de Bypass'
 slug: bypass-extensions
 isVisible: true
 isSearchable: true

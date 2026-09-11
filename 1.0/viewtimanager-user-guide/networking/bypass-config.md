@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Bypass Configuration'
+title: 'Configuração de Bypass'
 slug: bypass-config
 isVisible: true
 isSearchable: true

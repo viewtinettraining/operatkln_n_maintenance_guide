@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtisight integration'
+title: 'Integração com o Viewtisight'
 id: DQQ-811-GFO-MAV
 slug: viewtisight-integration
 isVisible: true

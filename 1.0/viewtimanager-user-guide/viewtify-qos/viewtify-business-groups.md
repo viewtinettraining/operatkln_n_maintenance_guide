@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtify Business Groups'
+title: 'Grupos de Negócios do Viewtify'
 id: BTJ-7EZ-LI3-8CP
 slug: viewtify-business-groups
 isVisible: true

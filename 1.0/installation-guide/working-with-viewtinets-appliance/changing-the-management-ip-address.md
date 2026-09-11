@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Changing the Management IP Address'
+title: 'Alterando o Endereço IP de Gerenciamento'
 id: 2ZB-E2LQ-CYQ-MH7
 slug: changing-the-management-ip-address
 isVisible: true

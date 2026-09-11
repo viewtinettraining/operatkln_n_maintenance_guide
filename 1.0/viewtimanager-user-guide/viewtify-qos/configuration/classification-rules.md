@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Classification Rules'
+title: 'Regras de Classificação'
 id: FG0-TVA-0IC-BQJ
 slug: classification-rules
 isVisible: true

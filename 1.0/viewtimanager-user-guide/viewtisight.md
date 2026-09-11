@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Viewtisight
+title: 'Viewtisight'
 id: V5M-N8MF-JIC-96Z
 slug: viewtisight
 isVisible: true

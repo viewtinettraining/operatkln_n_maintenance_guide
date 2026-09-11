@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Troubleshooting
+title: 'Solução de Problemas (Troubleshooting)'
 id: XRV-WRYD-2NW-IYL
 slug: troubleshooting
 isVisible: true

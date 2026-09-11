@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Export and Import'
+title: 'Exportar e Importar'
 id: 0J9-BX41-0FB-400
 slug: export-and-import
 isVisible: true

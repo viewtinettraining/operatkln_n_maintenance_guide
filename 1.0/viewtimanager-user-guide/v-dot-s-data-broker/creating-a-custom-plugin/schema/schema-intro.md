@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Schema Intro'
+title: 'Introdução ao Esquema (Schema)'
 id: FC4-5QC6-JEY-R9H
 slug: schema-intro
 isVisible: true

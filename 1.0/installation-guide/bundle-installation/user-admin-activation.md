@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'User admin activation'
+title: 'Ativação do Usuário Admin'
 id: 757-J2LF-2VB-34B
 slug: user-admin-activation
 isVisible: true

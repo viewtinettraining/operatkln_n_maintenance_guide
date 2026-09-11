@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Flow Emitter'
+title: 'Emissor de Fluxo (Flow Emitter)'
 id: 2BI-G0RJ-UDX-J16
 slug: flow-emitter
 isVisible: true

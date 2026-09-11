@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Syslog Producer'
+title: 'Produtor Syslog'
 id: SYS-PRD-LG1-TR4
 slug: syslog-producer
 isVisible: true

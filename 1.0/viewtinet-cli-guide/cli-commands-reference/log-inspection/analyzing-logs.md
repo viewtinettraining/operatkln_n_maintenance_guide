@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Analyzing Logs'
+title: 'Analisando Logs'
 id: ABY-3TLV-XA4-MNN
 slug: analyzing-logs
 isVisible: true

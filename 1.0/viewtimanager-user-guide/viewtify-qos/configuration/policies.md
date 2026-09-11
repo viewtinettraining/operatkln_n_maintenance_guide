@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'QoS Policies'
+title: 'Políticas de QoS'
 id: ZXW-9YD-UAF-XIM
 slug: policies
 isVisible: true

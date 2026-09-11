@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Configurations
+title: 'Configurações'
 id: 2MQ-V1SM-U3F-ASU
 slug: configurations
 isVisible: true

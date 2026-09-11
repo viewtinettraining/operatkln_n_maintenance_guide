@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'The Viewtimon Interface'
+title: 'A Interface do Viewtimon'
 id: Y1G-L34-YR2-JHP
 slug: viewtimon-interface
 isVisible: true

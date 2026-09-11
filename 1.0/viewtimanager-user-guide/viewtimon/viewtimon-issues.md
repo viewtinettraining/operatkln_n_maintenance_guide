@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtimon Issues'
+title: 'Problemas do Viewtimon'
 id: DCE-8CF-PFV-V6J
 slug: viewtimon-issues
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Preparing the Installation Bundle'
+title: 'Preparando o Pacote de Instalação'
 id: LQB-DJ6N-7GW-42C
 slug: preparing-the-installation-bundle
 isVisible: true

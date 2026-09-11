@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Operating Viewtinet Containers via Scripts'
+title: 'Operando Contêineres Viewtinet via Scripts'
 id: 20U-C19U-8N7-KWB
 slug: operating-viewtinet-containers-via-scripts
 isVisible: true

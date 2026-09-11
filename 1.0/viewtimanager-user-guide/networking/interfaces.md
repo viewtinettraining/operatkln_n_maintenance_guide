@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Interfaces
+title: 'Interfaces'
 slug: interfaces
 isVisible: true
 isSearchable: true

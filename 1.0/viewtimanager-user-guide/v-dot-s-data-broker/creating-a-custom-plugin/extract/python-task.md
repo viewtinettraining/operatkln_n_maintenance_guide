@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Python Task'
+title: 'Tarefa Python'
 id: G0B-9DU5-VOF-55K
 slug: python-task
 isVisible: true

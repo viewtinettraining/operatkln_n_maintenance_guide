@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Sflow
+title: 'sFlow'
 id: Z4I-P8Q4-K1D-88D
 slug: sflow
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Installation step2'
+title: 'Passo 2 da Instalação'
 id: PF0-AHFT-R28-HXH
 slug: installation-step2
 isVisible: true

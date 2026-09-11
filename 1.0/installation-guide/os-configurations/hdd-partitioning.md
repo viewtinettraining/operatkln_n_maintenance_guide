@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'HDD partitioning'
+title: 'Particionamento de Disco (HDD)'
 id: BGW-74PL-76T-ZMH
 slug: hdd-partitioning
 isVisible: true

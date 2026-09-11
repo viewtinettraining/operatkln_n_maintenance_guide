@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Command Executor'
+title: 'Executor de Comandos'
 id: 0CQ-M89W-I5S-62V
 slug: command-executor
 isVisible: true

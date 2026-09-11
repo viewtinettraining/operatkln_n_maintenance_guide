@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: About
+title: 'Sobre'
 id: VF0-YCF6-YDW-CMP
 slug: about
 isVisible: true

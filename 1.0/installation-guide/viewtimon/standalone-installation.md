@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Standalone Installation'
+title: 'Instalação Autônoma (Standalone)'
 id: 3QS-ZQO7-DIX-JDN
 slug: standalone-installation
 isVisible: true

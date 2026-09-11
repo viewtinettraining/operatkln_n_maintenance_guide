@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Prerequisites
+title: 'Pré-requisitos'
 id: TC5-RB9Y-U44-GEU
 slug: prerequisites
 isVisible: true

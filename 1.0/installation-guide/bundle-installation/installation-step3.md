@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Installation step3'
+title: 'Passo 3 da Instalação'
 id: NES-8Y4E-3UP-06J
 slug: installation-step3
 isVisible: true

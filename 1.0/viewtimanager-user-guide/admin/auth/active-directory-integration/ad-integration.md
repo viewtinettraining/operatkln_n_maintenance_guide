@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'AD Integration'
+title: 'Integração com Active Directory'
 id: OI1-V5IM-IU4-2B7
 slug: ad-integration
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'File List'
+title: 'Lista de Arquivos (File List)'
 id: VSV-WUOV-6JH-ZYB
 slug: file-list
 isVisible: true

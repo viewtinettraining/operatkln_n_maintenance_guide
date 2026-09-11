@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'What is a Plugin'
+title: 'O que é um Plugin'
 id: Q1E-5FHS-HUB-K2W
 slug: what-is-a-plugin
 isVisible: true

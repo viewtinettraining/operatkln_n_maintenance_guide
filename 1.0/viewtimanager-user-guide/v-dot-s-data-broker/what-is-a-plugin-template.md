@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'What is a Plugin Template'
+title: 'O que é um Modelo de Plugin'
 id: HN7-KY9F-YS7-COU
 slug: what-is-a-plugin-template
 isVisible: true

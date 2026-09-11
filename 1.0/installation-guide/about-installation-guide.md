@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Installation Guide'
+title: 'Sobre o Guia de Instalação'
 id: IEY-AS0W-4NR-IBF
 slug: about-installation-guide
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'QoS Profiles'
+title: 'Perfis de QoS'
 id: WO0-VUU-YUB-DSJ
 slug: profiles
 isVisible: true

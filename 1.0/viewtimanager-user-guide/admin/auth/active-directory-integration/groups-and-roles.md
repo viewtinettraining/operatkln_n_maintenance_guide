@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Groups & Roles'
+title: 'Grupos e Funções'
 id: 0QA-TLZ4-4U4-TO8
 slug: groups-and-roles
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Key Value'
+title: 'Chave-Valor (Key-Value)'
 id: ZIX-2MR-SWE-6VG
 slug: key-value
 isVisible: true

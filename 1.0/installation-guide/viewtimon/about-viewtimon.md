@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Viewtimon'
+title: 'Sobre o Viewtimon'
 id: J0L-XVWU-3C5-3ZR
 slug: about-viewtimon
 isVisible: true

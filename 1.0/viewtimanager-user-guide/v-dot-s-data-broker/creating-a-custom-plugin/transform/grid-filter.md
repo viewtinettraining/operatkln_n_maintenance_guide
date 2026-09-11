@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid Filter'
+title: 'Filtro de Grade'
 id: GL2-GM1-6UV-GSJ
 slug: grid-filter
 isVisible: true

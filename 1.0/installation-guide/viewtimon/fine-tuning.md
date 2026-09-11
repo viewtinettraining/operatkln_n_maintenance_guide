@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Fine Tuning'
+title: 'Ajuste Fino (Fine Tuning)'
 id: JB9-WUEB-9W1-SFX
 slug: fine-tuning
 isVisible: true

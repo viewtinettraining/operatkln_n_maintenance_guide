@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Prerequisites
+title: 'Pré-requisitos'
 id: AZ6-6MJC-RG4-6T0
 slug: prerequisites
 isVisible: true

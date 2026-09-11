@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Creating Aggregated Tables'
+title: 'Criando Tabelas Agregadas'
 id: SCH-AGG-TBL-003
 slug: schema-aggregated-tables
 isVisible: true

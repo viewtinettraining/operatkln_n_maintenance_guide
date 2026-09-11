@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'How To Rack Your Appliance'
+title: 'Como Montar o seu Appliance no Rack'
 id: ZUA-4Y0B-2R4-XQ6
 slug: how-to-rack-your-appliance
 isVisible: true

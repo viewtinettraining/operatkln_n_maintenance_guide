@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid Transpose'
+title: 'Transposição de Grade'
 id: 9XM-YVZ-OY1-MTB
 slug: grid-transpose
 isVisible: true

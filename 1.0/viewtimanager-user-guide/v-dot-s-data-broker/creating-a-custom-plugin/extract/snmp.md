@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: SNMP
+title: 'SNMP'
 id: GE5-DPO8-5AX-W06
 slug: snmp
 isVisible: true

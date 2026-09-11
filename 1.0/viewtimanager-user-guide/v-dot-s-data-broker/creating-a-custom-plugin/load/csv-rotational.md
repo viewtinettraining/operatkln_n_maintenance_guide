@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Rotational CSV Writer'
+title: 'CSV Rotativo'
 id: 97X-FXC-MZ1-UAZ
 slug: csv-rotational
 isVisible: true

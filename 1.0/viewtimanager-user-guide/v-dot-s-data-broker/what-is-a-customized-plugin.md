@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'What is a Customized Plugin'
+title: 'O que é um Plugin Personalizado'
 id: 696-8K5M-3KQ-YBW
 slug: what-is-a-customized-plugin
 isVisible: true

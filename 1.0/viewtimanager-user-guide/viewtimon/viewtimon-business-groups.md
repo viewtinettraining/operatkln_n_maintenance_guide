@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtimon Business Groups'
+title: 'Grupos de Negócios do Viewtimon'
 id: APK-WHS-YOA-AUX
 slug: viewtimon-business-groups
 isVisible: true

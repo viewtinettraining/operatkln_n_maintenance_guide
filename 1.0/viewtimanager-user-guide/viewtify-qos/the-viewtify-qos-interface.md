@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'The Viewtify QoS Interface'
+title: 'A Interface do Viewtify QoS'
 id: 6LX-142J-70R-L8Y
 slug: the-viewtify-qos-interface
 isVisible: true

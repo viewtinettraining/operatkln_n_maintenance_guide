@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Column Constant Adder'
+title: 'Adicionador de Constante de Coluna'
 id: 3AE-OBTK-EV6-YSP
 slug: column-constant-adder
 isVisible: true

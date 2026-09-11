@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'ViewtinetDB Producer'
+title: 'Produtor ViewtinetDB'
 id: YUQ-YMR-XKJ-1H8
 slug: viewtinetdb-producer
 isVisible: true

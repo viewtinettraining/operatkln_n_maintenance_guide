@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Math Operation'
+title: 'Operação Matemática'
 id: Y8I-WJZ-GMD-5X6
 slug: math-operation
 isVisible: true

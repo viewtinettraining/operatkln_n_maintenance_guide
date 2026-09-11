@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Issues
+title: 'Problemas'
 slug: issues
 isVisible: true
 isSearchable: true

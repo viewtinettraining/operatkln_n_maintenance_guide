@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Standalone Installation'
+title: 'Instalação Autônoma (Standalone)'
 id: OAK-P0VS-SIQ-GDI
 slug: standalone-installation
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Updating Bundle'
+title: 'Atualizando o Pacote (Bundle)'
 id: XY9-HS55-0VV-2F9
 slug: updating-bundle
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: SSH
+title: 'SSH'
 id: DNT-JX5E-QQ6-D9Q
 slug: ssh
 isVisible: true

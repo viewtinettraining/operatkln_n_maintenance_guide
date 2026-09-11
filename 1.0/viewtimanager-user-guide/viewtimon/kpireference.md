@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Kpireference
+title: 'Referência de KPI'
 id: 1NO-SZ5-WYW-QJL
 isVisible: true
 isSearchable: true
@@ -9,7 +9,7 @@ lastUpdated: '2026-09-10 19:52:48'
 ---
 ﻿---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: KPI_Reference
+title: 'Referência de KPI'
 id: KWS-CP2E-E29-FCN
 slug: kpireference
 isVisible: true

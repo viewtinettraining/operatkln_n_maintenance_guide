@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Categories
+title: 'Categorias'
 id: P4N-UHDZ-PL5-KCG
 slug: categories
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'JSON Parser'
+title: 'Analisador JSON (Parser)'
 id: JYR-UF1-IMM-QW3
 slug: json-parser
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Saving and Installing the Plugin'
+title: 'Salvando e Instalando'
 id: CUS-PLG-FIN-001
 slug: saving-and-installing
 isVisible: true

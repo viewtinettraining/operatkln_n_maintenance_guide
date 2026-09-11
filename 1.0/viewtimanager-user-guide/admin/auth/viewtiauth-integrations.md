@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtiauth Integrations'
+title: 'Integrações do Viewtiauth'
 id: ZIC-1AVN-68A-KLJ
 slug: viewtiauth-integrations
 isVisible: true

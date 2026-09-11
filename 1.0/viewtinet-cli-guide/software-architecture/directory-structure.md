@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Directory Structure'
+title: 'Estrutura de Diretórios'
 id: MUJ-O5K1-50I-SFY
 slug: directory-structure
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Real-Time Alarms'
+title: 'Alarmes em Tempo Real'
 id: WTM-6BK-1O0-RY2
 slug: schema-realtime-alarms
 isVisible: true

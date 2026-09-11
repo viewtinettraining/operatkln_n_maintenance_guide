@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: WMI
+title: 'WMI'
 id: BAR-U0M4-7C6-7OF
 slug: wmi
 isVisible: true

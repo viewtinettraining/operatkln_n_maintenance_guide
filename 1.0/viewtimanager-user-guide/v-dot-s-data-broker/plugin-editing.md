@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Plugin Editing'
+title: 'Edição de Plugins'
 id: ZOI-I2L5-1EQ-E9P
 slug: plugin-editing
 isVisible: false

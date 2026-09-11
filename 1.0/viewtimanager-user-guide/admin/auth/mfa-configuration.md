@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'MFA Configuration'
+title: 'Configuração de MFA'
 id: MGK-93YX-ZIC-MJJ
 slug: mfa-configuration
 isVisible: true

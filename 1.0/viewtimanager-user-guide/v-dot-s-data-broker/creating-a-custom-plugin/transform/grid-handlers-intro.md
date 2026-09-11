@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid handlers intro'
+title: 'Introdução aos Manipuladores de Grade'
 id: DGL-CW6-BNR-HIL
 slug: grid-handlers-intro
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Network Decorator'
+title: 'Decorador de Rede'
 id: NET-DEC0-GH1-TR4
 slug: network-decorator
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Introduction to Viewtify QoS'
+title: 'Introdução ao Viewtify QoS'
 id: G45-KCP-OW0-OSH
 slug: introduction-to-viewtify-qos
 isVisible: true

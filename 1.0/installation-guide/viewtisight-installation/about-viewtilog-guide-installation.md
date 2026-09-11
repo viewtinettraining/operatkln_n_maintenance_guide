@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Viewtilog Guide Installation'
+title: 'Sobre o Guia de Instalação do Viewtisight'
 id: RYK-H8A8-MCO-HH1
 slug: about-viewtilog-guide-installation
 isVisible: true

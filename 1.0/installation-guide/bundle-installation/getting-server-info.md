@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Getting server info'
+title: 'Obtendo Informações do Servidor'
 id: I7G-VSW8-J9P-8HE
 slug: getting-server-info
 isVisible: true

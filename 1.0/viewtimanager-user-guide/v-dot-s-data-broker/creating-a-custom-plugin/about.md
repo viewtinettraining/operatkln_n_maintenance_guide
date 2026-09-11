@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: About
+title: 'Sobre'
 id: AE9-UUBF-A0O-RX1
 slug: about
 isVisible: true

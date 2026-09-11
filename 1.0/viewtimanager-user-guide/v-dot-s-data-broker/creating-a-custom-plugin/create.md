@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Create
+title: 'Criar'
 id: 25X-FAG-VAN-AO9
 slug: create
 isVisible: true

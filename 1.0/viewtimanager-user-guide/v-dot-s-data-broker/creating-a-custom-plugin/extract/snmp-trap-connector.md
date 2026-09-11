@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'SNMP Trap Connector'
+title: 'Conector de Traps SNMP'
 id: Z4P-33BL-Q86-7SO
 slug: snmp-trap-connector
 isVisible: true

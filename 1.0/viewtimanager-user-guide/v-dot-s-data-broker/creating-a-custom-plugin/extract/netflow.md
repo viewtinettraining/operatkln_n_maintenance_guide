@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: Netflow
+title: 'NetFlow'
 id: N8H-HPYX-VSJ-1GV
 slug: netflow
 isVisible: true

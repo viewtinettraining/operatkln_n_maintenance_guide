@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Configuration Home'
+title: 'Início da Configuração'
 id: DT2-E1Z-RDO-X7C
 slug: configuration-home
 isVisible: true

@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Rest api'
+title: 'API REST'
 id: C1C-3ZC-317-MUQ
 slug: rest-api
 isVisible: true

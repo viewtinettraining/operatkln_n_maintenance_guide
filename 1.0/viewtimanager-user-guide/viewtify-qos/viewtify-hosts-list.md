@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtify Hosts List'
+title: 'Lista de Hosts do Viewtify'
 id: WD5-4HC-BOB-1YK
 slug: viewtify-hosts-list
 isVisible: true

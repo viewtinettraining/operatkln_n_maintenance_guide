@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'About Viewtilog'
+title: 'Sobre o Viewtilog'
 id: IZH-5T65-VK6-EK4
 slug: about-viewtilog
 isVisible: true

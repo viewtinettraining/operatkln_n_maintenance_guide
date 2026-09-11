@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Viewtimon Signatures'
+title: 'Assinaturas do Viewtimon'
 id: AUE-5OF-HOA-B3H
 slug: viewtimon-signatures
 isVisible: true

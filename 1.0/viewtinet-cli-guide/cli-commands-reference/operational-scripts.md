@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Operational Scripts'
+title: 'Scripts Operacionais'
 id: 86R-WT9P-MP0-NDE
 slug: operational-scripts
 isVisible: true

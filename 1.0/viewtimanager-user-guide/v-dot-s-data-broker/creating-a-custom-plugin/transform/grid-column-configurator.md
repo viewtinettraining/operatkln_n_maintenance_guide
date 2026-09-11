@@ -1,6 +1,6 @@
 ---
 # snazzyDocs - DO NOT REMOVE OR EDIT BELOW THIS LINE
-title: 'Grid Column Configurator'
+title: 'Configurador de Coluna de Grade'
 id: O3Y-V9O-SQJ-APX
 slug: grid-column-configurator
 isVisible: true
